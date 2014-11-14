@@ -18,15 +18,15 @@ dragable.prototype.update = function ( delta ) {
     }
 }
 dragable.prototype.mousedown = function ( pos ) {
-    //if (inarea && !this.dragging) {
-    this.dragging = true;
-    this.startx = this.entity.x;
-    this.starty = this.entity.y;
+    if (this.entity.area.inside(pos) && !this.dragging) {
+        console.log('WOHOOOOO');
+        this.dragging = true;
+        this.startx = this.entity.x;
+        this.starty = this.entity.y;
 
-    this.offset = V2(pos.x - this.entity.x,
-                     pos.y - this.entity.y);
-
-    // }
+        this.offset = V2(pos.x - this.entity.x,
+                         pos.y - this.entity.y);
+     }
 }
 dragable.prototype.mouseup = function ( pos ) {
     this.endx = pos.x;

@@ -10,5 +10,5 @@ function characterScene() {
 characterScene.prototype = new scene();
 
 characterScene.prototype.initItems = function() {
-    this.entities.push(new dragable(new item(100,100, new sprite('mock/button.png'))))
+    this.entities.push(new dragable(new item(100,100,100,100, new sprite('mock/button.png'))))
 }
