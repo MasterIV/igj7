@@ -1,7 +1,9 @@
 var g = {
 	urls: [
 			'mock/map.png',
-			'mock/fight.png'
+			'mock/char.png',
+			'mock/fight.png',
+            'mock/button.png'
 	],
 
 	add: function( url ) {
