@@ -37,7 +37,6 @@ dragable.prototype.mouseup = function ( pos ) {
 
 		if (game.scene.dropareas) {
 			for(var i =0;i < game.scene.dropareas.length;i++) {
-				console.log(game.scene.dropareas[i].types.indexOf(this.type));
 				if (game.scene.dropareas[i].types.indexOf(this.type) != -1)
 					if (game.scene.dropareas[i].area.inside(pos)) {
 
@@ -47,7 +46,6 @@ dragable.prototype.mouseup = function ( pos ) {
 
 						this.droparea = game.scene.dropareas[i];
 						game.scene.dropareas[i].drop(this.entity);
-
 
 						this.entity.setPosition(game.scene.dropareas[i].area.p1.x,game.scene.dropareas[i].area.p1.y)
 
