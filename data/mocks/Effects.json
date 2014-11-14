@@ -1,0 +1,34 @@
+{
+  "heal10": {
+    "cost": 2
+  },
+  "heal20": {
+    "cost": 2
+  },
+  "heal30": {
+    "cost": 2
+  },
+  "damage": {
+  },
+  "stun": {
+    "time": 2
+  },
+  "intbuff": {
+    "time": 2
+  },
+  "strbuff": {
+    "time": 2
+  },
+  "dexbuff": {
+    "time": 2
+  },
+  "conbuff": {
+    "time": 2
+  },
+  "hot": {
+    "time": 2
+  },
+  "dot": {
+    "time": 12
+  }
+}
