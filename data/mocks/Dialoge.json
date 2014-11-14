@@ -1,6 +1,8 @@
 {
   "1": {
     "text": "Ich bin ein Dialog",
+    "image": "npc.png",
+    "background": "tavern.png",
     "replies": [
       {
         "text": "Antwort 1",
