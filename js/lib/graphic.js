@@ -1,14 +1,9 @@
 var g = {
 	urls: [
 			'mock/map.png',
-<<<<<<< Updated upstream
 			'mock/char.png',
 			'mock/fight.png',
             'mock/button.png'
-=======
-			'mock/fight.png',
-			'mock/button.png'
->>>>>>> Stashed changes
 	],
 
 	add: function( url ) {
