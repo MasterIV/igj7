@@ -1,9 +1,11 @@
-function dragable(entity) {
+function dragable(entity, type) {
     this.entity = entity
-    this.dragging = false;
+    this.type = type;
+	this.dragging = false;
 
     this.offset = new V2(0,0);
 	this.droparea = null;
+
 }
 dragable.prototype.draw = function ( ctx ) {
     if (this.entity.draw) {
@@ -35,21 +37,22 @@ dragable.prototype.mouseup = function ( pos ) {
 
 		if (game.scene.dropareas) {
 			for(var i =0;i < game.scene.dropareas.length;i++) {
+				console.log(game.scene.dropareas[i].types.indexOf(this.type));
+				if (game.scene.dropareas[i].types.indexOf(this.type) != -1)
+					if (game.scene.dropareas[i].area.inside(pos)) {
 
-				if (game.scene.dropareas[i].area.inside(pos)) {
+						if (this.droparea) {
+							this.droparea.remove();
+						}
 
-					if (this.droparea) {
-						this.droparea.remove();
+						this.droparea = game.scene.dropareas[i];
+						game.scene.dropareas[i].drop(this.entity);
+
+
+						this.entity.setPosition(game.scene.dropareas[i].area.p1.x,game.scene.dropareas[i].area.p1.y)
+
+						return;
 					}
-
-					this.droparea = game.scene.dropareas[i];
-					game.scene.dropareas[i].drop(this.entity);
-
-
-					this.entity.setPosition(game.scene.dropareas[i].area.p1.x,game.scene.dropareas[i].area.p1.y)
-
-					return;
-				}
 			}
 		}
 
