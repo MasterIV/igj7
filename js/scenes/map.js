@@ -1,19 +1,9 @@
 function mapScene() {
 	this.bg = new sprite("mock/map.png");
 	
-	// Add buttons to button bar
-	// var buttonBar = new ButtonBar(
-	// 	new Button(...), 
-	// 	new Button(...), 
-	// 	new Button(...)
-	//);
-	// Add button bar
-	//this.entities.push();
-		
-	// Add encounters
-	//for(var encounter in encounters) {
-	//}
-
+	var btn = new button("mock/button.png", "mock/button.png", 10, 10, function(){ alert("Hallo Welt"); }, null);
+	
+	this.entities.push(btn);
 }
 
 mapScene.prototype = new scene();

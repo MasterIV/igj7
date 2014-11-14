@@ -3,7 +3,7 @@ function button( img, hover, x, y, callback, sound ) {
 	this.img = new sprite( img );
 	this.hover = new sprite( hover );
 	this.sound = sound;
-	this.area = new Rect( new V2( x, y ), new V2( x+this.image.width, y+this.image.height ));
+	this.area = new Rect( new V2( x, y ), new V2( x+this.img.width, y+this.img.height ));
 	this.callback = callback;
 	this.x = x;
 	this.y = y;
