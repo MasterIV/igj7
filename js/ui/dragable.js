@@ -2,38 +2,56 @@ function dragable(entity) {
     this.entity = entity
     this.dragging = false;
 
-    this.offset = V2(0,0);
+    this.offset = new V2(0,0);
+	this.droparea = null;
 }
 dragable.prototype.draw = function ( ctx ) {
-    if (this.entity.draw)
-        this.entity.draw( ctx );
+    if (this.entity.draw) {
+		this.entity.draw( ctx );
+	}
 }
 dragable.prototype.update = function ( delta ) {
     if (this.entity.update) {
         if (this.dragging) {
-            this.x = mouse.x + this.offset.x;
-            this.y = mouse.y + this.offset.y;
+            this.entity.x = mouse.x + this.offset.x;
+            this.entity.y = mouse.y + this.offset.y;
         }
         this.entity.update( delta );
     }
 }
 dragable.prototype.mousedown = function ( pos ) {
     if (this.entity.area.inside(pos) && !this.dragging) {
-        console.log('WOHOOOOO');
         this.dragging = true;
         this.startx = this.entity.x;
         this.starty = this.entity.y;
 
-        this.offset = V2(pos.x - this.entity.x,
-                         pos.y - this.entity.y);
+        this.offset = new V2(this.entity.x - pos.x,
+							 this.entity.y - pos.y);
      }
 }
 dragable.prototype.mouseup = function ( pos ) {
-    this.endx = pos.x;
-    this.endy = pos.y;
-
     if (this.dragging) {
         this.dragging = false;
+
+		if (game.scene.dropareas) {
+			for(var i =0;i < game.scene.dropareas.length;i++) {
+
+				if (game.scene.dropareas[i].area.inside(pos)) {
+
+					if (this.droparea) {
+						this.droparea.remove();
+					}
+
+					this.droparea = game.scene.dropareas[i];
+					game.scene.dropareas[i].drop(this.entity);
+
+
+					this.entity.setPosition(game.scene.dropareas[i].area.p1.x,game.scene.dropareas[i].area.p1.y)
+
+					return;
+				}
+			}
+		}
 
         this.entity.x = this.startx;
         this.entity.y = this.starty;
