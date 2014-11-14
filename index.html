@@ -16,15 +16,23 @@
 		<script type="text/javascript" src="js/lib/sound.js"></script>
 		<script type="text/javascript" src="js/lib/graphic.js"></script>
 		<script type="text/javascript" src="js/lib/sprite.js"></script>
-		<script type="text/javascript" src="js/lib/scene.js"></script>
 		<script type="text/javascript" src="js/lib/util.js"></script>
 		<script type="text/javascript" src="js/lib/ajax.js"></script>
 		<script type="text/javascript" src="js/ui/buttons.js"></script>
 
+		<script type="text/javascript" src="js/scenes/scene.js"></script>
+		<script type="text/javascript" src="js/scenes/map.js"></script>
+						
 		<script type="text/javascript">
+			var scenes = {};
+
 			function init() {
-				controls.init();
+				scenes.map = new mapScene();
+				
+				game.scene = scenes.splash;
 				game.init();
+
+				mouse.init();
 			}
 		</script>
 	</head>
