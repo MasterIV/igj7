@@ -1,4 +1,13 @@
-function dialogue(lines, choices) {
+function dialogue(text, choices) {
+	var words = text.split(' ');
+	var lines = [words.shift()];
+
+	for( var j = 0; j < words.length; j++ ) {
+		if( (lines[lines.length-1]+words[j]).length < 68 )
+			lines[lines.length-1] += ' '+words[j];
+		else lines.push(words[j]);
+	}
+
 	this.w = 1000;
 	this.h = 24+32*(lines.length+choices.length);
 	this.x = 140;
