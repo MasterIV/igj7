@@ -1,5 +1,5 @@
 function mapScene() {
-	//this.bg = new sprite("mock/map.png");
+	this.bg = new sprite("mock/map.png");
 	
 	// Add buttons to button bar
 	// var buttonBar = new ButtonBar(

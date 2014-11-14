@@ -1,5 +1,8 @@
 var g = {
-	urls: [],
+	urls: [
+			'mock/map.png',
+			'mock/fight.png'
+	],
 
 	add: function( url ) {
 		this.urls.push( url );

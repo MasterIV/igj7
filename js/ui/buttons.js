@@ -41,12 +41,13 @@ spriteButton.prototype.draw = function( ctx ) {
 
 /* Text Button */
 
-function textButton( text, x, y, w, h, colors, hover, sound ) {
+function textButton( text, x, y, w, h, callback, colors, hover, sound ) {
 	this.area = new Rect( new V2( x, y ), new V2( x+w, y+h));
 	this.text = text;
 	this.colors = colors;
 	this.hover = hover;
 	this.sound = sound;
+	this.callback = callback;
 }
 
 textButton.prototype.draw = function( ctx ) {
@@ -58,8 +59,8 @@ textButton.prototype.draw = function( ctx ) {
 	ctx.strokeStyle = c.border ? c.border : 'black';
 	ctx.strokeRect( this.area.p1.x, this.area.p1.y, this.area.width(), this.area.height());
 
-	ctx.strokeStyle = c.text ? c.text : 'black';
-	ctx.fillText( this.text, this.area.p1.x, this.area.p1.y, this.area.width());
+	ctx.fillStyle = c.text ? c.text : 'black';
+	ctx.fillText( this.text, this.area.p1.x+10, this.area.p1.y+10, this.area.width());
 }
 
 /* Shared Source */
