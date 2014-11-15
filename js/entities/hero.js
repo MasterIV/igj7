@@ -3,12 +3,14 @@ function Hero() {
 
 	}
 
+	this.unequip = function( item ) {
+
+	}
+
 	this.getInventory = function() {
 		return [
-			new item(itemDefinitions[1]),
-			new item(itemDefinitions[2]),
-			new item(itemDefinitions[1]),
-			new item(itemDefinitions[2]),
+			new item(itemDefinitions[3]),
+			new item(itemDefinitions[4]),
 		];
 	}
 

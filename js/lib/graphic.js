@@ -4,6 +4,11 @@ var g = {
 			'mock/char.png',
 			'mock/fight.png',
 			'mock/button.png',
+			'mock/itemslot.png',
+			'mock/itemslot_weapon.png',
+			'mock/itemslot_shield.png',
+			'mock/sword.png',
+			'mock/shield.png',
 			'img/ui/buttons.png',
 			'img/ui/target.png'
 	],
