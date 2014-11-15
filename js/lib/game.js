@@ -20,6 +20,8 @@ var game = {
 	bufferCtx: null,
 
 	init: function() {
+		var self = this;
+
 		this.display = document.getElementById('gameframe');
 		this.displayCtx = this.display.getContext('2d');
 
@@ -28,13 +30,21 @@ var game = {
 		this.buffer.width = this.display.width;
 		this.buffer.height = this.display.height;
 
-		var self = this;
+		this.updateScreensize();
+		window.onresize = function() { self.updateScreensize(); };
+		
 		setInterval( function() { self.updateFramerate(); }, 1000 );
 
 		this.lastUpdate = Date.now();
 		this.loop();
 	},
 
+	updateScreensize: function() {
+		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || this.buffer.width;
+		var height = window.innerHeight || document.documentElement.clientHeight  || document.body.clientHeight || this.buffer.height;
+		this.scaleFactor = Math.max(this.buffer.width/width, this.buffer.height/height);
+	},
+	
 	updateFramerate: function() {
 		this.fps = this.frames;
 		this.frames = 0;
