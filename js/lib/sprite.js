@@ -9,7 +9,7 @@ sprite.prototype.draw = function( ctx, x, y, scaleX, scaleY ) {
 };
 
 sprite.prototype.center = function( ctx, x, y, scaleX, scaleY ) {
-	ctx.drawImage( this.img, (x-this.img.width*(scaleX||1)/2)|0, (y-this.img.height*(scaleY||1)/2)|0, this.img.width*scaleX, this.img.height*scaleY );
+	ctx.drawImage( this.img, (x-this.img.width*(scaleX||1)/2)|0, (y-this.img.height*(scaleY||1)/2)|0, this.img.width*(scaleX||1), this.img.height*(scaleY||1));
 };
 
 sprite.prototype.area = function( ctx, sx, sy, sw, sh, x, y ) {
