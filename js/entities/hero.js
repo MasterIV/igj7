@@ -43,7 +43,7 @@ function Hero() {
 		hp: 150,
 		mana: 12,
 		str: 10,
-		def: 13,
+		def: 6,
 		dex: 10,
 		int: 10,
 		"const": 10,
@@ -81,6 +81,7 @@ function HeroContainer(x, y) {
 		var stats = hero.getStats();
 		this.life = stats.hp;
 		this.mana = stats.mana;
+		this.def = stats.def;
 	};
 
 	this.harm = function(hp) {

@@ -14,6 +14,7 @@ function Enemy( x, y, definition ) {
 	}
 
 	this.life = this.attrs.hp;
+	this.def = this.attrs.def;
 	this.img = new sprite('img/characters/roboter.png');
 }
 
