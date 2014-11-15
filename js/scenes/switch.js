@@ -8,7 +8,13 @@ function switchScene(targetScene, delay, title) {
 
 	this.boxheight = 250;
 
+	this.lifetime = 0;
+	this.progress = 0;
+	this.delay = delay
+
 	this.title = title
+
+	this.targetScene = targetScene;
 
 	this.entities = [
 
@@ -16,20 +22,36 @@ function switchScene(targetScene, delay, title) {
 	this.blocking = [
 	];
 
-	this.blocking.push(
-		new movingsprite(new sprite('img/ui/door_left.png'),0,0,game.display.width/2,0,5),
-		new movingsprite(new sprite('img/ui/door_right.png'),game.display.width,0,game.display.width/2,0,5)
-	);
-
-	window.setTimeout(function () {
-		game.screne = targetScene;
-	}, delay);
 }
 switchScene.prototype = new scene();
+
+switchScene.prototype.update = function (delta) {
+
+	this.lifetime += delta/10;
+	this.progress += this.lifetime/this.delay;
+
+	if (this.progress >1) {
+		game.scene = this.targetScene;
+	}
+
+	if (this.blocking.length) {
+		if (this.blocking[0].update(delta))
+			this.blocking.shift();
+		return;
+	}
+
+	for (var i = 0; i < this.entities.length; i++)
+		if (this.entities[i].update)
+			this.entities[i].update(delta);
+}
 
 
 switchScene.prototype.draw = function (ctx) {
 	ctx.drawImage( this.buffer, 0, 0 );
+
+	ctx.fillStyle = 'black';
+	ctx.fillRect(0,0,(game.display.width/2)*this.progress*1.2,768);
+	ctx.fillRect(game.display.width,0,-1*(game.display.width/2)*this.progress*1.2,768);
 
 
 	ctx.fillStyle = "rgba( 255, 255, 255, .9 )";
