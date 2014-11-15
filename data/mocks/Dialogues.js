@@ -8,11 +8,17 @@ vardialogDefinitions={
 				"condition":{
 					
 				},
-				"rewards":{
-					"fight":"0"
-				}
+				"rewards":[
+					{
+						"fight":"0"
+					}
+					
+				]
+				
 			}
+			
 		]
+		
 	},
 	"1":{
 		"text":"Angelika hat geschafft, aber gerade als sie dich verschlingen wollte, kam eine kleine Fee und hat dir das Leben gerettet. Du bist auf die andere Seite der Insel katapultiert worden. Fee: 'Das war ja wohl mal nichts! Wie um Himmels Willen konnte dir jemand diesen Job geben? Ab zurück auf die Schulbank und sammle Erfahrung in diesem Land!'",
@@ -23,11 +29,14 @@ vardialogDefinitions={
 				"condition":{
 					
 				},
-				"rewards":{
+				"rewards":[
 					
-				}
+				]
+				
 			}
+			
 		]
+		
 	},
 	"2":{
 		"text":"Du kommst an eine große Brücke, auf der dir ein Wächter den Weg versperrt. Er ruft dir entgegen: 'Haltet ein! Wer wandelt hier durch Nacht und Wind?'",
@@ -39,9 +48,9 @@ vardialogDefinitions={
 				"condition":{
 					
 				},
-				"rewards":{
+				"rewards":[
 					
-				},
+				],
 				"replies":[
 					{
 						"text":"(Kampf beginnt)",
@@ -49,18 +58,24 @@ vardialogDefinitions={
 						"condition":{
 							
 						},
-						"rewards":{
-							"fight": 3
-						},
-						"replies":[
+						"rewards":[
 							{
+								"fight":3
 							}
+							
+						],
+						"replies":[
+							
 						]
 						
 					}
+					
 				]
+				
 			}
+			
 		]
+		
 	}
 }
 ;
