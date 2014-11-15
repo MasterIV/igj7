@@ -18,24 +18,33 @@ function combatScene() {
 combatScene.prototype = new scene();
 
 combatScene.prototype.attack = function() {
-	this.targetSelection.start(new Attack( this, this.hero ));
-}
+	var self = this;
+	this.targetSelection.start(new Attack( this, this.hero ), function() { self.enemyTurn(); });
+};
+
+combatScene.prototype.enemyTurn = function() {
+	for (var i = 0; i < this.entities.length; i++)
+		if (this.entities[i] instanceof Enemy) {
+			var a = new Attack(this, this.entities[i]);
+			a.run( this.hero );
+		}
+};
 
 combatScene.prototype.spell = function() {
 	console.log('spell');
-}
+};
 
 combatScene.prototype.item = function() {
 	console.log('item');
-}
+};
 
 combatScene.prototype.defend = function() {
 	console.log('defend');
-}
+};
 
 combatScene.prototype.selectEnemy = function() {
 	console.log('defend');
-}
+};
 
 combatScene.prototype.setEnemies = function( definitions ) {
 	this.entities = [];
@@ -51,4 +60,4 @@ combatScene.prototype.setEnemies = function( definitions ) {
 
 	for( var i = 0; i < this.defaults.length; i++ )
 		this.entities.push( this.defaults[i] );
-}
+};

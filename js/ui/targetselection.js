@@ -19,12 +19,18 @@ TargetSelection.prototype.init = function( enemies ) {
 	})(enemies[i]);
 };
 
-TargetSelection.prototype.start = function( action ) {
+TargetSelection.prototype.start = function( action, callback ) {
 	this.action = action;
+	this.callback = callback;
 	this.scene.blocking = [this];
 };
 
 TargetSelection.prototype.select = function( enemy ) {
-	this.scene.blocking = [];
+	var self = this;
+	this.scene.blocking.shift();
 	this.action.run( enemy );
+	this.scene.blocking.push({ update: function() {
+		self.callback();
+		return true;
+	}});
 };

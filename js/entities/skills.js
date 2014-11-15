@@ -10,7 +10,8 @@ function Attack( scene, actor ) {
 }
 
 Attack.prototype.run = function( target ) {
-	this.scene.blocking.push( new MoveTwards(this.actor, target.x-100, target.y, this.actor.x, this.actor.y, 500 ));
+	var movex = target.x > this.actor.x ? target.x-100 : target.x+100;
+	this.scene.blocking.push( new MoveTwards(this.actor, movex, target.y, this.actor.x, this.actor.y, 500 ));
 	var actorStats = this.actor.getStats();
 
 	var hit = ( 0.9 * actorStats.dex / target.getStats().dex ) > Math.random();
@@ -22,5 +23,5 @@ Attack.prototype.run = function( target ) {
 		this.scene.blocking.push(new AnimationText(target, 'Miss'));
 	}
 
-	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, target.x-100, target.y, 500 ));
+	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, movex, target.y, 500 ));
 };
