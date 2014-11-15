@@ -1,0 +1,22 @@
+hitchance = 100 * char.dex / enemy.dex
+
+hit = (Math.random() * 100 <= hitchance
+
+hitdmg = items.dmg + ((items.dmg * 0.5) * Math.random()
+
+hitpointslost = enemy.dmg * (1 - (char.def / Def.MAX))
+
+attributes_max = Math.max(char.str, Math.max(char.dex, char.int))
+char_ori_int = char.int/maxattribute
+char_ori_dex = char.dex/maxattribute
+char_ori_str = char.str/maxattribute
+char_ori_max = Math.max(char_ori_int, Math.max(char_ori_dex, char_ori_str))
+if(char_ori_max == char_ori_int) {
+	char_ori = "int"
+} else if(char_ori_max == char_ori_str) {
+	char_ori = "str"
+} else {
+	char_ori = "dex"
+}
+
+char_ori_reputation = items.blingbling * char_ori_max
