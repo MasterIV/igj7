@@ -13,16 +13,14 @@ function Attack( scene, actor, factor ) {
 Attack.prototype.run = function( target ) {
 	var movex = target.x > this.actor.x ? target.x-100 : target.x+100;
 	this.scene.blocking.push( new MoveTwards(this.actor, movex, target.y, this.actor.x, this.actor.y, 500 ));
-	var actorStats = this.actor.getStats();
 
-	var hit = ( 0.9 * actorStats.dex / target.getStats().dex ) > Math.random();
-	if( hit ) {
-		var damage = this.factor * ( actorStats.str + Math.round(( actorStats.str * 0.6 ) * (Math.random() - .5)));
-		this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/strike1.png', 5, 100));
-		dealDamage(this.scene, target, damage);
-	} else {
-		this.scene.blocking.push(new AnimationText(target, 'Miss'));
-	}
+	var actorStats = this.actor.getStats();
+	var crit = ( 0.2 * actorStats.dex / target.getStats().dex ) > Math.random();
+	if(crit) this.factor *= 1.5;
+
+	var damage = Math.round(this.factor * ( actorStats.str + ( actorStats.str * 0.6 ) * (Math.random() - .5)));
+	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/strike1.png', 5, 100));
+	dealDamage(this.scene, target, damage);
 
 	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, movex, target.y, 500 ));
 };
@@ -40,12 +38,27 @@ Heal.prototype.run = function( target ) {
 	this.scene.blocking.push( new AnimationDamage( target, this.heal * -1 ));
 };
 
-function Stun() {
-
+function Stun( scene, actor, duration, attr ) {
+	this.scene = scene;
+	this.actor = actor;
+	this.duration = duration;
+	this.attr = attr;
 }
 
 Stun.prototype.run = function( target ) {
+	var movex = target.x > this.actor.x ? target.x-100 : target.x+100;
+	this.scene.blocking.push( new MoveTwards(this.actor, movex, target.y, this.actor.x, this.actor.y, 500 ));
 
+	var actorStats = this.actor.getStats();
+	var hit = ( 0.9 * actorStats[this.attr] / target.getStats()[this.attr] ) > Math.random();
+	if( hit ) {
+		target.stunned = this.duration;
+		this.scene.blocking.push(new AnimationText(target, 'Stunned'));
+	} else {
+		this.scene.blocking.push(new AnimationText(target, 'Miss'));
+	}
+
+	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, movex, target.y, 500 ));
 };
 
 function Shield() {

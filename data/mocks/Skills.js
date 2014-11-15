@@ -22,6 +22,14 @@ var skillDefinitions = {
 		"effects": {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
 		}
+	},
+	"stun": {
+		"name": "Stunnen",
+		"costs": "1",
+		"target": "single",
+		"effects": {
+			"Stun": {"duration": 3, "attr": "dex" }
+		}
 	}
 
 };

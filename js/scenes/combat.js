@@ -6,10 +6,11 @@ function combatScene() {
 
 	this.defaults = [
 			this.hero,
-			new SpriteButton('img/ui/buttons.png', Rect.create(0,  0,120,90), Rect.create(120,  0,120,90), 0, 678, function() { self.attack(); }),
-			new SpriteButton('img/ui/buttons.png', Rect.create(0, 90,120,90), Rect.create(120, 90,120,90), 130, 678, function() { self.spell(); }),
-			new SpriteButton('img/ui/buttons.png', Rect.create(0,180,120,90), Rect.create(120,180,120,90), 260, 678, function() { self.item(); }),
-			new SpriteButton('img/ui/buttons.png', Rect.create(0,270,120,90), Rect.create(120,270,120,90), 390, 678, function() { self.defend(); })
+			new SpriteButton('img/ui/buttons.png', Rect.create(0,  0,161,133), Rect.create(161,  0,161,133),  10, 625, function() { self.attack(); }),
+			new SpriteButton('img/ui/buttons.png', Rect.create(0,133,161,133), Rect.create(161,133,161,133), 180, 625, function() { self.spell(); }),
+			new SpriteButton('img/ui/buttons.png', Rect.create(0,266,161,133), Rect.create(161,266,161,133), 350, 625, function() { self.item(); }),
+			new SpriteButton('img/ui/buttons.png', Rect.create(0,399,161,133), Rect.create(161,399,161,133), 520, 625, function() { self.defend(); }),
+			new Heroinfo(this.hero)
 	];
 
 	this.setEnemies([1,2,3]);
@@ -23,18 +24,36 @@ combatScene.prototype.attack = function() {
 };
 
 combatScene.prototype.enemyTurn = function() {
+	var enemyCount = 0, e;
+
 	for (var i = 0; i < this.entities.length; i++)
 		if (this.entities[i] instanceof Enemy) {
-			var a = new Attack(this, this.entities[i]);
-			a.run( this.hero );
+			enemyCount++
+			e = this.entities[i];
+
+			if( e.stunned ) {
+				e.stunned--;
+			} else {
+				var a = new Attack(this, e);
+				a.run( this.hero );
+			}
+
+			if(e.buffs) {
+
+			}
 		}
-}
+
+	if( enemyCount == 0 )
+		game.scene = scenes.map;
+};
 
 combatScene.prototype.getEffect = function(type, args) {
 	if( type == 'Heal')
 		return new Heal( this, this.hero, args.base, args.rnd, args.attr );
 	if( type == 'Attack')
 		return new Attack( this, this.hero, args.factor );
+	if( type == 'Stun')
+		return new Stun( this, this.hero, args.duration, args.attr );
 
 };
 
