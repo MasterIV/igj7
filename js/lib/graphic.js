@@ -5,8 +5,6 @@ var g = {
 			'img/animation/strike1.png',
 			'img/characters/hero.png',
 			'mock/map.png',
-			'mock/char.png',
-			'mock/fight.png',
 			'mock/itemslot.png',
 			'mock/itemslot_helmet.png',
 			'mock/itemslot_chest.png',
