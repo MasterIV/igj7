@@ -65,6 +65,23 @@ function Shield() {
 
 }
 
+function Buff(scene, actor, duration, value) {
+	this.scene = scene;
+	this.actor = actor;
+	this.duration = duration;
+	this.value = value;
+}
+
+Buff.prototype.apply = function() {
+	this.duration--;
+	dealDamage( this.scene, this.target, this.value );
+	if( this.duration < 1 ) arrayRemove(this.target.buffs, this);
+};
+
+Buff.prototype.run = function( target ) {
+	this.target = target;
+	target.buffs.push( this );
+};
 
 
 

@@ -73,6 +73,7 @@ function Hero() {
 function HeroContainer(x, y) {
 	this.x = x;
 	this.y = y;
+	this.buffs = [];
 
 	this.reset = function() {
 		var stats = hero.getStats();
