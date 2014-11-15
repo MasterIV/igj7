@@ -2,7 +2,11 @@ function characterScene() {
 	this.entities = [
 		new stats(600, 20),
 		new HeroContainer(200,200),
+		new button("mock/button_menu.png", "mock/button_menu.png", 1150, 678, function(){
+			game.scene = scenes.menu;
+		}, null)
 	];
+
 
 	this.initDropareas();
 
@@ -31,15 +35,15 @@ characterScene.prototype.initDropareas = function () {
 	this.equipmentslots = {};
 
 	var helmet = new equipslot(x,y + 130,120,120,'weapon',function (item) {
-		hero.equip(item.item);
+		hero.equip(item);
 	}, function (item) {
-		hero.unequip(item.item);
+		hero.unequip(item);
 	});
 
 	var ring = new equipslot(x+130,y + 130,120,120,'shield',function (item) {
-		hero.equip(item.item);
+		hero.equip(item);
 	}, function (item) {
-		hero.unequip(item.item);
+		hero.unequip(item);
 	});
 
 	this.equipmentslots.helmet = helmet;
@@ -52,14 +56,17 @@ characterScene.prototype.initItems = function () {
 	var items = hero.getInventory();
 
 	for(var i =0;i<items.length;i++) {
-		var dg = new dragable(new itemContainer(this.itemslots[i].area.p1.x+this.itemslots[i].padding.x,this.itemslots[i].area.p1.y +this.itemslots[i].padding.y,100,100,items[i]), items[i].itemdefinition.type);
+		var dg = new dragable(new itemContainer(this.itemslots[i].area.p1.x+this.itemslots[i].padding.x,
+												this.itemslots[i].area.p1.y +this.itemslots[i].padding.y,
+			100,100,items[i]), items[i].itemdefinition.type);
 
-		this.itemslots[i].setContent(dg)
+		this.itemslots[i].content = dg.entity.item;
+		dg.droparea = this.itemslots[i];
+
 		this.entities.push(dg);
 	}
 
 	//Equipment
-
 	for(var item in hero.equipment) {
 		if (hero.equipment[item] != null) {
 
@@ -67,7 +74,10 @@ characterScene.prototype.initItems = function () {
 													this.equipmentslots[hero.equipment[item].itemdefinition.slot].area.p1.y +this.equipmentslots[hero.equipment[item].itemdefinition.slot].padding.y,
 														100,100,hero.equipment[item]), hero.equipment[item].itemdefinition.type);
 
-			this.equipmentslots[hero.equipment[item].itemdefinition.slot].setContent(dg)
+
+			this.equipmentslots[hero.equipment[item].itemdefinition.slot].content = dg.entity.item;
+			dg.droparea = this.equipmentslots[hero.equipment[item].itemdefinition.slot];
+
 			this.entities.push(dg);
 		}
 	}

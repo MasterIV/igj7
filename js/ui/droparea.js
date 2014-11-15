@@ -7,23 +7,18 @@ function droparea(x, y, width, height, types, onDrop, onRemove) {
 	this.onRemove = onRemove;
 }
 
-droparea.prototype.isDroparea = true
+droparea.prototype.isDroparea = true;
 droparea.prototype.padding = new V2(10,10);
 droparea.prototype.drop = function(entity) {
-	this.content = entity;
+	this.content = entity.item;
 
 	if (this.onDrop)
 		this.onDrop( this.content );
-}
-droparea.prototype.setContent = function(entity) {
-	this.content = entity;
-	entity.droparea = this;
 }
 droparea.prototype.remove = function() {
 	if (this.onRemove)
 		this.onRemove( this.content );
 
-	console.log(1321);
 	this.content = null;
 }
 

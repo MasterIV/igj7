@@ -1,10 +1,12 @@
 function Hero() {
 	var img = new sprite('img/characters/hero.png');
 	this.equip = function( item ) {
+		console.log(item);
 		this.equipment[item.itemdefinition.slot] = item;
 	}
 
 	this.unequip = function( item ) {
+		console.log(item)
 		this.equipment[item.itemdefinition.slot] = null;
 	}
 
@@ -15,11 +17,12 @@ function Hero() {
 		ring:null
 	};
 
+	this.inventory = [
+		new item(itemDefinitions[4]),
+	];
 	this.getInventory = function() {
-		return [
-			new item(itemDefinitions[4]),
-		];
-	}
+		return this.inventory;
+	};
 
 	this.harm = function(hp) {
 		this.life -= hp;
@@ -35,8 +38,8 @@ function Hero() {
 		def: 13,
 		dex: 10,
 		int: 10
-	}
-	this.life = this.attrs.hp
+	};
+	this.life = this.attrs.hp;
 
 	this.getStats = function() {
 		var currentStats = clone(this.attrs);
