@@ -117,18 +117,18 @@ function AnimationDie( scene, target, duration ) {
 
 
 AnimationDie.prototype.update = function( delta ) {
-	if(( this.anitime += delta ) > this.duration) {
+	//if(( this.anitime += delta ) > this.duration) {
 		arrayRemove( this.scene.entities, this.target );
 		if( this.target.button )
 			arrayRemove( this.scene.targetSelection.entities, this.target.button );
 		return true;
-	}
+	//}
 };
 
-AnimationDie.prototype.draw = function( ctx ){
-	ctx.globalCompositeOperation = 'lighter';
-	ctx.globalAlpha = (this.anitime / (this.duration / 3)) % 1;
-	this.target.draw( ctx );
-	ctx.globalAlpha = 1;
-	ctx.globalCompositeOperation = 'source-over';
-}
+//AnimationDie.prototype.draw = function( ctx ){
+//	ctx.globalCompositeOperation = 'lighter';
+//	ctx.globalAlpha = (this.anitime / (this.duration / 3)) % 1;
+//	this.target.draw( ctx );
+//	ctx.globalAlpha = 1;
+//	ctx.globalCompositeOperation = 'source-over';
+//};

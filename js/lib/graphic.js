@@ -2,7 +2,8 @@ var g = {
 	urls: [
 			'img/ui/buttons.png',
 			'img/ui/target.png',
-			'img/animation/strike1.png',
+			'img/animation/strike.png',
+			'img/animation/destroy.png',
 			'img/characters/hero.png',
 			'mock/map.png',
 			'mock/itemslot.png',
