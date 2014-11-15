@@ -39,7 +39,7 @@ var itemDefinitions = {
 		"itemname": "Schild",
 		"sprite": "mock/shield.png",
 		"type": "shield",
-		"slot": "helmet",
+		"slot": "ring",
 		"str": 24,
 		"def": 2,
 		"int": 1,
