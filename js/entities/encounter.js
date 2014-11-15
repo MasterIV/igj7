@@ -16,8 +16,6 @@ function encounter(imageSprite, imageX, imageY, imageWidth, imageHeight, paths, 
 	
 	this.prevEncounter = null;
     this.area = this.image.area;
-	
-	console.log(this.area);
 }
 
 encounter.prototype = new Entity();
