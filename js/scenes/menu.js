@@ -13,7 +13,7 @@ function menuScene() {
 			game.scene =  new looseScene();;
 		}, {}),
 		new textButton('switch', 10, 170, 200, 30, function () {
-			game.scene =  new switchScene(scenes.map, 1500, 'MAP');
+			game.scene =  new switchScene(scenes.map, 2000, 'MAP');
 		}, {})
 	];
 }

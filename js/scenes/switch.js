@@ -50,8 +50,8 @@ switchScene.prototype.draw = function (ctx) {
 	ctx.drawImage( this.buffer, 0, 0 );
 
 	ctx.fillStyle = 'black';
-	ctx.fillRect(0,0,(game.display.width/2)*this.progress*1.2,768);
-	ctx.fillRect(game.display.width,0,-1*(game.display.width/2)*this.progress*1.2,768);
+	ctx.fillRect(0,0,(game.display.width/2)*this.progress*3,768);
+	ctx.fillRect(game.display.width,0,-1*(game.display.width/2)*this.progress*3,768);
 
 
 	ctx.fillStyle = "rgba( 255, 255, 255, .9 )";
