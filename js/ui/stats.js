@@ -15,7 +15,7 @@ stats.prototype.draw = function (ctx) {
 
 	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Leben', stats.hp);
 	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Mana', stats.mana);
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Särke', stats.str);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Stärke', stats.str);
 	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Defense', stats.def);
 	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Agilität', stats.dex);
 	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Intelekt', stats.int);

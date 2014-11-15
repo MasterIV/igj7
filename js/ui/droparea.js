@@ -2,6 +2,7 @@ function droparea(x, y, width, height, types) {
 	this.area = new Rect(new V2(x, y),
 		new V2(x + width, y + height));
 	this.types = types;
+
 }
 droparea.prototype.padding = new V2(10,10);
 

@@ -13,12 +13,11 @@ function Hero() {
 
 	this.attrs = {
 		hp: 150,
-		mana: 12,
+		mana: 20,
 		str: 10,
 		def: 6,
 		dex: 10,
 		int: 10,
-		"const": 10,
 		blingbling: 10
 	};
 
@@ -59,6 +58,9 @@ function Hero() {
 		if (itemCounter == 20) {
 			break;
 		}
+	}
+	for(var key in skillDefinitions) {
+		this.skills.push(skillDefinitions[key]);
 	}
 
 	this.getStats = function() {
