@@ -1,17 +1,15 @@
 function Hero() {
 	var img = new sprite('img/characters/hero.png');
 	this.equip = function( item ) {
-		console.log(item);
 		this.equipment[item.itemdefinition.slot] = item;
 	}
 
 	this.unequip = function( item ) {
-		console.log(item)
 		this.equipment[item.itemdefinition.slot] = null;
 	}
 
 	this.equipment = {
-		helmet:new item(itemDefinitions[3]),
+		helmet:null,
 		chest:null,
 		boots:null,
 		ring:null
@@ -22,7 +20,10 @@ function Hero() {
 	};
 
 	this.inventory = [
+		new item(itemDefinitions[3]),
 		new item(itemDefinitions[4]),
+		new item(itemDefinitions[5]),
+		new item(itemDefinitions[6]),
 	];
 	this.getInventory = function() {
 		return this.inventory;
