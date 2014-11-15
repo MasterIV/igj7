@@ -11,21 +11,46 @@ function stats(x, y) {
     ]
 }
 stats.prototype.draw = function( ctx ) {
-    ctx.fillStyle = 'black';
 
-    ctx.fillText( 'stats', this.x, this.y, 200);
+	this.box(ctx, this.x,this.y,400,400)
+
+
+
+	ctx.font = '24px monospace';
+	ctx.textAlign = 'left';
+	ctx.fillStyle = 'white';
 
 	var stats = hero.getStats();
 
+    //hp
+    this.printStat(ctx,this.x + 20,this.y + 60,'HP',stats.hp);
+    //mana
+    this.printStat(ctx,this.x + 20,this.y + 90,'MP',stats.mana);
     //str
-    this.printStat(ctx,200,200,'Mukikraft',stats.str);
-    //int
-    this.printStat(ctx,200,220,'nerdigkeit',stats.int);
+    this.printStat(ctx,this.x + 20,this.y + 120,'STR',stats.str);
+    //def
+    this.printStat(ctx,this.x + 20,this.y + 150,'DEF',stats.def);
     //dex
-    this.printStat(ctx,200,240,'dex',stats.dex);
+    this.printStat(ctx,this.x + 20,this.y + 180,'DEX',stats.dex);
+    //int
+    this.printStat(ctx,this.x + 20,this.y + 210,'INT',stats.int);
 
 }
 stats.prototype.printStat = function (ctx,x,y,label,value) {
     ctx.fillText( label, x, y, 200);
     ctx.fillText( value, x+200, y, 200);
 }
+
+
+stats.prototype.box = function( ctx, x, y, w, h ) {
+	ctx.fillStyle = "rgba( 0, 0, 50, .9 )";
+	ctx.fillRect( x, y, w, h );
+	ctx.strokeStyle = "rgb( 90, 90, 90 )";
+	ctx.strokeRect( x, y, w, h );
+	ctx.strokeStyle = "rgb( 200,255,200 )";
+	ctx.strokeRect( x + 1, y + 1, w - 2, h - 2 );
+	ctx.strokeStyle = "rgb( 255,255,255 )";
+	ctx.strokeRect( x + 2, y + 2, w - 4, h - 4);
+	ctx.strokeStyle = "rgb( 90, 90, 90 )";
+	ctx.strokeRect( x + 3, y + 3, w - 6, h - 6);
+};
