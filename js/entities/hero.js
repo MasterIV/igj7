@@ -1,40 +1,79 @@
 function Hero() {
+	var img = new sprite('img/characters/hero.png');
 	this.equip = function( item ) {
-
+		this.equipment[item.itemdefinition.slot] = item;
 	}
+
+	this.unequip = function( item ) {
+		this.equipment[item.itemdefinition.slot] = null;
+	}
+
+	this.equipment = {
+		helmet:null,
+		chest:null,
+		boots:null,
+		ring:null
+	};
 
 	this.getInventory = function() {
 		return [
-			new item(itemDefinitions[1]),
-			new item(itemDefinitions[2]),
-			new item(itemDefinitions[1]),
-			new item(itemDefinitions[2]),
+			new item(itemDefinitions[3]),
+			new item(itemDefinitions[4]),
 		];
 	}
 
+	this.harm = function(hp) {
+		this.life -= hp;
+
+		if (this.life < 0)
+			this.life = 0;
+	}
+
+	this.attrs = {
+		hp: 150,
+		mana: 12,
+		str: 10,
+		def: 13,
+		dex: 10,
+		int: 10
+	}
+	this.life = this.attrs.hp
+
 	this.getStats = function() {
-		return {
-			dex: 10,
-			str: 10,
-			int: 10,
-			dmg: [15,20],
-			def: 13,
-			hp: 150,
-			mana: 12
+		var currentStats = clone(this.attrs);
+
+		for(var item in this.equipment) {
+			if (this.equipment[item] != null) {
+				for(var stat in currentStats) {
+					if (this.equipment[item].itemdefinition[stat])
+						currentStats[stat] += this.equipment[item].itemdefinition[stat];
+				}
+
+			}
 		}
+
+		return currentStats;
 	}
 
 	this.center = function( ctx, x, y ) {
-		var w = 200; var h = 400;
-		ctx.fillStyle = 'purple';
-		ctx.fillRect(x-w/2, y-h/2, w, h);
+		img.center(ctx, x, y);
 	}
 }
 
-var hero = new Hero();
-
 function HeroContainer(x, y) {
+	this.x = x;
+	this.y = y;
+
 	this.draw = function(ctx) {
-		hero.center(ctx, x, y);
+		hero.center(ctx, this.x, this.y);
+	}
+
+	this.getStats = function() {
+		return hero.getStats();
+	}
+
+	this.harm = function(hp) {
+		hero.harm(hp);
+		return hero.life
 	}
 }
