@@ -1,11 +1,11 @@
-var encounters = {
+/*var encounters = {
 	"1": {
 		image: "mock/encounter.png",
 		x: 150,
 		y: 250,
 		width: 120,
 		height: 80,
-		paths: [ "2" ]
+		paths: [ "2", "3" ]
 	},
 	"2": {
 		image: "mock/encounter.png",
@@ -15,9 +15,19 @@ var encounters = {
 		height: 80,
 		paths: [
 		]
+	}, 
+	"3": {
+		image: "mock/encounter.png",
+		x: 600,
+		y: 500,
+		width: 120,
+		height: 80,
+		paths: [
+		]
 	}
+	
 };
-
+*/
 function mapScene() {
 	var self = this;
 	this.bg = new sprite("img/maps/campaign_map.jpg");
@@ -32,7 +42,7 @@ function mapScene() {
 	];
 		
 	this.encounterMap = {};
-	for(var index in encounters) {
+	/*for(var index in encounters) {
 		var enc = encounters[index];
 		var connectedEncounters = [];
 		for(var index in encounter.paths) {
@@ -45,7 +55,7 @@ function mapScene() {
 	}	
 	
 	this.encounterMap["1"].isClickable = true;
-	
+	*/
 	this.dragStart = new V2(0,0);
 	this.dragOffset = new V2(-912,-906);
 	
@@ -71,7 +81,6 @@ mapScene.prototype.setClickable = function(b) {
 mapScene.prototype.setDialogue = function(dialogueData) {
 	var self = this;
 	var answers = [];
-	console.log(dialogueData);
 	if(dialogueData["replies"] != null && dialogueData.replies.length > 0) {
 		for(var i = 0, j = dialogueData.replies.length; i < j; i++) {
 			var reply = dialogueData.replies[i];
@@ -109,9 +118,21 @@ mapScene.prototype.calcOffset = function() {
 mapScene.prototype.draw = function (ctx) {
 	var offset = this.calcOffset();
 	
-	
 	if (this.bg)
 		this.bg.draw(ctx, offset.x, offset.y);
+	
+	for(var index in encounterMappings) {
+		var mapping = encounterMappings[index];
+		for(var secondIndex in mapping.connected) {
+			secondIndex = mapping.connected[secondIndex];
+			var target = encounterMappings[secondIndex];
+			ctx.beginPath();
+			ctx.moveTo(mapping.x + offset.x, mapping.y + offset.y);
+			ctx.lineTo(target.x + offset.x, target.y + offset.y);
+			ctx.strokeStyle="#167ff8";
+			ctx.stroke();
+		}
+	}
 
 	for (var i = 0; i < this.entities.length; i++)
 		if (this.entities[i].draw)
