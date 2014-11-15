@@ -61,6 +61,10 @@ dialogue.prototype.draw = function( ctx ) {
 	}
 };
 
+dialogue.prototype.update = function() {
+	return false;
+}
+
 dialogue.prototype.click = function( pos ) {
 	for( var i = 0; i < this.choices.length; i++ ) {
 		if( this.choices[i].area.inside( pos ))

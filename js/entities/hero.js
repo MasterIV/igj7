@@ -1,35 +1,43 @@
 function Hero() {
 	var img = new sprite('img/characters/hero.png');
 	this.equip = function( item ) {
-		console.log(item);
 		this.equipment[item.itemdefinition.slot] = item;
 	}
 
 	this.unequip = function( item ) {
-		console.log(item)
 		this.equipment[item.itemdefinition.slot] = null;
 	}
 
 	this.equipment = {
-		helmet:new item(itemDefinitions[3]),
+		helmet:null,
 		chest:null,
 		boots:null,
 		ring:null
 	};
 
+	this.getSkills = function() {
+		return skillDefinitions;
+	};
+
 	this.inventory = [
-		new item(itemDefinitions[4]),
 	];
+
+	console.log(itemDefinitions);
+	console.log(itemDefinitions.length);
+
+	var itemCounter =0;
+	for(var key in itemDefinitions) {
+		this.inventory.push(new item(itemDefinitions[key]));
+
+		itemCounter ++;
+		if (itemCounter == 9) {
+			break;
+		}
+	}
+
 	this.getInventory = function() {
 		return this.inventory;
 	};
-
-	this.harm = function(hp) {
-		this.life -= hp;
-
-		if (this.life < 0)
-			this.life = 0;
-	}
 
 	this.attrs = {
 		hp: 150,
@@ -37,7 +45,9 @@ function Hero() {
 		str: 10,
 		def: 13,
 		dex: 10,
-		int: 10
+		int: 10,
+		"const": 10,
+		blingbling: 10
 	};
 	this.life = this.attrs.hp;
 
@@ -65,17 +75,33 @@ function Hero() {
 function HeroContainer(x, y) {
 	this.x = x;
 	this.y = y;
+	this.buffs = [];
+
+	this.reset = function() {
+		var stats = hero.getStats();
+		this.life = stats.hp;
+		this.mana = stats.mana;
+	};
+
+	this.harm = function(hp) {
+		this.life -= hp;
+
+		if (this.life > this.getStats().hp)
+			this.life = this.getStats().hp;
+
+		if (this.life <= 0) {
+			this.life = 0;
+			game.scene = scenes.loose;
+		}
+	};
 
 	this.draw = function(ctx) {
 		hero.center(ctx, this.x, this.y);
-	}
+	};
 
 	this.getStats = function() {
 		return hero.getStats();
-	}
+	};
 
-	this.harm = function(hp) {
-		hero.harm(hp);
-		return hero.life
-	}
+	this.reset();
 }

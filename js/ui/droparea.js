@@ -5,6 +5,8 @@ function droparea(x, y, width, height, types, onDrop, onRemove) {
 	this.content = null;
 	this.onDrop = onDrop;
 	this.onRemove = onRemove;
+
+	this.entity = null;
 }
 
 droparea.prototype.isDroparea = true;
@@ -26,9 +28,7 @@ function drawedDroparea(e) {
 }
 drawedDroparea.prototype = new droparea()
 drawedDroparea.prototype.draw = function ( ctx ) {
-	this.sprite.draw(ctx,
-		this.area.p1.x, this.area.p1.y, this.area.p2.x - this.area.p1.x, this.area.p2.y - this.area.p1.y,
-		this.area.p1.x, this.area.p1.y, this.area.p2.x - this.area.p1.x, this.area.p2.y - this.area.p1.y);
+	this.sprite.draw(ctx, this.area.p1.x, this.area.p1.y);
 }
 
 function itemslot(x, y, width, height, types, onDrop, onRemove) {

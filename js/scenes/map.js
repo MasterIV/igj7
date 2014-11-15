@@ -29,28 +29,10 @@ var encounters = {
 
 function mapScene() {
 	var self = this;
-	this.bg = new sprite("mock/map.png");
+	this.bg = new sprite("img/maps/campaign_map.jpg");
 	
 	this.entities = [
-		new button("mock/button_paywall.png", "mock/button_paywall.png", 10, 678, function(){ 
-			var pw = new dialogue("Yo. This is paywall. Pay or die, bitch.", [
-				{ 
-					text:"Pay", 
-					callback:function(){
-						self.entities.pop();
-					}
-				},
-				{ 
-					text:"Die", 
-					callback:function(){
-						self.entities.pop();
-					}
-				}
-				]);
-				self.entities.push(pw);
-				
-		}, null),
-		new button("mock/button_character.png", "mock/button_character.png", 140, 678, function(){
+		new button("img/ui/character_button.png", "img/ui/character_button_hover.png", 10, 618, function(){
 			game.scene = scenes.character;
 		}, null),
 		new button("mock/button_menu.png", "mock/button_menu.png", 1150, 678, function(){
@@ -71,8 +53,12 @@ function mapScene() {
 		this.entities.push(this.encounterMap[index]);
 	}	
 	
-	this.setEncounter("1");
-	this.currentEncounter.isClickable = true;
+	this.encounterMap["1"].isClickable = true;
+	
+	this.dragStart = new V2(0,0);
+	this.dragOffset = new V2(0,0);
+	
+	this.scrolls = false;
 }
 
 mapScene.prototype = new scene();
@@ -84,8 +70,62 @@ mapScene.prototype.setEncounter = function(id) {
 mapScene.prototype.setClickable = function(b) {
 	if(this.currentEncounter != null){
 		var encIds = this.currentEncounter.connectedEncounters;
+		console.log(encIds);
 		for(var i = 0, j = encIds.length; i < j; i++) {
-			this.encounterMap[encIds[i]].isClickable = false;
+			this.encounterMap[encIds[i]].isClickable = b;
 		}
 	}
+}
+
+mapScene.prototype.setDialogue = function(dialogueData) {
+	var self = this;
+	var answers = [];
+	console.log(dialogueData);
+	if(dialogueData["replies"] != null && dialogueData.replies.length > 0) {
+		for(var i = 0, j = dialogueData.replies.length; i < j; i++) {
+			var reply = dialogueData.replies[i];
+			answers.push({ data: reply, text: reply.reply, callback: function(){
+				self.entities.pop();
+				self.setDialogue(this.data);
+			} });
+		}
+	}
+	if(answers.length == 0) {
+		answers = [{ text: "Weiter", callback: function(){
+			self.entities.pop();
+		}}]
+	}
+	var visibleDialogue = new dialogue(dialogueData.text, answers);
+	this.entities.push(visibleDialogue);
+}
+mapScene.prototype.mousedown = function(pos) {
+	this.dragStart = new V2(pos.x, pos.y);
+	this.scrolls = true;
+}
+mapScene.prototype.mouseup = function(pos) {
+	this.dragOffset = this.calcOffset();
+	this.scrolls = false;
+}
+mapScene.prototype.calcOffset = function() {
+	var offset;
+	if(this.scrolls) {
+		offset = this.dragOffset.dif(this.dragStart.dif(mouse));
+	} else {
+		offset = this.dragOffset;
+	}
+	return new V2(Math.max(Math.min(0, offset.x), -this.bg.width+game.buffer.width), Math.max(Math.min(0, offset.y), -this.bg.height+game.buffer.height));
+}
+mapScene.prototype.draw = function (ctx) {
+	var offset = this.calcOffset();
+	
+	
+	if (this.bg)
+		this.bg.draw(ctx, offset.x, offset.y);
+
+	for (var i = 0; i < this.entities.length; i++)
+		if (this.entities[i].draw)
+			this.entities[i].draw(ctx, offset);
+
+	if (this.blocking.length && this.blocking[0].draw)
+		this.blocking[0].draw(ctx, offset);
 }

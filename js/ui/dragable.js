@@ -18,9 +18,26 @@ dragable.prototype.draw = function ( ctx ) {
 }
 dragable.prototype.update = function ( delta ) {
     if (this.entity.update) {
-        if (this.dragging) {
+
+		if (this.dragging) {
             this.entity.x = mouse.x + this.offset.x;
             this.entity.y = mouse.y + this.offset.y;
+
+
+			for(var i =0;i < game.scene.entities.length;i++) {
+				if (game.scene.entities[i].isEquipmentDropArea) {
+					if (game.scene.entities[i].types.indexOf(this.type) != -1)
+						if (game.scene.entities[i].area.inside(new V2(mouse.x,mouse.y))) {
+
+							if (game.scene == scenes.character) {
+								scenes.character.showDiffrence(this.entity.item);
+							}
+
+							return;
+						}
+				}
+			}
+
         }
         this.entity.update( delta );
     }
@@ -34,32 +51,37 @@ dragable.prototype.mousedown = function ( pos ) {
         this.offset = new V2(this.entity.x - pos.x,
 							 this.entity.y - pos.y);
      }
-
-
-
 }
+
 dragable.prototype.mouseup = function ( pos ) {
     if (this.dragging) {
         this.dragging = false;globalDragging = false;
 
 		for(var i =0;i < game.scene.entities.length;i++) {
-			if (game.scene.entities[i].isDroparea)
-				if (game.scene.entities[i].content == null)
-					if (game.scene.entities[i].types.indexOf(this.type) != -1)
-						if (game.scene.entities[i].area.inside(pos)) {
+			var entity = game.scene.entities[i];
+			if (entity.isDroparea)
+				if (entity.types.indexOf(this.type) != -1)
+						if (entity.area.inside(pos)) {
+							if (entity.content == null) {
 
 							if (this.droparea) {
 								this.droparea.remove();
 							}
 
-							this.droparea = game.scene.entities[i];
-							game.scene.entities[i].drop(this.entity);
+							this.droparea = entity;
+							entity.drop(this.entity);
+							entity.entity = this;
 
-							this.entity.setPosition(game.scene.entities[i].area.p1.x + game.scene.entities[i].padding.x,
-													game.scene.entities[i].area.p1.y+ game.scene.entities[i].padding.y)
+							this.entity.setPosition(entity.area.p1.x + entity.padding.x,
+								entity.area.p1.y + entity.padding.y)
 
 							return;
+							} else {
+
+							}
 						}
+
+
 		}
 
         this.entity.x = this.startx;

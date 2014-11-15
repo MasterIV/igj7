@@ -23,31 +23,34 @@ function encounter(imageSprite, imageX, imageY, imageWidth, imageHeight, paths, 
 
 encounter.prototype = new Entity();
 
-encounter.prototype.draw = function(ctx) {
+encounter.prototype.draw = function(ctx, offset) {
 	for(var i = 0, j = this.paths.length; i < j; i++) {
 		var path = this.paths[i];
-	    path.sprite.draw(ctx, path.area.p1.x, path.area.p1.y);	
+	    path.sprite.draw(ctx, path.area.p1.x + offset.x, path.area.p1.y + offset.y);	
 	}
 	
-    this.image.sprite.center(ctx, this.image.area.p1.x + this.image.area.width()/2, this.image.area.p1.y + this.image.area.height()/2, this.scale, this.scale);
+    this.image.sprite.center(ctx, this.image.area.p1.x + this.image.area.width()/2 + offset.x, this.image.area.p1.y + this.image.area.height()/2 + offset.y, this.scale, this.scale);
 }
 
 encounter.prototype.update = function(delta) {
-	if(this.area.inside(mouse)) {
-		if(this.scale <= 1.6) {
-			this.scale = Math.min(this.scale + delta / 500, 1.6);
-		}
-	} else {
-		if(this.scale >= 1) {
-			this.scale = Math.max(this.scale - delta / 500, 1);
+	if(this.isClickable) {
+		if(this.area.inside(mouse.dif(scenes.map.calcOffset()))) {
+			if(this.scale <= 1.6) {
+				this.scale = Math.min(this.scale + delta / 500, 1.6);
+			}
+		} else {
+			if(this.scale >= 1) {
+				this.scale = Math.max(this.scale - delta / 500, 1);
+			}
 		}
 	}
 }
 
 encounter.prototype.click = function(pos) {
 	if(this.isClickable) {
-		if(this.area.inside(pos)) {
-			game.scene = scenes.combat; 
+		if(this.area.inside(pos.dif(scenes.map.calcOffset()))) {
+			game.scene.setDialogue(dialogDefinitions["1"]);
+			//game.scene = scenes.combat; 
 		}
 	}
 }

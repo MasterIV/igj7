@@ -5,7 +5,8 @@ var dialogDefinitions = {
     "background": "tavern.png",
     "replies": [
       {
-        "text": "Antwort 1",
+		"reply": "Antwort 1",  
+        "text": "Folgetext zu Antwort 1.",
         "condition": {
           "str": 30
         },
@@ -16,7 +17,8 @@ var dialogDefinitions = {
         },
         "replies": [
           {
-            "text": "Antwort 11",
+			"reply": "Antwort 11",
+            "text": "Folgetext Antwort 11",
             "condition": {
               "dex": 15
             },
@@ -26,12 +28,25 @@ var dialogDefinitions = {
               ]
             },
             "replies": [
+				{
+					"reply": "Antwort 101",
+		            "text": "Folgetext Antwort 101",
+		            "condition": {
+		              "dex": 15
+		            },
+		            "rewards": {
+		              "gold": [
+		                18
+		              ]
+	            	}
+				}
             ]
           }
         ]
       },
       {
-        "text": "Antwort 2",
+		"reply": "Antwort 2",
+        "text": "Text zu Antwort 2",
         "condition": {
           "int": 10
         },

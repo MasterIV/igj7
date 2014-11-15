@@ -17,9 +17,7 @@ function itemContainer(x, y, width, height, item) {
 itemContainer.prototype = new Entity();
 
 itemContainer.prototype.draw = function (ctx) {
-	this.sprite.draw(ctx,
-		this.x, this.y, this.width, this.height,
-		this.x, this.y, this.width, this.height);
+	this.sprite.draw(ctx,this.x, this.y);
 }
 itemContainer.prototype.update = function (delta) {
 

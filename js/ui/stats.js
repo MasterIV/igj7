@@ -1,6 +1,7 @@
 function stats(x, y) {
     this.x = x;
     this.y = y;
+	this.showDiffrence = false;
 
     this.attrs = [
         {label: 'str', value: 10},
@@ -12,7 +13,7 @@ function stats(x, y) {
 }
 stats.prototype.draw = function( ctx ) {
 
-	this.box(ctx, this.x,this.y,400,400)
+	this.box(ctx, this.x,this.y,400,300)
 
 
 
@@ -34,11 +35,52 @@ stats.prototype.draw = function( ctx ) {
     this.printStat(ctx,this.x + 20,this.y + 180,'DEX',stats.dex);
     //int
     this.printStat(ctx,this.x + 20,this.y + 210,'INT',stats.int);
-
+    //const
+    this.printStat(ctx,this.x + 20,this.y + 240,'CONST',stats.const);
+    //blingbling
+    this.printStat(ctx,this.x + 20,this.y + 270,'BLINGBLING',stats.blingbling);
+;
+	if (this.showDiffrence) {
+		this.drawDiffrence(ctx, this.showDiffrence);
+	}
 }
+stats.prototype.drawDiffrence = function(ctx, attrs) {
+	//hp
+	this.printDiffStat(ctx,this.x + 20,this.y + 60,attrs.hp);
+	//mana
+	this.printDiffStat(ctx,this.x + 20,this.y + 90,attrs.mana);
+	//str
+	this.printDiffStat(ctx,this.x + 20,this.y + 120,attrs.str);
+	//def
+	this.printDiffStat(ctx,this.x + 20,this.y + 150,attrs.def);
+	//dex
+	this.printDiffStat(ctx,this.x + 20,this.y + 180,attrs.dex);
+	//int
+	this.printDiffStat(ctx,this.x + 20,this.y + 210,attrs.int);
+	//const
+	this.printDiffStat(ctx,this.x + 20,this.y + 240,attrs.const);
+	//blingbling
+	this.printDiffStat(ctx,this.x + 20,this.y + 270,attrs.blingbling);
+}
+
 stats.prototype.printStat = function (ctx,x,y,label,value) {
     ctx.fillText( label, x, y, 200);
     ctx.fillText( value, x+200, y, 200);
+}
+
+stats.prototype.printDiffStat = function (ctx,x,y,value) {
+	ctx.font = '24px monospace';
+	ctx.textAlign = 'left';
+	if (value > 0) {
+		ctx.fillStyle = 'green';
+	} else if (value < 0) {
+		ctx.fillStyle = 'red';
+		value = value *-1;
+
+	} else if (value = 0) {
+		ctx.fillStyle = 'whited';
+	}
+    ctx.fillText( value, x+300, y, 200);
 }
 
 
