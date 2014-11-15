@@ -45,7 +45,9 @@ function Hero() {
 		str: 10,
 		def: 13,
 		dex: 10,
-		int: 10
+		int: 10,
+		"const": 10,
+		blingbling: 10
 	};
 	this.life = this.attrs.hp;
 

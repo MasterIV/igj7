@@ -5,6 +5,8 @@ function droparea(x, y, width, height, types, onDrop, onRemove) {
 	this.content = null;
 	this.onDrop = onDrop;
 	this.onRemove = onRemove;
+
+	this.entity = null;
 }
 
 droparea.prototype.isDroparea = true;
