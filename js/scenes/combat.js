@@ -68,10 +68,21 @@ combatScene.prototype.getCoice = function(s) {
 		self.blocking.shift();
 
 		if(s.target != 'single' ) {
-			for( var j in s.effects ) {
-				var e = self.getEffect(j, s.effects[j]);
-				e.run( self.hero );
+			var targets = [];
+
+			if(s.target == 'self' ) {
+				targets.push(this.hero);
+			} else {
+				for (var i = 0; i < self.entities.length; i++)
+					if (self.entities[i] instanceof Enemy)
+						targets.push(self.entities[i]);
 			}
+
+			for( var i = 0; i < targets.length; i++ )
+				for( var j in s.effects ) {
+					var e = self.getEffect(j, s.effects[j]);
+					e.run( targets[i] );
+				}
 
 			self.blocking.push({ update: function() {
 				self.enemyTurn();
