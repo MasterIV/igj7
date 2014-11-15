@@ -9,7 +9,7 @@ function Hero() {
 	}
 
 	this.equipment = {
-		helmet:null,
+		helmet:new item(itemDefinitions[3]),
 		chest:null,
 		boots:null,
 		ring:null
@@ -17,7 +17,6 @@ function Hero() {
 
 	this.getInventory = function() {
 		return [
-			new item(itemDefinitions[3]),
 			new item(itemDefinitions[4]),
 		];
 	}
