@@ -43,6 +43,8 @@ function itemslot(x, y, width, height, types, onDrop, onRemove) {
 	this.content = null;
 	this.onDrop = onDrop;
 	this.onRemove = onRemove;
+
+	this.inventoryId = null;
 }
 
 itemslot.prototype = new droparea()
@@ -59,3 +61,12 @@ function equipslot(x, y, width, height, type, onDrop, onRemove) {
 
 equipslot.prototype = new droparea();
 equipslot.prototype.isEquipmentDropArea = true;
+equipslot.prototype.draw = function( ctx ) {
+	var item = hero.equipment[this.types[0]];
+
+	if (item) {
+		item.sprite.draw(ctx, this.x, this.y);
+	} else {
+
+	}
+};

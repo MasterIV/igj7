@@ -1,11 +1,10 @@
 function characterScene() {
-	this.bg = new sprite( 'img/maps/mountain.jpg' );
+	this.bg = new sprite( 'img/ui/character_sheet_background.jpg' );
 
-	this.stats = new stats(658, 20);
+	this.stats = new stats(58, 65);
 	this.entities = [
 		this.stats,
-		new HeroContainer(300,320),
-		new SpriteButton('img/ui/back_button.png', Rect.create(0,  0,161,133), Rect.create(161,  0,161,133),  10, 625, function(){
+		new SpriteButton('img/ui/back_button.png', Rect.create(0,  0,161,133), Rect.create(161,  0,161,133),  10, 632, function(){
 			game.scene = scenes.map;
 		}, null)
 	];
@@ -18,17 +17,17 @@ function characterScene() {
 characterScene.prototype = new scene();
 characterScene.prototype.initDropareas = function () {
 
-	var x = 10;
-	var y = 500;
+	var x = 430;
+	var y = 220;
 
 	this.itemslots = [];
 
-	for(var c =0;c<2;c++ )
-		for(var i =0;i<9;i++ ) {
-			var is = new itemslot(x + 130*i,y + 130*c,120,120,['item', 'helmet', 'chest','boots' , 'ring'],function (item) {
-				console.log('drop');
+	for(var c =0;c<4;c++ )
+		for(var i =0;i<5;i++ ) {
+			var is = new itemslot(x + 168*i,y + 135*c,120,120,['item', 'helmet', 'chest', 'gloves', 'boots' ,'ring'],function (item) {
+				//console.log('drop');
 			}, function (item) {
-				console.log('remove');
+				//console.log('remove');
 			});
 
 			this.entities.push(is);
@@ -37,35 +36,42 @@ characterScene.prototype.initDropareas = function () {
 
 	this.equipmentslots = {};
 
-	var helmet = new equipslot(x+5*130,y - 130,120,120,'helmet',function (item) {
+	var helmet = new equipslot(430,27,120,120,'helmet',function (item) {
 		hero.equip(item);
 	}, function (item) {
-		hero.unequip(item);
+		//hero.unequip(item);
 	});
 
-	var chest = new equipslot(x+130+5*130,y - 130,120,120,'chest',function (item) {
+	var chest = new equipslot(596,27,120,120,'chest',function (item) {
 		hero.equip(item);
 	}, function (item) {
-		hero.unequip(item);
+		//hero.unequip(item);
 	});
 
-	var boots = new equipslot(x+260+5*130,y - 130,120,120,'boots',function (item) {
+	var boots = new equipslot(763,27,120,120,'boots',function (item) {
 		hero.equip(item);
 	}, function (item) {
-		hero.unequip(item);
+		//hero.unequip(item);
 	});
 
-	var ring = new equipslot(x+390+5*130,y - 130,120,120,'ring',function (item) {
+	var neck = new equipslot(932,27,120,120,'neck',function (item) {
 		hero.equip(item);
 	}, function (item) {
-		hero.unequip(item);
+		//hero.unequip(item);
+	});
+
+	var ring = new equipslot(1100,27,120,120,'ring',function (item) {
+		hero.equip(item);
+	}, function (item) {
+		//hero.unequip(item);
 	});
 
 	this.equipmentslots.helmet = helmet;
 	this.equipmentslots.chest = chest;
 	this.equipmentslots.boots = boots;
+	this.equipmentslots.neck = neck;
 	this.equipmentslots.ring = ring;
-	this.entities.push(helmet, chest, boots, ring);
+	this.entities.push(helmet, chest, boots, neck, ring);
 }
 
 characterScene.prototype.showDiffrence = function (item) {
@@ -76,8 +82,7 @@ characterScene.prototype.showDiffrence = function (item) {
 		def: 0,
 		dex: 0,
 		int: 0,
-		"const": 0,
-		blingbling: 0,
+		"const": 0
 	};
 
 	var eqItem = hero.equipment[item.itemdefinition.slot];
@@ -106,6 +111,7 @@ characterScene.prototype.hideDiffrence = function () {
 }
 
 characterScene.prototype.initItems = function () {
+	/*
 	// Inventory
 	var items = hero.getInventory();
 
@@ -139,5 +145,6 @@ characterScene.prototype.initItems = function () {
 			this.entities.push(dg);
 		}
 	}
+	*/
 
 }

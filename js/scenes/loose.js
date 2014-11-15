@@ -1,26 +1,29 @@
 function looseScene() {
 	this.bg = new sprite( 'img/maps/death.jpg' );
-
-	this.entities = [];
-
-	var fee = new sprite('img/characters/fee.png');
-	this.entities.push({
+	var feeSprite = new sprite('img/characters/fee.png');
+	var self = this;
+	var fee = {
 		draw: function (ctx) {
-			fee.draw(ctx, 800,200)
+			feeSprite.draw(ctx, 800, 160)
 		}
-	});
+	};
 
-	var messageBox = new dialogue('DU BIst leider gestorben',
-			[{text: 'OK',
-				callback: function() {
-					game.scene = scenes.menu;
-			}},
-			{text: 'NEIN!',
-				callback: function() {
-					game.scene = scenes.character;
-				}}, ], (game.display.height/4)*3);
+		this.entities = [new HeroContainer(300,380)];
 
-	this.blocking.push(messageBox);
+	this.blocking.push(new dialogue(
+			'Verdammt noch mal! Schon wieder in die Pfanne gehauen. Wie soll ich das nur jemals schaffen... Dieses Spiel scheint einfach unmöglich. Was für Sadisten denken sich sowas aus?',
+			[{text: 'Weiter', callback: function() { self.blocking.shift(); }}],
+			600
+	));
+
+	this.blocking.push({update: function() { self.entities.push(fee);return true; }});
+	this.blocking.push(new FadeIn(fee, 800));
+
+	this.blocking.push(new dialogue(
+			'Aber zum Glück wurde in dieses Spiel eine gute Fee eingebaut, die dich in die Verangenheit schiecken kann. Und so schmeißt sie den Fluxkompensator an und schickt dich in eine Zeit zurück, in der du noch garnicht angefangen hattest, dieses Spiel szu spielen...',
+			[{text: 'Weiter', callback: function() { game.scene = scenes.menu; }}],
+			560
+	));
 }
 
 looseScene.prototype = new scene();
