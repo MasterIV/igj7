@@ -24,6 +24,7 @@ var g = {
 			'img/characters/roboter.png',
 			'img/characters/fee.png',
 			'img/maps/mountain.jpg',
+			'img/maps/death.jpg',
 			'img/ui/character_button.png',
 			'img/ui/character_button_hover.png',
 			'img/maps/campaign_map.jpg'

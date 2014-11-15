@@ -1,5 +1,5 @@
 function looseScene() {
-	this.bg = new sprite( 'img/maps/mountain.jpg' );
+	this.bg = new sprite( 'img/maps/death.jpg' );
 
 	this.entities = [];
 
