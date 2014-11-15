@@ -1,8 +1,6 @@
 function characterScene() {
-	this.bg = new sprite("mock/char.png");
-
 	this.entities = [
-		new stats(500, 500),
+		new stats(600, 20),
 	];
 
 	this.dropareas = []
