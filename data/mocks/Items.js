@@ -1,38 +1,38 @@
 var itemDefinitions={
-	"stdamulettstr":{
+	"stdneckstr":{
 		"itemname":"Stärke-Amulett",
-		"sprite":"img/items/amulett.png",
-		"slot":"amulett",
+		"sprite":"img/items/neck.png",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
 		"dex":1,
 		"blingbling":1
 	},
-	"stdamulettdef":{
+	"stdneckdef":{
 		"itemname":"Panzer-Amulett",
-		"sprite":"img/items/amulett.png",
-		"slot":"amulett",
+		"sprite":"img/items/neck.png",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
 		"dex":1,
 		"blingbling":1
 	},
-	"stdamulettdex":{
+	"stdneckdex":{
 		"itemname":"Geschicklichkeit-Amulett",
-		"sprite":"img/items/amulett.png",
-		"slot":"amulett",
+		"sprite":"img/items/neck.png",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
 		"dex":1,
 		"blingbling":1
 	},
-	"stdamulettint":{
+	"stdneckint":{
 		"itemname":"Intelligenz-Amulett",
-		"sprite":"img/items/amulett.png",
-		"slot":"amulett",
+		"sprite":"img/items/neck.png",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
@@ -159,40 +159,40 @@ var itemDefinitions={
 		"dex":1,
 		"blingbling":1
 	},
-	"stdhelmstr":{
+	"stdhelmetstr":{
 		"itemname":"Stärke-Helm",
-		"sprite":"img/items/helm.png",
-		"slot":"helm",
+		"sprite":"img/items/helmet.png",
+		"slot":"helmet",
 		"str":1,
 		"def":1,
 		"int":1,
 		"dex":1,
 		"blingbling":1
 	},
-	"stdhelmdef":{
+	"stdhelmetdef":{
 		"itemname":"Panzer-Helm",
-		"sprite":"img/items/helm.png",
-		"slot":"helm",
+		"sprite":"img/items/helmet.png",
+		"slot":"helmet",
 		"str":1,
 		"def":1,
 		"int":1,
 		"dex":1,
 		"blingbling":1
 	},
-	"stdhelmdex":{
+	"stdhelmetdex":{
 		"itemname":"Geschicklichkeit-Helm",
-		"sprite":"img/items/helm.png",
-		"slot":"helm",
+		"sprite":"img/items/helmet.png",
+		"slot":"helmet",
 		"str":1,
 		"def":1,
 		"int":1,
 		"dex":1,
 		"blingbling":1
 	},
-	"stdhelmint":{
+	"stdhelmetint":{
 		"itemname":"Intelligenz-Helm",
-		"sprite":"img/items/helm.png",
-		"slot":"helm",
+		"sprite":"img/items/helmet.png",
+		"slot":"helmet",
 		"str":1,
 		"def":1,
 		"int":1,
@@ -202,7 +202,7 @@ var itemDefinitions={
 	"klosteinstr":{
 		"itemname":"Klostein Amulett",
 		"sprite":"img/items/klostein.png",
-		"slot":"amulett",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
@@ -212,7 +212,7 @@ var itemDefinitions={
 	"klosteindef":{
 		"itemname":"Klostein Amulett",
 		"sprite":"img/items/klostein.png",
-		"slot":"amulett",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
@@ -222,7 +222,7 @@ var itemDefinitions={
 	"klosteindex":{
 		"itemname":"Klostein Amulett",
 		"sprite":"img/items/klostein.png",
-		"slot":"amulett",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
@@ -232,7 +232,7 @@ var itemDefinitions={
 	"klosteinint":{
 		"itemname":"Klostein Amulett",
 		"sprite":"img/items/klostein.png",
-		"slot":"amulett",
+		"slot":"neck",
 		"str":1,
 		"def":1,
 		"int":1,
