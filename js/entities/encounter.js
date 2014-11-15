@@ -2,18 +2,9 @@ function encounter(imageSprite, imageX, imageY, imageWidth, imageHeight, paths, 
 	this.image = {};
 	this.isClickable = false;
 	this.image.sprite = new sprite(imageSprite);
-    this.image.area = Rect.create(imageX, imageY, imageWidth, imageHeight);
+    this.image.area = Rect.create(imageX - imageWidth/2, imageY - imageHeight/2, imageWidth, imageHeight);
 
-	this.paths = [];
-	this.connectedEncounters = [];
-	for(var i = 0, j = paths.length; i < j; i++) {
-		var path = paths[i];
-		var pathData = {};
-		pathData.sprite = new sprite(path.image);
-		pathData.area = Rect.create(path.x, path.y, path.width, path.height);
-		this.paths.push(pathData);
-		this.connectedEncounters.push(path.to);
-	}
+	this.paths = paths;
 	
 	this.prevEncounter = null;
     this.area = this.image.area;
@@ -24,12 +15,17 @@ function encounter(imageSprite, imageX, imageY, imageWidth, imageHeight, paths, 
 encounter.prototype = new Entity();
 
 encounter.prototype.draw = function(ctx, offset) {
+	var x = this.image.area.p1.x + this.image.area.width()/2 + offset.x;
+	var y = this.image.area.p1.y + this.image.area.height()/2 + offset.y;
 	for(var i = 0, j = this.paths.length; i < j; i++) {
-		var path = this.paths[i];
-	    path.sprite.draw(ctx, path.area.p1.x + offset.x, path.area.p1.y + offset.y);	
+		var otherEncounter = encounters[this.paths[i]];
+		ctx.beginPath();
+		ctx.moveTo(x, y);
+		ctx.lineTo(otherEncounter.x + offset.x, otherEncounter.y + offset.y);
+		ctx.stroke();
 	}
 	
-    this.image.sprite.center(ctx, this.image.area.p1.x + this.image.area.width()/2 + offset.x, this.image.area.p1.y + this.image.area.height()/2 + offset.y, this.scale, this.scale);
+    this.image.sprite.center(ctx, x, y, this.scale, this.scale);
 }
 
 encounter.prototype.update = function(delta) {

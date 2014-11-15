@@ -5,16 +5,7 @@ var encounters = {
 		y: 250,
 		width: 120,
 		height: 80,
-		paths: [
-			{
-				to: "2",
-				image: "mock/path.png",
-				x: 170,
-				y: 200,
-				width: 230,
-				height: 90
-			}
-		]
+		paths: [ "2" ]
 	},
 	"2": {
 		image: "mock/encounter.png",
@@ -56,7 +47,7 @@ function mapScene() {
 	this.encounterMap["1"].isClickable = true;
 	
 	this.dragStart = new V2(0,0);
-	this.dragOffset = new V2(0,0);
+	this.dragOffset = new V2(-912,-906);
 	
 	this.scrolls = false;
 }
