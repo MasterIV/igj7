@@ -79,8 +79,8 @@ function mapScene() {
 		this.entities.push(this.encounterMap[index]);
 	}	
 	
-	this.currentEncounter = null;
 	this.setEncounter("1");
+	this.currentEncounter.isClickable = true;
 }
 
 mapScene.prototype = new scene();
