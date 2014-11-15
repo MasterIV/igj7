@@ -1,14 +1,20 @@
 var g = {
 	urls: [
+			'img/ui/buttons.png',
+			'img/ui/target.png',
+			'img/animation/strike1.png',
+			'img/characters/hero.png',
 			'mock/map.png',
 			'mock/char.png',
 			'mock/fight.png',
 			'mock/button.png',
-			'img/ui/buttons.png',
-			'img/ui/target.png',
-			'img/animation/strike1.png',
-			'img/characters/hero.png'
-	],
+			'mock/settings.png',
+			'mock/button_menu.png',
+			'mock/button_character.png',
+			'mock/button_paywall.png',
+			'mock/encounter.png',
+			'mock/path.png'
+			],
 
 	add: function( url ) {
 		this.urls.push( url );
