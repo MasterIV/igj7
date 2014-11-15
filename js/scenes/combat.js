@@ -2,9 +2,10 @@ function combatScene() {
 	var self = this;
 	this.bg = new sprite( 'mock/fight.png' );
 	this.targetSelection = new TargetSelection( self );
+	this.hero = new HeroContainer(200,380);
 
 	this.defaults = [
-			new HeroContainer(200,380),
+			this.hero,
 			new SpriteButton('img/ui/buttons.png', Rect.create(0,  0,120,90), Rect.create(120,  0,120,90), 0, 678, function() { self.attack(); }),
 			new SpriteButton('img/ui/buttons.png', Rect.create(0, 90,120,90), Rect.create(120, 90,120,90), 130, 678, function() { self.spell(); }),
 			new SpriteButton('img/ui/buttons.png', Rect.create(0,180,120,90), Rect.create(120,180,120,90), 260, 678, function() { self.item(); }),
@@ -17,7 +18,7 @@ function combatScene() {
 combatScene.prototype = new scene();
 
 combatScene.prototype.attack = function() {
-	this.targetSelection.start(new Attack( this ));
+	this.targetSelection.start(new Attack( this, this.hero ));
 }
 
 combatScene.prototype.spell = function() {

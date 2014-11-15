@@ -31,7 +31,10 @@ function Hero() {
 }
 
 function HeroContainer(x, y) {
+	this.x = x;
+	this.y = y;
+
 	this.draw = function(ctx) {
-		hero.center(ctx, x, y);
+		hero.center(ctx, this.x, this.y);
 	}
 }
