@@ -18,14 +18,14 @@ stats.prototype.draw = function( ctx ) {
 	var stats = hero.getStats();
 
     //str
-    this.printStat(200,200,'Mukikraft',stats.str);
+    this.printStat(ctx,200,200,'Mukikraft',stats.str);
     //int
-    this.printStat(200,220,'nerdigkeit',stats.int);
+    this.printStat(ctx,200,220,'nerdigkeit',stats.int);
     //dex
-    this.printStat(200,240,'dex',stats.dex);
+    this.printStat(ctx,200,240,'dex',stats.dex);
 
 }
-stats.prototype.printStat = function (x,y,label,value) {
-    ctx.fillText( this.attrs[i].label, x, y, 200);
-    ctx.fillText( this.attrs[i].value, x+200, y, 200);
+stats.prototype.printStat = function (ctx,x,y,label,value) {
+    ctx.fillText( label, x, y, 200);
+    ctx.fillText( value, x+200, y, 200);
 }
