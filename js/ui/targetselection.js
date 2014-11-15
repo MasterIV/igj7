@@ -1,5 +1,5 @@
 function TargetSelection( scene ) {
-
+	this.scene = scene;
 }
 
 TargetSelection.prototype = new scene();
@@ -15,6 +15,12 @@ TargetSelection.prototype.init = function( enemies ) {
 	})(enemies[i]);
 };
 
-TargetSelection.prototype.select = function( enemy ) {
+TargetSelection.prototype.start = function( action ) {
+	this.action = action;
+	this.scene.blocking = [this];
+};
 
+TargetSelection.prototype.select = function( enemy ) {
+	this.scene.blocking = [];
+	this.action.run( enemy );
 };

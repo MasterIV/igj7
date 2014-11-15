@@ -23,13 +23,14 @@ scene.prototype.draw = function (ctx) {
 		if (this.entities[i].draw)
 			this.entities[i].draw(ctx);
 
-	if (this.blocking.length)
+	if (this.blocking.length && this.blocking[0].draw)
 		this.blocking[0].draw(ctx);
 }
 
 scene.prototype.click = function (pos) {
 	if (this.blocking.length) {
-		this.blocking[0].click(pos);
+		if( this.blocking[0].click )
+			this.blocking[0].click(pos);
 		return;
 	}
 
@@ -40,7 +41,8 @@ scene.prototype.click = function (pos) {
 
 scene.prototype.mousedown = function (pos) {
 	if (this.blocking.length) {
-		this.blocking[0].mousedown(pos);
+		if( this.blocking[0].mousedown )
+			this.blocking[0].mousedown(pos);
 		return;
 	}
 
@@ -51,7 +53,8 @@ scene.prototype.mousedown = function (pos) {
 
 scene.prototype.mouseup = function (pos) {
 	if (this.blocking.length) {
-		this.blocking[0].mouseup(pos);
+		if( this.blocking[0].mouseup )
+			this.blocking[0].mouseup(pos);
 		return;
 	}
 

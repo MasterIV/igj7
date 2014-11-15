@@ -39,6 +39,8 @@
 		<script type="text/javascript" src="js/entities/enemy.js"></script>
 		<script type="text/javascript" src="js/entities/item.js"></script>
 		<script type="text/javascript" src="js/entities/encounter.js"></script>
+		<script type="text/javascript" src="js/entities/animation.js"></script>
+		<script type="text/javascript" src="js/entities/skills.js"></script>
 
 		<script type="text/javascript" src="js/scenes/map.js"></script>
 		<script type="text/javascript" src="js/scenes/menu.js"></script>
@@ -49,9 +51,11 @@
 
 		<script type="text/javascript">
 			var scenes = {};
+			var hero;
 
 			function init() {
 				g.load( function() {
+					hero = new Hero();
 					scenes.menu = new menuScene();
 					scenes.map = new mapScene();
 					scenes.combat = new combatScene();
