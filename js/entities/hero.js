@@ -15,6 +15,10 @@ function Hero() {
 		ring:null
 	};
 
+	this.getSkills = function() {
+		return skillDefinitions;
+	};
+
 	this.inventory = [
 		new item(itemDefinitions[3]),
 		new item(itemDefinitions[4]),
@@ -24,13 +28,6 @@ function Hero() {
 	this.getInventory = function() {
 		return this.inventory;
 	};
-
-	this.harm = function(hp) {
-		this.life -= hp;
-
-		if (this.life < 0)
-			this.life = 0;
-	}
 
 	this.attrs = {
 		hp: 150,
@@ -67,16 +64,28 @@ function HeroContainer(x, y) {
 	this.x = x;
 	this.y = y;
 
+	this.reset = function() {
+		var stats = hero.getStats();
+		this.life = stats.hp;
+		this.mana = stats.mana;
+	};
+
+	this.harm = function(hp) {
+		this.life -= hp;
+
+		if (this.life <= 0) {
+			this.life = 0;
+			game.scene = scenes.loose;
+		}
+	};
+
 	this.draw = function(ctx) {
 		hero.center(ctx, this.x, this.y);
-	}
+	};
 
 	this.getStats = function() {
 		return hero.getStats();
-	}
+	};
 
-	this.harm = function(hp) {
-		hero.harm(hp);
-		return hero.life
-	}
+	this.reset();
 }
