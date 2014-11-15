@@ -15,14 +15,17 @@ stats.prototype.draw = function( ctx ) {
 
     ctx.fillText( 'stats', this.x, this.y, 200);
 
-	//var stats = hero.getStats();
+	var stats = hero.getStats();
 
-    for(var i =0; i<this.attrs.length; i++) {
-        ctx.fillText( this.attrs[i].label, this.x, this.y + 20*i, 200);
-        ctx.fillText( this.attrs[i].value, this.x+200, this.y + 20*i, 200);
-    }
+    //str
+    this.printStat(ctx,200,200,'Mukikraft',stats.str);
+    //int
+    this.printStat(ctx,200,220,'nerdigkeit',stats.int);
+    //dex
+    this.printStat(ctx,200,240,'dex',stats.dex);
+
 }
-
-//stats.prototype.update = function( delta ) {
-//
-//}
+stats.prototype.printStat = function (ctx,x,y,label,value) {
+    ctx.fillText( label, x, y, 200);
+    ctx.fillText( value, x+200, y, 200);
+}
