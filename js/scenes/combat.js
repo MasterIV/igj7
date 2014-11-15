@@ -62,10 +62,13 @@ combatScene.prototype.getEffect = function(type, args) {
 		return new Buff( this, this.hero, args.duration, args.value );
 };
 
-combatScene.prototype.getCoice = function(s) {
+combatScene.prototype.getChoice = function(s) {
 	var self = this;
 	return { text: s.name, callback: function() {
 		self.blocking.shift();
+
+		if(s.costs)
+			self.hero.mp -= s.costs;
 
 		if(s.target != 'single' ) {
 			var targets = [];
@@ -102,7 +105,7 @@ combatScene.prototype.spell = function() {
 
 	for(var i in skills) (function(s) {
 		if( this.hero.mana < s.costs ) return;
-		choices.push(self.getCoice(s));
+		choices.push(self.getChoice(s));
 	})(skills[i]);
 
 	choices.push({text: "Abbrechen", callback: function() { self.blocking.shift(); }});
@@ -115,7 +118,7 @@ combatScene.prototype.item = function() {
 	var self = this;
 
 	for(var i in items) if(items[i].effects) (function(s) {
-		choices.push(self.getCoice(s));
+		choices.push(self.getChoice(s));
 	})(items[i]);
 
 	choices.push({text: "Abbrechen", callback: function() { self.blocking.shift(); }});
@@ -133,11 +136,11 @@ combatScene.prototype.setEnemies = function( definitions ) {
 	this.blocking = [];
 
 	var d = definitions.shift();
-	this.entities.push( new Enemy( 900, 320, d));
+	this.entities.push( new Enemy( 900, 320, npcDefinitions[d] ));
 	if(d = definitions.shift())
-		this.entities.push( new Enemy(1100, 480, d));
+		this.entities.push( new Enemy(1100, 480, npcDefinitions[d]));
 	if(d = definitions.shift())
-		this.entities.push( new Enemy( 800, 560, d));
+		this.entities.push( new Enemy( 800, 560, npcDefinitions[d]));
 
 	this.targetSelection.init( this.entities );
 	this.hero.reset();

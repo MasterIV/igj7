@@ -3,8 +3,10 @@ function dealDamage( scene, target, damage ) {
 	if( damage < 0 ) damage = 0;
 
 	scene.blocking.push( new AnimationDamage( target, damage ));
-	if( damage >= target.life )
-		scene.blocking.push(new AnimationDie( scene, target, 600 ));
+	if( damage >= target.life ) {
+		scene.blocking.push(new AnimationDie(scene, target, 600));
+		scene.blocking.push( new Animation(target.x, target.y, 'img/animation/destroy.png', 18, 50));
+	}
 }
 
 function Attack( scene, actor, factor ) {
@@ -22,7 +24,7 @@ Attack.prototype.run = function( target ) {
 	if(crit) this.factor *= 1.5;
 
 	var damage = Math.round(this.factor * ( actorStats.str + ( actorStats.str * 0.6 ) * (Math.random() - .5)));
-	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/strike1.png', 5, 100));
+	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/strike.png', 6, 100));
 	dealDamage(this.scene, target, damage);
 
 	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, movex, target.y, 500 ));
