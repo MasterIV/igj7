@@ -11,6 +11,9 @@ function menuScene() {
 		}, {}),
 		new textButton('TOD', 10, 130, 200, 30, function () {
 			game.scene =  new looseScene();;
+		}, {}),
+		new textButton('switch', 10, 170, 200, 30, function () {
+			game.scene =  new switchScene(scenes.map, 2000, 'MAP');
 		}, {})
 	];
 }
