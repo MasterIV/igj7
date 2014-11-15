@@ -36,8 +36,8 @@ function Heal( scene, actor, base, rnd, attr ) {
 	this.heal = Math.round( base*(1+stats[attr]/100) + base*rnd*(Math.random() -.5));
 }
 
-Heal.prototype.run = function() {
-	this.scene.blocking.push( new AnimationDamage( this.actor, this.heal * -1 ));
+Heal.prototype.run = function( target ) {
+	this.scene.blocking.push( new AnimationDamage( target, this.heal * -1 ));
 };
 
 function Stun() {
