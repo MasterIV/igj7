@@ -50,7 +50,7 @@ function mapScene() {
 				self.entities.push(pw);
 				
 		}, null),
-		new button("mock/button_character.png", "mock/button_character.png", 140, 678, function(){
+		new button("img/ui/character_button.png", "img/ui/character_button_hover.png", 140, 618, function(){
 			game.scene = scenes.character;
 		}, null),
 		new button("mock/button_menu.png", "mock/button_menu.png", 1150, 678, function(){
@@ -88,4 +88,26 @@ mapScene.prototype.setClickable = function(b) {
 			this.encounterMap[encIds[i]].isClickable = b;
 		}
 	}
+}
+
+mapScene.prototype.setDialogue = function(dialogueData) {
+	var self = this;
+	var answers = [];
+	console.log(dialogueData);
+	if(dialogueData["replies"] != null && dialogueData.replies.length > 0) {
+		for(var i = 0, j = dialogueData.replies.length; i < j; i++) {
+			var reply = dialogueData.replies[i];
+			answers.push({ data: reply, text: reply.reply, callback: function(){
+				self.entities.pop();
+				self.setDialogue(this.data);
+			} });
+		}
+	}
+	if(answers.length == 0) {
+		answers = [{ text: "Weiter", callback: function(){
+			self.entities.pop();
+		}}]
+	}
+	var visibleDialogue = new dialogue(dialogueData.text, answers);
+	this.entities.push(visibleDialogue);
 }

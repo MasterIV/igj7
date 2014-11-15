@@ -49,7 +49,8 @@ encounter.prototype.update = function(delta) {
 encounter.prototype.click = function(pos) {
 	if(this.isClickable) {
 		if(this.area.inside(pos)) {
-			game.scene = scenes.combat; 
+			game.scene.setDialogue(dialogDefinitions["1"]);
+			//game.scene = scenes.combat; 
 		}
 	}
 }
