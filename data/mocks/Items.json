@@ -1,6 +1,7 @@
 {
   "1": {
     "itemname": "Dampfhammeruhr 3000",
+    "type": "shield",
     "dmg": 1,
     "def": 1,
     "int": 1,
@@ -10,6 +11,7 @@
   },
   "2": {
     "itemname": "Klobürste",
+    "type": "sword",
     "dmg": 24,
     "def": 2,
     "int": 1,

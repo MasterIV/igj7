@@ -11,6 +11,7 @@ char_ori_int = char.int/maxattribute
 char_ori_dex = char.dex/maxattribute
 char_ori_str = char.str/maxattribute
 char_ori_max = Math.max(char_ori_int, Math.max(char_ori_dex, char_ori_str))
+//JA! Man ist bei Gleichstand eher ein Nerd, als ein Pumper oder ein Schlangenmensch!
 if(char_ori_max == char_ori_int) {
 	char_ori = "int"
 } else if(char_ori_max == char_ori_str) {
