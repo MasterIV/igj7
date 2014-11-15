@@ -29,28 +29,10 @@ var encounters = {
 
 function mapScene() {
 	var self = this;
-	this.bg = new sprite("img/maps/campaign_map.jpg");
+	this.bg = new sprite("img/maps/campaign_map_w_dots.jpg");
 	
 	this.entities = [
-		new button("mock/button_paywall.png", "mock/button_paywall.png", 10, 678, function(){ 
-			var pw = new dialogue("Yo. This is paywall. Pay or die, bitch.", [
-				{ 
-					text:"Pay", 
-					callback:function(){
-						self.entities.pop();
-					}
-				},
-				{ 
-					text:"Die", 
-					callback:function(){
-						self.entities.pop();
-					}
-				}
-				]);
-				self.entities.push(pw);
-				
-		}, null),
-		new button("img/ui/character_button.png", "img/ui/character_button_hover.png", 140, 618, function(){
+		new button("img/ui/character_button.png", "img/ui/character_button_hover.png", 10, 618, function(){
 			game.scene = scenes.character;
 		}, null),
 		new button("mock/button_menu.png", "mock/button_menu.png", 1150, 678, function(){
@@ -72,6 +54,8 @@ function mapScene() {
 	}	
 	
 	this.encounterMap["1"].isClickable = true;
+	
+	//this.dragpos = V2(0,0);
 }
 
 mapScene.prototype = new scene();
@@ -110,4 +94,21 @@ mapScene.prototype.setDialogue = function(dialogueData) {
 	}
 	var visibleDialogue = new dialogue(dialogueData.text, answers);
 	this.entities.push(visibleDialogue);
+}
+mapScene.prototype.onmousedown = function(pos) {
+	//this.dragpos = this.dragpos.sub(pos);
+}
+mapScene.prototype.onmouseup = function(pos) {
+	//this.dragpos = pos.sub(this.dragpos);
+}
+mapScene.prototype.draw = function (ctx) {
+	if (this.bg)
+		this.bg.draw(ctx, -300, 0);
+
+	for (var i = 0; i < this.entities.length; i++)
+		if (this.entities[i].draw)
+			this.entities[i].draw(ctx);
+
+	if (this.blocking.length && this.blocking[0].draw)
+		this.blocking[0].draw(ctx);
 }
