@@ -30,6 +30,22 @@ var skillDefinitions = {
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
 		}
+	},
+	"hot": {
+		"name": "Hot",
+		"costs": "1",
+		"target": "self",
+		"effects": {
+			"Buff": {"duration": 3, "value": -15 }
+		}
+	},
+	"dot": {
+		"name": "Dot",
+		"costs": "1",
+		"target": "single",
+		"effects": {
+			"Buff": {"duration": 3, "value": "5" }
+		}
 	}
 
 };
