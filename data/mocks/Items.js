@@ -2,7 +2,6 @@ var itemDefinitions = {
 	"1": {
 		"itemname": "Dampfhammeruhr 3000",
 		"sprite": "mock/button.png",
-		"type": "shield",
 		"slot": "helmet",
 		"str": 1,
 		"def": 1,
@@ -14,7 +13,6 @@ var itemDefinitions = {
 	"2": {
 		"itemname": "Klobürste",
 		"sprite": "mock/button.png",
-		"type": "weapon",
 		"slot": "helmet",
 		"str": 24,
 		"def": 2,
@@ -24,9 +22,8 @@ var itemDefinitions = {
 		"blingbling": 1
 	},
 	"3": {
-		"itemname": "Schwert",
+		"itemname": "Helm",
 		"sprite": "mock/sword.png",
-		"type": "weapon",
 		"slot": "helmet",
 		"str": 24,
 		"def": 2,
@@ -36,14 +33,35 @@ var itemDefinitions = {
 		"blingbling": 1
 	},
 	"4": {
-		"itemname": "Schild",
-		"sprite": "mock/shield.png",
-		"type": "shield",
-		"slot": "ring",
+		"itemname": "Ruestung",
+		"sprite": "mock/sword.png",
+		"slot": "chest",
 		"str": 24,
 		"def": 2,
 		"int": 1,
 		"dex": 5,
+		"const": 1,
+		"blingbling": 1
+	},
+	"5": {
+		"itemname": "Schuhe",
+		"sprite": "mock/sword.png",
+		"slot": "boots",
+		"str": 10,
+		"def": 5,
+		"int": 3,
+		"dex": 4,
+		"const": 1,
+		"blingbling": 1
+	},
+	"6": {
+		"itemname": "Ring",
+		"sprite": "mock/shield.png",
+		"slot": "ring",
+		"str": 10,
+		"def": 5,
+		"int": 3,
+		"dex": 4,
 		"const": 1,
 		"blingbling": 1
 	}
