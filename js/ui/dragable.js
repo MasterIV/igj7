@@ -81,15 +81,6 @@ dragable.prototype.mouseup = function ( pos ) {
 }
 
 dragable.prototype.flip = function(otherDragable) {
-
-	var targetDroparea = otherDragable.droparea;
-
-	var oldDropArea = this.droparea;
-
-
-	targetDroparea.switchContent(oldDropArea);
-
-
 	console.log(oldDropArea);
 	console.log(targetDroparea);
 }

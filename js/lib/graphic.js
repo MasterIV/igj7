@@ -4,6 +4,8 @@ var g = {
 			'img/ui/target.png',
 			'img/animation/strike1.png',
 			'img/characters/hero.png',
+			'img/ui/door_right.png',
+			'img/ui/door_left.png',
 			'mock/map.png',
 			'mock/char.png',
 			'mock/fight.png',

@@ -40,12 +40,14 @@
 		<script type="text/javascript" src="js/entities/encounter.js"></script>
 		<script type="text/javascript" src="js/entities/animation.js"></script>
 		<script type="text/javascript" src="js/entities/skills.js"></script>
+		<script type="text/javascript" src="js/entities/movingsprite.js"></script>
 
 		<script type="text/javascript" src="js/scenes/map.js"></script>
 		<script type="text/javascript" src="js/scenes/menu.js"></script>
 		<script type="text/javascript" src="js/scenes/combat.js"></script>
 		<script type="text/javascript" src="js/scenes/character.js"></script>
 		<script type="text/javascript" src="js/scenes/loose.js"></script>
+		<script type="text/javascript" src="js/scenes/switch.js"></script>
 
 
 
@@ -61,6 +63,7 @@
 					scenes.combat = new combatScene();
 					scenes.character = new characterScene();
 					scenes.loose = null // new looseScene();
+					scenes.switch = null // new switchScene();
 
 					game.scene = scenes.menu;
 					game.init();
