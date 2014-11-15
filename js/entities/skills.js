@@ -1,4 +1,7 @@
 function dealDamage( scene, target, damage ) {
+	if( damage > 0 ) damage -= Math.floor( target.def*.4 );
+	if( damage < 0 ) damage = 0;
+
 	scene.blocking.push( new AnimationDamage( target, damage ));
 	if( damage >= target.life )
 		scene.blocking.push(new AnimationDie( scene, target, 600 ));
@@ -61,9 +64,26 @@ Stun.prototype.run = function( target ) {
 	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, movex, target.y, 500 ));
 };
 
-function Shield() {
-
+function Shield(scene, actor, duration, value) {
+	this.scene = scene;
+	this.actor = actor;
+	this.duration = duration;
+	this.value = value;
 }
+
+Shield.prototype.run = function( target ) {
+	this.target = target;
+	target.def *= this.value;
+	target.buffs.push( this );
+};
+
+Shield.prototype.apply = function() {
+	this.duration--;
+	if( this.duration < 1 ) {
+		arrayRemove(this.target.buffs, this);
+		this.target.def /= this.value
+	}
+};
 
 function Buff(scene, actor, duration, value) {
 	this.scene = scene;

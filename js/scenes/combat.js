@@ -98,7 +98,9 @@ combatScene.prototype.item = function() {
 };
 
 combatScene.prototype.defend = function() {
-	console.log('defend');
+	var shield = new Shield( this, this.hero, 2, 2 );
+	shield.run( this.hero );
+	this.enemyTurn();
 };
 
 combatScene.prototype.setEnemies = function( definitions ) {

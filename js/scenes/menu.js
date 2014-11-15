@@ -8,6 +8,9 @@ function menuScene() {
 		}, {}),
 		new textButton('Character', 10, 90, 200, 30, function () {
 			game.scene = scenes.character;
+		}, {}),
+		new textButton('TOD', 10, 130, 200, 30, function () {
+			game.scene =  new looseScene();;
 		}, {})
 	];
 }
