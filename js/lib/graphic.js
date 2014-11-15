@@ -7,8 +7,6 @@ var g = {
 			'img/ui/door_right.png',
 			'img/ui/door_left.png',
 			'mock/map.png',
-			'mock/char.png',
-			'mock/fight.png',
 			'mock/itemslot.png',
 			'mock/itemslot_helmet.png',
 			'mock/itemslot_chest.png',
@@ -26,10 +24,9 @@ var g = {
 			'mock/path.png',
 			'img/characters/roboter.png',
 			'img/maps/mountain.jpg',
-			'img/maps/campaign_map.jpg',
 			'img/ui/character_button.png',
 			'img/ui/character_button_hover.png',
-			'img/maps/campaign_map_w_dots.jpg'
+			'img/maps/campaign_map.jpg'
 	],
 
 	add: function( url ) {

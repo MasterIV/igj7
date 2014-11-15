@@ -27,7 +27,6 @@ var npcDefinitions = {
     "con": 3,
     "str": 4,
     "hp": 123,
-    "dmg": 9999,
-    "skills": []
+    "dmg": 9999
   }
 };
