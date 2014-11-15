@@ -60,11 +60,152 @@ vardialogDefinitions={
 						},
 						"rewards":[
 							{
-								"fight":3
+								"fight":"brueckenwaechter"
 							}
 							
 						],
 						"replies":[
+							
+						]
+						
+					}
+					
+				]
+				
+			},
+			{
+				"text":"Okay, Keeeeeevin! Nun beantwortet mir folgende Frage! Wie lautet eure Lieblingsfarbe?",
+				"reply":"Kevin, nett dich kennzulernen!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					{
+						"text":"FALSCH!",
+						"reply":"Ähm... Rot?",
+						"condition":{
+							
+						},
+						"rewards":[
+							
+						],
+						"replies":[
+							{
+								"text":"(Kampf beginnt)",
+								"reply":"(Kampf beginnen)",
+								"condition":{
+									
+								},
+								"rewards":[
+									{
+										"fight":"brueckenwaechter"
+									}
+									
+								],
+								"replies":[
+									
+								]
+								
+							}
+							
+						]
+						
+					},
+					{
+						"text":"FALSCH!",
+						"reply":"Defintiv Gelb!?",
+						"condition":{
+							
+						},
+						"rewards":[
+							
+						],
+						"replies":[
+							{
+								"text":"(Kampf beginnt)",
+								"reply":"(Kampf beginnen)",
+								"condition":{
+									
+								},
+								"rewards":[
+									{
+										"fight":"brueckenwaechter"
+									}
+									
+								],
+								"replies":[
+									
+								]
+								
+							}
+							
+						]
+						
+					},
+					{
+						"text":"Wächter: 'Richtig! Nächste Frage. Was begehrt ihr?'",
+						"reply":"Pink?",
+						"condition":{
+							
+						},
+						"rewards":[
+							
+						],
+						"replies":[
+							{
+								"text":"So soll es sein!",
+								"reply":"Schätze",
+								"condition":{
+									
+								},
+								"rewards":[
+									{
+										"item":"brueckenwaechter"
+									}
+									
+								],
+								"replies":[
+									
+								]
+								
+							},
+							{
+								"text":"So soll es sein!",
+								"reply":"Schätze",
+								"condition":{
+									
+								},
+								"rewards":[
+									{
+										"item":"brueckenwaechter"
+									}
+									
+								],
+								"replies":[
+									
+								]
+								
+							},
+							{
+								"text":"So soll es sein!",
+								"reply":"Schätze",
+								"condition":{
+									
+								},
+								"rewards":[
+									{
+										"item":"brueckenwaechter"
+									}
+									
+								],
+								"replies":[
+									
+								]
+								
+							}
 							
 						]
 						
