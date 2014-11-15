@@ -22,6 +22,13 @@ function Hero() {
 		];
 	}
 
+	this.harm = function(hp) {
+		this.life -= hp;
+
+		if (this.life < 0)
+			this.life = 0;
+	}
+
 	this.attrs = {
 		hp: 150,
 		mana: 12,
@@ -30,6 +37,7 @@ function Hero() {
 		dex: 10,
 		int: 10
 	}
+	this.life = this.attrs.hp
 
 	this.getStats = function() {
 		var currentStats = clone(this.attrs);
@@ -62,5 +70,10 @@ function HeroContainer(x, y) {
 
 	this.getStats = function() {
 		return hero.getStats();
+	}
+
+	this.harm = function(hp) {
+		hero.harm(hp);
+		return hero.life
 	}
 }
