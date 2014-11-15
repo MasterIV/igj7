@@ -15,6 +15,8 @@ stats.prototype.draw = function( ctx ) {
 
     ctx.fillText( 'stats', this.x, this.y, 200);
 
+	//var stats = hero.getStats();
+
     for(var i =0; i<this.attrs.length; i++) {
         ctx.fillText( this.attrs[i].label, this.x, this.y + 20*i, 200);
         ctx.fillText( this.attrs[i].value, this.x+200, this.y + 20*i, 200);
