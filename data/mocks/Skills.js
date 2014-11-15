@@ -46,6 +46,14 @@ var skillDefinitions = {
 		"effects": {
 			"Buff": {"duration": 3, "value": "5" }
 		}
+	},
+	"shield": {
+		"name": "Shield",
+		"costs": "1",
+		"target": "self",
+		"effects": {
+			"Buff": {"duration": 3, "value": "5" }
+		}
 	}
 
 };
