@@ -1,4 +1,4 @@
-varnpcDefinitions={
+var npcDefinitions={
 	"roboter":{
 		"name":"Roboter",
 		"image":'img/characters/roboter.png',
