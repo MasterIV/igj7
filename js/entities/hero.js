@@ -23,6 +23,18 @@ function Hero() {
 			mana: 12
 		}
 	}
+
+	this.center = function( ctx, x, y ) {
+		var w = 200; var h = 400;
+		ctx.fillStyle = 'purple';
+		ctx.fillRect(x-w/2, y-h/2, w, h);
+	}
 }
 
 var hero = new Hero();
+
+function HeroContainer(x, y) {
+	this.draw = function(ctx) {
+		hero.center(ctx, x, y);
+	}
+}

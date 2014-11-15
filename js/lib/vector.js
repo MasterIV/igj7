@@ -28,8 +28,8 @@ function Rect( p1, p2 ) {
 	this.p2 = p2;
 }
 
-Rect.create = function(x1,y1,x2,y2) {
-	return new Rect( new V2( x1, y1 ), new V2( x2, y2 ));
+Rect.create = function(x,y,w,h) {
+	return new Rect( new V2( x, y ), new V2( x+w, y+h ));
 }
 
 Rect.prototype.collision = function( r ) {
