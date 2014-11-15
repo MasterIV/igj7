@@ -17,7 +17,7 @@ button.prototype.draw = function( ctx ) {
 /* Sprite button */
 
 function spriteButton( img, position, hover, x, y, callback, sound ) {
-	this.img = new sprite( img );
+	this.img = g[img];
 	this.position = position;
 	this.hover = hover;
 	this.sound = sound;
@@ -29,11 +29,11 @@ function spriteButton( img, position, hover, x, y, callback, sound ) {
 
 spriteButton.prototype.draw = function( ctx ) {
 	if( this.hover &&  this.area.inside( mouse )) {
-		this.img.draw( ctx,
+		ctx.drawImage( this.img,
 				this.hover.p1.x, this.hover.p1.y, this.hover.width(), this.hover.height(),
 				this.x, this.y, this.hover.width(), this.hover.height());
 	} else {
-		this.img.draw( ctx,
+		ctx.drawImage( this.img,
 				this.position.p1.x, this.position.p1.y, this.position.width(), this.position.height(),
 				this.x, this.y, this.position.width(), this.position.height());
 	}

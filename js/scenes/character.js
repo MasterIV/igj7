@@ -32,7 +32,7 @@ characterScene.prototype.initDropareas = function () {
 
 characterScene.prototype.initItems = function () {
 	var items = hero.getInventory();
-	
+
 	for(var i =0;i<items.length;i++) {
 		this.entities.push(new dragable(items[i], 'item'));
 	}

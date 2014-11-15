@@ -3,7 +3,8 @@ var g = {
 			'mock/map.png',
 			'mock/char.png',
 			'mock/fight.png',
-            'mock/button.png'
+			'mock/button.png',
+			'img/ui/buttons.png'
 	],
 
 	add: function( url ) {
