@@ -3,19 +3,11 @@ function Enemy( x, y, definition ) {
 	this.y = y;
 	this.stunned = 0;
 	this.buffs = [];
-
-	this.attrs = {
-		hp: 10,
-		mana: 12,
-		str: 10,
-		def: 13,
-		dex: 10,
-		int: 10
-	}
-
+	this.attrs = definition;
 	this.life = this.attrs.hp;
 	this.def = this.attrs.def;
-	this.img = new sprite('img/characters/roboter.png');
+	this.img = new sprite(definition.image);
+	this.skills = definition.skills;
 }
 
 Enemy.prototype.draw = function( ctx ) {

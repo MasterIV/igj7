@@ -77,7 +77,9 @@ characterScene.prototype.showDiffrence = function (item) {
 		str: 0,
 		def: 0,
 		dex: 0,
-		int: 0
+		int: 0,
+		"const": 0,
+		blingbling: 0,
 	};
 
 	var eqItem = hero.equipment[item.itemdefinition.slot];
