@@ -1,4 +1,5 @@
 function Hero() {
+	var img = new sprite('img/characters/hero.png');
 	this.equip = function( item ) {
 
 	}
@@ -25,13 +26,9 @@ function Hero() {
 	}
 
 	this.center = function( ctx, x, y ) {
-		var w = 200; var h = 400;
-		ctx.fillStyle = 'purple';
-		ctx.fillRect(x-w/2, y-h/2, w, h);
+		img.center(ctx, x, y);
 	}
 }
-
-var hero = new Hero();
 
 function HeroContainer(x, y) {
 	this.draw = function(ctx) {

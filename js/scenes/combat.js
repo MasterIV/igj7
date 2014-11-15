@@ -17,8 +17,7 @@ function combatScene() {
 combatScene.prototype = new scene();
 
 combatScene.prototype.attack = function() {
-	//this.targetSelection.skill = Attack;
-	this.blocking.unshift(this.targetSelection);
+	this.targetSelection.start(new Attack( this ));
 }
 
 combatScene.prototype.spell = function() {
