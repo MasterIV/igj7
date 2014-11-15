@@ -125,10 +125,22 @@ AnimationDie.prototype.update = function( delta ) {
 	//}
 };
 
-//AnimationDie.prototype.draw = function( ctx ){
-//	ctx.globalCompositeOperation = 'lighter';
-//	ctx.globalAlpha = (this.anitime / (this.duration / 3)) % 1;
-//	this.target.draw( ctx );
-//	ctx.globalAlpha = 1;
-//	ctx.globalCompositeOperation = 'source-over';
-//};
+
+
+function FadeIn( target, duration ) {
+	this.target = target;
+	this.duration = duration;
+	this.anitime = 0;
+}
+
+FadeIn.prototype.update = function( delta ) {
+	return ( this.anitime += delta ) > this.duration;
+};
+
+FadeIn.prototype.draw = function( ctx ){
+	ctx.globalCompositeOperation = 'lighter';
+	ctx.globalAlpha = 1-(this.anitime / this.duration);
+	this.target.draw( ctx );
+	ctx.globalAlpha = 1;
+	ctx.globalCompositeOperation = 'source-over';
+};

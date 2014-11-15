@@ -5,8 +5,8 @@ function Hero() {
 
 	this.equipment = {
 		helmet:null,
+		neck: null,
 		chest:null,
-		gloves: null,
 		boots:null,
 		ring:null
 	};
