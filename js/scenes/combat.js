@@ -33,6 +33,8 @@ combatScene.prototype.enemyTurn = function() {
 combatScene.prototype.getEffect = function(type, args) {
 	if( type == 'Heal')
 		return new Heal( this, this.hero, args.base, args.rnd, args.attr );
+	if( type == 'Attack')
+		return new Attack( this, this.hero, args.factor );
 
 };
 
@@ -49,7 +51,7 @@ combatScene.prototype.spell = function() {
 			if(s.target != 'single' ) {
 				for( var j in s.effects ) {
 					var e = self.getEffect(j, s.effects[j]);
-					e.run();
+					e.run( self.hero );
 				}
 
 				self.blocking.push({ update: function() {
@@ -57,6 +59,7 @@ combatScene.prototype.spell = function() {
 					return true;
 				}});
 			} else {
+				for( var j in s.effects );
 				self.targetSelection.start(self.getEffect(j, s.effects[j]), function() { self.enemyTurn(); });
 			}
 		}});
