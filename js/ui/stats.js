@@ -13,7 +13,7 @@ function stats(x, y) {
 }
 stats.prototype.draw = function( ctx ) {
 
-	this.box(ctx, this.x,this.y,400,400)
+	this.box(ctx, this.x,this.y,400,300)
 
 
 
@@ -67,6 +67,7 @@ stats.prototype.printDiffStat = function (ctx,x,y,value) {
 		ctx.fillStyle = 'green';
 	} else if (value < 0) {
 		ctx.fillStyle = 'red';
+		value = value *-1;
 
 	} else if (value = 0) {
 		ctx.fillStyle = 'whited';
