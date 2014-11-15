@@ -48,7 +48,6 @@ dragable.prototype.mouseup = function ( pos ) {
 					if (game.scene.entities[i].types.indexOf(this.type) != -1)
 						if (game.scene.entities[i].area.inside(pos)) {
 
-
 							if (this.droparea) {
 								this.droparea.remove();
 							}

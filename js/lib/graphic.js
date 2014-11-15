@@ -21,7 +21,8 @@ var g = {
 			'mock/encounter.png',
 			'mock/path.png',
 			'img/characters/roboter.png',
-			'img/maps/mountain.jpg'
+			'img/maps/mountain.jpg',
+			'img/maps/campaign_map.jpg'
 	],
 
 	add: function( url ) {
