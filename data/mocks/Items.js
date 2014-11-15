@@ -1,5 +1,5 @@
 var itemDefinitions = {
-	"1": {
+	"damfhammer": {
 		"itemname": "Dampfhammeruhr 3000",
 		"sprite": "mock/sword.png",
 		"slot": "helmet",
@@ -7,8 +7,15 @@ var itemDefinitions = {
 		"def": 1,
 		"int": 1,
 		"dex": 1,
-		"const": 1,
 		"blingbling": 1
+	},
+	"potion": {
+		"itemname": "Heiltrank",
+		"sprite": "mock/sword.png",
+		"target": "self",
+		"effects": {
+			"Heal": {"base": 20, "attr": "int", "rnd": .6}
+		}
 	},
 	"2": {
 		"itemname": "Klobürste",
