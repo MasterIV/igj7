@@ -36,7 +36,7 @@ function mapScene() {
 		new button("img/ui/character_button.png", "img/ui/character_button_hover.png", 10, 618, function(){
 			game.scene = scenes.character;
 		}, null),
-		new button("mock/button_menu.png", "mock/button_menu.png", 1150, 678, function(){
+		new SpriteButton('img/ui/back_button.png', Rect.create(0, 0, 161, 133), Rect.create(161, 0, 161, 133), 191, 632, function(){
 			game.scene = scenes.menu;
 		}, null)
 	];

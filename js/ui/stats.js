@@ -36,7 +36,6 @@ stats.prototype.drawDiffrence = function (ctx, attrs) {
 	this.printDiffStat(ctx, this.x, this.y + (i++)*offset, attrs.def);
 	this.printDiffStat(ctx, this.x, this.y + (i++)*offset, attrs.dex);
 	this.printDiffStat(ctx, this.x, this.y + (i++)*offset, attrs.int);
-	this.printDiffStat(ctx, this.x, this.y + (i++)*offset, attrs.const);
 	this.printDiffStat(ctx, this.x, this.y + (i++)*offset, attrs.blingbling);
 };
 
@@ -58,5 +57,5 @@ stats.prototype.printDiffStat = function (ctx, x, y, value) {
 		ctx.fillStyle = 'white';
 	}
 
-	ctx.fillText(value, x + 300, y, 200);
+	ctx.fillText(value, x + 270, y, 200);
 };
