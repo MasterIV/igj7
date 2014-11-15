@@ -1,9 +1,10 @@
 function item(itemdefinition) {
-	this.sprite = new sprite(itemdefinition.sprite);
+	this.itemdefinition = itemdefinition
 }
 
 function itemContainer(x, y, width, height, item) {
 	this.item = item
+	this.sprite = new sprite(item.itemdefinition.sprite);
 
 
 	this.x = x;
@@ -16,7 +17,7 @@ function itemContainer(x, y, width, height, item) {
 itemContainer.prototype = new Entity();
 
 itemContainer.prototype.draw = function (ctx) {
-	this.item.sprite.draw(ctx,
+	this.sprite.draw(ctx,
 		this.x, this.y, this.width, this.height,
 		this.x, this.y, this.width, this.height);
 }
