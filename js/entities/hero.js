@@ -5,6 +5,10 @@ function Hero() {
 
 	this.getInventory = function() {
 		return [
+			new item(itemDefinitions[1]),
+			new item(itemDefinitions[2]),
+			new item(itemDefinitions[1]),
+			new item(itemDefinitions[2]),
 		];
 	}
 

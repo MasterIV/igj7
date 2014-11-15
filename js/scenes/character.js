@@ -34,6 +34,6 @@ characterScene.prototype.initItems = function () {
 	var items = hero.getInventory();
 
 	for(var i =0;i<items.length;i++) {
-		this.entities.push(new dragable(items[i], 'item'));
+		this.entities.push(new dragable(new itemContainer(100 + 120*i,100,100,100,items[i]), 'item'));
 	}
 }
