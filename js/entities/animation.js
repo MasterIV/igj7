@@ -89,7 +89,7 @@ function AnimationText( target, text ){
 
 AnimationText.prototype.update = function( delta ) {
 	return ( this.anitime += delta ) > this.duration;
-}
+};
 
 AnimationText.prototype.draw = function( ctx ){
 	ctx.font = '18pt Verdana, sans-serif';
@@ -102,5 +102,30 @@ AnimationText.prototype.draw = function( ctx ){
 	ctx.fillText(this.text, x, y);
 	ctx.fillStyle = "rgba(230,230,230,1)";
 	ctx.fillText(this.text, x-1, y-1 );
+};
+
+
+function AnimationDie( scene, target, duration ) {
+	this.scene = scene;
+	this.target = target;
+	this.duration = duration;
+	this.anitime = 0;
 }
 
+
+AnimationDie.prototype.update = function( delta ) {
+	if(( this.anitime += delta ) > this.duration) {
+		arrayRemove( this.scene.entities, this.target );
+		if( this.target.button )
+			arrayRemove( this.scene.targetSelection.entities, this.target.button );
+		return true;
+	}
+};
+
+AnimationDie.prototype.draw = function( ctx ){
+	ctx.globalCompositeOperation = 'lighter';
+	ctx.globalAlpha = (this.anitime / (this.duration / 3)) % 1;
+	this.target.draw( ctx );
+	ctx.globalAlpha = 1;
+	ctx.globalCompositeOperation = 'source-over';
+}
