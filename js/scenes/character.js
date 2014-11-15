@@ -25,15 +25,15 @@ characterScene.prototype.initDropareas = function () {
 	}
 
 	this.entities.push(new equipslot(x,y + 130,120,120,'weapon',function (item) {
-			hero.equip(item);
+			hero.equip(item.item);
 		}, function (item) {
-			hero.unequip(item);
+			hero.unequip(item.item);
 		})
 	);
 	this.entities.push(new equipslot(x+130,y + 130,120,120,'shield',function (item) {
-			hero.equip(item);
+			hero.equip(item.item);
 		}, function (item) {
-			hero.unequip(item);
+			hero.unequip(item.item);
 		})
 	);
 }
