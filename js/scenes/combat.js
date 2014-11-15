@@ -26,6 +26,9 @@ combatScene.prototype.attack = function() {
 combatScene.prototype.enemyTurn = function() {
 	var enemyCount = 0, e;
 
+	for(var j = 0; j< this.hero.buffs.length; j++ )
+		this.hero.buffs[j].apply();
+
 	for (var i = 0; i < this.entities.length; i++)
 		if (this.entities[i] instanceof Enemy) {
 			enemyCount++
@@ -38,13 +41,14 @@ combatScene.prototype.enemyTurn = function() {
 				a.run( this.hero );
 			}
 
-			if(e.buffs) {
-
-			}
+			for(var j = 0; j< e.buffs.length; j++ )
+				e.buffs[j].apply();
 		}
 
 	if( enemyCount == 0 )
-		game.scene = scenes.map;
+		this.blocking.push(new dialogue('Victory!',[{'text': 'Weiter', callback: function() {
+			game.scene = scenes.map;
+		}}]));
 };
 
 combatScene.prototype.getEffect = function(type, args) {
@@ -54,7 +58,8 @@ combatScene.prototype.getEffect = function(type, args) {
 		return new Attack( this, this.hero, args.factor );
 	if( type == 'Stun')
 		return new Stun( this, this.hero, args.duration, args.attr );
-
+	if( type == 'Buff')
+		return new Buff( this, this.hero, args.duration, args.value );
 };
 
 combatScene.prototype.spell = function() {
@@ -93,11 +98,14 @@ combatScene.prototype.item = function() {
 };
 
 combatScene.prototype.defend = function() {
-	console.log('defend');
+	var shield = new Shield( this, this.hero, 2, 2 );
+	shield.run( this.hero );
+	this.enemyTurn();
 };
 
 combatScene.prototype.setEnemies = function( definitions ) {
 	this.entities = [];
+	this.blocking = [];
 
 	var d = definitions.shift();
 	this.entities.push( new Enemy( 900, 320, d));

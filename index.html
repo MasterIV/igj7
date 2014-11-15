@@ -8,12 +8,10 @@
 		<script type="text/javascript" src="data/config.js"></script>
 		<script type="text/javascript" src="js/util/util.js"></script>
 
-
-        <script type="text/javascript" src="data/mocks/Dialogues.js"></script>
-        <script type="text/javascript" src="data/mocks/Effects.js"></script>
-        <script type="text/javascript" src="data/mocks/Items.js"></script>
-        <script type="text/javascript" src="data/mocks/Npcs.js"></script>
-        <script type="text/javascript" src="data/mocks/Skills.js"></script>
+		<script type="text/javascript" src="data/mocks/Dialogues.js"></script>
+		<script type="text/javascript" src="data/mocks/Items.js"></script>
+		<script type="text/javascript" src="data/mocks/Npcs.js"></script>
+		<script type="text/javascript" src="data/mocks/Skills.js"></script>
 
 		<script type="text/javascript" src="js/lib/vector.js"></script>
 		<script type="text/javascript" src="js/lib/game.js"></script>
@@ -47,6 +45,7 @@
 		<script type="text/javascript" src="js/scenes/menu.js"></script>
 		<script type="text/javascript" src="js/scenes/combat.js"></script>
 		<script type="text/javascript" src="js/scenes/character.js"></script>
+		<script type="text/javascript" src="js/scenes/loose.js"></script>
 
 
 
@@ -61,6 +60,7 @@
 					scenes.map = new mapScene();
 					scenes.combat = new combatScene();
 					scenes.character = new characterScene();
+					scenes.loose = null // new looseScene();
 
 					game.scene = scenes.menu;
 					game.init();

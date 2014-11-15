@@ -29,7 +29,7 @@ var encounters = {
 
 function mapScene() {
 	var self = this;
-	this.bg = new sprite("img/maps/campaign_map_w_dots.jpg");
+	this.bg = new sprite("img/maps/campaign_map.jpg");
 	
 	this.entities = [
 		new button("img/ui/character_button.png", "img/ui/character_button_hover.png", 10, 618, function(){
@@ -55,7 +55,10 @@ function mapScene() {
 	
 	this.encounterMap["1"].isClickable = true;
 	
-	//this.dragpos = V2(0,0);
+	this.dragStart = new V2(0,0);
+	this.dragOffset = new V2(0,0);
+	
+	this.scrolls = false;
 }
 
 mapScene.prototype = new scene();
@@ -95,20 +98,34 @@ mapScene.prototype.setDialogue = function(dialogueData) {
 	var visibleDialogue = new dialogue(dialogueData.text, answers);
 	this.entities.push(visibleDialogue);
 }
-mapScene.prototype.onmousedown = function(pos) {
-	//this.dragpos = this.dragpos.sub(pos);
+mapScene.prototype.mousedown = function(pos) {
+	this.dragStart = new V2(pos.x, pos.y);
+	this.scrolls = true;
 }
-mapScene.prototype.onmouseup = function(pos) {
-	//this.dragpos = pos.sub(this.dragpos);
+mapScene.prototype.mouseup = function(pos) {
+	this.dragOffset = this.calcOffset();
+	this.scrolls = false;
+}
+mapScene.prototype.calcOffset = function() {
+	var offset;
+	if(this.scrolls) {
+		offset = this.dragOffset.dif(this.dragStart.dif(mouse));
+	} else {
+		offset = this.dragOffset;
+	}
+	return new V2(Math.max(Math.min(0, offset.x), -this.bg.width+game.buffer.width), Math.max(Math.min(0, offset.y), -this.bg.height+game.buffer.height));
 }
 mapScene.prototype.draw = function (ctx) {
+	var offset = this.calcOffset();
+	
+	
 	if (this.bg)
-		this.bg.draw(ctx, -300, 0);
+		this.bg.draw(ctx, offset.x, offset.y);
 
 	for (var i = 0; i < this.entities.length; i++)
 		if (this.entities[i].draw)
-			this.entities[i].draw(ctx);
+			this.entities[i].draw(ctx, offset);
 
 	if (this.blocking.length && this.blocking[0].draw)
-		this.blocking[0].draw(ctx);
+		this.blocking[0].draw(ctx, offset);
 }
