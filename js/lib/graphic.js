@@ -28,6 +28,7 @@ var g = {
 			'img/maps/death.jpg',
 			'img/ui/character_button.png',
 			'img/ui/character_button_hover.png',
+			'img/ui/character_sheet_background.jpg',
 			'img/maps/campaign_map.jpg'
 	],
 
