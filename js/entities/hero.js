@@ -20,11 +20,21 @@ function Hero() {
 	};
 
 	this.inventory = [
-		new item(itemDefinitions[3]),
-		new item(itemDefinitions[4]),
-		new item(itemDefinitions[5]),
-		new item(itemDefinitions[6]),
 	];
+
+	console.log(itemDefinitions);
+	console.log(itemDefinitions.length);
+
+	var itemCounter =0;
+	for(var key in itemDefinitions) {
+		this.inventory.push(new item(itemDefinitions[key]));
+
+		itemCounter ++;
+		if (itemCounter == 9) {
+			break;
+		}
+	}
+
 	this.getInventory = function() {
 		return this.inventory;
 	};

@@ -22,7 +22,7 @@ characterScene.prototype.initDropareas = function () {
 
 	this.itemslots = [];
 
-	for(var i =0;i<6;i++ ) {
+	for(var i =0;i<9;i++ ) {
 		var is = new itemslot(x + 130*i,y,120,120,['item', 'helmet', 'chest','boots' , 'ring'],function (item) {
 			console.log('drop');
 		}, function (item) {
