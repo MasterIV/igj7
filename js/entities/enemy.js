@@ -10,14 +10,13 @@ function Enemy( x, y, definition ) {
 		dex: 10,
 		int: 10
 	}
-	this.life = this.attrs.hp;
 
+	this.life = this.attrs.hp;
+	this.img = new sprite('img/characters/roboter.png');
 }
 
 Enemy.prototype.draw = function( ctx ) {
-	var w = 200; var h = 340;
-	ctx.fillStyle = '#6666FF';
-	ctx.fillRect(this.x-w/2, this.y-h/2, w, h);
+	this.img.center( ctx, this.x, this.y);
 }
 
 Enemy.prototype.getStats = function( ) {

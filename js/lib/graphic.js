@@ -19,8 +19,9 @@ var g = {
 			'mock/button_character.png',
 			'mock/button_paywall.png',
 			'mock/encounter.png',
-			'mock/path.png'
-			],
+			'mock/path.png',
+			'img/characters/roboter.png'
+	],
 
 	add: function( url ) {
 		this.urls.push( url );
