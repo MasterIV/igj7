@@ -14,6 +14,8 @@ droparea.prototype.drop = function(entity) {
 		this.onDrop();
 }
 droparea.prototype.remove = function() {
+	this.content = null;
+	
 	if (this.onRemove)
 		this.onRemove();
 }

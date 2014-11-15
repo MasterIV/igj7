@@ -5,8 +5,8 @@ function item(x, y, width, height, itemdefinition) {
 	this.width = width;
 	this.height = height;
 
-	this.area.p1 = new V2(x, y);
-	this.area.p2 = new V2(x + width, y + height);
+	this.area = new Rect(new V2(x, y),new V2(x + width, y + height));
+
 }
 item.prototype = new Entity();
 item.prototype.draw = function (ctx) {
