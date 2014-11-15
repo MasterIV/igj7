@@ -1,76 +1,307 @@
-var itemDefinitions = {
-	"damfhammer": {
-		"itemname": "Dampfhammeruhr 3000",
-		"sprite": "mock/sword.png",
-		"slot": "helmet",
-		"str": 1,
-		"def": 1,
-		"int": 1,
-		"dex": 1,
-		"blingbling": 1
+var itemDefinitions={
+	"stdamulettstr":{
+		"itemname":"Stärke-Amulett",
+		"sprite":"img/items/amulett.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
 	},
-	"potion": {
-		"itemname": "Heiltrank",
-		"sprite": "mock/sword.png",
-		"target": "self",
-		"effects": {
-			"Heal": {"base": 20, "attr": "int", "rnd": .6}
+	"stdamulettdef":{
+		"itemname":"Panzer-Amulett",
+		"sprite":"img/items/amulett.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdamulettdex":{
+		"itemname":"Geschicklichkeit-Amulett",
+		"sprite":"img/items/amulett.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdamulettint":{
+		"itemname":"Intelligenz-Amulett",
+		"sprite":"img/items/amulett.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdbootsstr":{
+		"itemname":"Stärke-Schuhe",
+		"sprite":"img/items/boots.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdbootsdef":{
+		"itemname":"Panzer-Schuhe",
+		"sprite":"img/items/boots.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdbootsdex":{
+		"itemname":"Geschicklichkeit-Schuhe",
+		"sprite":"img/items/boots.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdbootsint":{
+		"itemname":"Intelligenz-Schuhe",
+		"sprite":"img/items/boots.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdringstr":{
+		"itemname":"Stärke-Ring",
+		"sprite":"img/items/ring.png",
+		"slot":"ring",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdringdef":{
+		"itemname":"Panzer-Ring",
+		"sprite":"img/items/ring.png",
+		"slot":"ring",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdringdex":{
+		"itemname":"Geschicklichkeit-Ring",
+		"sprite":"img/items/ring.png",
+		"slot":"ring",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdringint":{
+		"itemname":"Intelligenz-Ring",
+		"sprite":"img/items/ring.png",
+		"slot":"ring",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdcheststr":{
+		"itemname":"Stärke-Rüstung",
+		"sprite":"img/items/chest.png",
+		"slot":"chest",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdchestdef":{
+		"itemname":"Panzer-Rüstung",
+		"sprite":"img/items/chest.png",
+		"slot":"chest",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdchestdex":{
+		"itemname":"Geschicklichkeit-Rüstung",
+		"sprite":"img/items/chest.png",
+		"slot":"chest",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdchestint":{
+		"itemname":"Intelligenz-Rüstung",
+		"sprite":"img/items/chest.png",
+		"slot":"chest",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdhelmstr":{
+		"itemname":"Stärke-Helm",
+		"sprite":"img/items/helm.png",
+		"slot":"helm",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdhelmdef":{
+		"itemname":"Panzer-Helm",
+		"sprite":"img/items/helm.png",
+		"slot":"helm",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdhelmdex":{
+		"itemname":"Geschicklichkeit-Helm",
+		"sprite":"img/items/helm.png",
+		"slot":"helm",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"stdhelmint":{
+		"itemname":"Intelligenz-Helm",
+		"sprite":"img/items/helm.png",
+		"slot":"helm",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"klosteinstr":{
+		"itemname":"Klostein Amulett",
+		"sprite":"img/items/klostein.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"klosteindef":{
+		"itemname":"Klostein Amulett",
+		"sprite":"img/items/klostein.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"klosteindex":{
+		"itemname":"Klostein Amulett",
+		"sprite":"img/items/klostein.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"klosteinint":{
+		"itemname":"Klostein Amulett",
+		"sprite":"img/items/klostein.png",
+		"slot":"amulett",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"sandalensockenstr":{
+		"itemname":"Sandalen mit Socken",
+		"sprite":"img/items/sandalensocken.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"sandalensockendef":{
+		"itemname":"Sandalen mit Socken",
+		"sprite":"img/items/sandalensocken.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"sandalensockendex":{
+		"itemname":"Sandalen mit Socken",
+		"sprite":"img/items/sandalensocken.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"sandalensockenint":{
+		"itemname":"Sandalen mit Socken",
+		"sprite":"img/items/sandalensocken.png",
+		"slot":"boots",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"damfhammer":{
+		"itemname":"Dampfhammeruhr 3000",
+		"sprite":"mock/sword.png",
+		"slot":"helmet",
+		"str":1,
+		"def":1,
+		"int":1,
+		"dex":1,
+		"blingbling":1
+	},
+	"potion":{
+		"itemname":"Heiltrank",
+		"sprite":"mock/sword.png",
+		"target":"self",
+		"effects":{
+			"Heal":{
+				"base":20,
+				"attr":"int",
+				"rnd":.6
+			}
+			
 		}
-	},
-	"2": {
-		"itemname": "Klobürste",
-		"sprite": "mock/sword.png",
-		"slot": "helmet",
-		"str": 24,
-		"def": 2,
-		"int": 1,
-		"dex": 5,
-		"const": 1,
-		"blingbling": 1
-	},
-	"3": {
-		"itemname": "Helm",
-		"sprite": "mock/sword.png",
-		"slot": "helmet",
-		"str": 24,
-		"def": 2,
-		"int": 1,
-		"dex": 5,
-		"const": 1,
-		"blingbling": 1
-	},
-	"4": {
-		"itemname": "Ruestung",
-		"sprite": "mock/sword.png",
-		"slot": "chest",
-		"str": 24,
-		"def": 2,
-		"int": 1,
-		"dex": 5,
-		"const": 1,
-		"blingbling": 1
-	},
-	"5": {
-		"itemname": "Schuhe",
-		"sprite": "mock/sword.png",
-		"slot": "boots",
-		"str": 10,
-		"def": 5,
-		"int": 3,
-		"dex": 4,
-		"const": 1,
-		"blingbling": 1
-	},
-	"6": {
-		"itemname": "Ring",
-		"sprite": "mock/shield.png",
-		"slot": "ring",
-		"str": 10,
-		"def": 5,
-		"int": 3,
-		"dex": 4,
-		"const": 1,
-		"blingbling": 1
+		
 	}
-};
-
+}
+;
