@@ -1,33 +1,19 @@
 var npcDefinitions = {
-  "1": {
-    "name": "Henry Npcgeil",
-    "image": "npc1.png",
-    "int": 1,
-    "dex": 2,
-    "con": 3,
-    "str": 4,
-    "hp": 123,
-    "dmg": 9999,
+  "0": {
+    "name": "Angelika",
+    "image": "angelika.png",
+    "int": 67,
+    "dex": 42,
+    "con": 50,
+    "str": 60,
+    "hp": 400,
     "skills": [
     	{
-	     "skill": "1",
-	     "probability": "50"
+	     "skill": "double_damage"
 	},
 	{
-	     "skill": "2",
-	     "probability": "50"
-	},
+	     "skill": "shield"
+	}
     ]
-  },
-  "2": {
-    "name": "Morgroc hok Dorc",
-    "image": "npc1.png",
-    "int": 1,
-    "dex": 2,
-    "con": 3,
-    "str": 4,
-    "hp": 123,
-    "dmg": 9999,
-    "skills": []
   }
 };
