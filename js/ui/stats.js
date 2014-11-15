@@ -78,7 +78,7 @@ stats.prototype.printDiffStat = function (ctx,x,y,value) {
 		value = value *-1;
 
 	} else if (value = 0) {
-		ctx.fillStyle = 'whited';
+		ctx.fillStyle = 'white';
 	}
     ctx.fillText( value, x+300, y, 200);
 }
