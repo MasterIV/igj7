@@ -8,7 +8,7 @@ function encounter(imageSprite, imageX, imageY, imageWidth, imageHeight, paths, 
 	
 	this.prevEncounter = null;
     this.area = this.image.area;
-	
+	this.isVisited = false;	
 	this.scale = 1;
 }
 
@@ -17,13 +17,13 @@ encounter.prototype = new Entity();
 encounter.prototype.draw = function(ctx, offset) {
 	var x = this.image.area.p1.x + this.image.area.width()/2 + offset.x;
 	var y = this.image.area.p1.y + this.image.area.height()/2 + offset.y;
-	for(var i = 0, j = this.paths.length; i < j; i++) {
+	/*for(var i = 0, j = this.paths.length; i < j; i++) {
 		var otherEncounter = encounters[this.paths[i]];
 		ctx.beginPath();
 		ctx.moveTo(x, y);
 		ctx.lineTo(otherEncounter.x + offset.x, otherEncounter.y + offset.y);
 		ctx.stroke();
-	}
+	}*/
 	
     this.image.sprite.center(ctx, x, y, this.scale, this.scale);
 }

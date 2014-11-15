@@ -34,18 +34,7 @@ droparea.prototype.setContent = function (dragEntity) {
 
 	dragEntity.entity.setPosition(this.area.p1.x + this.padding.x,
 			this.area.p1.y + this.padding.y);
-}
-droparea.prototype.switchContent = function (otherDroparea) {
-
-
-}
-
-function drawedDroparea(e) {
-}
-drawedDroparea.prototype = new droparea()
-drawedDroparea.prototype.draw = function (ctx) {
-	this.sprite.draw(ctx, this.area.p1.x, this.area.p1.y);
-}
+};
 
 function itemslot(x, y, width, height, types, onDrop, onRemove) {
 	this.area = new Rect(new V2(x, y),
@@ -54,11 +43,9 @@ function itemslot(x, y, width, height, types, onDrop, onRemove) {
 	this.content = null;
 	this.onDrop = onDrop;
 	this.onRemove = onRemove;
-
-	this.sprite = new sprite('mock/itemslot.png');
 }
-itemslot.prototype = new drawedDroparea()
 
+itemslot.prototype = new droparea()
 
 function equipslot(x, y, width, height, type, onDrop, onRemove) {
 	this.area = new Rect(new V2(x, y),
@@ -68,8 +55,7 @@ function equipslot(x, y, width, height, type, onDrop, onRemove) {
 	this.content = null;
 	this.onDrop = onDrop;
 	this.onRemove = onRemove;
-
-	this.sprite = new sprite('mock/itemslot_' + type + '.png');
 }
-equipslot.prototype = new drawedDroparea();
+
+equipslot.prototype = new droparea();
 equipslot.prototype.isEquipmentDropArea = true;

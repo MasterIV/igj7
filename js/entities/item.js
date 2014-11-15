@@ -1,6 +1,12 @@
-function item(itemdefinition) {
-	this.itemdefinition = itemdefinition
+function item(definition) {
+	this.itemdefinition = definition;
+	this.slot = definition.slot;
+	this.sprite = new sprite(definition.sprite);
+	this.name = definition.itemname;
+	this.target = definition.target;
+	this.effects = definition.effects;
 }
+
 
 function itemContainer(x, y, width, height, item) {
 	this.item = item
@@ -14,6 +20,7 @@ function itemContainer(x, y, width, height, item) {
 
 	this.area = new Rect(new V2(x, y),new V2(x + width, y + height));
 }
+
 itemContainer.prototype = new Entity();
 
 itemContainer.prototype.draw = function (ctx) {

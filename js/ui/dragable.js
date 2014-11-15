@@ -4,25 +4,20 @@ function dragable(entity, type) {
 	this.entity = entity
 	this.type = type;
 	this.dragging = false;
-
-
 	this.offset = new V2(0, 0);
 	this.droparea = null;
-
 }
+
 dragable.prototype.draw = function (ctx) {
-	if (this.entity.draw) {
-
+	if (this.entity.draw)
 		this.entity.draw(ctx);
-	}
 }
+
 dragable.prototype.update = function (delta) {
 	if (this.entity.update) {
-
 		if (this.dragging) {
 			this.entity.x = mouse.x + this.offset.x;
 			this.entity.y = mouse.y + this.offset.y;
-
 
 			for (var i = 0; i < game.scene.entities.length; i++) {
 				if (game.scene.entities[i].isEquipmentDropArea) {
@@ -42,6 +37,7 @@ dragable.prototype.update = function (delta) {
 		this.entity.update(delta);
 	}
 }
+
 dragable.prototype.mousedown = function (pos) {
 	if (this.entity.area.inside(pos) && !this.dragging && !globalDragging) {
 		this.dragging = true;
@@ -65,16 +61,12 @@ dragable.prototype.mouseup = function (pos) {
 				if (entity.types.indexOf(this.type) != -1)
 					if (entity.area.inside(pos)) {
 						if (entity.content == null) {
-
 							entity.setContent(this);
-
 							return;
 						} else {
 							this.flip(game.scene.entities[i].dragEntity);
 						}
 					}
-
-
 		}
 
 		this.entity.x = this.startx;

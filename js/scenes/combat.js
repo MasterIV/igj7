@@ -82,12 +82,14 @@ combatScene.prototype.getChoice = function(s) {
 
 		if(s.costs)
 			self.hero.mp -= s.costs;
+		if(s instanceof item)
+			hero.use(item);
 
 		if(s.target != 'single' ) {
 			var targets = [];
 
 			if(s.target == 'self' ) {
-				targets.push(this.hero);
+				targets.push(self.hero);
 			} else {
 				for (var i = 0; i < self.entities.length; i++)
 					if (self.entities[i] instanceof Enemy)

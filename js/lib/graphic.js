@@ -19,6 +19,7 @@ var g = {
 			'mock/button_menu.png',
 			'mock/button_character.png',
 			'mock/button_paywall.png',
+			'img/ui/back_button.png',
 			'mock/encounter.png',
 			'mock/path.png',
 			'img/characters/roboter.png',

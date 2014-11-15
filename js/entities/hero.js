@@ -1,39 +1,14 @@
 function Hero() {
 	var img = new sprite('img/characters/hero.png');
-	this.equip = function( item ) {
-		this.equipment[item.itemdefinition.slot] = item;
-	}
-
-	this.unequip = function( item ) {
-		this.equipment[item.itemdefinition.slot] = null;
-	}
+	this.inventory = [];
+	this.skills = [];
 
 	this.equipment = {
 		helmet:null,
 		chest:null,
+		gloves: null,
 		boots:null,
 		ring:null
-	};
-
-	this.getSkills = function() {
-		return skillDefinitions;
-	};
-
-	this.inventory = [
-	];
-
-	var itemCounter =0;
-	for(var key in itemDefinitions) {
-		this.inventory.push(new item(itemDefinitions[key]));
-
-		itemCounter ++;
-		if (itemCounter == 9) {
-			break;
-		}
-	}
-
-	this.getInventory = function() {
-		return this.inventory;
 	};
 
 	this.attrs = {
@@ -46,7 +21,45 @@ function Hero() {
 		"const": 10,
 		blingbling: 10
 	};
+
 	this.life = this.attrs.hp;
+
+	this.use = function( item ) {
+		arrayRemove(this.inventory, item);
+	};
+
+	this.equip = function( item ) {
+		if(!item.slot) return;
+		var slot = item.slot;
+
+		this.use(item);
+		if(this.equipment[slot])
+			this.loot(this.equipment[slot]);
+
+		this.equipment[slot] = item;
+	};
+
+	this.getSkills = function() {
+		return this.skills;
+	};
+
+	this.getInventory = function() {
+		return this.inventory;
+	};
+
+	this.loot = function( item ) {
+		this.inventory.push( item );
+	};
+
+	/** debug code to have items from beginning */
+	var itemCounter =0;
+	for(var key in itemDefinitions) {
+		this.inventory.push(new item(itemDefinitions[key]));
+		itemCounter ++;
+		if (itemCounter == 9) {
+			break;
+		}
+	}
 
 	this.getStats = function() {
 		var currentStats = clone(this.attrs);
@@ -57,12 +70,11 @@ function Hero() {
 					if (this.equipment[item].itemdefinition[stat])
 						currentStats[stat] += this.equipment[item].itemdefinition[stat];
 				}
-
 			}
 		}
 
 		return currentStats;
-	}
+	};
 
 	this.center = function( ctx, x, y ) {
 		img.center(ctx, x, y);
