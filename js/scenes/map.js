@@ -29,7 +29,7 @@ var encounters = {
 
 function mapScene() {
 	var self = this;
-	this.bg = new sprite("mock/map.png");
+	this.bg = new sprite("img/maps/campaign_map.jpg");
 	
 	this.entities = [
 		new button("mock/button_paywall.png", "mock/button_paywall.png", 10, 678, function(){ 
@@ -71,8 +71,7 @@ function mapScene() {
 		this.entities.push(this.encounterMap[index]);
 	}	
 	
-	this.setEncounter("1");
-	this.currentEncounter.isClickable = true;
+	this.encounterMap["1"].isClickable = true;
 }
 
 mapScene.prototype = new scene();
@@ -84,8 +83,9 @@ mapScene.prototype.setEncounter = function(id) {
 mapScene.prototype.setClickable = function(b) {
 	if(this.currentEncounter != null){
 		var encIds = this.currentEncounter.connectedEncounters;
+		console.log(encIds);
 		for(var i = 0, j = encIds.length; i < j; i++) {
-			this.encounterMap[encIds[i]].isClickable = false;
+			this.encounterMap[encIds[i]].isClickable = b;
 		}
 	}
 }

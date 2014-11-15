@@ -33,13 +33,15 @@ encounter.prototype.draw = function(ctx) {
 }
 
 encounter.prototype.update = function(delta) {
-	if(this.area.inside(mouse)) {
-		if(this.scale <= 1.6) {
-			this.scale = Math.min(this.scale + delta / 500, 1.6);
-		}
-	} else {
-		if(this.scale >= 1) {
-			this.scale = Math.max(this.scale - delta / 500, 1);
+	if(this.isClickable) {
+		if(this.area.inside(mouse)) {
+			if(this.scale <= 1.6) {
+				this.scale = Math.min(this.scale + delta / 500, 1.6);
+			}
+		} else {
+			if(this.scale >= 1) {
+				this.scale = Math.max(this.scale - delta / 500, 1);
+			}
 		}
 	}
 }
