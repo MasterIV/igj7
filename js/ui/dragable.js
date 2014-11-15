@@ -64,20 +64,11 @@ dragable.prototype.mouseup = function ( pos ) {
 						if (entity.area.inside(pos)) {
 							if (entity.content == null) {
 
-							if (this.droparea) {
-								this.droparea.remove();
-							}
+								entity.setContent(this);
 
-							this.droparea = entity;
-							entity.drop(this.entity);
-							entity.entity = this;
-
-							this.entity.setPosition(entity.area.p1.x + entity.padding.x,
-								entity.area.p1.y + entity.padding.y)
-
-							return;
+								return;
 							} else {
-
+								this.flip(game.scene.entities[i].dragEntity);
 							}
 						}
 
@@ -87,4 +78,18 @@ dragable.prototype.mouseup = function ( pos ) {
         this.entity.x = this.startx;
         this.entity.y = this.starty;
     }
+}
+
+dragable.prototype.flip = function(otherDragable) {
+
+	var targetDroparea = otherDragable.droparea;
+
+	var oldDropArea = this.droparea;
+
+
+	targetDroparea.switchContent(oldDropArea);
+
+
+	console.log(oldDropArea);
+	console.log(targetDroparea);
 }

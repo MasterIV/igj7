@@ -115,7 +115,7 @@ characterScene.prototype.initItems = function () {
 			100,100,items[i]), items[i].itemdefinition.slot);
 
 		this.itemslots[i].content = dg.entity.item;
-		this.itemslots[i].entity = dg.entity;
+		this.itemslots[i].dragEntity = dg;
 		dg.droparea = this.itemslots[i];
 
 		this.entities.push(dg);
@@ -133,7 +133,7 @@ characterScene.prototype.initItems = function () {
 
 
 			equipmentslot.content = dg.entity.item;
-			equipmentslot.entity = dg.entity;
+			equipmentslot.dragEntity = dg;
 
 			dg.droparea = equipmentslot;
 			this.entities.push(dg);

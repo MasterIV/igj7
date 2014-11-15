@@ -23,6 +23,22 @@ droparea.prototype.remove = function() {
 
 	this.content = null;
 }
+droparea.prototype.setContent = function(dragEntity) {
+	if (dragEntity.droparea) {
+		dragEntity.droparea.remove();
+	}
+
+	dragEntity.droparea = this;
+	this.drop(dragEntity.entity);
+	this.dragEntity = dragEntity;
+
+	dragEntity.entity.setPosition(this.area.p1.x + this.padding.x,
+								  this.area.p1.y + this.padding.y);
+}
+droparea.prototype.switchContent = function (otherDroparea) {
+
+
+}
 
 function drawedDroparea(e) {
 }
