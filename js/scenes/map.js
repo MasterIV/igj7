@@ -1,8 +1,8 @@
 var encounters = {
 	"1": {
 		image: "mock/encounter.png",
-		x: 50,
-		y: 200,
+		x: 150,
+		y: 250,
 		width: 120,
 		height: 80,
 		paths: [
@@ -23,14 +23,6 @@ var encounters = {
 		width: 120,
 		height: 80,
 		paths: [
-			{
-				to: "2",
-				image: "mock/path.png",
-				x: 170,
-				y: 200,
-				width: 230,
-				height: 90
-			}
 		]
 	}
 };
