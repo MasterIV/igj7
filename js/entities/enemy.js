@@ -3,7 +3,7 @@ function Enemy( x, y, definition ) {
 	this.y = y;
 
 	this.attrs = {
-		hp: 150,
+		hp: 10,
 		mana: 12,
 		str: 10,
 		def: 13,
@@ -17,6 +17,12 @@ function Enemy( x, y, definition ) {
 
 Enemy.prototype.draw = function( ctx ) {
 	this.img.center( ctx, this.x, this.y);
+
+	ctx.strokeStyle = 'black';
+	ctx.fillStyle = 'red';
+
+	ctx.fillRect( this.x - 50, this.y - 170, 100 * this.life / this.attrs.hp, 10 );
+	ctx.strokeRect( this.x - 50, this.y - 170, 100, 10 );
 }
 
 Enemy.prototype.getStats = function( ) {
