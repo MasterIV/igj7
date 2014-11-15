@@ -48,8 +48,7 @@ characterScene.prototype.initItems = function () {
 
 		var dg = new dragable(new itemContainer(this.itemslots[i].area.p1.x+this.itemslots[i].padding.x,this.itemslots[i].area.p1.y +this.itemslots[i].padding.y,100,100,items[i]), items[i].itemdefinition.type);
 
-		this.itemslots[i].content = items[i];
-		dg.droparea = this.itemslots[i];
+		this.itemslots[i].setContent(dg)
 		this.entities.push(dg);
 	}
 }

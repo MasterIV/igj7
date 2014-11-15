@@ -15,6 +15,10 @@ droparea.prototype.drop = function(entity) {
 	if (this.onDrop)
 		this.onDrop( this.content );
 }
+droparea.prototype.setContent = function(entity) {
+	this.content = entity;
+	entity.droparea = this;
+}
 droparea.prototype.remove = function() {
 	if (this.onRemove)
 		this.onRemove( this.content );
