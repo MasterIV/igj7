@@ -3,18 +3,11 @@ vardialogDefinitions={
 		"text":"Die Partei der strahlend polierten Dampfzwerg hat dich um Hilfe gebeten. Ein seit tausend Jahren schlafendes Monstrum hat sich erhoben, um ihr Urlaubsparadies Malorca zu vernichten. Du wurdest gerufen, um sie zu verteidigen. Angelika steht dir in ihrer vollen Pracht gegenüber und ist für den Kampf bereit!",
 		"image":"boss.png",
 		"replies":[
+			
+		],
+		"rewards":[
 			{
-				"text":"(Kampf beginnen)",
-				"condition":{
-					
-				},
-				"rewards":[
-					{
-						"fight":"0"
-					}
-					
-				]
-				
+				"fight":"0"
 			}
 			
 		]
@@ -24,16 +17,9 @@ vardialogDefinitions={
 		"text":"Angelika hat geschafft, aber gerade als sie dich verschlingen wollte, kam eine kleine Fee und hat dir das Leben gerettet. Du bist auf die andere Seite der Insel katapultiert worden. Fee: 'Das war ja wohl mal nichts! Wie um Himmels Willen konnte dir jemand diesen Job geben? Ab zurück auf die Schulbank und sammle Erfahrung in diesem Land!'",
 		"image":"fee.png",
 		"replies":[
-			{
-				"text":"(Reise beginnen)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				]
-				
-			}
+			
+		],
+		"rewards":[
 			
 		]
 		
@@ -53,7 +39,7 @@ vardialogDefinitions={
 				],
 				"replies":[
 					{
-						"text":"(Kampf beginnt)",
+						"text":"",
 						"reply":"(Kampf beginnen)",
 						"condition":{
 							
@@ -94,7 +80,7 @@ vardialogDefinitions={
 						],
 						"replies":[
 							{
-								"text":"(Kampf beginnt)",
+								"text":"",
 								"reply":"(Kampf beginnen)",
 								"condition":{
 									
@@ -125,7 +111,7 @@ vardialogDefinitions={
 						],
 						"replies":[
 							{
-								"text":"(Kampf beginnt)",
+								"text":"",
 								"reply":"(Kampf beginnen)",
 								"condition":{
 									
@@ -157,13 +143,13 @@ vardialogDefinitions={
 						"replies":[
 							{
 								"text":"So soll es sein!",
-								"reply":"Schätze",
+								"reply":"Schutz",
 								"condition":{
 									
 								},
 								"rewards":[
 									{
-										"item":"brueckenwaechter"
+										"item":"stdamulettdef"
 									}
 									
 								],
@@ -174,13 +160,13 @@ vardialogDefinitions={
 							},
 							{
 								"text":"So soll es sein!",
-								"reply":"Schätze",
+								"reply":"Wissen!",
 								"condition":{
 									
 								},
 								"rewards":[
 									{
-										"item":"brueckenwaechter"
+										"item":"stdamulettint"
 									}
 									
 								],
@@ -191,13 +177,47 @@ vardialogDefinitions={
 							},
 							{
 								"text":"So soll es sein!",
-								"reply":"Schätze",
+								"reply":"Gewandheit",
 								"condition":{
 									
 								},
 								"rewards":[
 									{
-										"item":"brueckenwaechter"
+										"item":"stdamulettdex"
+									}
+									
+								],
+								"replies":[
+									
+								]
+								
+							},
+							{
+								"text":"So soll es sein!",
+								"reply":"Stärke!",
+								"condition":{
+									
+								},
+								"rewards":[
+									{
+										"item":"stdamulettstr"
+									}
+									
+								],
+								"replies":[
+									
+								]
+								
+							},							,
+							{
+								"text":"",
+								"reply":"Deinen Job!",
+								"condition":{
+									
+								},
+								"rewards":[
+									{
+										"fight":"brueckenwaechter"
 									}
 									
 								],
