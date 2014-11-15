@@ -22,9 +22,6 @@ function Hero() {
 	this.inventory = [
 	];
 
-	console.log(itemDefinitions);
-	console.log(itemDefinitions.length);
-
 	var itemCounter =0;
 	for(var key in itemDefinitions) {
 		this.inventory.push(new item(itemDefinitions[key]));

@@ -13,7 +13,7 @@ function combatScene() {
 			new Heroinfo(this.hero)
 	];
 
-	this.setEnemies([1,2,3]);
+	this.setEnemies(['roboter','roboter','roboter']);
 }
 
 combatScene.prototype = new scene();
@@ -25,6 +25,7 @@ combatScene.prototype.attack = function() {
 
 combatScene.prototype.enemyTurn = function() {
 	var enemyCount = 0, e;
+	var self = this;
 
 	for(var j = 0; j< this.hero.buffs.length; j++ )
 		this.hero.buffs[j].apply();
@@ -37,8 +38,20 @@ combatScene.prototype.enemyTurn = function() {
 			if( e.stunned ) {
 				e.stunned--;
 			} else {
-				var a = new Attack(this, e);
-				a.run( this.hero );
+				var rnd = Math.random();
+				var sum  = 0;
+
+				for(var j in e.skills )
+					if(( sum += e.skills[j] ) > rnd ) {
+						var s = skillDefinitions[j];
+
+						for( var k in s.effects ) {
+							var eff = self.getEffect(k, s.effects[k], e);
+							eff.run(s.target == 'self' ? e : self.hero );
+						}
+
+						break;
+					}
 			}
 
 			for(var j = 0; j< e.buffs.length; j++ )
@@ -51,15 +64,15 @@ combatScene.prototype.enemyTurn = function() {
 		}}]));
 };
 
-combatScene.prototype.getEffect = function(type, args) {
+combatScene.prototype.getEffect = function(type, args, actor) {
 	if( type == 'Heal')
-		return new Heal( this, this.hero, args.base, args.rnd, args.attr );
+		return new Heal( this, actor, args.base, args.rnd, args.attr );
 	if( type == 'Attack')
-		return new Attack( this, this.hero, args.factor );
+		return new Attack( this, actor, args.factor );
 	if( type == 'Stun')
-		return new Stun( this, this.hero, args.duration, args.attr );
+		return new Stun( this, actor, args.duration, args.attr );
 	if( type == 'Buff')
-		return new Buff( this, this.hero, args.duration, args.value );
+		return new Buff( this, actor, args.duration, args.value );
 };
 
 combatScene.prototype.getChoice = function(s) {
@@ -83,7 +96,7 @@ combatScene.prototype.getChoice = function(s) {
 
 			for( var i = 0; i < targets.length; i++ )
 				for( var j in s.effects ) {
-					var e = self.getEffect(j, s.effects[j]);
+					var e = self.getEffect(j, s.effects[j], self.hero);
 					e.run( targets[i] );
 				}
 
@@ -93,7 +106,7 @@ combatScene.prototype.getChoice = function(s) {
 			}});
 		} else {
 			for( var j in s.effects );
-			self.targetSelection.start(self.getEffect(j, s.effects[j]), function() { self.enemyTurn(); });
+			self.targetSelection.start(self.getEffect(j, s.effects[j], self.hero), function() { self.enemyTurn(); });
 		}
 	}}
 };
