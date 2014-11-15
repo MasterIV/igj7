@@ -3,6 +3,8 @@ function droparea(x, y, width, height, types) {
 		new V2(x + width, y + height));
 	this.types = types;
 }
+droparea.prototype.padding = new V2(10,10);
+
 
 function itemslot(x, y, width, height, types) {
 	this.area = new Rect(new V2(x, y),
@@ -21,9 +23,9 @@ itemslot.prototype.draw = function(ctx) {
 
 	if (item) {
 		if (!this.dragging) {
-			item.sprite.draw(ctx, this.area.p1.x, this.area.p1.y);
+			item.sprite.draw(ctx, this.area.p1.x + this.padding.x, this.area.p1.y + this.padding.y);
 		} else {
-			item.sprite.draw(ctx, this.dragPos.x + this.dragOffset.x, this.dragPos.y + this.dragOffset.y);
+			item.sprite.draw(ctx, this.dragPos.x  + this.padding.x + this.dragOffset.x, this.dragPos.y  + this.padding.y + this.dragOffset.y);
 		}
 	}
 }
@@ -91,8 +93,8 @@ equipslot.prototype.draw = function( ctx ) {
 	var item = hero.equipment[this.types[0]];
 
 	if (item != null) {
-		item.sprite.draw(ctx, this.area.p1.x, this.area.p1.y);
+		item.sprite.draw(ctx, this.area.p1.x + this.padding.x, this.area.p1.y + this.padding.x);
 	} else {
-		this.emptySprite.draw(ctx, this.area.p1.x, this.area.p1.y);
+		this.emptySprite.draw(ctx, this.area.p1.x + this.padding.y, this.area.p1.y + this.padding.y);
 	}
 };
