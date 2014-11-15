@@ -1,7 +1,7 @@
 var itemDefinitions = {
     "1": {
         "itemname": "Dampfhammeruhr 3000",
-        "sprite":"mock/button.png",
+        "sprite": "mock/button.png",
         "type": "shield",
         "dmg": 1,
         "def": 1,
@@ -12,7 +12,7 @@ var itemDefinitions = {
     },
     "2": {
         "itemname": "Klobürste",
-        "sprite":"mock/button.png",
+        "sprite": "mock/button.png",
         "type": "sword",
         "dmg": 24,
         "def": 2,
