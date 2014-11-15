@@ -42,7 +42,7 @@ MoveTwards.prototype.update = function(delta) {
 
 function AnimationDamage( target, damage ) {
 	this.target = target;
-	this.damage = String(damage).split('');
+	this.damage = String(Math.abs( damage )).split('');
 	this.total = damage;
 	this.done = 0;
 	this.duration = 700;
@@ -72,7 +72,7 @@ AnimationDamage.prototype.draw = function( ctx ){
 		var y = this.y + 45 * Math.cos( Math.PI*2*(this.anitime+50*i)/(this.duration+50*i));
 		ctx.fillStyle = "rgba(30,30,30,0.5)";
 		ctx.fillText(this.damage[i], x+16*i, y);
-		ctx.fillStyle = "rgba(230,230,230,1)";
+		ctx.fillStyle = this.total > 0 ? "rgb(230,150,150)" : "rgb(150,230,150)";
 		ctx.fillText(this.damage[i], x+16*i-1, y-1 );
 	}
 };

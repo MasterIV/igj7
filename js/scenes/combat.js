@@ -1,6 +1,6 @@
 function combatScene() {
 	var self = this;
-	this.bg = new sprite( 'mock/fight.png' );
+	this.bg = new sprite( 'img/maps/mountain.jpg' );
 	this.targetSelection = new TargetSelection( self );
 	this.hero = new HeroContainer(200,380);
 
@@ -28,10 +28,42 @@ combatScene.prototype.enemyTurn = function() {
 			var a = new Attack(this, this.entities[i]);
 			a.run( this.hero );
 		}
+}
+
+combatScene.prototype.getEffect = function(type, args) {
+	if( type == 'Heal')
+		return new Heal( this, this.hero, args.base, args.rnd, args.attr );
+
 };
 
 combatScene.prototype.spell = function() {
-	console.log('spell');
+	var choices = [];
+	var skills = hero.getSkills();
+	var self = this;
+
+	for(var i in skills) (function(s) {
+		if( this.hero.mana < s.costs ) return;
+		choices.push({text: s.name, callback: function() {
+			self.blocking.shift();
+
+			if(s.target != 'single' ) {
+				for( var j in s.effects ) {
+					var e = self.getEffect(j, s.effects[j]);
+					e.run();
+				}
+
+				self.blocking.push({ update: function() {
+					self.enemyTurn();
+					return true;
+				}});
+			} else {
+				self.targetSelection.start(self.getEffect(j, s.effects[j]), function() { self.enemyTurn(); });
+			}
+		}});
+	})(skills[i]);
+
+	choices.push({text: "Abbrechen", callback: function() { self.blocking.shift(); }});
+	this.blocking.unshift(new dialogue('Fertigkeit auswählen:', choices));
 };
 
 combatScene.prototype.item = function() {
@@ -42,21 +74,18 @@ combatScene.prototype.defend = function() {
 	console.log('defend');
 };
 
-combatScene.prototype.selectEnemy = function() {
-	console.log('defend');
-};
-
 combatScene.prototype.setEnemies = function( definitions ) {
 	this.entities = [];
 
 	var d = definitions.shift();
-	this.entities.push( new Enemy( 870, 200, d));
+	this.entities.push( new Enemy( 900, 320, d));
 	if(d = definitions.shift())
-		this.entities.push( new Enemy(1100, 380, d));
+		this.entities.push( new Enemy(1100, 480, d));
 	if(d = definitions.shift())
-		this.entities.push( new Enemy( 870, 560, d));
+		this.entities.push( new Enemy( 800, 560, d));
 
 	this.targetSelection.init( this.entities );
+	this.hero.reset();
 
 	for( var i = 0; i < this.defaults.length; i++ )
 		this.entities.push( this.defaults[i] );

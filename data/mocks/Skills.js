@@ -1,17 +1,11 @@
 var skillDefinitions = {
-  "1": {
-    "name": "Mächtige Hand",
-    "image": "item.png",
-    "effects": [
-      "heal10", "damage10"
-    ]
-  },
-  "2": {
-    "name": "Reib die Gurke",
-    "image": "item2.png",
-    "effects": [
-      "damage10"
-    ]
-  } 
+	"heal": {
+		"name": "Heilung",
+		"costs": "10",
+		"target": "self",
+		"effects": {
+			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
+		}
+	}
 };
 
