@@ -20,7 +20,8 @@ var g = {
 			'mock/button_paywall.png',
 			'mock/encounter.png',
 			'mock/path.png',
-			'img/characters/roboter.png'
+			'img/characters/roboter.png',
+			'img/maps/campaign_map.jpg'
 	],
 
 	add: function( url ) {
