@@ -4,7 +4,8 @@ var g = {
 			'mock/char.png',
 			'mock/fight.png',
 			'mock/button.png',
-			'img/ui/buttons.png'
+			'img/ui/buttons.png',
+			'img/ui/target.png'
 	],
 
 	add: function( url ) {

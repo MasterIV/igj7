@@ -5,10 +5,6 @@ function Hero() {
 
 	this.getInventory = function() {
 		return [
-			new item(),
-			new item(),
-			new item(),
-			new item()
 		];
 	}
 
