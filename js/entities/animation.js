@@ -15,15 +15,15 @@ Animation.prototype.draw = function(ctx) {
 	this.img.center(ctx, this.x, this.y, this.counter.frame);
 };
 
-function MoveTwards( entity, x, y, duration ) {
+function MoveTwards( entity, dx, dy, sx, sy, duration ) {
 	this.elapsed = 0;
 	this.duration = duration;
 
 	this.entity = entity;
-	this.x = x;
-	this.y = y;
-	this.width = x-entity.x;
-	this.height = y-entity.y;
+	this.x = dx;
+	this.y = dy;
+	this.width = dx-sx;
+	this.height = dy-sy;
 }
 
 MoveTwards.prototype.update = function(delta) {
