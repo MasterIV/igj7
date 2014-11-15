@@ -127,7 +127,7 @@ var itemDefinitions={
 		"def":3,
 		"int":3,
 		"dex":3,
-		"blingbling":
+		"blingbling":5
 	},
 	"stdchestdef":{
 		"itemname":"Panzer-Rüstung",
