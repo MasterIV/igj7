@@ -83,6 +83,9 @@ function HeroContainer(x, y) {
 	this.harm = function(hp) {
 		this.life -= hp;
 
+		if (this.life > this.getStats().hp)
+			this.life = this.getStats().hp;
+
 		if (this.life <= 0) {
 			this.life = 0;
 			game.scene = scenes.loose;

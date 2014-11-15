@@ -54,7 +54,10 @@ function AnimationDamage( target, damage ) {
 
 AnimationDamage.prototype.update = function( delta ) {
 	var prog = this.anitime / this.duration;
-	var dmg = Math.max( 0, Math.round( this.total * prog ) - this.done );
+
+	var dmg = this.total > 0
+			? Math.max( 0, Math.round( this.total * prog ) - this.done )
+			: Math.max( this.total, Math.round( this.total * prog ) - this.done );
 
 	this.done += dmg;
 	this.target.harm( dmg );
