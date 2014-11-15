@@ -1,4 +1,4 @@
-function dialogue(text, choices) {
+function dialogue(text, choices, y) {
 	var words = text.split(' ');
 	var lines = [words.shift()];
 
@@ -11,7 +11,8 @@ function dialogue(text, choices) {
 	this.w = 1000;
 	this.h = 24+32*(lines.length+choices.length);
 	this.x = 140;
-	this.y = (768-this.h)/2;
+
+	this.y = y?y:(768-this.h)/2;
 
 	for( var i = 0; i < choices.length; i++ )
 		choices[i].area = new Rect(

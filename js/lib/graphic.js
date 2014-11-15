@@ -22,6 +22,7 @@ var g = {
 			'mock/encounter.png',
 			'mock/path.png',
 			'img/characters/roboter.png',
+			'img/characters/fee.png',
 			'img/maps/mountain.jpg',
 			'img/ui/character_button.png',
 			'img/ui/character_button_hover.png',
