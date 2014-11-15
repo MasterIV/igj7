@@ -11,7 +11,7 @@ var itemDefinitions = {
 	},
 	"potion": {
 		"itemname": "Heiltrank",
-		"sprite": "mock/sword.png",
+		"sprite": "mock/shield.png",
 		"target": "self",
 		"effects": {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6}

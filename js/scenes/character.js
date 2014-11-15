@@ -11,7 +11,6 @@ function characterScene() {
 
 
 	this.initDropareas();
-	this.initItems();
 }
 
 characterScene.prototype = new scene();
@@ -29,6 +28,7 @@ characterScene.prototype.initDropareas = function () {
 			}, function (item) {
 				//console.log('remove');
 			});
+			is.inventoryId = c*5 + i;
 
 			this.entities.push(is);
 			this.itemslots.push(is);
@@ -82,7 +82,7 @@ characterScene.prototype.showDiffrence = function (item) {
 		def: 0,
 		dex: 0,
 		int: 0,
-		"const": 0
+		blingbling: 0
 	};
 
 	var eqItem = hero.equipment[item.itemdefinition.slot];
@@ -108,43 +108,4 @@ characterScene.prototype.showDiffrence = function (item) {
 }
 characterScene.prototype.hideDiffrence = function () {
 	this.stats.showDiffrence = false;
-}
-
-characterScene.prototype.initItems = function () {
-	/*
-	// Inventory
-	var items = hero.getInventory();
-
-	for(var i =0;i<items.length;i++) {
-		var dg = new dragable(new itemContainer(this.itemslots[i].area.p1.x+this.itemslots[i].padding.x,
-												this.itemslots[i].area.p1.y +this.itemslots[i].padding.y,
-			100,100,items[i]), items[i].itemdefinition.slot);
-
-		this.itemslots[i].content = dg.entity.item;
-		this.itemslots[i].dragEntity = dg;
-		dg.droparea = this.itemslots[i];
-
-		this.entities.push(dg);
-	}
-
-	//Equipment
-	for(var item in hero.equipment) {
-		if (hero.equipment[item] != null) {
-
-			var equipmentslot = this.equipmentslots[hero.equipment[item].itemdefinition.slot];
-
-			var dg = new dragable(new itemContainer(equipmentslot.area.p1.x+equipmentslot.padding.x,
-													equipmentslot.area.p1.y +equipmentslot.padding.y,
-														100,100,hero.equipment[item]), hero.equipment[item].itemdefinition.slot);
-
-
-			equipmentslot.content = dg.entity.item;
-			equipmentslot.dragEntity = dg;
-
-			dg.droparea = equipmentslot;
-			this.entities.push(dg);
-		}
-	}
-	*/
-
 }
