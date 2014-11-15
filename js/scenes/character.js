@@ -5,19 +5,17 @@ function characterScene() {
 	this.entities = [
 		this.stats,
 		new HeroContainer(300,320),
-		new button("mock/button_menu.png", "mock/button_menu.png", 1170, 678, function(){
+		new SpriteButton('img/ui/back_button.png', Rect.create(0,  0,161,133), Rect.create(161,  0,161,133),  10, 625, function(){
 			game.scene = scenes.map;
 		}, null)
 	];
 
 
 	this.initDropareas();
-
 	this.initItems();
 }
+
 characterScene.prototype = new scene();
-
-
 characterScene.prototype.initDropareas = function () {
 
 	var x = 10;
