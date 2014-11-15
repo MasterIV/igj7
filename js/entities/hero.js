@@ -59,4 +59,8 @@ function HeroContainer(x, y) {
 	this.draw = function(ctx) {
 		hero.center(ctx, this.x, this.y);
 	}
+
+	this.getStats = function() {
+		return hero.getStats();
+	}
 }

@@ -9,3 +9,14 @@ Enemy.prototype.draw = function( ctx ) {
 	ctx.fillStyle = '#6666FF';
 	ctx.fillRect(this.x-w/2, this.y-h/2, w, h);
 }
+
+Enemy.prototype.getStats = function( ) {
+	return {
+		hp: 150,
+		mana: 12,
+		str: 10,
+		def: 13,
+		dex: 10,
+		int: 10
+	}
+}

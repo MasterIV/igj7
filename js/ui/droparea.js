@@ -55,3 +55,4 @@ function equipslot(x, y, width, height, type, onDrop, onRemove) {
 	this.sprite = new sprite('mock/itemslot_'+type+'.png');
 }
 equipslot.prototype = new drawedDroparea();
+equipslot.prototype.isEquipmentDropArea = true;
