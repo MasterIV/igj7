@@ -15,5 +15,8 @@ Entity.prototype.setPosition = function ( x, y) {
 	if (this.area) {
 		this.area = new Rect(new V2(x,y),
 							 new V2(x + this.width, y + this.height));
+
+
+
 	}
 }

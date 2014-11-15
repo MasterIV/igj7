@@ -12,6 +12,7 @@ function dragable(entity, type) {
 }
 dragable.prototype.draw = function ( ctx ) {
     if (this.entity.draw) {
+
 		this.entity.draw( ctx );
 	}
 }
@@ -38,24 +39,25 @@ dragable.prototype.mouseup = function ( pos ) {
     if (this.dragging) {
         this.dragging = false;globalDragging = false;
 
-		if (game.scene.dropareas) {
-			for(var i =0;i < game.scene.dropareas.length;i++) {
-				if (game.scene.dropareas[i].content == null)
-					if (game.scene.dropareas[i].types.indexOf(this.type) != -1)
-						if (game.scene.dropareas[i].area.inside(pos)) {
+		for(var i =0;i < game.scene.entities.length;i++) {
+			if (game.scene.entities[i].isDroparea)
+				if (game.scene.entities[i].content == null)
+					if (game.scene.entities[i].types.indexOf(this.type) != -1)
+						if (game.scene.entities[i].area.inside(pos)) {
+
 
 							if (this.droparea) {
 								this.droparea.remove();
 							}
 
-							this.droparea = game.scene.dropareas[i];
-							game.scene.dropareas[i].drop(this.entity);
+							this.droparea = game.scene.entities[i];
+							game.scene.entities[i].drop(this.entity);
 
-							this.entity.setPosition(game.scene.dropareas[i].area.p1.x,game.scene.dropareas[i].area.p1.y)
+							this.entity.setPosition(game.scene.entities[i].area.p1.x + game.scene.entities[i].padding.x,
+													game.scene.entities[i].area.p1.y+ game.scene.entities[i].padding.y)
 
 							return;
 						}
-			}
 		}
 
         this.entity.x = this.startx;
