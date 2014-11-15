@@ -42,7 +42,7 @@ var game = {
 	updateScreensize: function() {
 		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || this.buffer.width;
 		var height = window.innerHeight || document.documentElement.clientHeight  || document.body.clientHeight || this.buffer.height;
-		this.scaleFactor = Math.max(this.buffer.width/width, this.buffer.height/height);
+		this.scaleFactor = Math.max(this.buffer.width/width, this.buffer.height/height, 1);
 	},
 	
 	updateFramerate: function() {
