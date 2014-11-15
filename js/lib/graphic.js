@@ -7,7 +7,6 @@ var g = {
 			'mock/map.png',
 			'mock/char.png',
 			'mock/fight.png',
-			'mock/button.png',
 			'mock/settings.png',
 			'mock/button_menu.png',
 			'mock/button_character.png',

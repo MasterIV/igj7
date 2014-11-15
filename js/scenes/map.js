@@ -40,23 +40,22 @@ function mapScene() {
 	this.bg = new sprite("mock/map.png");
 	
 	this.entities = [
-// Bottom bar
 		new button("mock/button_paywall.png", "mock/button_paywall.png", 10, 678, function(){ 
 			var pw = new dialogue("Yo. This is paywall. Pay or die, bitch.", [
-			{ 
-				text:"Pay", 
-				callback:function(){
-					self.entities.pop();
+				{ 
+					text:"Pay", 
+					callback:function(){
+						self.entities.pop();
+					}
+				},
+				{ 
+					text:"Die", 
+					callback:function(){
+						self.entities.pop();
+					}
 				}
-			},
-			{ 
-				text:"Die", 
-				callback:function(){
-					self.entities.pop();
-				}
-			}
-			]);
-			self.entities.push(pw);
+				]);
+				self.entities.push(pw);
 				
 		}, null),
 		new button("mock/button_character.png", "mock/button_character.png", 140, 678, function(){
@@ -79,9 +78,22 @@ function mapScene() {
 		);
 		this.entities.push(this.encounterMap[index]);
 	}	
+	
+	this.currentEncounter = null;
+	this.setEncounter("1");
 }
 
 mapScene.prototype = new scene();
-mapScene.prototype.setEncounters = function(encounter) {
-	
+mapScene.prototype.setEncounter = function(id) {
+	this.setClickable(false);
+	this.currentEncounter = this.encounterMap[id];
+	this.setClickable(true);
+}
+mapScene.prototype.setClickable = function(b) {
+	if(this.currentEncounter != null){
+		var encIds = this.currentEncounter.connectedEncounters;
+		for(var i = 0, j = encIds.length; i < j; i++) {
+			this.encounterMap[encIds[i]].isClickable = false;
+		}
+	}
 }

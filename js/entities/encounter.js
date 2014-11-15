@@ -1,5 +1,6 @@
 function encounter(imageSprite, imageX, imageY, imageWidth, imageHeight, paths, connectedEncounters) {
 	this.image = {};
+	this.isClickable = false;
 	this.image.sprite = new sprite(imageSprite);
     this.image.area = Rect.create(imageX, imageY, imageWidth, imageHeight);
 
@@ -36,7 +37,9 @@ encounter.prototype.update = function(delta) {
 }
 
 encounter.prototype.click = function(pos) {
-	if(this.area.inside(pos)) {
-		game.scene = scenes.combat; 
+	if(this.isClickable) {
+		if(this.area.inside(pos)) {
+			game.scene = scenes.combat; 
+		}
 	}
 }
