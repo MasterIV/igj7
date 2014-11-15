@@ -22,6 +22,9 @@ scene.prototype.draw = function (ctx) {
 	for (var i = 0; i < this.entities.length; i++)
 		if (this.entities[i].draw)
 			this.entities[i].draw(ctx);
+
+	if (this.blocking.length)
+		this.blocking[0].draw(ctx);
 }
 
 scene.prototype.click = function (pos) {

@@ -6,6 +6,6 @@ function Enemy( x, y, definition ) {
 
 Enemy.prototype.draw = function( ctx ) {
 	var w = 200; var h = 340;
-	ctx.fillStyle = 'darkorange';
+	ctx.fillStyle = '#6666FF';
 	ctx.fillRect(this.x-w/2, this.y-h/2, w, h);
 }
