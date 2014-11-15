@@ -56,7 +56,7 @@ function Hero() {
 	for(var key in itemDefinitions) {
 		this.inventory.push(new item(itemDefinitions[key]));
 		itemCounter ++;
-		if (itemCounter == 9) {
+		if (itemCounter == 20) {
 			break;
 		}
 	}
