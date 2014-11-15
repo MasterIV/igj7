@@ -62,6 +62,39 @@ combatScene.prototype.getEffect = function(type, args) {
 		return new Buff( this, this.hero, args.duration, args.value );
 };
 
+combatScene.prototype.getCoice = function(s) {
+	var self = this;
+	return { text: s.name, callback: function() {
+		self.blocking.shift();
+
+		if(s.target != 'single' ) {
+			var targets = [];
+
+			if(s.target == 'self' ) {
+				targets.push(this.hero);
+			} else {
+				for (var i = 0; i < self.entities.length; i++)
+					if (self.entities[i] instanceof Enemy)
+						targets.push(self.entities[i]);
+			}
+
+			for( var i = 0; i < targets.length; i++ )
+				for( var j in s.effects ) {
+					var e = self.getEffect(j, s.effects[j]);
+					e.run( targets[i] );
+				}
+
+			self.blocking.push({ update: function() {
+				self.enemyTurn();
+				return true;
+			}});
+		} else {
+			for( var j in s.effects );
+			self.targetSelection.start(self.getEffect(j, s.effects[j]), function() { self.enemyTurn(); });
+		}
+	}}
+};
+
 combatScene.prototype.spell = function() {
 	var choices = [];
 	var skills = hero.getSkills();
@@ -69,24 +102,7 @@ combatScene.prototype.spell = function() {
 
 	for(var i in skills) (function(s) {
 		if( this.hero.mana < s.costs ) return;
-		choices.push({text: s.name, callback: function() {
-			self.blocking.shift();
-
-			if(s.target != 'single' ) {
-				for( var j in s.effects ) {
-					var e = self.getEffect(j, s.effects[j]);
-					e.run( self.hero );
-				}
-
-				self.blocking.push({ update: function() {
-					self.enemyTurn();
-					return true;
-				}});
-			} else {
-				for( var j in s.effects );
-				self.targetSelection.start(self.getEffect(j, s.effects[j]), function() { self.enemyTurn(); });
-			}
-		}});
+		choices.push(self.getCoice(s));
 	})(skills[i]);
 
 	choices.push({text: "Abbrechen", callback: function() { self.blocking.shift(); }});
@@ -94,7 +110,16 @@ combatScene.prototype.spell = function() {
 };
 
 combatScene.prototype.item = function() {
-	console.log('item');
+	var choices = [];
+	var items = hero.getInventory();
+	var self = this;
+
+	for(var i in items) if(items[i].effects) (function(s) {
+		choices.push(self.getCoice(s));
+	})(items[i]);
+
+	choices.push({text: "Abbrechen", callback: function() { self.blocking.shift(); }});
+	this.blocking.unshift(new dialogue('Gegenstände auswählen:', choices));
 };
 
 combatScene.prototype.defend = function() {

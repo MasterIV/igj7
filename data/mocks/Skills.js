@@ -10,7 +10,7 @@ var skillDefinitions = {
 	"double_damage": {
 		"name": "Doppelter Schaden",
 		"costs": "1",
-		"target": "single",
+		"target": "all",
 		"effects": {
 			"Attack": {"factor": 2}
 		}
@@ -18,7 +18,7 @@ var skillDefinitions = {
 	"heal_enemy": {
 		"name": "Gegner Heilen",
 		"costs": "1",
-		"target": "single",
+		"target": "all",
 		"effects": {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
 		}
@@ -26,7 +26,7 @@ var skillDefinitions = {
 	"stun": {
 		"name": "Stunnen",
 		"costs": "1",
-		"target": "single",
+		"target": "all",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
 		}
@@ -34,7 +34,7 @@ var skillDefinitions = {
 	"hot": {
 		"name": "Hot",
 		"costs": "1",
-		"target": "self",
+		"target": "all",
 		"effects": {
 			"Buff": {"duration": 3, "value": -15 }
 		}
@@ -42,7 +42,15 @@ var skillDefinitions = {
 	"dot": {
 		"name": "Dot",
 		"costs": "1",
-		"target": "single",
+		"target": "all",
+		"effects": {
+			"Buff": {"duration": 3, "value": "5" }
+		}
+	},
+	"shield": {
+		"name": "Shield",
+		"costs": "1",
+		"target": "all",
 		"effects": {
 			"Buff": {"duration": 3, "value": "5" }
 		}
