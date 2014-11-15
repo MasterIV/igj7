@@ -47,6 +47,7 @@
 		<script type="text/javascript" src="js/scenes/menu.js"></script>
 		<script type="text/javascript" src="js/scenes/combat.js"></script>
 		<script type="text/javascript" src="js/scenes/character.js"></script>
+		<script type="text/javascript" src="js/scenes/loose.js"></script>
 
 
 
@@ -61,6 +62,7 @@
 					scenes.map = new mapScene();
 					scenes.combat = new combatScene();
 					scenes.character = new characterScene();
+					scenes.loose = null // new looseScene();
 
 					game.scene = scenes.menu;
 					game.init();
