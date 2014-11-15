@@ -14,14 +14,17 @@ characterScene.prototype.initDropareas = function () {
 	var x = 20;
 	var y = 400;
 
+	this.itemslots = [];
+
 	for(var i =0;i<6;i++ ) {
-		this.entities.push(
-			new itemslot(x + 130*i,y,120,120,['item', 'weapon', 'shield'],function (item) {
-				console.log('drop');
-			}, function (item) {
-				console.log('remove');
-			})
-		)
+		var is = new itemslot(x + 130*i,y,120,120,['item', 'weapon', 'shield'],function (item) {
+			console.log('drop');
+		}, function (item) {
+			console.log('remove');
+		});
+
+		this.entities.push(is);
+		this.itemslots.push(is);
 	}
 
 	this.entities.push(new equipslot(x,y + 130,120,120,'weapon',function (item) {
@@ -42,6 +45,11 @@ characterScene.prototype.initItems = function () {
 	var items = hero.getInventory();
 
 	for(var i =0;i<items.length;i++) {
-		this.entities.push(new dragable(new itemContainer(100 + 120*i,100,100,100,items[i]), items[i].itemdefinition.type));
+
+		var dg = new dragable(new itemContainer(this.itemslots[i].area.p1.x+this.itemslots[i].padding.x,this.itemslots[i].area.p1.y +this.itemslots[i].padding.y,100,100,items[i]), items[i].itemdefinition.type);
+
+		this.itemslots[i].content = items[i];
+		dg.droparea = this.itemslots[i];
+		this.entities.push(dg);
 	}
 }

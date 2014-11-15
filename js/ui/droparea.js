@@ -19,6 +19,7 @@ droparea.prototype.remove = function() {
 	if (this.onRemove)
 		this.onRemove( this.content );
 
+	console.log(1321);
 	this.content = null;
 }
 
