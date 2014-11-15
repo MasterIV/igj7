@@ -1,5 +1,5 @@
 function dealDamage( scene, target, damage ) {
-	if( damage > 0 ) damage -= Math.floor( target.def*.75 );
+	if( damage > 0 ) damage -= Math.floor( target.def*.4 );
 	if( damage < 0 ) damage = 0;
 
 	scene.blocking.push( new AnimationDamage( target, damage ));
