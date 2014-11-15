@@ -2,12 +2,14 @@ function Heroinfo( hero ) {
 	this.hero = hero;
 	this.x = 10;
 	this.y = 10;
+	this.img = new sprite( 'img/ui/hp_mp_bar.png' );
 }
 
 Heroinfo.prototype.draw = function(ctx) {
 	var w = 200;
 	var h = 20;
 
+	this.img.draw(ctx, 0, 0);
 	ctx.strokeStyle = 'black';
 
 	ctx.fillStyle = 'red';
