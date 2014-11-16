@@ -47,11 +47,12 @@ var npcDefinitions={
 		"int":65,
 		"dex":54,
 		"str":72,
-		"def":55,
-		"hp":320,
+		"def":0,
+		"hp":820,
 		"skills":{
 			"attack":.8,
-			"heal":.2
+			"heal":.2,
+			"attack_god":.1
 		}
 		
 	},
@@ -59,26 +60,28 @@ var npcDefinitions={
 		"name":"Brückenwächter",
 		"image":'img/characters/roboter.png',
 		"int":10,
-		"dex":10,
+		"dex":12,
 		"str":10,
-		"def":2,
-		"hp":20,
+		"def":9,
+		"hp":65,
 		"skills":{
-			"attack":.8,
-			"heal":.2
+			"attack":.8
 		}
 		
 	},
 	"hexe":{
 		"name":"Verliebte Hexe",
-		"image":'img/characters/fee.png',
-		"int":10,
+		"image":'img/characters/witch.png',
+		"int":11,
 		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"str":11,
+		"def":8,
+		"hp":65,
 		"skills":{
-			"attack":1
+			"attack":.6,
+			"heal":.2,
+			"double_damage":.15,
+			"heal_enemy":.05
 		}
 		
 	},
@@ -87,9 +90,9 @@ var npcDefinitions={
 		"image":'img/characters/roboter3.png',
 		"int":10,
 		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"str":9,
+		"def":6,
+		"hp":55,
 		"skills":{
 			"attack":1
 		}
@@ -101,9 +104,9 @@ var npcDefinitions={
 		"dex":10,
 		"str":10,
 		"def":2,
-		"hp":20,
+		"hp":35,
 		"skills":{
-			"stun_leg":.2
+			"attack":.8
 		}
 	},
 	"spider":{
@@ -115,6 +118,8 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
+			"attack":.7,
+			"dot":.3,
 		}
 	},
 	"golem":{
@@ -127,7 +132,7 @@ var npcDefinitions={
 		"hp":20,
 		"skills":{
 			"attack":.8,
-			"heal":.2
+			"double_damage":.2
 		}
 		
 	},
@@ -140,8 +145,7 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"attack":.8,
-			"heal":.2
+			"attack":.7
 		}
 		
 	},
@@ -168,8 +172,8 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"attack":.8,
-			"heal":.2
+			"attack":.9,
+			"heal":.1
 		}
 		
 	},
