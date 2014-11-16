@@ -25,7 +25,7 @@ function looseScene() {
 			[{text: 'Weiter', callback: function() {
 				scenes.map.reset();
 				hero.reset();
-				game.scene = scenes.map; 
+				game.scene = new switchScene(scenes.map,2500,'Map');
 			}}],
 			560
 	));

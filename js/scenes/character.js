@@ -8,7 +8,7 @@ function characterScene() {
 		this.stats,
 		this.hero,
 		new SpriteButton('img/ui/back_button.png', Rect.create(0,  0,161,133), Rect.create(161,  0,161,133),  10, 632, function(){
-			game.scene = scenes.map;
+			game.scene = new switchScene(scenes.map,2500,'Charakter');
 		}, null)
 	];
 

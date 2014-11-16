@@ -23,7 +23,7 @@ function winScene() {
 			'... but it is kind of fun to do the impossible!',
 			[{text: 'Weiter', callback: function() {
 				scenes.map.reset();
-				game.scene = scenes.map; 
+				game.scene = new switchScene(scenes.map,2500,'Map');
 			}}],
 			560
 	));
