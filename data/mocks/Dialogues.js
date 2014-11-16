@@ -657,7 +657,6 @@ var dialogDefinitions={
 					{
 						"item":["hp_potion"]
 					},
-					,
 					{
 						"item":["mana_potion"]
 					}

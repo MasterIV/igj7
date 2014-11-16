@@ -113,6 +113,14 @@ var skillDefinitions = {
 			"Attack": {"factor": 1}
 		}
 	},
+	"hyperbeam": {
+		"name": "Hyperstrahl",
+		"costs": 0,
+		"target": "single",
+		"effects": {
+			"Merkel": {"factor": 1}
+		}
+	},
 	"heal": {
 		"name": "Heilung",
 		"costs": 1,
