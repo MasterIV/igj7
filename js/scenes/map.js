@@ -53,7 +53,7 @@ function mapScene() {
 	
 	this.scrolls = false;
 	
-	this.reset();	
+	//this.reset();
 }
 
 mapScene.prototype = new scene();
@@ -73,6 +73,11 @@ mapScene.prototype.reset = function() {
 	}
 	this.encounterMap["1"].isClickable = true;
 	this.currentEncounter = this.encounterMap["1"];
+
+
+	this.blocking.push(
+		new mapSlide()
+	);
 }
 
 mapScene.prototype.setEncounter = function(id) {
@@ -216,4 +221,33 @@ mapScene.prototype.draw = function (ctx) {
 
 	if (this.blocking.length && this.blocking[0].draw)
 		this.blocking[0].draw(ctx, offset);
+}
+
+
+function mapSlide() {
+	this.start = new V2(-450, -150);
+	this.end = new V2(-912,-906);
+
+	this.duration = 4000;
+	this.animtime = 0;
+	this.progress = 0;
+}
+mapSlide.prototype.update = function (delta) {
+	if (this.animtime == 0) {
+		this._init();
+	}
+
+	this.animtime += delta;
+	this.progress = this.animtime/this.duration;
+
+	var length = this.start.dist(this.end);
+	var direction = this.end.dif(this.start).quo(length);
+	game.scene.dragOffset = this.start.sum(direction.mul(length*this.progress));
+
+	if (this.progress > 1) {
+		return true;
+	}
+}
+mapSlide.prototype._init = function () {
+	game.scene.dragOffset = this.start;
 }
