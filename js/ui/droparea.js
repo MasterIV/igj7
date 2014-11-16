@@ -34,7 +34,8 @@ itemslot.prototype.draw = function(ctx) {
 	if (this.getItem() && this.area.inside(mouse)) {
 		if (!game.scene.tooltip) {
 			var list = [];
-			list.push({label:'Slot',value:config.slotLabels[this.getItem().slot]})
+			if (this.getItem().slot)
+				list.push({label:'Slot',value:config.slotLabels[this.getItem().slot]})
 			for(var key in hero.attrs) {
 				var val = this.getItem().itemdefinition[key];
 				if (val)
@@ -121,7 +122,8 @@ equipslot.prototype.draw = function( ctx ) {
 	if (this.getItem() && this.area.inside(mouse)) {
 		if (!game.scene.tooltip) {
 			var list = [];
-			list.push({label:'Slot',value:config.slotLabels[this.getItem().slot]});
+			if (this.getItem().slot)
+				list.push({label:'Slot',value:config.slotLabels[this.getItem().slot]});
 			for(var key in hero.attrs) {
 				var val = this.getItem().itemdefinition[key];
 				if (val)
