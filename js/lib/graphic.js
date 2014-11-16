@@ -8,6 +8,7 @@ var g = {
 			'img/animation/healing.png',
 			'img/animation/newitem.png',
 			'img/characters/hero.png',
+			'img/characters/hero_spritesheet.png',
 			'img/ui/buttons.png',
 			'img/ui/target.png',
 			'img/ui/back_button.png',

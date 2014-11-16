@@ -1,5 +1,9 @@
 function Hero() {
 	var img = new sprite('img/characters/hero.png');
+	var animImg = new AnimationSprite('img/characters/hero_spritesheet.png',4);
+	this.counter = new Framecounter(200);
+
+
 	this.inventory = [];
 	this.skills = [];
 
@@ -64,7 +68,7 @@ function Hero() {
 	};
 
 	this.center = function( ctx, x, y ) {
-		img.center(ctx, x, y);
+		animImg.center(ctx, x, y, this.counter.frame%animImg.f);
 	}
 }
 
@@ -94,6 +98,9 @@ function HeroContainer(x, y) {
 
 	this.draw = function(ctx) {
 		hero.center(ctx, this.x, this.y);
+	};
+	this.update = function( delta ) {
+		hero.counter.update(delta);
 	};
 
 	this.getStats = function() {
