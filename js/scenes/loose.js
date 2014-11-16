@@ -21,7 +21,10 @@ function looseScene() {
 
 	this.blocking.push(new dialogue(
 			'Aber zum Glück wurde in dieses Spiel eine gute Fee eingebaut, die dich in die Verangenheit schiecken kann. Und so schmeißt sie den Fluxkompensator an und schickt dich in eine Zeit zurück, in der du noch garnicht angefangen hattest, dieses Spiel zu spielen...',
-			[{text: 'Weiter', callback: function() { game.scene = scenes.menu; }}],
+			[{text: 'Weiter', callback: function() {
+				scenes.map.reset();
+				game.scene = scenes.map; 
+			}}],
 			560
 	));
 }

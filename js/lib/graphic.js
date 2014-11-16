@@ -31,7 +31,8 @@ var g = {
 			'img/items/chest.png',
 			'img/items/helmet.png',
 			'img/items/ring.png',
-			'img/ui/gamestates.png'
+			'img/ui/gamestates.png',
+			'img/characters/villain.png'
 		],
 		
 	add: function( url ) {

@@ -47,18 +47,26 @@ function mapScene() {
 		this.encounterMap[index] = new encounter(index, enc.x, enc.y);
 		this.entities.push(this.encounterMap[index]);
 	}	
-	
-	this.encounterMap["1"].isClickable = true;
 
 	this.dragStart = new V2(0,0);
 	this.dragOffset = new V2(-912,-906);
 	
 	this.scrolls = false;
 	
-	this.currentEncounter = this.encounterMap["1"];
+	this.reset();	
 }
 
 mapScene.prototype = new scene();
+
+mapScene.prototype.reset = function() {
+	for(var index in this.encounterMap) {
+		var encounter = this.encounterMap[index];
+		encounter.isVisited = false;
+		encounter.isClickable = false;
+	}
+	this.encounterMap["1"].isClickable = true;
+	this.currentEncounter = this.encounterMap["1"];
+}
 
 mapScene.prototype.setEncounter = function(id) {
 	this.setClickable(false);
