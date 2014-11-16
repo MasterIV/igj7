@@ -2,11 +2,11 @@ var npcDefinitions={
 	"roboter":{
 		"name":"Roboter",
 		"image":'img/characters/roboter.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":15,
+		"dex":15,
+		"str":15,
+		"def":12,
+		"hp":40,
 		"skills":{
 			"attack":.8,
 			"heal":.2
@@ -14,13 +14,13 @@ var npcDefinitions={
 		
 	},
 	"roboter2":{
-		"name":"Roboter",
+		"name":"Roboter MK II",
 		"image":'img/characters/roboter2.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":17,
+		"dex":18,
+		"str":16,
+		"def":13,
+		"hp":50,
 		"skills":{
 			"attack":.8,
 			"heal":.2
@@ -28,13 +28,13 @@ var npcDefinitions={
 		
 	},
 	"roboter3":{
-		"name":"Roboter",
+		"name":"Roboter MK III",
 		"image":'img/characters/roboter3.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":18,
+		"dex":19,
+		"str":15,
+		"def":15,
+		"hp":60,
 		"skills":{
 			"attack":.8,
 			"heal":.2
@@ -99,7 +99,7 @@ var npcDefinitions={
 	},
 	"hotelf":{
 		"name":"Heiße Elfe",
-		"image":'img/characters/roboter2.png',
+		"image":'img/characters/hotelf.png',
 		"int":19,
 		"dex":18,
 		"str":20,
@@ -130,8 +130,8 @@ var npcDefinitions={
 		"def":8,
 		"hp":34,
 		"skills":{
-			"attack":.7,
-			"posioncloud":.3,
+			"attack":.9,
+			"posioncloud":.1,
 		}
 	},
 	"golem":{

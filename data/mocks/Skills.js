@@ -7,12 +7,21 @@ var skillDefinitions = {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
 		}
 	},
-	"oil": {
-		"name": "Einölen",
-		"costs": 2,
+	"bandage": {
+		"name": "Bandagieren",
+		"costs": 5,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 10, "attr": "int", "rnd": .6 }
+			"Heal": {"base": 7, "attr": "int", "rnd": .3 }
+		}
+	},
+	"oil": {
+		"name": "Einölen",
+		"costs": 10,
+		"target": "self",
+		"effects": {
+			"Heal": {"base": 15, "attr": "int", "rnd": .6 },
+			"Stun": {"duration": 1, "attr": "str" }
 		}
 	},
 	"heal_enemy": {
@@ -25,7 +34,7 @@ var skillDefinitions = {
 	},
 	"heal_w_dmg": {
 		"name": "Blaues Auge der Heilung",
-		"costs": 1,
+		"costs": 25,
 		"target": "self",
 		"effects": {
 			"Heal": {"base": 40, "attr": "int", "rnd": .6 },
@@ -34,15 +43,15 @@ var skillDefinitions = {
 	},
 	"buff_cucumber": {
 		"name": "Reib die Gurke",
-		"costs": 2,
+		"costs": 5,
 		"target": "self",
 		"effects": {
 			"Buff": {"duration": 3, "value": "-5" }
 		}
 	},
 	"posioncloud": {
-		"name": "Reib die Gurke",
-		"costs": 2,
+		"name": "Giftwolke",
+		"costs": 25,
 		"target": "all",
 		"effects": {
 			"Buff": {"duration": 3, "value": "20" }
@@ -50,7 +59,7 @@ var skillDefinitions = {
 	},
 	"attack_god": {
 		"name": "Faust Gottes",
-		"costs": 10,
+		"costs": 25,
 		"target": "all",
 		"effects": {
 			"Attack": {"factor": 1.5}
@@ -58,7 +67,7 @@ var skillDefinitions = {
 	},
 	"attack_fist": {
 		"name": "Mächtige Hand",
-		"costs": 5,
+		"costs": 20,
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 2.5}
@@ -66,7 +75,7 @@ var skillDefinitions = {
 	},
 	"attack_rage": {
 		"name": "Rage!#$§!?%",
-		"costs": 4,
+		"costs": 17,
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 2.3}
@@ -74,7 +83,7 @@ var skillDefinitions = {
 	},
 	"double_damage": {
 		"name": "Doppelter Schaden",
-		"costs": "3",
+		"costs": "15",
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 2}
@@ -82,7 +91,7 @@ var skillDefinitions = {
 	},
 	"roundhousekick": {
 		"name": "Roundhousekick",
-		"costs": "5",
+		"costs": "45",
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 3}
@@ -90,7 +99,7 @@ var skillDefinitions = {
 	},
 	"stun_leg": {
 		"name": "Bein stellen",
-		"costs": 2,
+		"costs": 10,
 		"target": "single",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
@@ -117,15 +126,32 @@ var skillDefinitions = {
 		"costs": 30,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 70, "attr": "int", "rnd": .6 }
+			"Heal": {"base": 70, "attr": "int", "rnd": .3 }
 		}
 	},
 	"psychohit": {
 		"name": "Psychoschlag",
-		"costs": 30,
+		"costs": 15,
+		"target": "all",
+		"effects": {
+			"Stun": {"duration": 2, "attr": "dex" }
+		}
+	},
+	"singing": {
+		"name": "Schräger Gesang",
+		"costs": 40,
 		"target": "all",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
+		}
+	},
+	"thundershock": {
+		"name": "Donnerschock",
+		"costs": 20,
+		"target": "all",
+		"effects": {
+			"Stun": {"duration": 3, "attr": "dex" },
+			"Buff": {"duration": 2, "value": "15" }
 		}
 	}
 };
