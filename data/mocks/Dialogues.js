@@ -49,6 +49,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":3,
 				"rewards":[
 					{
 						"fight":[
@@ -88,6 +89,7 @@ var dialogDefinitions={
 						"condition":{
 							
 						},
+						"image":3,
 						"rewards":[
 							{
 								"fight":[
@@ -117,6 +119,7 @@ var dialogDefinitions={
 						"condition":{
 							
 						},
+						"image":3,
 						"rewards":[
 							{
 								"fight":[
@@ -202,6 +205,7 @@ var dialogDefinitions={
 								"condition":{
 									
 								},
+								"image":3,
 								"rewards":[
 									{
 										"fight":[
@@ -247,6 +251,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":1,
 				"rewards":[
 					{
 						"fight":[
@@ -568,6 +573,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":2,
 				"rewards":[
 					{
 						"fight":[
@@ -719,6 +725,7 @@ var dialogDefinitions={
 		"replies":[
 			
 		],
+		"image":1,
 		"rewards":[
 			{
 				"hp":80
@@ -753,6 +760,7 @@ var dialogDefinitions={
 		"replies":[
 			
 		],
+		"image":2,
 		"rewards":[
 			{
 				"fight":["minischlacht","minischlacht","minischlacht"]
@@ -779,6 +787,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":2,
 				"rewards":[
 					{
 						"fight":["roboter","sheep","sheep"]
@@ -1064,7 +1073,7 @@ var dialogDefinitions={
 	},
 	"12":{
 		"text":"Niemand weiß, wie es Alibaba und seine tausend Kumpels es auf diese Insel verschlagen hat, aber es scheint hart gewesen zu sein. Sie sind nur noch zu dritt.",
-		"image":"boss.png",
+		"image":4,
 		"replies":[
 			
 		],
@@ -1247,6 +1256,7 @@ var dialogDefinitions={
 		"replies":[
 			
 		],
+		"image":3,
 		"rewards":[
 			{
 				"fight":[
@@ -1372,6 +1382,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":2,
 				"rewards":[
 					{
 						"fight":[
@@ -1432,6 +1443,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":2,
 				"rewards":[
 					{
 						"fight":[
@@ -1459,6 +1471,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":2,
 				"rewards":[
 					{
 						"fight":[
@@ -1497,6 +1510,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":4,
 				"rewards":[
 					{
 						"hp":80
@@ -1727,6 +1741,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":3,
 				"rewards":[
 					{
 						"hp":80
@@ -1763,6 +1778,7 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
+				"image":3,
 				"rewards":[
 					{
 						"fight":["hotelf"]
@@ -2009,7 +2025,7 @@ var dialogDefinitions={
 	},
 	"24":{
 		"text":"Schon einmal vom den angepissten Hausfrauen der Raktagron-Ebene gehört? Die auch nicht, ABER sie schlagen genauso hart zu, wie sie unwissend sind! Sie sind verdammt wütend, dass du den Müll nicht rausgebracht hast!",
-		"image":"boss.png",
+		"image":2,
 		"replies":[
 			
 		],
@@ -2274,7 +2290,7 @@ var dialogDefinitions={
 	},
 	"27":{
 		"text":"Du bist in eine Ratsitzung von Golems gestolpert. Sie diskutieren seit 15.000 Jahren und brauchen Monate für einen Satz. Zu deinem Unglück hast du sie mittendrin unterbrochen. Schlechte Idee!",
-		"image":"boss.png",
+		"image":2,
 		"replies":[
 			
 		],
@@ -2307,7 +2323,7 @@ var dialogDefinitions={
 	},
 	"28":{
 		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee: 'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast!' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
-		"image":"boss.png",
+		"image":1,
 		"replies":[
 			
 		],
@@ -2343,7 +2359,7 @@ var dialogDefinitions={
 	},
 	"29":{
 		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee: 'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast!' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
-		"image":"boss.png",
+		"image":1,
 		"replies":[
 			
 		],
@@ -2379,7 +2395,7 @@ var dialogDefinitions={
 	},
 	"30":{
 		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee: 'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast!' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
-		"image":"boss.png",
+		"image":1,
 		"replies":[
 			
 		],
@@ -2415,7 +2431,7 @@ var dialogDefinitions={
 	},
 	"31":{
 		"text":"WIE?! Aus welchem Loch bist du denn gekrochen gekommen? Na egal, ich werde dich wegrationalisieren und Neuland aus dir machen!",
-		"image":"boss.png",
+		"image":4,
 		"replies":[
 			
 		],

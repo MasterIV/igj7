@@ -96,10 +96,10 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 				var fightImage = "img/maps/mountain.jpg";
 				if(typeof(dialogueData.image) != "undefined") {
 					if(dialogueData.image == 2) {
-						fightImage = "img/maps/death.jpg";
+						fightImage = "img/maps/village.jpg";
 					}
 					if(dialogueData.image == 3) {
-						fightImage = "img/maps/death.jpg";
+						fightImage = "img/maps/waterfall.jpg";
 					}
 					if(dialogueData.image == 4) {
 						fightImage = "img/maps/death.jpg";
