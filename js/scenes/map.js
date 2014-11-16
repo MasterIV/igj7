@@ -231,7 +231,7 @@ function mapSlide() {
 	this.start = new V2(-450, -150);
 	this.end = new V2(-912,-906);
 
-	this.duration = 4000;
+	this.duration = 2000;
 	this.animtime = 0;
 	this.progress = 0;
 }
