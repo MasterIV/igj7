@@ -81,7 +81,7 @@ combatScene.prototype.getChoice = function(s) {
 		self.blocking.shift();
 
 		if(s.costs)
-			self.hero.mp -= s.costs;
+			self.hero.mana -= s.costs;
 		if(s instanceof item)
 			hero.use(item);
 
