@@ -33,7 +33,7 @@ switchScene.prototype.update = function (delta) {
 	this.lifetime += delta;
 	this.progress = this.lifetime/this.delay;
 
-	if (this.progress >1) {
+	if (this.progress > 1) {
 		game.scene = this.targetScene;
 	}
 
@@ -50,7 +50,11 @@ switchScene.prototype.update = function (delta) {
 
 
 switchScene.prototype.draw = function (ctx) {
-	ctx.drawImage( this.buffer, 0, 0 );
+	if (this.progress > 0.5) {
+		this.targetScene.draw(ctx);
+	} else {
+		ctx.drawImage( this.buffer, 0, 0 );
+	}
 
 
 	/*
@@ -65,10 +69,18 @@ switchScene.prototype.draw = function (ctx) {
 	ctx.fillText( this.title, game.display.width/2, game.display.height/2, game.display.width);
 	*/
 
-	var pixelProgress = 640 * this.progress*3;
-	if (pixelProgress > 640) pixelProgress = 640;
-	this.leftSide.draw(ctx, -640 + pixelProgress,0);
-	this.rightSide.draw(ctx, game.display.width - pixelProgress,0);
+
+	if (this.progress <= 0.5) {
+		var pixelProgress = 640 * this.progress*3;
+		if (pixelProgress > 640) pixelProgress = 640;
+		this.leftSide.draw(ctx, -640 + pixelProgress,0);
+		this.rightSide.draw(ctx, game.display.width - pixelProgress,0);
+	} else {
+		var pixelProgress = 640 * (this.progress-0.5)*3;
+		if (pixelProgress > 640) pixelProgress = 640;
+		this.leftSide.draw(ctx, 0 - pixelProgress,0);
+		this.rightSide.draw(ctx, game.display.width/2 + pixelProgress,0);
+	}
 
 	//ctx.fillStyle = 'black';
 	//ctx.fillRect(0,0,(game.display.width/2)*this.progress*3,768);
