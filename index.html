@@ -23,6 +23,7 @@
 		<script type="text/javascript" src="js/lib/sprite.js"></script>
 		<script type="text/javascript" src="js/lib/util.js"></script>
 		<script type="text/javascript" src="js/lib/ajax.js"></script>
+		<script type="text/javascript" src="js/lib/backgroundsound.js"></script>
 
 		<script type="text/javascript" src="js/entities/entity.js"></script>
 		<script type="text/javascript" src="js/scenes/scene.js"></script>
@@ -63,6 +64,7 @@
 					scenes.character = new characterScene();
 					scenes.loose = null // new looseScene();
 					scenes.switch = null // new switchScene();
+					backgroundsound.play('sound/map_intro.mp3');
 
 					game.scene = scenes.menu;
 					game.init();

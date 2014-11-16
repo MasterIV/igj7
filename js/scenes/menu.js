@@ -4,6 +4,7 @@ function menuScene() {
 			game.scene = scenes.map;
 		}, {}),
 		new textButton('Kampf', 10, 50, 200, 30, function () {
+			scenes.combat.setEnemies(['roboter','roboter','roboter']);
 			game.scene = scenes.combat;
 		}, {}),
 		new textButton('Character', 10, 90, 200, 30, function () {
