@@ -4,8 +4,12 @@ function tooltip(headline, description, list, owner) {
 
 	this.owner = owner;
 
-	this.lines = this._splitString(description, 22);
-	this.headlines = this._splitString(headline, 14);
+	this.lines = []
+	if (description)
+		this.lines = this._splitString(description, 22);
+	this.headlines = [];
+	if (headline)
+		this.headlines = this._splitString(headline, 14);
 	this.list = list;
 }
 tooltip.prototype._splitString = function (str,charsPerLine ) {
