@@ -52,6 +52,7 @@ var g = {
 			'img/characters/roboter3.png',
 			'img/characters/sheep.png',
 			'img/characters/merkel.png',
+			'img/characters/witch.png',
 			'img/characters/spider.png'
 		],
 		
