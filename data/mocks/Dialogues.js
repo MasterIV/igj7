@@ -17,7 +17,7 @@ var dialogDefinitions={
 		
 	},
 	"1":{
-		"text":"Das Letzte, an das du dich noch erinnerst, ist Angelika über dir und ein wildes Amazonenjodeln in deinen Ohren, bis das Dunkeln dich umhüllt. Als du wieder zu Besinnung kommst, funkelt dir eine niedliche Fee entgegen, welche jedoch mit deiner Leistung absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAR DAS DENN? So eine jämmerliche Darbietung habe ich lange nicht mehr gesehen. Ab zurück auf die Trainingsbank! Und bevor du dich in die Welt stürzt, mach dich mit deinen Attributen und dem Inventar vertraut! GOD DAMN IT!",
+		"text":"Das Letzte, an das du dich noch erinnerst, ist Angelika über dir und ein wildes Amazonenjodeln in deinen Ohren, bis das Dunkel dich umhüllt. Als du wieder zur Besinnung kommst, funkelt dir eine niedliche Fee entgegen, welche jedoch mit deiner Leistung absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAR DAS DENN? So eine jämmerliche Darbietung habe ich lange nicht mehr gesehen. Ab zurück auf die Trainingsbank! Und bevor du dich in die Welt stürzt, mach dich mit deinen Attributen und dem Inventar vertraut! GOD DAMN IT!",
 		"image":"fee.png",
 		"replies":[
 			
@@ -40,11 +40,11 @@ var dialogDefinitions={
 		
 	},
 	"2":{
-		"text":"Du kommst an eine große Brücke, auf der dir ein Wächter den Weg versperrt. Er ruft: 'Haltet ein! Wer wandelt hier durch Nacht und Wind?'",
+		"text":"Du erreichst eine monumentale Brücke, auf der dir ein Wächter den Weg versperrt. Er ruft: 'Haltet ein! Wer wandelt hier durch Nacht und Wind?'",
 		"image":"bruecke.png",
 		"replies":[
 			{
-				"text":"Denkst du ich bin ein Idiot? Ich kann von hier deine Beinhaarstoppel sehen!",
+				"text":"Denkt Ihr, ich bin ein Idiot? Ich kann von hier aus Eure Beinhaarstoppeln sehen!",
 				"reply":"Ich bin eine Prinzessin vom Glitzerberg",
 				"condition":{
 					
@@ -141,7 +141,7 @@ var dialogDefinitions={
 						
 					},
 					{
-						"text":"Wächter: 'Richtig! Nächste Frage. Was begehrt ihr?'",
+						"text":"Wächter: 'Richtig! Nächste Frage. Was begehrt Ihr?'",
 						"reply":"Pink?",
 						"condition":{
 							
@@ -242,7 +242,7 @@ var dialogDefinitions={
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Du setzt einen Fuß hinter den anderen, bemerkst jedoch zu spät, dass du in eine klebrige, rosa Flüßigkeit getreten bist. Diese verströmt einen vertrauten Geruch von Liebestrank! Plötzlich attackiert euch eine verliebt aussehende Hexe aus dem Gebüsch an!",
+				"text":"Du setzt einen Fuß hinter den anderen, bemerkst jedoch zu spät, dass du in eine klebrige, rosa Flüßigkeit getreten bist. Diese verströmt einen vertrauten Geruch von Liebestrank! Plötzlich attackiert dich eine verliebt aussehende Hexe aus dem Gebüsch!",
 				"reply":"(Nachsehen)",
 				"condition":{
 					
@@ -271,7 +271,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Du bemerkst sofort, dass die Hexe eine Falle gestellt und sich daraufhin in ihrer eigenen Tollpatschigkeit selbst mit einem Liebestrank übergossen hat. Du gibst dich als auf Liebestränke spezialisierter Alchemist aus und überredest sie dir ihre restlichen Wertgegenstände für eine Heilung zu geben!",
+				"text":"Du bemerkst sofort, dass dir eine Hexe eine Falle gestellt hat und sich daraufhin in ihrer eigenen Tollpatschigkeit selbst mit einem Liebestrank übergossen hat. Du gibst dich als ein auf Liebestränke spezialisierter Alchemist aus und überredest sie, dir ihre restlichen Wertgegenstände für eine Heilung zu geben!",
 				"reply":"Situation glasklar analysiert!",
 				"condition":{
 				},
@@ -293,8 +293,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Du entdeckst eine alte Hexe, dich direkt mit verliebten Augen ansieht. Ihr Held ist da und sie schenkt dir direkt ein Amulett als Verlobungsgeschenk!",
-				"reply":"Gewiss eine holde Maid! Sie braucht meine harte Brust zum anschmiegen!",
+				"text":"Du entdeckst eine alte Hexe, die dich unmittelbar mit verliebten Augen ansieht. Ihr Held ist da, so denkt sie, und legt selbstlos einen stärkenden Zauber als Verlobungsgeschenk auf dich!",
+				"reply":"Gewiss eine holde Maid! Sie braucht meine harte Brust zum Anschmiegen!",
 				"condition":{
 				},
 				"rewards":[
@@ -322,11 +322,11 @@ var dialogDefinitions={
 		
 	},
 	"4":{
-		"text":"Schon von weitem erkennst du eine lange Schleifspur auf dem Boden, die recht schnell in einem Einschlagskrater mündet. Als du näher kommst, humpelt dir aus den Überresten einer Rakete ein in Lumpen gekleideter Gnom entgegen. Gnom: 'Haltet ein Reisender, mein Interinselflug ist leider auf dieser Insel abgestürzt und ich habe kein Ticket, um weiter zu reisen! Kannst du mir helfen?'",
+		"text":"Schon von weitem erkennst du eine lange Schleifspur auf dem Boden, die recht früh in einem Einschlagskrater mündet. Als du näher kommst, humpelt dir aus den Überresten einer Rakete ein in Lumpen gekleideter Gnom entgegen. Gnom: 'Haltet ein Reisender, mein Interinselflug ist leider auf dieser Insel abgestürzt und ich habe kein Ticket, um weiter zu reisen! Könnt Ihr mir helfen?'",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Gnome:'Habt dank!' Auch wenn deine Beine viel länger sind, kann ich dir sicher beibringen sie jemanden in den Weg zu stellen! ",
+				"text":"Gnome:'Habt dank!' Auch wenn Eure Beine viel länger sind, so kann ich Euch sicher beibringen, wie Ihr sie effektiv jemandem in den Weg stellt! ",
 				"reply":"Aber sicher! Gnome in Not sind genau mein Ding!",
 				"condition":{
 					
@@ -405,11 +405,11 @@ var dialogDefinitions={
 		
 	},
 	"5":{
-		"text":"Heißer Dampf schlägt dir entgegen und du merkst, dass dein Weg dich in das städtische Badehaus geführt hat. Aber die Gilde der verboten reichen Füllereiliebhaber hat alle Wasserbecken belegt. Sie sehen dich fragend an, als du hinsteigen willst.",
+		"text":"Heißer Dampf schlägt dir entgegen und du merkst, dass dein Weg dich in das städtische Badehaus geführt hat. Aber die Gilde der verboten reichen Füllereiliebhaber hat alle Wasserbecken belegt. Sie sehen dich fragend an, als du hinzusteigen willst.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"'Mit Gewalt geht alles!' Du holst Anlauf und springst kopfüber in die Falte vom Vorsitzenden. Ein wenig Platz schaffen und die Sache passt. Klasse Training!",
+				"text":"'Mit Gewalt geht alles!' Du nimmst Anlauf und springst kopfüber in die Falte vom Vorsitzenden. Ein wenig Platz schaffen und die Sache passt. Klasse Training!",
 				"reply":"'Da ist noch Platz!'",
 				"condition":{
 					
@@ -480,7 +480,7 @@ var dialogDefinitions={
 			},
 			{
 				"text":"Du kannst garnicht so schnell gucken, wie die Becken leer sind, aber leider auch das Wasser...",
-				"reply":"'Draußen verteilt wer goldene Minzblätter!'",
+				"reply":"'Draußen verteilt jemand goldene Minzblätter!'",
 				"condition":{
 					
 				},
@@ -514,7 +514,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Wie es der Natur dieser reichen Säcke entspricht, respektieren sie nur Klunker und dein einfach 'Bling Bling' ist stärker!",
+				"text":"Wie es der Natur dieser reichen Säcke entspricht, respektieren sie nur Klunker und dein 'Bling Bling' ist stärker!",
 				"reply":"'Sonst bade ich nur in Geld, aber...'",
 				"condition":{
 					
@@ -556,7 +556,7 @@ var dialogDefinitions={
 		
 	},
 	"6":{
-		"text":"Du kommst an eine Farm. Im Hintergrund hüpfen glückliche Schäfchen und ein pfeifender Elf begrüßt euch freundlich! Während er seinem Lieblingssbock einnen Pferdeschwanz flechtet, guckt er dich neugierig an.",
+		"text":"Du kommst an eine Farm. Im Hintergrund hüpfen glückliche Schäfchen und jäh begrüßt dich freundlich pfeifender Elf! Während er seinem Lieblingsbock einnen Pferdeschwanz flechtet, guckt er dich neugierig an.",
 		"image":"boss.png",
 		"replies":[
 			{
@@ -603,7 +603,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Nachdem du ihn eine halbe Stunde eingelullet und sogar 'Liebe und Harmonie' in Deutungstanz vorgführt hast gibt er nach!",
+				"text":"Nachdem du ihn eine halbe Stunde eingelullt und sogar 'Liebe und Harmonie' als Deutungstanz vorgeführt hast, gibt er nach!",
 				"reply":"'In der Natur braucht man keine Schätze!'",
 				"condition":{
 					
@@ -637,7 +637,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Du wusstest du hast Talent für sowas, aber wie zur Hölle konntest du selbst mit eingeflechtet?",
+				"text":"Du wusstest, du hast Talent für sowas, aber wie zur Hölle konntest du dich selbst mit einflechten?",
 				"reply":"Hilf ihm mit den Zöpfen.",
 				"condition":{
 					
@@ -671,7 +671,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Er ist geblendet von soviel Naturkompetenz. Nachdem ich auch die neusten Goblin-Sammelkarten ausgetauscht habt, ziehst du von Dannen!",
+				"text":"Er ist geblendet von soviel Naturkompetenz. Nachdem ihr auch die neuesten Goblin-Sammelkarten ausgetauscht habt, ziehst du von dannen!",
 				"reply":"Zeig ihm deine Abzeichen der Pfadfinder.",
 				"condition":{
 					
@@ -746,7 +746,7 @@ var dialogDefinitions={
 		
 	},
 	"8":{
-		"text":"Du machst dich bereit und spürst die Vorfreude einer Schlacht in dir aufflammen, als in der Ferne das Klirren von Waffen und Knallen von Musketen ertönt. Als du jedoch durch das Gebüsch auf eine Lichtung tritts stehen dort nur drei schäbig bewaffnete Menschen. Naja, Schlacht ist Schlacht!",
+		"text":"Du machst dich bereit und spürst die Vorfreude einer Schlacht in dir aufflammen, als in der Ferne das Klirren von Waffen und das Knallen von Musketen ertönt. Als du jedoch durch das Gebüsch auf eine Lichtung trittst, stehen dort nur drei schäbig bewaffnete Leute. Naja, Schlacht ist Schlacht!",
 		"image":"boss.png",
 		"replies":[
 			
@@ -772,7 +772,7 @@ var dialogDefinitions={
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Du bist nicht allein! Als du dich in einem hohen Bogen den wabernden Schwaden näherst siehst du schähmenhafte Umrisse. Aber Herje, es entpuppen sich als ein behaarter Holzfäller, sein Pferd und die zwei angepissten Schafe Jeff und Tom aus Connecticut.",
+				"text":"Du bist nicht allein! Als du dich in einem hohen Bogen den wabernden Schwaden näherst, siehst du schähmenhafte Umrisse. Aber Herrje, sie entpuppen sich als ein behaarter Holzfäller, sein Pferd und die zwei angepissten Schafe Jeff und Tom aus Connecticut.",
 				"reply":"...springst nackt in die Quelle.",
 				"condition":{
 					
@@ -797,7 +797,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Die in Dampf verhüllten Gestalten bemerken dich nicht und kannst ruhig alles mitnehmen, was von Wert ist.",
+				"text":"Die in Dampf verhüllten Gestalten bemerken dich nicht und du kannst gefahrlos alles mitnehmen, was von Wert ist.",
 				"reply":"...durchsuchst die Sachen.",
 				"condition":{
 					
@@ -819,7 +819,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Du kriechst bist auf wenige Meter heran, wirst aber von einem Hinweisschild aufgehalten, dass unmissverständlich erklärt, dass dies eine FKK-Quelle ist. Schade, aber immerhin konntest du die Gespräche belauschen und etwas orkisch lernen...",
+				"text":"Du kriechst bis auf wenige Meter heran, wirst aber von einem Hinweisschild aufgehalten, das unmissverständlich erklärt, dass dies eine FKK-Quelle ist. Schade, aber immerhin konntest du die Gespräche belauschen und etwas orkisch lernen...",
 				"reply":"...riskierst einen Blick.",
 				"condition":{
 					
@@ -848,11 +848,11 @@ var dialogDefinitions={
 		
 	},
 	"10":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Du weißt von einem elfischen Versuchslabor, das interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Malus auf Bewegungsreichweite erwürfelt. Du hast keine Probleme damit abzuhauen. Gut für dich!",
 				"reply":"Das ist mir nicht geheuer... lieber weg!",
 				"condition":{
 					
@@ -896,7 +896,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"text":"Als du ohne Drohgebärden an den Schwarm herantrittst, erweisen sie sich als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
 				"reply":"Nach dem Weg fragen.",
 				"condition":{
 					
@@ -925,11 +925,11 @@ var dialogDefinitions={
 		
 	},
 	"11":{
-		"text":"'Wuuuhuuuuuuuu...' ein schrillendes Rufen weckt dich aus deinen Reiseträumen. Du schaust dich um, kannst aber niemand finden bis dir etwas großes Rundes vor die Linsen fliegt. Aber was zum Teufel ist das? Es ist eine Miniform der guten Fee, aber scheint diese gegessen zu haben. Gut gelaunt erfüllt sie dir einen Wünsch.",
+		"text":"'Wuuuhuuuuuuuu...' ein schrilles Rufen weckt dich aus deinen Reiseträumen. Du schaust dich um, kannst aber niemanden ausmachen, bis dir etwas großes Rundes vor die Linsen fliegt. Aber was zum Teufel ist das? Es ist eine Miniform der guten Fee, aber sie scheint diese gegessen zu haben. Gut gelaunt erfüllt sie dir einen Wünsch.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Ein klasse Wunsch! Sie erzählt dir stundenlang Anekdoten außer ihrer Zeit als Wirtin Goldwalds Kneipe 'Zum stolzen Löwen'",
+				"text":"Ein klasse Wunsch! Sie erzählt dir stundenlang Anekdoten aus ihrer Zeit als Wirtin in Goldwalds Kneipe 'Zum geknickten Löwen'",
 				"reply":"Das Wissen der Welt",
 				"condition":{
 					
@@ -988,7 +988,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Eine harte Nuss, da sich viel Erfahrung damit hat Leute übers Ohr zu hauen, aber keine Fee kann etwas gegen eine Doppelwunsch-Versicherung einwenden!",
+				"text":"Eine harte Nuss, da sie offenbar viel Erfahrung damit hat, Leute übers Ohr zu hauen, aber keine Fee kann etwas gegen eine Doppelwunsch-Versicherung einwenden!",
 				"reply":"Sie soll eine Versicherung abkaufen",
 				"condition":{
 					
@@ -1019,7 +1019,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Sie hat da noch so eine dicke Uhr von ihrer Tante TingelTangelbob. Die kannst haben!",
+				"text":"Sie hat da noch so eine dicke Uhr von ihrer Tante TingelTangelbob. Die kannst du haben!",
 				"reply":"Mehr Reichtum!",
 				"condition":{
 					
@@ -1057,7 +1057,7 @@ var dialogDefinitions={
 		
 	},
 	"12":{
-		"text":"Niemand weiß, wie es Alibaba und seine tausend Kumpels es auf diese Insel verschlagen hat, aber es scheint hart gewesen zu sein. Sie sind nurnoch zu dritt.",
+		"text":"Niemand weiß, wie es Alibaba und seine tausend Kumpels es auf diese Insel verschlagen hat, aber es scheint hart gewesen zu sein. Sie sind nur noch zu dritt.",
 		"image":"boss.png",
 		"replies":[
 			
@@ -1090,7 +1090,7 @@ var dialogDefinitions={
 		
 	},
 	"13":{
-		"text":"Eine friedliche, unschuldige, blumige Wiese in reinem Sonnenlicht. Hier passiert dir nichts böses!",
+		"text":"Eine friedliche, unschuldige, blumige Wiese in reinem Sonnenlicht. Hier passiert dir nichts Böses! Du solltest hier das Spiel beenden, wenn du es mit Friedlichkeit in Erinnerung behalten willst.",
 		"image":"boss.png",
 		"replies":[
 			
@@ -1101,11 +1101,11 @@ var dialogDefinitions={
 		
 	},
 	"14":{
-		"text":"Eine Gang aus Händlern belagert die Straße. Aus dem Durcheinander aus Beatboxing und 'Digga' vermeinst du zu hören, dass du 'fett krass was abkaufen musst, um auf die Westside zu kommen'. Zum Glück hast du noch etwas Taschengeld übrig. Was soll es sein?",
+		"text":"Eine Bande aus Händlern belagert die Straße. Aus dem Durcheinander aus Beatboxing und 'Digga' vermeinst du zu hören, dass du 'fett krass was abkaufen musst, um auf die Westside zu kommen'. Zum Glück hast du noch etwas Taschengeld übrig. Was soll es sein?",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Auf Elfen ist verlass, ihr Stoff gibt Erinnerungen aus mindestens sieben Leben.",
+				"text":"Auf Elfen ist verlass, ihr Stoff gibt Erinnerungen aus mindestens sieben Leben, so glaubst du.",
 				"reply":"Voll deeper shit",
 				"condition":{
 					
@@ -1136,7 +1136,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Tiefer gelegte Lasttiere haben seit jeher zu langen Stauß geführt, aber damn... sitzen die Puschen tight!",
+				"text":"Tiefer gelegte Lasttiere haben seit jeher zu langen Staus geführt, aber was soll's... sitzen die Puschen tight, ist alles alright!",
 				"reply":"Krasse Maultierfelgen",
 				"condition":{
 					
@@ -1167,7 +1167,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Ich bin raus...",
+				"text":"Der sagenhafte Text des geforderten Buches: 'Ich bin raus...'",
 				"reply":"Thug's Handbuch of life",
 				"condition":{
 					
@@ -1236,7 +1236,7 @@ var dialogDefinitions={
 		
 	},
 	"15":{
-		"text":"El'Orko del diablo hat sein Lager am Wegesrand aufgeschlagen. An dieser Gelegenheit kommst du noch vorbei!",
+		"text":"El'Orko del Diablo hat sein Lager am Wegesrand aufgeschlagen. An dieser Gelegenheit kommst du noch vorbei!",
 		"image":"boss.png",
 		"replies":[
 			
@@ -1273,7 +1273,7 @@ var dialogDefinitions={
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Zur deiner Überraschung wirst du genommen. Deine Aufgabe besteht in einer Runde 'Angsthase' gegen einen Dachs. Bremst du, oder hälst du drauf?",
+				"text":"Zu deiner eigenen Überraschung wirst du unzählige Male zum Recall eingeladen und schließlich zu einem Test vorgelassen. Deine Aufgabe besteht in einer Runde 'Angsthase' gegen einen Dachs. Bremst du, oder hälst du drauf?",
 				"reply":"Fahrer? ICH ICH ICH!",
 				"condition":{
 					
@@ -1283,7 +1283,7 @@ var dialogDefinitions={
 				],
 				"replies":[
 					{
-						"text":"Du hast nicht mehr alle Tassen im Schrank! Jeder weiß, was Dachse sie Berseker der Straße sind. Es wird niemand erfahren, ob es daher rührt, dass er nicht ans Lenkrad kam, oder die Welt einfach nur brennen sehen wollte. Auf jeden Fall kracht ihr voll zusammen und du kannst dich glücklich schätzen mit dem Leben davon zu kommen!",
+						"text":"Du hast nicht mehr alle Tassen im Schrank! Jeder weiß, das Dachse sie Berseker der Straße sind. Es wird niemand erfahren, ob es daher rührt, dass er nicht ans Lenkrad kam, oder ob er die Welt einfach nur brennen sehen wollte. Auf jeden Fall kracht ihr hart zusammen und du kannst dich glücklich schätzen, mit dem Leben davongekommen zu sein!",
 						"reply":"(Draufhalten)",
 						"condition":{
 							
