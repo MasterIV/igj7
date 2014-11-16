@@ -30,6 +30,15 @@ Attack.prototype.run = function( target ) {
 	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, movex, target.y, 500 ));
 };
 
+function Mana(scene, actor, value) {
+	this.scene = scene;
+	this.actor = actor;
+	this.value = value;
+}
+
+Mana.prototype.run = function( target ) {
+	this.scene.blocking.push( new AnimationDamage( target, this.value, true ));
+};
 
 function Heal( scene, actor, base, rnd, attr ) {
 	this.scene = scene;

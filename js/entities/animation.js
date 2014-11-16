@@ -40,13 +40,14 @@ MoveTwards.prototype.update = function(delta) {
 	this.entity.y += percent * this.height;
 };
 
-function AnimationDamage( target, damage ) {
+function AnimationDamage( target, damage, mana ) {
 	this.target = target;
 	this.damage = String(Math.abs( damage )).split('');
 	this.total = damage;
 	this.done = 0;
 	this.duration = 700;
 	this.anitime = 0;
+	this.mana = mana;
 
 	this.x = target.x;
 	this.y = target.y;
@@ -60,7 +61,9 @@ AnimationDamage.prototype.update = function( delta ) {
 			: Math.max( this.total, Math.round( this.total * prog ) - this.done );
 
 	this.done += dmg;
-	this.target.harm( dmg );
+
+	if( this.mana ) this.replenish( dmg );
+	else this.target.harm( dmg );
 
 	return ( this.anitime += delta ) > this.duration;
 }
@@ -75,7 +78,8 @@ AnimationDamage.prototype.draw = function( ctx ){
 		var y = this.y + 45 * Math.cos( Math.PI*2*(this.anitime+50*i)/(this.duration+50*i));
 		ctx.fillStyle = "rgba(30,30,30,0.5)";
 		ctx.fillText(this.damage[i], x+16*i, y);
-		ctx.fillStyle = this.total > 0 ? "rgb(230,150,150)" : "rgb(150,230,150)";
+		if( this.mana ) ctx.fillStyle = "rgb(150,230,150)";
+		else ctx.fillStyle = this.total > 0 ? "rgb(230,150,150)" : "rgb(150,230,150)";
 		ctx.fillText(this.damage[i], x+16*i-1, y-1 );
 	}
 };
