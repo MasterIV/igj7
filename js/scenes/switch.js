@@ -53,16 +53,7 @@ switchScene.prototype.draw = function (ctx) {
 	ctx.drawImage( this.buffer, 0, 0 );
 
 
-	var pixelProgress = 640 * this.progress*3;
-	if (pixelProgress > 640) pixelProgress = 640;
-	this.leftSide.draw(ctx, -640 + pixelProgress,0);
-	this.rightSide.draw(ctx, game.display.width - pixelProgress,0);
-
-	//ctx.fillStyle = 'black';
-	//ctx.fillRect(0,0,(game.display.width/2)*this.progress*3,768);
-	//ctx.fillRect(game.display.width,0,-1*(game.display.width/2)*this.progress*3,768);
-
-
+	/*
 	ctx.fillStyle = "rgba( 255, 255, 255, .9 )";
 	ctx.fillRect(0,game.display.height/2 - this.boxheight/2, game.display.width,this.boxheight);
 
@@ -72,6 +63,17 @@ switchScene.prototype.draw = function (ctx) {
 	ctx.textAlign = 'center';
 	ctx.fillStyle = 'black';
 	ctx.fillText( this.title, game.display.width/2, game.display.height/2, game.display.width);
+	*/
+
+	var pixelProgress = 640 * this.progress*3;
+	if (pixelProgress > 640) pixelProgress = 640;
+	this.leftSide.draw(ctx, -640 + pixelProgress,0);
+	this.rightSide.draw(ctx, game.display.width - pixelProgress,0);
+
+	//ctx.fillStyle = 'black';
+	//ctx.fillRect(0,0,(game.display.width/2)*this.progress*3,768);
+	//ctx.fillRect(game.display.width,0,-1*(game.display.width/2)*this.progress*3,768);
+
 
 
 

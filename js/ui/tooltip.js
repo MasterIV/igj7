@@ -32,7 +32,7 @@ tooltip.prototype.showTooltip = function( ctx ) {
 	var topPadding = 55;
 
 	var width = 260;
-	var length = this.lines.length * 32 + this.lines.length * 32 + this.list.length * 32 + topPadding;
+	var length = this.headlines.length * 32 + this.lines.length * 22 + this.list.length * 32 + topPadding - 30;
 
 	if ( (y + length + 60) > game.display.height) {
 		y = y - length;
@@ -40,12 +40,8 @@ tooltip.prototype.showTooltip = function( ctx ) {
 	if ( (x + width + 70) > game.display.width) {
 		x = x - width - 140;
 	}
-
-
 	this.tooltipTopSprite.draw(ctx, x, y);
 	this.tooltipBottomSprite.drawImage(ctx, x, y + 65, 371 ,length);
-
-
 
 
 	ctx.font = '32px monospace';
@@ -59,9 +55,9 @@ tooltip.prototype.showTooltip = function( ctx ) {
 	ctx.textAlign = 'left';
 
 	for( var i = 0; i < this.lines.length; i++ )
-		ctx.fillText( this.lines[i], x + 16 + 30, y+topPadding+this.headlines.length * 32+i*32, width);
+		ctx.fillText( this.lines[i], x + 16 + 30, y+topPadding+this.headlines.length * 32+i*22, width);
 
-	var offsetY = this.headlines.length * 32 + this.lines.length * 32 + topPadding+16;
+	var offsetY = this.headlines.length * 32 + this.lines.length * 22 + topPadding+16;
 	for( var i = 0; i < this.list.length; i++ ) {
 		ctx.fillText( this.list[i].label, x + 16 + 30, y+offsetY + i*32, width);
 		ctx.fillText( this.list[i].value, x + 200 + 30, y+offsetY + i*32, width);
