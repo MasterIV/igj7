@@ -10,8 +10,8 @@ TargetSelection.prototype.init = function( enemies ) {
 	this.entities = [];
 	for( var i = 0; i < enemies.length; i++ ) (function(e) {
 		var button = new SpriteButton('img/ui/target.png',
-				Rect.create(0, 0, 100, 100), Rect.create(100, 0, 100, 100),
-				e.x - 50, e.y - 50, function () { self.select(e); }
+				Rect.create(0, 0, 114, 122), Rect.create(0, 122, 114, 122),
+				e.x - 55, e.y - 114, function () { self.select(e); }
 		);
 
 		e.button = button;

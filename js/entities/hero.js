@@ -59,9 +59,10 @@ function Hero() {
 			break;
 		}
 	}
+	/*
 	for(var key in skillDefinitions) {
 		this.skills.push(skillDefinitions[key]);
-	}
+	}*/
 
 	this.getStats = function() {
 		var currentStats = clone(this.attrs);

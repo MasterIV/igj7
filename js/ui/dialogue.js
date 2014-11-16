@@ -25,6 +25,7 @@ function dialogue(text, choices, y) {
 }
 
 dialogue.prototype.box = function( ctx, x, y, w, h ) {
+	ctx.lineWidth="1";
 	ctx.fillStyle = "rgba( 0, 0, 50, .9 )";
 	ctx.fillRect( x, y, w, h );
 	ctx.strokeStyle = "rgb( 90, 90, 90 )";

@@ -4,15 +4,14 @@ function tooltip(headline, description, list, owner) {
 
 	this.owner = owner;
 
-	this.lines = this._splitString(this.description);
-	this.headlines = this._splitString(this.headline);
+	this.lines = this._splitString(description, 22);
+	this.headlines = this._splitString(headline, 14);
 	this.list = list;
 }
-tooltip.prototype._splitString = function (str) {
+tooltip.prototype._splitString = function (str,charsPerLine ) {
 	var words = str.split(' ');
 	var lines = [words.shift()];
 
-	var charsPerLine = 22;
 	for( var j = 0; j < words.length; j++ ) {
 		if( (lines[lines.length-1]+words[j]).length < charsPerLine )
 			lines[lines.length-1] += ' '+words[j];
@@ -56,9 +55,9 @@ tooltip.prototype.showTooltip = function( ctx ) {
 	ctx.textAlign = 'left';
 
 	for( var i = 0; i < this.lines.length; i++ )
-		ctx.fillText( this.lines[i], x + 16 + 30, y+topPadding+32+i*32, width);
+		ctx.fillText( this.lines[i], x + 16 + 30, y+topPadding+this.headlines.length * 32+i*32, width);
 
-	var offsetY = this.lines.length * 32 + topPadding+32 +32;
+	var offsetY = this.headlines.length * 32 + this.lines.length * 32 + topPadding+32 +32;
 	for( var i = 0; i < this.list.length; i++ ) {
 		ctx.fillText( this.list[i].label, x + 16 + 30, y+offsetY + i*32, width);
 		ctx.fillText( this.list[i].value, x + 200 + 30, y+offsetY + i*32, width);

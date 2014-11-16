@@ -1,22 +1,21 @@
-function encounter(imageSprite, imageX, imageY, imageWidth, imageHeight, paths, connectedEncounters) {
+function encounter(id, imageX, imageY) {
+	this.id = id;
 	this.image = {};
 	this.isClickable = false;
-	this.image.sprite = new sprite(imageSprite);
-    this.image.area = Rect.create(imageX - imageWidth/2, imageY - imageHeight/2, imageWidth, imageHeight);
+	this.image.sprite = new sprite("img/ui/gamestates.png");
+		
+    this.image.area = Rect.create(imageX - 51, imageY - 53, 102, 107);
 
-	this.paths = paths;
-	
 	this.prevEncounter = null;
     this.area = this.image.area;
 	this.isVisited = false;	
-	this.scale = 1;
 }
 
 encounter.prototype = new Entity();
 
 encounter.prototype.draw = function(ctx, offset) {
-	var x = this.image.area.p1.x + this.image.area.width()/2 + offset.x;
-	var y = this.image.area.p1.y + this.image.area.height()/2 + offset.y;
+	var x = this.image.area.p1.x + offset.x;
+	var y = this.image.area.p1.y + offset.y - 15;
 	/*for(var i = 0, j = this.paths.length; i < j; i++) {
 		var otherEncounter = encounters[this.paths[i]];
 		ctx.beginPath();
@@ -24,29 +23,31 @@ encounter.prototype.draw = function(ctx, offset) {
 		ctx.lineTo(otherEncounter.x + offset.x, otherEncounter.y + offset.y);
 		ctx.stroke();
 	}*/
-	
-    this.image.sprite.center(ctx, x, y, this.scale, this.scale);
+	var style = 1;
+	var scale = 1;
+	if(this.isVisited) {
+		style = 0;
+	}
+	if(this.isClickable) {
+		style = 3;
+	}
+	if(this.isClickable && this.area.inside(mouse.dif(scenes.map.calcOffset()))) {
+		style = 2;
+	}
+	if(style == 1) {
+		scale = 0.5;
+	}
+    this.image.sprite.area(ctx, 0, 107 * style, this.image.area.width(), this.image.area.height(), x + this.image.area.width() * (1-scale) / 2, y + this.image.area.height() * (1-scale) / 2, scale, scale);
 }
 
 encounter.prototype.update = function(delta) {
-	if(this.isClickable) {
-		if(this.area.inside(mouse.dif(scenes.map.calcOffset()))) {
-			if(this.scale <= 1.6) {
-				this.scale = Math.min(this.scale + delta / 500, 1.6);
-			}
-		} else {
-			if(this.scale >= 1) {
-				this.scale = Math.max(this.scale - delta / 500, 1);
-			}
-		}
-	}
 }
 
 encounter.prototype.click = function(pos) {
 	if(this.isClickable) {
 		if(this.area.inside(pos.dif(scenes.map.calcOffset()))) {
-			game.scene.setDialogue(dialogDefinitions["1"]);
-			//game.scene = scenes.combat; 
+			this.isVisited = true;
+			game.scene.setDialogue(dialogDefinitions[this.id], this.id);
 		}
 	}
 }
