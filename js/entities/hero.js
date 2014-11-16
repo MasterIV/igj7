@@ -51,7 +51,7 @@ function Hero() {
 	};
 
 	/** debug code to have items from beginning */
-	/*var itemCounter =0;
+	var itemCounter =0;
 	for(var key in itemDefinitions) {
 		this.inventory.push(new item(itemDefinitions[key]));
 		itemCounter ++;
@@ -59,6 +59,7 @@ function Hero() {
 			break;
 		}
 	}
+	/*
 	for(var key in skillDefinitions) {
 		this.skills.push(skillDefinitions[key]);
 	}*/
