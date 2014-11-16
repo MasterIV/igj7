@@ -11,15 +11,7 @@ function Hero() {
 		ring:null
 	};
 
-	this.attrs = {
-		hp: 150,
-		mana: 20,
-		str: 10,
-		def: 6,
-		dex: 10,
-		int: 10,
-		blingbling: 10
-	};
+	this.attrs = config.defaultAttributes;
 
 	this.life = this.attrs.hp;
 
@@ -50,6 +42,11 @@ function Hero() {
 		this.inventory.push( item );
 	};
 
+	this.reset = function() {
+		this.inventory = [];
+		this.skills = [];
+		this.attrs = config.defaultAttributes;
+	};
 
 	this.getStats = function() {
 		var currentStats = clone(this.attrs);
