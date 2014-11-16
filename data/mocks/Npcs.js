@@ -50,7 +50,7 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"dot":.6
+			"attack":1
 		}
 		
 	},
@@ -63,6 +63,7 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
+			"attack":1
 		}
 	},
 	"sheep":{
