@@ -1,7 +1,7 @@
 var itemDefinitions = {
 	"standard_amulett_str": {
 		"itemname": "Amulett für Anaboliker",
-		"description": "Amulett",
+		"description": "Lässt nicht nur den Hals, sondern auch die Muskeln glänzen.",
 		"sprite": "img/items/neck.png",
 		"slot": "neck",
 		"str": 15,
@@ -12,7 +12,7 @@ var itemDefinitions = {
 	},
 	"getrockneter_tigerhoden": {
 		"itemname": "Getrockneter Tigerhoden",
-		"description": "Amulett",
+		"description": "Ledrig und wiederstandsfähig!",
 		"sprite": "img/items/tigerhoden.png",
 		"slot": "neck",
 		"str": 5,
@@ -23,7 +23,7 @@ var itemDefinitions = {
 	},
 	"standard_amulett_dex": {
 		"itemname": "Amulett der Windigkeit",
-		"description": "Amulett",
+		"description": "Nicht nur Redbull verleiht Flügel.",
 		"sprite": "img/items/neck.png",
 		"slot": "neck",
 		"str": 5,
@@ -34,7 +34,7 @@ var itemDefinitions = {
 	},
 	"klostein_amulett": {
 		"itemname": "Klostein Amulett ",
-		"description": "Amulett",
+		"description": "Reinigt mit der Kraft der Zitrone.",
 		"sprite": "img/items/klosteinamulett.png",
 		"slot": "neck",
 		"str": 5,
@@ -47,7 +47,7 @@ var itemDefinitions = {
 
 	"mettwurststiefeletten": {
 		"itemname": "Stiefeletten aus Mettwurst",
-		"description": "Schuhe",
+		"description": "Das Beste seit es Schokolade gibt.",
 		"sprite": "img/items/mettwurststiefeletten.png",
 		"slot": "boots",
 		"str": 15,
@@ -58,7 +58,7 @@ var itemDefinitions = {
 	},
 	"sandalen_mit_socken": {
 		"itemname": "Sandalen mit Socken",
-		"description": "Schuhe",
+		"description": "Adrett und traditionell.",
 		"sprite": "img/items/sandalensocken.png",
 		"slot": "boots",
 		"str": 5,
@@ -69,7 +69,7 @@ var itemDefinitions = {
 	},
 	"trabbelhufe_des_trippers": {
 		"itemname": "Trabbelhufe des Trippers",
-		"description": "Schuhe",
+		"description": "Nicht zwingend zum Anziehen, macht aber lustige Spuren.",
 		"sprite": "img/items/trabbelhufedestrippers.png",
 		"slot": "boots",
 		"str": 5,
@@ -80,7 +80,7 @@ var itemDefinitions = {
 	},
 	"standard_boots_int": {
 		"itemname": "Boots der Nerdygkeit",
-		"description": "Schuhe",
+		"description": "1001 110010 1001 01101",
 		"sprite": "img/items/boots.png",
 		"slot": "boots",
 		"str": 5,
@@ -93,7 +93,7 @@ var itemDefinitions = {
 
 	"dampfhammeruhr": {
 		"itemname": "Dampfhammeruhr 3000",
-		"description": "Ring",
+		"description": "Schlägt nicht nur Zähne ein, sondern zeigt auch noch die Zeit an.",
 		"sprite": "img/items/dampfhammeruhr3000.png",
 		"slot": "ring",
 		"str": 15,
@@ -104,7 +104,7 @@ var itemDefinitions = {
 	},
 	"der_eine_ring": {
 		"itemname": "Der eine Ring",
-		"description": "Ring",
+		"description": "Heute im Sonderangebot!",
 		"sprite": "img/items/dereinering.png",
 		"slot": "ring",
 		"str": 5,
@@ -115,7 +115,7 @@ var itemDefinitions = {
 	},
 	"dubstep-ring": {
 		"itemname": "Dubstep-ring",
-		"description": "Ring",
+		"description": "Ütz ütz ütz",
 		"sprite": "img/items/dubstepring.png",
 		"slot": "ring",
 		"str": 5,
@@ -126,7 +126,7 @@ var itemDefinitions = {
 	},
 	"moebiusstreifen": {
 		"itemname": "Möbiusstreifen",
-		"description": "Ring",
+		"description": "Etwas kompliziert anzuziehen.",
 		"sprite": "img/items/moebiusstreifen.png",
 		"slot": "ring",
 		"str": 5,
@@ -138,7 +138,7 @@ var itemDefinitions = {
 
 	"das_gewisse_nichts": {
 		"itemname": "Das gewisse Nichts",
-		"description": "Rüstung",
+		"description": "Verleiht ihnen das gewisse Etwas.",
 		"sprite": "img/items/dasgewissenichts.png",
 		"slot": "chest",
 		"str": 10,
@@ -149,7 +149,7 @@ var itemDefinitions = {
 	},
 	"erotisches_outfit": {
 		"itemname": "Erotisches Outfit",
-		"description": "Rüstung",
+		"description": "Durchaus figurbetont.",
 		"sprite": "img/items/erotischesoutfit.png",
 		"slot": "chest",
 		"str": 5,
@@ -159,8 +159,8 @@ var itemDefinitions = {
 		"blingbling": 20
 	},
 	"borats_lieblingsfetzen": {
-		"itemname": "Borats lieblingsfetzen",
-		"description": "Rüstung",
+		"itemname": "Borats Lieblingsfetzen",
+		"description": "Und ich dachte die anderen Rüstungen wären knapp...",
 		"sprite": "img/items/boratslieblingsfetzen.png",
 		"slot": "chest",
 		"str": 5,
@@ -171,7 +171,7 @@ var itemDefinitions = {
 	},
 	"standardt_outfit_int": {
 		"itemname": "Rüstung der Nerdygkeit",
-		"description": "Rüstung",
+		"description": "01101 1001101 101011",
 		"sprite": "img/items/chest.png",
 		"slot": "chest",
 		"str": 5,
@@ -180,11 +180,9 @@ var itemDefinitions = {
 		"int": 10,
 		"blingbling": 10
 	},
-
-
 	"vikinger_helm": {
 		"itemname": "Geiler Vikinger Helm",
-		"description": "Helm",
+		"description": "Hast du die Hörner gesehen!?!",
 		"sprite": "img/items/geilervikingerhelm.png",
 		"slot": "helmet",
 		"str": 10,
@@ -195,7 +193,7 @@ var itemDefinitions = {
 	},
 	"standard_helm_def": {
 		"itemname": "Helm der Härte",
-		"description": "Helm",
+		"description": "Es kann nie schaden, wenn ein Helm hart ist.",
 		"sprite": "img/items/helmet.png",
 		"slot": "helmet",
 		"str": 5,
@@ -206,7 +204,7 @@ var itemDefinitions = {
 	},
 	"panfloetenmaske": {
 		"itemname": "Panflötenmaske",
-		"description": "Helm",
+		"description": "Schützt das Gesicht und klingt auch noch toll.",
 		"sprite": "img/items/panfloetenmaske.png",
 		"slot": "helmet",
 		"str": 5,
@@ -217,7 +215,7 @@ var itemDefinitions = {
 	},
 	"mauszeigerhut": {
 		"itemname": "Mauszeigerhut",
-		"description": "Helm",
+		"description": "Propellermützen waren gestern!",
 		"sprite": "img/items/mauszeigerhut.png",
 		"slot": "helmet",
 		"str": 5,
@@ -228,6 +226,7 @@ var itemDefinitions = {
 	},
 	"hp_potion": {
 		"itemname": "Heiltrank",
+		"description": "Macht den Müden wieder munter.",
 		"sprite": "img/items/neck.png",
 		"target": "self",
 		"effects": {
