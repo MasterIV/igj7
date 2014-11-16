@@ -19,8 +19,9 @@ function mapScene() {
 	}	
 
 	this.dragStart = new V2(0,0);
-	this.dragOffset = new V2(-912,-906);
-	
+	//this.dragOffset = new V2(-912,-906);
+	this.dragOffset = new V2(-450, -150);
+
 	this.scrolls = false;
 }
 
@@ -34,7 +35,9 @@ mapScene.prototype.goToFinalScene = function() {
 }
 
 mapScene.prototype.reset = function() {
-	this.dragOffset = new V2(-912,-906);
+//	this.dragOffset = new V2(-912,-906);
+	this.dragOffset = new V2(-450, -150);
+
 	for(var index in this.encounterMap) {
 		var encounter = this.encounterMap[index];
 		encounter.isVisited = false;
