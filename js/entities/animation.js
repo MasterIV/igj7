@@ -160,3 +160,20 @@ AnimationItemFound.prototype.draw = function( ctx ) {
 	this.bg.center(ctx, 640, 384, this.counter.frame%4 );
 	this.item.sprite.center(ctx, 640, 384);
 };
+
+
+function AnimationSkillFound( item ) {
+	this.counter = new Framecounter(75);
+	this.item = item;
+	this.bg = new AnimationSprite('img/animation/newitem.png', 4);
+}
+
+AnimationSkillFound.prototype.update = function( delta ) {
+	this.counter.update(delta);
+	return this.counter.frame > 20;
+};
+
+AnimationSkillFound.prototype.draw = function( ctx ) {
+	this.bg.center(ctx, 640, 384, this.counter.frame%4 );
+	this.item.sprite.center(ctx, 640, 384);
+};
