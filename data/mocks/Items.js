@@ -116,7 +116,7 @@ var itemDefinitions={
 	"dubstep-ring":{
 		"itemname":"Dubstep-ring",
 		"description":"Ring",
-		"sprite":"img/items/dubstepring.pngg",
+		"sprite":"img/items/dubstepring.png",
 		"slot":"ring",
 		"str":5,
 		"def":5,
