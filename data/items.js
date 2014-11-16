@@ -227,7 +227,7 @@ var itemDefinitions = {
 	"hp_potion": {
 		"itemname": "Heiltrank",
 		"description": "Macht den Müden wieder munter.",
-		"sprite": "img/items/neck.png",
+		"sprite": "img/items/potion.png",
 		"target": "self",
 		"effects": {
 			"Heal": {
