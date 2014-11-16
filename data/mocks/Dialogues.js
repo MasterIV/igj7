@@ -17,7 +17,7 @@ var dialogDefinitions={
 		
 	},
 	"1":{
-		"text":"Das Letzte, an das du dich noch erinnerst, ist Angelika über dir und ein wildes Amazonenjodeln in deinen Ohren, bis das Dunkeln dich umhüllt. Als du wieder zu Besinnung kommst, funkelt dir eine niedliche Fee entgegen, welche jedoch mit deiner Leistung absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAR DAS DENN? So eine jämmerliche Darbietung habe ich lange nicht mehr gesehen. Ab zurück auf die Trainingsbank! Und bevor du dich in die Welt stürzt, mach dich mit deinen Attributen und dem Inventar vertraut! GOD DAMN IT!",
+		"text":"Das Letzte, an das du dich noch erinnerst, ist Angelika über dir und ein wildes Amazonenjodeln in deinen Ohren, bis das Dunkeln dich umhüllt. Als du wieder zu Besinnung kommst, funkelt dir eine niedliche Fee entgegen, welche jedoch mit deiner Leistung absolut nicht zufrieden zu sein scheint.                                            Fee: 'WAS ZUR HÖLLE WAR DAS DENN? So eine jämmerliche Darbietung habe ich lange nicht mehr gesehen. Ab zurück auf die Trainingsbank! Und bevor du dich in die Welt stürzt, mach dich mit deinen Attributen und dem Inventar vertraut! GOD DAMN IT!",
 		"image":"fee.png",
 		"replies":[
 			

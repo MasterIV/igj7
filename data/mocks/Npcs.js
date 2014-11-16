@@ -60,13 +60,12 @@ var npcDefinitions={
 		"name":"Brückenwächter",
 		"image":'img/characters/roboter.png',
 		"int":10,
-		"dex":10,
+		"dex":12,
 		"str":10,
-		"def":2,
-		"hp":20,
+		"def":9,
+		"hp":65,
 		"skills":{
-			"attack":.8,
-			"stun_leg":.2
+			"attack":.8
 		}
 		
 	},
@@ -81,8 +80,8 @@ var npcDefinitions={
 		"skills":{
 			"attack":.6,
 			"heal":.2,
-			"double_damage":.1,
-			"heal_enemy":.1
+			"double_damage":.15,
+			"heal_enemy":.05
 		}
 		
 	},
@@ -91,9 +90,9 @@ var npcDefinitions={
 		"image":'img/characters/roboter3.png',
 		"int":10,
 		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"str":9,
+		"def":6,
+		"hp":55,
 		"skills":{
 			"attack":1
 		}
@@ -105,10 +104,9 @@ var npcDefinitions={
 		"dex":10,
 		"str":10,
 		"def":2,
-		"hp":20,
+		"hp":35,
 		"skills":{
-			"attack":.8,
-			"stun_leg":.2
+			"attack":.8
 		}
 	},
 	"spider":{
@@ -147,8 +145,7 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"attack":.7,
-			"stun_leg":.3
+			"attack":.7
 		}
 		
 	},
