@@ -119,6 +119,14 @@ var skillDefinitions = {
 		"effects": {
 			"Heal": {"base": 70, "attr": "int", "rnd": .6 }
 		}
+	},
+	"psychohit": {
+		"name": "Psychoschlag",
+		"costs": 30,
+		"target": "all",
+		"effects": {
+			"Stun": {"duration": 3, "attr": "dex" }
+		}
 	}
 };
 

@@ -97,6 +97,18 @@ var npcDefinitions={
 			"attack":1
 		}
 	},
+	"hotelf":{
+		"name":"Heiße Elfe",
+		"image":'img/characters/roboter2.png',
+		"int":19,
+		"dex":18,
+		"str":20,
+		"def":17,
+		"hp":180,
+		"skills":{
+			"attack":1
+		}
+	},
 	"sheep":{
 		"name":"Schaf",
 		"image":'img/characters/sheep.png',

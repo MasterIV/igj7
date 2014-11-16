@@ -317,7 +317,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"double_damage"
+			}			
 		]
 		
 	},
@@ -332,9 +334,6 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					{
-						"skill":"stun_leg"
-					},
 					{
 						"int":2
 					},
@@ -400,7 +399,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"stun_leg"
+			}
 		]
 		
 	},
@@ -552,7 +553,7 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
-				"skill":"stun_leg"
+				"skill":"oil"
 			}
 		]
 		
@@ -709,7 +710,6 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
 		]
 		
 	},
@@ -922,7 +922,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"posioncloud"
+			}
 		]
 		
 	},
@@ -1054,7 +1056,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"attack_god"
+			}
 		]
 		
 	},
@@ -1707,7 +1711,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"heal"
+			}
 		]
 		
 	},
@@ -1819,7 +1825,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"psychohit"
+			}
 		]
 		
 	},
@@ -2154,7 +2162,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"greater_heal"
+			}
 		]
 		
 	},
