@@ -20,7 +20,7 @@ var itemDefinitions={
 		"blingbling":10
 	},
 	"stdneckdex":{
-		"itemname":"Geschicklichkeit-Amulett",
+		"itemname":"Geschicklichkeit Amulett",
 		"sprite":"img/items/neck.png",
 		"slot":"neck",
 		"str":1,

@@ -17,8 +17,9 @@ function itemslot(x, y, width, height, types) {
 	this.dragging = false;
 	this.dragPos = new V2(0,0);
 	this.dragOffset = new V2(0,0);
+
 }
-itemslot.prototype = new droparea()
+itemslot.prototype = new droparea();
 itemslot.prototype.draw = function(ctx) {
 	var item = this.getItem();
 
@@ -29,6 +30,23 @@ itemslot.prototype.draw = function(ctx) {
 			item.sprite.draw(ctx, this.dragPos.x  + this.padding.x + this.dragOffset.x, this.dragPos.y  + this.padding.y + this.dragOffset.y);
 		}
 	}
+
+	if (this.getItem() && this.area.inside(mouse)) {
+		if (!game.scene.tooltip) {
+			var list = [];
+			for(var key in hero.attrs) {
+				var val = this.getItem().itemdefinition[key];
+				if (val)
+					list.push({label:config.attrsLabels[key],value:val})
+			}
+
+			game.scene.tooltip = new tooltip(this.getItem().itemdefinition.itemname, 'blub',list, this);
+		}
+	} else {
+		if (game.scene.tooltip && game.scene.tooltip.owner == this) {
+			game.scene.tooltip = null;
+		}
+	}
 }
 
 itemslot.prototype.update = function ( delta ) {
@@ -37,8 +55,8 @@ itemslot.prototype.update = function ( delta ) {
 
 		for (var i = 0; i < game.scene.entities.length; i++) {
 			if (game.scene.entities[i].isEquipmentDropArea) {
-				if (game.scene.entities[i].types.indexOf(this.getItem().slot) != -1)
-					if (game.scene.entities[i].area.inside(new V2(mouse.x, mouse.y))) {
+				if (game.scene.entities[i].area.inside(mouse)) {
+					if (game.scene.entities[i].types.indexOf(this.getItem().slot) != -1) {
 
 						if (game.scene == scenes.character) {
 							scenes.character.showDiffrence(this.getItem());
@@ -46,6 +64,7 @@ itemslot.prototype.update = function ( delta ) {
 
 						return;
 					}
+				}
 			}
 		}
 	}
@@ -64,7 +83,7 @@ itemslot.prototype.mouseup = function (pos) {
 			if (game.scene.entities[i].isEquipmentDropArea) {
 				var equipArea = game.scene.entities[i];
 				if (equipArea.types.indexOf(this.getItem().slot) != -1)
-					if (equipArea.area.inside(new V2(mouse.x, mouse.y))) {
+					if (equipArea.area.inside(mouse)) {
 						hero.equip(hero.inventory[this.inventoryId]);
 						return;
 					}
@@ -91,11 +110,32 @@ function equipslot(x, y, width, height, type) {
 equipslot.prototype = new droparea();
 equipslot.prototype.isEquipmentDropArea = true;
 equipslot.prototype.draw = function( ctx ) {
-	var item = hero.equipment[this.types[0]];
+	var item = this.getItem();
 
 	if (item != null) {
 		item.sprite.draw(ctx, this.area.p1.x + this.padding.x, this.area.p1.y + this.padding.x);
 	} else {
 		this.emptySprite.draw(ctx, this.area.p1.x + this.padding.y, this.area.p1.y + this.padding.y);
 	}
+
+	if (this.getItem() && this.area.inside(mouse)) {
+		if (!game.scene.tooltip) {
+			var list = [];
+			for(var key in hero.attrs) {
+				var val = this.getItem().itemdefinition[key];
+				if (val)
+					list.push({label:key,value:val})
+			}
+
+			game.scene.tooltip = new tooltip(this.getItem().itemdefinition.itemname, 'blub',list, this);
+		}
+	} else {
+		if (game.scene.tooltip && game.scene.tooltip.owner == this) {
+			game.scene.tooltip = null;
+		}
+	}
 };
+equipslot.prototype.getItem = function() {
+	return hero.equipment[this.types[0]];
+}
+

@@ -7,6 +7,9 @@ function sprite( img ) {
 sprite.prototype.draw = function( ctx, x, y, scaleX, scaleY ) {
 	ctx.drawImage( this.img, x|0, y|0, this.width * (scaleX||1), this.height * (scaleY||1));
 };
+sprite.prototype.drawImage = function( ctx, x, y, width, height, scaleX, scaleY ) {
+	ctx.drawImage( this.img, x|0, y|0, width * (scaleX||1), height * (scaleY||1));
+};
 
 sprite.prototype.center = function( ctx, x, y, scaleX, scaleY ) {
 	ctx.drawImage( this.img, (x-this.img.width*(scaleX||1)/2)|0, (y-this.img.height*(scaleY||1)/2)|0, this.img.width*(scaleX||1), this.img.height*(scaleY||1));
