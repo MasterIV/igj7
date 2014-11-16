@@ -4,6 +4,12 @@ function menuScene() {
 			game.scene = scenes.map;
 		}, {}),
 		new textButton('Kampf', 10, 50, 200, 30, function () {
+			/** debug code to have items from beginning */
+			//for(var key in itemDefinitions)
+			//	hero.loot(new item(itemDefinitions[key]));
+			for(var key in skillDefinitions)
+				hero.skills.push(skillDefinitions[key]);
+
 			scenes.combat.setEnemies(['roboter','roboter','roboter']);
 			game.scene = scenes.combat;
 		}, {}),

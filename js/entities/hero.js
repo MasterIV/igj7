@@ -50,19 +50,6 @@ function Hero() {
 		this.inventory.push( item );
 	};
 
-	/** debug code to have items from beginning */
-	var itemCounter =0;
-	for(var key in itemDefinitions) {
-		this.inventory.push(new item(itemDefinitions[key]));
-		itemCounter ++;
-		if (itemCounter == 20) {
-			break;
-		}
-	}
-	/*
-	for(var key in skillDefinitions) {
-		this.skills.push(skillDefinitions[key]);
-	}*/
 
 	this.getStats = function() {
 		var currentStats = clone(this.attrs);
