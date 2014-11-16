@@ -27,6 +27,19 @@ var npcDefinitions={
 		}
 		
 	},
+	"hexe":{
+		"name":"Verliebte Hexe",
+		"image":'img/characters/fee.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"dot":.8;
+		}
+		
+	}
 	
 }
 ;
