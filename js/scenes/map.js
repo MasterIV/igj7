@@ -90,8 +90,20 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 		if(typeof(dialogueData.rewards) != "undefined") {
 			for(var i = 0, j = dialogueData.rewards.length; i < j; i++) { 
 				var reward = dialogueData.rewards[i];
+				var fightImage = "img/maps/mountain.jpg";
+				if(typeof(dialogueData.image) != "undefined") {
+					if(dialogueData.image == 2) {
+						fightImage = "img/maps/death.jpg";
+					}
+					if(dialogueData.image == 3) {
+						fightImage = "img/maps/death.jpg";
+					}
+					if(dialogueData.image == 4) {
+						fightImage = "img/maps/death.jpg";
+					}
+				}	
 				if(typeof(reward.fight) != "undefined") {
-					scenes.combat.setEnemies(reward.fight);
+					scenes.combat.setEnemies(reward.fight, fightImage);
 					answers = [{ text: "Zum Kampf", callback: function(){
 						self.blocking.pop();
 						self.encounterMap["1"].isClickable = false;
