@@ -14,10 +14,10 @@ function Hero() {
 	this.attrs = {
 		hp: 50,
 		mana: 20,
-		str: 5,
+		str: 7,
 		def: 0,
-		dex: 5,
-		int: 5,
+		dex: 7,
+		int: 7,
 		blingbling: 0
 	};
 

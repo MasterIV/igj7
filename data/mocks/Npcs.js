@@ -50,9 +50,32 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"dot":.3
+			"dot":.6
 		}
 		
+	},
+	"farmerelf":{
+		"name":"Fauler Farmer",
+		"image":'img/characters/roboter3.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+		}
+	},
+	"sheep":{
+		"name":"Schaf",
+		"image":'img/characters/sheep.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"stun_leg":.2
+		}
 	}
 	
 }

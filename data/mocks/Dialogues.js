@@ -7,7 +7,10 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
-				"fight":["angelika"]
+				"fight":[
+					"angelika"
+				]
+				
 			}
 			
 		]
@@ -28,6 +31,9 @@ var dialogDefinitions={
 			},
 			{
 				"dex":4
+			},
+			{
+				"hp":100
 			}
 			
 		]
@@ -45,16 +51,19 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"fight":["brueckenwaechter"]
+						"fight":[
+							"brueckenwaechter"
+						]
+						
 					},
 					{
-						"int":2
+						"int":3
 					},
 					{
-						"str":2
+						"str":3
 					},
 					{
-						"dex":2
+						"dex":3
 					}
 					
 				],
@@ -81,7 +90,10 @@ var dialogDefinitions={
 						},
 						"rewards":[
 							{
-								"fight":["brueckenwaechter"]
+								"fight":[
+									"brueckenwaechter"
+								]
+								
 							},
 							{
 								"int":3
@@ -107,7 +119,10 @@ var dialogDefinitions={
 						},
 						"rewards":[
 							{
-								"fight":["brueckenwaechter"]
+								"fight":[
+									"brueckenwaechter"
+								]
+								
 							},
 							{
 								"int":3
@@ -143,9 +158,6 @@ var dialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdneckdef"
-									},
-									{
 										"int":3
 									},
 									{
@@ -169,10 +181,7 @@ var dialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdneckint"
-									},
-									{
-										"int":3
+										"int":9
 									},
 									{
 										"str":3
@@ -195,16 +204,13 @@ var dialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdneckdex"
-									},
-									{
 										"int":3
 									},
 									{
 										"str":3
 									},
 									{
-										"dex":3
+										"dex":9
 									}
 									
 								],
@@ -221,13 +227,10 @@ var dialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdneckstr"
-									},
-									{
 										"int":3
 									},
 									{
-										"str":3
+										"str":9
 									},
 									{
 										"dex":3
@@ -248,7 +251,10 @@ var dialogDefinitions={
 								},
 								"rewards":[
 									{
-										"fight":["brueckenwaechter"]
+										"fight":[
+											"brueckenwaechter"
+										]
+										
 									},
 									{
 										"int":4
@@ -290,7 +296,10 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"fight":["hexe"]
+						"fight":[
+							"hexe"
+						]
+						
 					},
 					{
 						"int":3
@@ -312,46 +321,10 @@ var dialogDefinitions={
 				"text":"Du bemerkst sofort, dass die Hexe eine Falle gestellt und in ihrer Tollpatschigkeit sich selbst mit einem Liebestrank übergossen hat. Du gibst dich als auf Liebestränke spezialisierter Alchemist aus und bringst sie um ihren Schatz!",
 				"reply":"Lage glasklar analysieren!",
 				"condition":{
-					"int":14
 				},
 				"rewards":[
 					{
-						"item":"stdneckint"
-					},
-					{
-						"int":3
-					},
-					{
-						"str":3
-					},
-					{
-						"dex":3
-					}
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Das 'Arsch' entpuppt sich als Hexe, welche sich mit ihrem eigenen Liebestrank vergiftet hat. Zum Glück sie sie vollkommen mit ihrem Spiegelbild beschäftigt und bemerkt nicht, dass du ihr ein Amulett aus der Tasche mopst!",
-				"reply":"Eine Falle! Drehen wir den Spieß um und erleichtern ihn um seinen Schatz!",
-				"condition":{
-					"dex":14
-				},
-				"rewards":[
-					{
-						"item":"stdneckdex"
-					},
-					{
-						"int":3
-					},
-					{
-						"str":3
-					},
-					{
-						"dex":3
+						"int":9
 					}
 					
 				],
@@ -364,20 +337,10 @@ var dialogDefinitions={
 				"text":"Du entdeckst eine alte Hexe, dich direkt mit verliebten Augen ansieht. Ihr Held ist da und sie schenkt dir direkt ein Amulett als Verlobungsgeschenk!",
 				"reply":"Gewiss eine holde Maid! Sie braucht meine harte Brust zum anschmiegen!",
 				"condition":{
-					"str":14
 				},
 				"rewards":[
 					{
-						"item":"stdneckstr"
-					},
-					{
-						"int":3
-					},
-					{
-						"str":3
-					},
-					{
-						"dex":3
+						"str":9
 					}
 					
 				],
@@ -406,20 +369,13 @@ var dialogDefinitions={
 				"rewards":[
 					{
 						"skill":"stun_leg"
+					},
+					{
+						"int":2
+					},
+					{
+						"dex":1
 					}
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
-				"condition":{
-					
-				},
-				"rewards":[
 					
 				],
 				"replies":[
@@ -428,12 +384,15 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2b)",
-				"reply":"(Reply 2)",
+				"text":"Gnome von anderen Inseln sind anscheinend leichter gebaut, da dieser besser fliegt, als jeder Dampfball! Du gehst die Reste der Rakete inspizieren!",
+				"reply":"(Kick den Zwerg von der Insel und geh plündern!)",
 				"condition":{
 					
 				},
 				"rewards":[
+					{
+						"dex":9
+					}
 					
 				],
 				"replies":[
@@ -442,12 +401,18 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2v)",
-				"reply":"(Reply 3)",
+				"text":"Du verprügelst den Gnom nach allen Regeln der Kunst, aber er hatte Recht. Er war wirklich abgebrannt! Außer ein paar Erfahrungen im Polo bleibt dir nichts!",
+				"reply":"(Der is ja kleiner, als mein Hammer!)",
 				"condition":{
 					
 				},
 				"rewards":[
+					{
+						"str":3
+					},
+					{
+						"dex":3
+					}
 					
 				],
 				"replies":[
@@ -463,16 +428,22 @@ var dialogDefinitions={
 		
 	},
 	"5":{
-		"text":"(Questtext)",
+		"text":"Heißer Dampf schlägt dir entgegen und du merkst, dass dein Weg dich in das städtische Badehaus geführt hat. Aber die Gilde der verboten reichen Füllereiliebhaber hat alle Wasserbecken belegt. Sie sehen dich fragend an, als du hinsteigen willst.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"text":"'Mit Gewalt geht alles!' Du holst Anlauf und springst kopfüber in die Falte vom Vorsitzenden. Ein wenig Platz schaffen und die Sache passt. Klasse Training!",
+				"reply":"'Da ist noch Platz!'",
 				"condition":{
 					
 				},
 				"rewards":[
+					{
+						"str":3
+					},
+					{
+						"dex":3
+					}
 					
 				],
 				"replies":[
@@ -481,12 +452,15 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"text":"Wenn dein Schulmathe richtig ist, geht das Wasservolumen gegen Null! Der Rest ist Schweiß.",
+				"reply":"'Archimedes! Berechne das übrige Volumen!'",
 				"condition":{
-					
+					"int":20
 				},
 				"rewards":[
+					{
+						"int":2
+					}
 					
 				],
 				"replies":[
@@ -496,25 +470,17 @@ var dialogDefinitions={
 			},
 			{
 				"text":"(Questtext 2b)",
-				"reply":"(Reply 2)",
+				"reply":"'Draußen verteilt wer goldene Minzblätter!'",
 				"condition":{
 					
 				},
 				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2v)",
-				"reply":"(Reply 3)",
-				"condition":{
-					
-				},
-				"rewards":[
+					{
+						"str":3
+					},
+					{
+						"dex":3
+					}
 					
 				],
 				"replies":[
@@ -530,12 +496,37 @@ var dialogDefinitions={
 		
 	},
 	"6":{
-		"text":"(Questtext)",
+		"text":"Du kommst an eine Farm. Im Hintergrund hüpfen glückliche Schäfchen und ein pfeifender Elf begrüßt euch freundlich! Während er seinem Lieblingssbock einnen Pferdeschwanz flechtet, guckt er dich neugierig an.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"text":"Erstaunlicherweise ist der Elf schnell auf den Beinen und bekommt sogar Hilfe von seinen Schafen!",
+				"reply":"'Ab aufs Feld, fauler Bauer!'",
+				"condition":{
+					
+				},
+				"rewards":[
+					{
+						"fight":[
+							"farmerelf",
+							"sheep",
+							"sheep"
+						]
+						
+					},
+					{
+						
+					}
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Nachdem du ihn eine halbe Stunde eingelullet und sogar 'Liebe und Harmonie' in Deutungstanz vorgführt hast gibt er nach!",
+				"reply":"'In der Natur braucht man keine Schätze!'",
 				"condition":{
 					
 				},
@@ -548,8 +539,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"text":"Du wusstest du hast Talent für sowas, aber wie zur Hölle konntest du selbst mit eingeflechtet?",
+				"reply":"Helf ihm mit den Zöpfen.",
 				"condition":{
 					
 				},
@@ -562,22 +553,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2b)",
-				"reply":"(Reply 2)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2v)",
-				"reply":"(Reply 3)",
+				"text":"Er ist geblendet von soviel Naturkompetenz. Nachdem ich auch die neusten Goblin-Sammelkarten ausgetauscht habt, ziehst du von Dannen!",
+				"reply":"Zeig ihm deine Abzeichen der Pfadfinder.",
 				"condition":{
 					
 				},
@@ -597,146 +574,38 @@ var dialogDefinitions={
 		
 	},
 	"7":{
-		"text":"(Questtext)",
+		"text":"Du hast davon gehört. Spinnen sind grauselige Gegner, aber je mehr Beine, desto mehr Ringe, oder?",
 		"image":"boss.png",
 		"replies":[
-			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2b)",
-				"reply":"(Reply 2)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2v)",
-				"reply":"(Reply 3)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			}
 			
 		],
 		"rewards":[
-			
+			{
+				"fight":["spider","spider"]
+			}
 		]
 		
 	},
 	"8":{
-		"text":"(Questtext)",
+		"text":"Du machst dich bereit und spürst die Vorfreude einer Schlacht in dir aufflammen, als in der Ferne das Klirren von Waffen und Knallen von Musketen ertönt. Als du jedoch durch das Gebüsch auf eine Lichtung tritts stehen dort nur drei schäbig bewaffnete Menschen. Naja, Schlacht ist Schlacht!",
 		"image":"boss.png",
 		"replies":[
-			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2b)",
-				"reply":"(Reply 2)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2v)",
-				"reply":"(Reply 3)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			}
 			
 		],
 		"rewards":[
-			
+			{
+				"fight":["roboter2"]
+			}
 		]
 		
 	},
 	"9":{
-		"text":"(Questtext)",
+		"text":"In einer Taverne hast du von einer heißen Quelle in der Nähe erfahren, in der sich gegen Abend die Schönheiten der Umgebung treffen sollen. Du schleichst dich heran und...",
 		"image":"boss.png",
 		"replies":[
 			{
 				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"reply":"...springst nackt in die Quelle.",
 				"condition":{
 					
 				},
@@ -750,7 +619,7 @@ var dialogDefinitions={
 			},
 			{
 				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"reply":"...durchsuchst die Sachen.",
 				"condition":{
 					
 				},
@@ -764,21 +633,7 @@ var dialogDefinitions={
 			},
 			{
 				"text":"(Questtext 2b)",
-				"reply":"(Reply 2)",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"(Questtext 2v)",
-				"reply":"(Reply 3)",
+				"reply":"...riskierst die Sachen.",
 				"condition":{
 					
 				},
@@ -872,7 +727,10 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
-				"fight":["angelika"]
+				"fight":[
+					"angelika"
+				]
+				
 			}
 			
 		]

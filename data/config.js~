@@ -4,7 +4,7 @@ var config = {
 		mana: 'Mojo',
 		str: 'Anabolika',
 		def: 'Härte',
-		dex: 'Windigkeit',
+		dex: 'Gewandheit',
 		int: 'Nerdy',
 		blingbling: 'Bling Bling'
 	}
