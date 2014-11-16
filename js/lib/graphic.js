@@ -40,6 +40,7 @@ var g = {
 			'img/ui/start_button.png',
 			'img/ui/credits_button.png',
 			'img/ui/menu.jpg',
+			'img/ui/credits.jpg',
 			'img/maps/campaign_map.jpg',
 			'img/items/neck.png',
 			'img/items/boots.png',

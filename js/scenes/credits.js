@@ -1,5 +1,5 @@
 function creditsScene() {
-	this.bg = new sprite( 'img/ui/menu.jpg' );
+	this.bg = new sprite( 'img/ui/credits.jpg' );
 
 
 	this.entities = [
