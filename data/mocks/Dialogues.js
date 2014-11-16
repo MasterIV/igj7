@@ -34,6 +34,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":45
+			},
+			{
+				"skill":"stun_leg"
 			}
 			
 		]
