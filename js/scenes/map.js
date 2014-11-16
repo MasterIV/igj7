@@ -82,10 +82,20 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 		if(typeof(dialogueData.replies) != "undefined" && dialogueData.replies.length > 0) {
 			for(var i = 0, j = dialogueData.replies.length; i < j; i++) {
 				var reply = dialogueData.replies[i];
-				answers.push({ data: reply, text: reply.reply, callback: function(){
-					self.blocking.pop();
-					self.setDialogue(this.data, nextId);
-				} });
+				var allowed = true;
+				if(typeof(reply.condition)!="undefined") {
+					for(var index in reply.condition) {
+						if(reply.condition[index] > hero.attrs[index]) {
+							allowed = false;
+						}
+					}
+				}
+				if(allowed) {
+					answers.push({ data: reply, text: reply.reply, callback: function(){
+						self.blocking.pop();
+						self.setDialogue(this.data, nextId);
+					} });
+				}
 			}
 		}
 		if(typeof(dialogueData.rewards) != "undefined") {
