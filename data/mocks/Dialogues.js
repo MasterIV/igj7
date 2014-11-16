@@ -1,4 +1,4 @@
-vardialogDefinitions={
+var dialogDefinitions={
 	"0":{
 		"text":"Die Partei der strahlend polierten Dampfzwerg hat dich um Hilfe gebeten. Ein seit tausend Jahren schlafendes Monstrum hat sich erhoben, um ihr Urlaubsparadies Malorca zu vernichten. Du wurdest gerufen, um sie zu verteidigen. Angelika steht dir in ihrer vollen Pracht gegenüber und ist für den Kampf bereit!",
 		"image":"boss.png",
@@ -7,14 +7,14 @@ vardialogDefinitions={
 		],
 		"rewards":[
 			{
-				"fight":"0"
+				"fight":["angelika"]
 			}
 			
 		]
 		
 	},
 	"1":{
-		"text":"Angelika hat geschafft, aber gerade als sie dich verschlingen wollte, kam eine kleine Fee und hat dir das Leben gerettet. Du bist auf die andere Seite der Insel katapultiert worden. Fee: 'Das war ja wohl mal nichts! Wie um Himmels Willen konnte dir jemand diesen Job geben? Ab zurück auf die Schulbank und sammle Erfahrung in diesem Land!' (Sie belohnt sich mit 14 Attributspunkten)",
+		"text":"Das letzte an das du dich noch erinnerst ist Angelika über dir und ein wildes Amazonenjodeln. Als du wieder zu dir kommst funkelt dir eine niedliche Fee entgegen, die jedoch absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAS DAS DENN? So eine jämmerliche Show habe ich lange nicht mehr gesehen. Ab auf die Trainingsbank!'",
 		"image":"fee.png",
 		"replies":[
 			
@@ -45,7 +45,7 @@ vardialogDefinitions={
 				},
 				"rewards":[
 					{
-						"fight":"brueckenwaechter"
+						"fight":["brueckenwaechter"]
 					},
 					{
 						"int":2
@@ -81,7 +81,7 @@ vardialogDefinitions={
 						},
 						"rewards":[
 							{
-								"fight":"brueckenwaechter"
+								"fight":["brueckenwaechter"]
 							},
 							{
 								"int":3
@@ -107,7 +107,7 @@ vardialogDefinitions={
 						},
 						"rewards":[
 							{
-								"fight":"brueckenwaechter"
+								"fight":["brueckenwaechter"]
 							},
 							{
 								"int":3
@@ -143,7 +143,7 @@ vardialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdamulettdef"
+										"item":"stdneckdef"
 									},
 									{
 										"int":3
@@ -169,7 +169,7 @@ vardialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdamulettint"
+										"item":"stdneckint"
 									},
 									{
 										"int":3
@@ -195,7 +195,7 @@ vardialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdamulettdex"
+										"item":"stdneckdex"
 									},
 									{
 										"int":3
@@ -221,7 +221,7 @@ vardialogDefinitions={
 								},
 								"rewards":[
 									{
-										"item":"stdamulettstr"
+										"item":"stdneckstr"
 									},
 									{
 										"int":3
@@ -248,7 +248,7 @@ vardialogDefinitions={
 								},
 								"rewards":[
 									{
-										"fight":"brueckenwaechter"
+										"fight":["brueckenwaechter"]
 									},
 									{
 										"int":4
@@ -290,7 +290,7 @@ vardialogDefinitions={
 				},
 				"rewards":[
 					{
-						"fight":"hexe"
+						"fight":["hexe"]
 					},
 					{
 						"int":3
@@ -316,10 +316,16 @@ vardialogDefinitions={
 				},
 				"rewards":[
 					{
-						"item":"stdamulettint"
+						"item":"stdneckint"
 					},
 					{
-						"xp":"1164"
+						"int":3
+					},
+					{
+						"str":3
+					},
+					{
+						"dex":3
 					}
 					
 				],
@@ -336,10 +342,16 @@ vardialogDefinitions={
 				},
 				"rewards":[
 					{
-						"item":"stdamulettdex"
+						"item":"stdneckdex"
 					},
 					{
-						"xp":"1164"
+						"int":3
+					},
+					{
+						"str":3
+					},
+					{
+						"dex":3
 					}
 					
 				],
@@ -356,10 +368,16 @@ vardialogDefinitions={
 				},
 				"rewards":[
 					{
-						"item":"stdamulettstr"
+						"item":"stdneckstr"
 					},
 					{
-						"xp":"1164"
+						"int":3
+					},
+					{
+						"str":3
+					},
+					{
+						"dex":3
 					}
 					
 				],
@@ -376,28 +394,16 @@ vardialogDefinitions={
 		
 	},
 	"4":{
-		"text":"Als du gerade durch den dunklen Wald schleichst, siehst du auf dem Weg vor dir ein Seil auf dem Boden. Während du dich näherst, hörst du es hinter einem Baum glucksen!",
+		"text":"(Questtext)",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Du setzt einen Fuß hinter den anderen, bemerkst jedoch zu spät, dass du in eine klebrige, rosa Flüßigkeit getreten bist, welche einen erschreckend bekannten Geruch von Liebestrank verströmt! Die verliebt lächelnde Hexe greift dich erschrocken an!",
-				"reply":"(Nachsehen)",
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
 				"condition":{
 					
 				},
 				"rewards":[
-					{
-						"fight":"hexe"
-					},
-					{
-						"int":3
-					},
-					{
-						"str":3
-					},
-					{
-						"dex":3
-					}
 					
 				],
 				"replies":[
@@ -406,18 +412,12 @@ vardialogDefinitions={
 				
 			},
 			{
-				"text":"Du bemerkst sofort, dass die Hexe eine Falle gestellt und in ihrer Tollpatschigkeit sich selbst mit einem Liebestrank übergossen hat. Du gibst dich als auf Liebestränke spezialisierter Alchemist aus und bringst sie um ihren Schatz!",
-				"reply":"Lage glasklar analysieren!",
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
 				"condition":{
-					"int":14
+					
 				},
 				"rewards":[
-					{
-						"item":"stdamulettint"
-					},
-					{
-						"xp":"1164"
-					}
 					
 				],
 				"replies":[
@@ -426,18 +426,12 @@ vardialogDefinitions={
 				
 			},
 			{
-				"text":"Das 'Arsch' entpuppt sich als Hexe, welche sich mit ihrem eigenen Liebestrank vergiftet hat. Zum Glück sie sie vollkommen mit ihrem Spiegelbild beschäftigt und bemerkt nicht, dass du ihr ein Amulett aus der Tasche mopst!",
-				"reply":"Seil und komische Pfütze auf dem Boden! Ganz klar! Eine Falle! Schleich dich an und raub das Arsch aus!",
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
 				"condition":{
-					"dex":14
+					
 				},
 				"rewards":[
-					{
-						"item":"stdamulettdex"
-					},
-					{
-						"xp":"1164"
-					}
 					
 				],
 				"replies":[
@@ -446,18 +440,12 @@ vardialogDefinitions={
 				
 			},
 			{
-				"text":"Du entdeckst eine alte Hexe, dich direkt mit verliebten Augen ansieht. Ihr Held ist da und sie schenkt dir direkt ein Amulett als Verlobungsgeschenk!",
-				"reply":"Ein entzückendes Glucksen in einem dunklen Wald. Vielleicht braucht hier eine Person einen starken Arm und eine harte Brust zum anschmiegen!",
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
 				"condition":{
-					"str":14
+					
 				},
 				"rewards":[
-					{
-						"item":"stdamulettstr"
-					},
-					{
-						"xp":"1164"
-					}
 					
 				],
 				"replies":[
@@ -480,7 +468,7 @@ vardialogDefinitions={
 		],
 		"rewards":[
 			{
-				"fight":"0"
+				"fight":["angelika"]
 			}
 			
 		]
