@@ -17,7 +17,7 @@ var dialogDefinitions={
 		
 	},
 	"1":{
-		"text":"Das letzte an das du dich noch erinnerst ist Angelika über dir und ein wildes Amazonenjodeln in den Ohren. Als du wieder zu dir kommst funkelt dir eine niedliche Fee entgegen, die jedoch absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAS DAS DENN? So eine jämmerliche Show habe ich lange nicht mehr gesehen. Ab auf die Trainingsbank!' Und bevor du dich in die Welt stürzt, mach dich mit dem deinen Attributen und dem Items vertraut! GOD DAMN IT!",
+		"text":"Das Letzte, an das du dich noch erinnerst, ist Angelika über dir und ein wildes Amazonenjodeln in deinen Ohren, bis das Dunkeln dich umhüllt. Als du wieder zu Besinnung kommst, funkelt dir eine niedliche Fee entgegen, welche jedoch mit deiner Leistung absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAR DAS DENN? So eine jämmerliche Darbietung habe ich lange nicht mehr gesehen. Ab zurück auf die Trainingsbank! Und bevor du dich in die Welt stürzt, mach dich mit deinen Attributen und dem Inventar vertraut! GOD DAMN IT!",
 		"image":"fee.png",
 		"replies":[
 			
@@ -40,12 +40,12 @@ var dialogDefinitions={
 		
 	},
 	"2":{
-		"text":"Du kommst an eine große Brücke, auf der dir ein Wächter den Weg versperrt. Er ruft dir entgegen: 'Haltet ein! Wer wandelt hier durch Nacht und Wind?'",
+		"text":"Du kommst an eine große Brücke, auf der dir ein Wächter den Weg versperrt. Er ruft: 'Haltet ein! Wer wandelt hier durch Nacht und Wind?'",
 		"image":"bruecke.png",
 		"replies":[
 			{
-				"text":"Denkst du ich bin ein Idiot? Ich kann von hier deine Beinhaarstoppel sehen! (Gewinn 4 Attributspunkte)",
-				"reply":"Ich bin eine Prinzessin von Glitzerberg",
+				"text":"Denkst du ich bin ein Idiot? Ich kann von hier deine Beinhaarstoppel sehen!",
+				"reply":"Ich bin eine Prinzessin vom Glitzerberg",
 				"condition":{
 					
 				},
@@ -73,7 +73,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Okay, Keeeeeevin! Nun beantwortet mir folgende Frage! Wie lautet eure Lieblingsfarbe?",
+				"text":"Okay, Keeeeeevin! Nun beantwortet mir doch folgende Frage! Wie lautet Eure Lieblingsfarbe?",
 				"reply":"Kevin, nett dich kennzulernen!",
 				"condition":{
 					
@@ -83,7 +83,7 @@ var dialogDefinitions={
 				],
 				"replies":[
 					{
-						"text":"FALSCH!",
+						"text":"HA! FALSCH! *räusper* Ich meine 'Ihr liegt leider falsch!'",
 						"reply":"Ähm... Rot?",
 						"condition":{
 							
@@ -197,7 +197,7 @@ var dialogDefinitions={
 								
 							},
 							{
-								"text":"",
+								"text":"Alt und grau könnt Ihr werden, aber nicht frech! Zieht Eure Waffen, Rotzlümmel!",
 								"reply":"Deinen Job!",
 								"condition":{
 									
@@ -238,11 +238,11 @@ var dialogDefinitions={
 		
 	},
 	"3":{
-		"text":"Als du gerade durch den dunklen Wald schleichst, siehst du auf dem Weg vor dir ein Seil auf dem Boden. Während du dich näherst, hörst du es hinter einem Baum glucksen!",
+		"text":"Als du gerade durch den dunklen Wald schleichst, siehst du auf dem Weg vor dir ein Seil auf dem Boden und hörst ein vergnügtes Glucksen aus dem Gebüsch!",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Du setzt einen Fuß hinter den anderen, bemerkst jedoch zu spät, dass du in eine klebrige, rosa Flüßigkeit getreten bist, welche einen erschreckend bekannten Geruch von Liebestrank verströmt! Die verliebt lächelnde Hexe greift dich erschrocken an!",
+				"text":"Du setzt einen Fuß hinter den anderen, bemerkst jedoch zu spät, dass du in eine klebrige, rosa Flüßigkeit getreten bist. Diese verströmt einen vertrauten Geruch von Liebestrank! Plötzlich attackiert euch eine verliebt aussehende Hexe aus dem Gebüsch an!",
 				"reply":"(Nachsehen)",
 				"condition":{
 					
@@ -271,8 +271,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Du bemerkst sofort, dass die Hexe eine Falle gestellt und in ihrer Tollpatschigkeit sich selbst mit einem Liebestrank übergossen hat. Du gibst dich als auf Liebestränke spezialisierter Alchemist aus und bringst sie um ihren Schatz!",
-				"reply":"Lage glasklar analysieren!",
+				"text":"Du bemerkst sofort, dass die Hexe eine Falle gestellt und sich daraufhin in ihrer eigenen Tollpatschigkeit selbst mit einem Liebestrank übergossen hat. Du gibst dich als auf Liebestränke spezialisierter Alchemist aus und überredest sie dir ihre restlichen Wertgegenstände für eine Heilung zu geben!",
+				"reply":"Situation glasklar analysiert!",
 				"condition":{
 				},
 				"rewards":[
@@ -322,7 +322,7 @@ var dialogDefinitions={
 		
 	},
 	"4":{
-		"text":"Schon von weitem erkennst du eine lange Schleifspur auf dem Boden, die recht schnell in einem Einschlagskrater endet. Als du näher kommst, humpelt dir aus den Überresten einer Rakete ein in Lumpen gekleideter Gnom entgegen. Gnom: 'Haltet ein Reisender, mein Interinselflug ist leider auf dieser Insel abgestürzt und ich habe kein Ticket, um weiter zu reisen! Kannst du mir helfen?'",
+		"text":"Schon von weitem erkennst du eine lange Schleifspur auf dem Boden, die recht schnell in einem Einschlagskrater mündet. Als du näher kommst, humpelt dir aus den Überresten einer Rakete ein in Lumpen gekleideter Gnom entgegen. Gnom: 'Haltet ein Reisender, mein Interinselflug ist leider auf dieser Insel abgestürzt und ich habe kein Ticket, um weiter zu reisen! Kannst du mir helfen?'",
 		"image":"boss.png",
 		"replies":[
 			{

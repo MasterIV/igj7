@@ -43,12 +43,12 @@ var npcDefinitions={
 	},
 	"angelika":{
 		"name":"Angelika",
-		"image":'img/characters/villain.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"image":'img/characters/merkel.png',
+		"int":65,
+		"dex":54,
+		"str":72,
+		"def":55,
+		"hp":320,
 		"skills":{
 			"attack":.8,
 			"heal":.2

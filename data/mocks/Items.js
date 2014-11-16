@@ -65,7 +65,7 @@ var itemDefinitions={
 		"def":15,
 		"dex":5,
 		"int":5,
-		"blingbling":10
+		"blingbling":15
 	},
 	"trabbelhufe_des_trippers":{
 		"itemname":"Trabbelhufe des Trippers",
@@ -78,7 +78,7 @@ var itemDefinitions={
 		"int":5,
 		"blingbling":10
 	},
-	"standardt_boots_int":{
+	"standard_boots_int":{
 		"itemname":"Boots der Nerdygkeit",
 		"description":"Schuhe",
 		"sprite":"img/items/boots.png",
