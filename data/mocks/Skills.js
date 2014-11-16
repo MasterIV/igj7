@@ -71,6 +71,6 @@ var skillDefinitions = {
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
 		}
-	},
+	}
 };
 
