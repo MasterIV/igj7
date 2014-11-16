@@ -116,7 +116,48 @@ var npcDefinitions={
 		"hp":20,
 		"skills":{
 		}
-	}
-	
+	},
+	"golem":{
+		"name":"Golem",
+		"image":'img/characters/roboter.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"golemlead":{
+		"name":"Golemanführer",
+		"image":'img/characters/roboter2.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"fairy":{
+		"name":"Gute Fee (mit dickem Knüppel)",
+		"image":'img/characters/fee.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
 }
 ;

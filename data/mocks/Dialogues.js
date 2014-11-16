@@ -1011,27 +1011,17 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"",
+				"text":"Ein lautes Gröhlen erscheint, als du dich den Herrscharen anschließt!",
 				"reply":"(Hilf den Söldnern)",
 				"condition":{
 					
 				},
 				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
-				"condition":{
-					
-				},
-				"rewards":[
-					
+					{
+						"fight":[
+							"roboter3"
+						]
+					}
 				],
 				"replies":[
 					
@@ -1046,12 +1036,32 @@ var dialogDefinitions={
 		
 	},
 	"19":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Als du unbesorgt deines Weges gehst, hörst du einen kläglichen Hilferuf aus der Nähe. Eine Suche bringt einen Zauberer in einer magischen Blase zu Tage. Zauberer:'Stop... Stop. Bitte lauft nicht weg! Ich hatte leider ein kleines Missgeschick bei meinem letzten Experiment. Könnt ihr mir helfen? Ihr müsst nur diesen Hebel dort betätigen!'",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"text":"Ihr legt den Hebel um, bemerkt jedoch zu spät, dass um den Hebel herum ein Haufen Menschenknochen verstreut liegt. Mit einem Knall erscheinen drei blutrünstige Schafe und fallen euch an. Während ihr in den Kampf stürtzt hört ihr noch die gehässige Stimme des Zauberers: 'Jaaa, meine Lieblings. Es ist Fressizeit!'",
+				"reply":"(Hebel umlegen)",
+				"condition":{
+					
+				},
+				"rewards":[
+					{
+						"fight":[
+							"sheep","sheep","sheep"
+						]
+					}
+				]
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Rechtzeitig bemerkt ihr, dass um den Hebel herum ein Haufen Menschenknochen liegt. Ihr lasst den Zauberer hocken und durchwühlt stattdessen den Haufen.",
+				"reply":"(Hebel betrachten)",
 				"condition":{
 					
 				},
@@ -1064,22 +1074,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
+				"text":"Zauberer in magischen Blasen waren dir immer suspekt!",
+				"reply":"(Weggehen)",
 				"condition":{
 					
 				},
@@ -1099,6 +1095,264 @@ var dialogDefinitions={
 		
 	},
 	"20":{
+		"text":"Je weiter des Weges du kommst, desto größere Scharen an Menschen umgeben dich. Als du dich gerade fragst, ob du immernoch etwas Liebestrank von der Hexe am Schuh hast, siehst du die Fahnen und Schilder vom großen Dampflasterrennen. Es werden noch lebensmüde Fahrer gesucht. Was tust du?",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Zur deiner Überraschung wirst du genommen. Deine Aufgabe besteht in einer Runde 'Angsthase' gegen einen Dachs. Bremst du, oder hälst du drauf?",
+				"reply":"Fahrer? ICH ICH ICH!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					{
+						"text":"Du hast nicht mehr alle Tassen im Schrank! Jeder weiß, was Dachse sie Berseker der Straße sind. Es wird niemand erfahren, ob es daher rührt, dass er nicht ans Lenkrad kam, oder die Welt einfach nur brennen sehen wollte. Auf jeden Fall kracht ihr voll zusammen und du kannst dich glücklich schätzen mit dem Leben davon zu kommen!",
+						"reply":"(Draufhalten)",
+						"condition":{
+							
+						},
+						"rewards":[
+							
+						],
+						"replies":[
+							
+						]
+					},
+					{
+						"text":"Zwei Idioten, ein Gedanke. Ihr beiden weicht beide aus und kracht in die Beplankung. Zu deinem Glück warst du eine Sekunde langsamer und hast so gewonnen!",
+						"reply":"(Bist du irre?)",
+						"condition":{
+							
+						},
+						"rewards":[
+							
+						],
+						"replies":[
+							
+						]
+					}
+				]
+				
+			},
+			{
+				"text":"Das Preisgeld wäre größer, aber in fremden Taschen finden sich auch interessante Sachen.",
+				"reply":"Massen an Menschen schaffen Möglichkeiten",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"21":{
+		"text":"Als du unbesorgt deines Weges gehst, hörst du einen kläglichen Hilferuf aus der Nähe. Eine Suche bringt einen Zauberer in einer magischen Blase zu Tage. Zauberer:'Stop... Stop. Bitte lauft nicht weg! Ich hatte leider ein kleines Missgeschick bei meinem letzten Experiment. Könnt ihr mir helfen? Ihr müsst nur diesen Hebel dort betätigen!'",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Ihr legt den Hebel um, bemerkt jedoch zu spät, dass um den Hebel herum ein Haufen Menschenknochen verstreut liegt. Mit einem Knall erscheinen drei blutrünstige Schafe und fallen euch an. Während ihr in den Kampf stürtzt hört ihr noch die gehässige Stimme des Zauberers: 'Jaaa, meine Lieblings. Es ist Fressizeit!'",
+				"reply":"(Hebel umlegen)",
+				"condition":{
+					
+				},
+				"rewards":[
+					{
+						"fight":[
+							"sheep","sheep","sheep"
+						]
+					}
+				]
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Rechtzeitig bemerkt ihr, dass um den Hebel herum ein Haufen Menschenknochen liegt. Ihr lasst den Zauberer hocken und durchwühlt stattdessen den Haufen.",
+				"reply":"(Hebel betrachten)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Zauberer in magischen Blasen waren dir immer suspekt!",
+				"reply":"(Weggehen)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"22":{
+		"text":"Eine Gang aus Händlern belagert die Straße. Aus dem Durcheinander aus Beatboxing und 'Digga' vermeinst du zu hören, dass du 'fett krass was abkaufen musst, um auf die Westside zu kommen'. Zum Glück hast du noch etwas Taschengeld übrig. Was soll es sein?",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Auf Elfen ist verlass, ihr Stoff gibt Erinnerungen aus mindestens sieben Leben.",
+				"reply":"Voll deeper shit",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Tiefer gelegte Lasttiere haben seit jeher zu langen Stauß geführt, aber damn... sitzen die Puschen tight!",
+				"reply":"Krasse Maultierfelgen",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Ich bin raus...",
+				"reply":"Thug's Handbuch of life",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Mutti wäre stolz auf diesen Bizeps!",
+				"reply":"Pumpsession mit Snoop Ork",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"23":{
+		"text":"'Wuuuhuuuuuuuu...' ein schrillendes Rufen weckt dich aus deinen Reiseträumen. Du schaust dich um, kannst aber niemand finden bis dir etwas großes Rundes vor die Linsen fliegt. Aber was zum Teufel ist das? Es ist eine Miniform der guten Fee, aber scheint diese gegessen zu haben. Gut gelaunt erfüllt sie dir einen Wünsch.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Ein klasse Wunsch! Sie erzählt dir stundenlang Anekdoten außer ihrer Zeit als Wirtin Goldwalds Kneipe 'Zum stolzen Löwen'",
+				"reply":"Das Wissen der Welt",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Kein Problem. Madame Tickerbell hat den besten Stoff.",
+				"reply":"Ost-Mallorcanisches Vitamin B",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Eine harte Nuss, da sich viel Erfahrung damit hat Leute übers Ohr zu hauen, aber keine Fee kann etwas gegen eine Doppelwunsch-Versicherung einwenden!",
+				"reply":"Sie soll eine Versicherung abkaufen",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"24":{
+		"text":"Schon einmal vom den angepissten Hausfrauen der Raktagron-Ebene gehört? Nein? ABER JETZT! Denn sie sind verdammt wütend, dass du den Müll nicht rausgebracht hast!",
+		"image":"boss.png",
+		"replies":[
+			
+		],
+		"rewards":[
+			{
+				"fight":[
+					"witch","witch"
+				]
+			}
+		]
+		
+	},
+	"25":{
 		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
 		"image":"boss.png",
 		"replies":[
@@ -1143,11 +1397,138 @@ var dialogDefinitions={
 					
 				]
 				
+			},
+			{
+				"text":"Das Gold interessiert sie nicht, aber deine Zähne sondern soviel Wasserstoff-Peroxid ab, dass diese ganz nebelt auf deine Wünsche eingehen.",
+				"reply":"Mücken stehen auf Gold. Weiß jeder!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
 			}
 			
 		],
 		"rewards":[
 			
+		]
+		
+	},
+	"26":{
+		"text":"Im Untergeschoss einer verfallenen Tavernenruine findest du ein düsteres, mit grünen Kerzen beleuchtetes Kellergewölbe. Beim Betreten wendet sich eine schwarz vermummte Person auch euch: Person:'Seid gegrüßt, wir sind ehemalige Totenbeschwörer die alles für einen Schu... äh... Schluck Schwarzwein tun. ALLES!'",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Ihr erinnert euch daran, dass ihr auf eurem letzten Auftrag noch diese Probe aus dem verseuchten Teich einsammeln solltet. Konsistenz und Farbe stimmen überein. Der merkt das nie!",
+				"reply":"Fakewein verkaufen",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Mit Schwarzwein könnt ihr nicht dienen, aber ihr habt einen halbgelutschten Pfefferminz in der Tasche!",
+				"reply":"Kein Schwarzwein, aber Pfefferminz!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Ihr dachtet schon die Schuhe könnt ihr wegschmeißen, aber was diese Totenbeschwörer mit ein wenig Spucke und einem Lappen alles hinbekommen. Sagenhaft! Sogar der Kaugummi ist raus!",
+				"reply":"Wirklich ALLES?",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"27":{
+		"text":"Du bist in eine Ratsitzung von Golems gestolpert. Sie diskutieren seit 15.000 Jahren und brauchen Monate für einen Satz. Zu deinem Unglück hast du sie mittendrin unterbrochen. Schlechte Idee!",
+		"image":"boss.png",
+		"replies":[
+			
+		],
+		"rewards":[
+			{
+				"fight":[
+					"golem","golemlead","golem"
+				]
+			}
+		]
+		
+	},
+	"28":{
+		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee:'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
+		"image":"boss.png",
+		"replies":[
+			
+		],
+		"rewards":[
+			{
+				"fight":[
+					"fairy"
+				]
+			}
+		]
+		
+	},
+	"29":{
+		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee:'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
+		"image":"boss.png",
+		"replies":[
+			
+		],
+		"rewards":[
+			{
+				"fight":[
+					"fairy"
+				]
+			}
+		]
+		
+	},
+	"30":{
+		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee:'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
+		"image":"boss.png",
+		"replies":[
+			
+		],
+		"rewards":[
+			{
+				"fight":[
+					"fairy"
+				]
+			}
 		]
 		
 	},
