@@ -13,7 +13,6 @@ function combatScene() {
 			new Heroinfo(this.hero)
 	];
 }
-
 combatScene.prototype = new scene();
 
 combatScene.prototype.attack = function() {
@@ -163,3 +162,14 @@ combatScene.prototype.setEnemies = function( definitions ) {
 		this.entities.push( this.defaults[i] );
 	backgroundsound.play('sound/boss.mp3');
 };
+combatScene.prototype._zSort = function() {
+	function compare(a,b) {
+		if (a.y < b.y)
+			return -1;
+		if (a.y > b.y)
+			return 1;
+		return 0;
+	}
+
+	this.entities.sort(compare);
+}
