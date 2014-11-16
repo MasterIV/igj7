@@ -12,7 +12,7 @@ var config = {
 	slotLabels: {
 		helmet: 'Kopf',
 		chest: 'Brust',
-		boots: 'Fuesse',
+		boots: 'Füsse',
 		neck: 'Hals',
 		ring: 'Finger'
 	},
