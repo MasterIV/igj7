@@ -11,15 +11,7 @@ function Hero() {
 		ring:null
 	};
 
-	this.attrs = {
-		hp: 150,
-		mana: 20,
-		str: 10,
-		def: 6,
-		dex: 10,
-		int: 10,
-		blingbling: 10
-	};
+	this.attrs = config.defaultAttributes;
 
 	this.life = this.attrs.hp;
 
@@ -50,19 +42,11 @@ function Hero() {
 		this.inventory.push( item );
 	};
 
-	/** debug code to have items from beginning */
-	var itemCounter =0;
-	for(var key in itemDefinitions) {
-		this.inventory.push(new item(itemDefinitions[key]));
-		itemCounter ++;
-		if (itemCounter == 20) {
-			break;
-		}
-	}
-	/*
-	for(var key in skillDefinitions) {
-		this.skills.push(skillDefinitions[key]);
-	}*/
+	this.reset = function() {
+		this.inventory = [];
+		this.skills = [];
+		this.attrs = config.defaultAttributes;
+	};
 
 	this.getStats = function() {
 		var currentStats = clone(this.attrs);

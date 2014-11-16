@@ -144,7 +144,7 @@ combatScene.prototype.defend = function() {
 	this.enemyTurn();
 };
 
-combatScene.prototype.setEnemies = function( definitions ) {
+combatScene.prototype.setEnemies = function( definitions, bg ) {
 	this.entities = [];
 	this.blocking = [];
 
@@ -160,6 +160,8 @@ combatScene.prototype.setEnemies = function( definitions ) {
 
 	for( var i = 0; i < this.defaults.length; i++ )
 		this.entities.push( this.defaults[i] );
+
+	if( bg ) this.bg = new sprite(bg);
 	backgroundsound.play('sound/boss.mp3');
 };
 combatScene.prototype._zSort = function() {
