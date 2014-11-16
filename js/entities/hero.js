@@ -98,7 +98,7 @@ function HeroContainer(x, y) {
 
 		if (this.life <= 0) {
 			this.life = 0;
-			game.scene =  new looseScene();
+			game.scene = new switchScene(new looseScene(), 2000, 'Game Over');
 		}
 	};
 
