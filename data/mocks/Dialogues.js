@@ -857,7 +857,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"buff_cucumber"
+			}
 		]
 		
 	},
