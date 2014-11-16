@@ -75,6 +75,7 @@ function Shield(scene, actor, duration, value) {
 
 Shield.prototype.run = function( target ) {
 	this.target = target;
+	this.scene.blocking.push( new Animation(target.x+50, target.y, 'img/animation/barrier.png', 2, 200));
 	target.def *= this.value;
 	target.buffs.push( this );
 };
