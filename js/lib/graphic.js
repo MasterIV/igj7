@@ -36,6 +36,7 @@ var g = {
 			'img/ui/hp_mp_bar.png',
 			'img/ui/menu.jpg',
 			'img/ui/continue_button.png',
+			'img/ui/start_button.png',
 			'img/ui/credits_button.png',
 			'img/ui/menu.jpg',
 			'img/maps/campaign_map.jpg',
