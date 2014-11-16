@@ -1304,7 +1304,7 @@ var dialogDefinitions={
 						]
 					},
 					{
-						"text":"Zwei Idioten, ein Gedanke. Ihr beiden weicht beide aus und kracht in die Beplankung. Zu deinem Glück warst du eine Sekunde langsamer und hast so gewonnen!",
+						"text":"Zwei Idioten, ein Gedanke. Ihr beiden weicht beide aus und kracht in die Leitplanken. Zu deinem Glück warst du eine Sekunde langsamer und hast so gewonnen!",
 						"reply":"(Bist du irre?)",
 						"condition":{
 							
@@ -1328,7 +1328,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Das Preisgeld wäre größer, aber in fremden Taschen finden sich auch interessante Sachen.",
+				"text":"Das Preisgeld wäre größer, aber in fremden Taschen finden sich durchaus interessante Sachen.",
 				"reply":"Massen an Menschen schaffen Möglichkeiten",
 				"condition":{
 					
@@ -1357,12 +1357,12 @@ var dialogDefinitions={
 		
 	},
 	"17":{
-		"text":"Die Straße wird von einer Meute wütender Goblinangesteller belagert. Ihr Vorsitzender stellt sich als Vorsitzender der Gewerkschaft 'Goblinische Diener Lebenslang' vor und fordert von allen Durchreisenden drei Prozent mehr Wegsteuer plus das Recht auch Orks vertreten zu dürfen.",
+		"text":"Die Straße wird von einer Meute wütender Goblinangesteller belagert. Der Rädelsführer stellt sich als Vorsitzender der Gewerkschaft 'Goblinische Diener Lebenslang' vor und fordert von allen Durchreisenden drei Prozent mehr Wegsteuer plus das Recht, auch Orks vertreten zu dürfen.",
 		"image":"boss.png",
 		"replies":[
 			{
 				"text":"Trotz ihrer Größe haben Goblins erstaunlich scharfe Zähne. Sie stürzen sich auf dich!",
-				"reply":"'Drei Prozent von Nichts sind Haue. Auf sie!'",
+				"reply":"'Drei Prozent von Nichts bedeutet Haue. Auf sie!'",
 				"condition":{
 					
 				},
@@ -1388,7 +1388,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Goblins lieben Gold. Du BIST Gold! Nimm mit...",
+				"text":"Goblins lieben Gold. Du BIST Gold! Sie nehmen dich mit...",
 				"reply":"'Bekomme ich für sechs Prozent zwei Goblins oben drauf?'",
 				"condition":{
 					
@@ -1417,7 +1417,7 @@ var dialogDefinitions={
 		
 	},
 	"18":{
-		"text":"Du kommst an eine zerstörte Burg, in welcher der ehemalige Burgherr von Söldnern belagert wird. Hilfst du den Söldnern, oder dem Burgherrn?",
+		"text":"Du erreichst eine zerstörte Burg, in welcher der ehemalige Burgherr von Söldnern belagert wird. Hilfst du den Söldnern oder dem Burgherren?",
 		"image":"boss.png",
 		"replies":[
 			{
@@ -1448,7 +1448,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Ein lautes Gröhlen erscheint, als du dich den Herrscharen anschließt!",
+				"text":"Ein lautes Gröhlen tönt auf, als du dich den Heerscharen anschließt!",
 				"reply":"(Hilf den Söldnern)",
 				"condition":{
 					
@@ -1482,11 +1482,11 @@ var dialogDefinitions={
 		
 	},
 	"19":{
-		"text":"Als du unbesorgt deines Weges gehst, hörst du einen kläglichen Hilferuf aus der Nähe. Eine Suche bringt einen Zauberer in einer magischen Blase zu Tage. Zauberer:'Stop... Stop. Bitte lauft nicht weg! Ich hatte leider ein kleines Missgeschick bei meinem letzten Experiment. Könnt ihr mir helfen? Ihr müsst nur diesen Hebel dort betätigen!'",
+		"text":"Als du unbesorgt deines Weges gehst, hörst du einen kläglichen Hilferuf aus der Nähe. Deine Suche endet in der Entdeckung eines Zauberers, der in einer magischen Blase gefangen ist. Zauberer: 'Stop... Stop. Bitte lauft nicht weg! Ich hatte leider ein kleines Missgeschick bei meinem letzten Experiment. Könnt Ihr mir helfen? Ihr müsst nur diesen Hebel dort betätigen!'",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Ihr legt den Hebel um, bemerkt jedoch zu spät, dass um den Hebel herum ein Haufen Menschenknochen verstreut liegt. Mit einem Knall erscheinen drei blutrünstige Schafe und fallen euch an. Während ihr in den Kampf stürtzt hört ihr noch die gehässige Stimme des Zauberers: 'Jaaa, meine Lieblings. Es ist Fressizeit!'",
+				"text":"Ihr legt den Hebel um, bemerkt jedoch zu spät, dass um den Hebel herum ein Haufen Menschenknochen verstreut liegt. Mit einem Knall erscheinen drei blutrünstige Schafe und sie fallen dich an. Während ihr in den Kampf stürzt, hörst du noch die gehässige Stimme des Zauberers: 'Jaaa, meine Lieblinge. Es ist Fressizeit!'",
 				"reply":"(Hebel umlegen)",
 				"condition":{
 					
@@ -1522,7 +1522,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Rechtzeitig bemerkt ihr, dass um den Hebel herum ein Haufen Menschenknochen liegt. Ihr lasst den Zauberer hocken und durchwühlt stattdessen den Haufen.",
+				"text":"Rechtzeitig bemerkst du, dass um den Hebel herum ein Haufen Menschenknochen liegt. Du lässt den Zauberer in seiner Blase und durchwühlst stattdessen den Haufen.",
 				"reply":"(Hebel betrachten)",
 				"condition":{
 					
@@ -1554,7 +1554,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Zauberer in magischen Blasen waren dir immer suspekt!",
+				"text":"Zauberer in magischen Blasen waren dir schon immer suspekt!",
 				"reply":"(Weggehen)",
 				"condition":{
 					
@@ -1592,12 +1592,12 @@ var dialogDefinitions={
 		
 	},
 	"20":{
-		"text":"Je weiter des Weges du kommst, desto größere Scharen an Menschen umgeben dich. Als du dich gerade fragst, ob du immernoch etwas Liebestrank von der Hexe am Schuh hast, siehst du die Fahnen und Schilder vom großen Dampflasterrennen. Es werden noch lebensmüde Fahrer gesucht. Was tust du?",
+		"text":"Beim Durchschreiten des Waldes hörst du das Gelächter junger Leute. Niemand sollte hier draußen sein...",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Zur deiner Überraschung wirst du genommen. Deine Aufgabe besteht in einer Runde 'Angsthase' gegen einen Dachs. Bremst du, oder hälst du drauf?",
-				"reply":"Fahrer? ICH ICH ICH!",
+				"text":"Es ist eine Gruppe Rollenspieler, die eine Runde 'Dolchbären & Drachensabber' spielen. Sie laden dich ein, als der kluge Ritter 'Ser Rotzalot' mitzuspielen.",
+				"reply":"(Inspizieren)",
 				"condition":{
 					
 				},
@@ -1606,8 +1606,8 @@ var dialogDefinitions={
 				],
 				"replies":[
 					{
-						"text":"Du hast nicht mehr alle Tassen im Schrank! Jeder weiß, was Dachse sie Berseker der Straße sind. Es wird niemand erfahren, ob es daher rührt, dass er nicht ans Lenkrad kam, oder die Welt einfach nur brennen sehen wollte. Auf jeden Fall kracht ihr voll zusammen und du kannst dich glücklich schätzen mit dem Leben davon zu kommen!",
-						"reply":"(Draufhalten)",
+						"text":"Der Spielleiter bemerkt deinen Versuch und sagt: 'Oh, Ihr spielt Eure Rolle aber großartig! Ihr habt einen Wert von 203.000 in Stehlen, nicht wahr? Wohlan denn, fahrt nur fort.' Etwas irritiert machst du weiter und kommst unbehelligt davon.",
+						"reply":"Beim Spielen könnte man unauffällig die Nerds bestehlen...",
 						"condition":{
 							
 						},
@@ -1637,8 +1637,8 @@ var dialogDefinitions={
 						]
 					},
 					{
-						"text":"Zwei Idioten, ein Gedanke. Ihr beiden weicht beide aus und kracht in die Beplankung. Zu deinem Glück warst du eine Sekunde langsamer und hast so gewonnen!",
-						"reply":"(Bist du irre?)",
+						"text":"Der Spielleiter ist so beeindruckt, dass er vor Aufregung einem Herzinfarkt erliegt.",
+						"reply":"Das kann ich! Megahart abgehen und die Nerds beeindrucken!",
 						"condition":{
 							
 						},
@@ -1671,8 +1671,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Das Preisgeld wäre größer, aber in fremden Taschen finden sich auch interessante Sachen.",
-				"reply":"Massen an Menschen schaffen Möglichkeiten",
+				"text":"Du hast offenbar eine Gruppe rollenspielender Nerds erwischt. Astrein, jetzt ist hier wieder unberührte Natur! Vom verursachten Sprengkrater Mal abgesehen...",
+				"reply":"Man sollte prophylaktisch die einzige heilige Granate auf die Lichtung werfen.",
 				"condition":{
 					
 				},
@@ -1710,12 +1710,12 @@ var dialogDefinitions={
 		
 	},
 	"21":{
-		"text":"Als du unbesorgt deines Weges gehst, hörst du einen kläglichen Hilferuf aus der Nähe. Eine Suche bringt einen Zauberer in einer magischen Blase zu Tage. Zauberer:'Stop... Stop. Bitte lauft nicht weg! Ich hatte leider ein kleines Missgeschick bei meinem letzten Experiment. Könnt ihr mir helfen? Ihr müsst nur diesen Hebel dort betätigen!'",
+		"text":"Eine extrem heiße Elfe in knappem Outfit stürmt auf dich zu und macht Anstalten, dich zu verführen.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Ihr legt den Hebel um, bemerkt jedoch zu spät, dass um den Hebel herum ein Haufen Menschenknochen verstreut liegt. Mit einem Knall erscheinen drei blutrünstige Schafe und fallen euch an. Während ihr in den Kampf stürtzt hört ihr noch die gehässige Stimme des Zauberers: 'Jaaa, meine Lieblings. Es ist Fressizeit!'",
-				"reply":"(Hebel umlegen)",
+				"text":"Nach einigen Stunden der Debatte stimmt sie dir nickend zu und kleidet sich in die schwere Rüstung eines Ritters. Sie erleidet einen Hitzestau und fällt tot um.",
+				"reply":"Sexismus ist eine schlimme Sache, das sollte man mit ihr debattieren!",
 				"condition":{
 					
 				},
@@ -1750,8 +1750,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Rechtzeitig bemerkt ihr, dass um den Hebel herum ein Haufen Menschenknochen liegt. Ihr lasst den Zauberer hocken und durchwühlt stattdessen den Haufen.",
-				"reply":"(Hebel betrachten)",
+				"text":"",
+				"reply":"Für diesen Frevel hat sie einen abgehackten Kopf verdient!",
 				"condition":{
 					
 				},
@@ -1781,8 +1781,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Zauberer in magischen Blasen waren dir immer suspekt!",
-				"reply":"(Weggehen)",
+				"text":"Sie weint und verzweifelt. Du hast ein Leben zerstört, Glückwunsch!",
+				"reply":"Ich bin selbst viel heißer. Sie ist meiner nicht würdig!",
 				"condition":{
 					
 				},
