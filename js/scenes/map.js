@@ -60,6 +60,7 @@ mapScene.prototype = new scene();
 
 mapScene.prototype.goToFinalScene = function() {
 	this.dragOffset = new V2(-450, -150);
+	this.setEncounter("31");
 	this.encounterMap["31"].isVisited = true;
 	this.setDialogue(dialogDefinitions["31"]);
 }
