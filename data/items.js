@@ -236,5 +236,16 @@ var itemDefinitions = {
 				"rnd": .6
 			}
 		}
+	},
+	"mana_potion": {
+		"itemname": "Manatrank",
+		"description": "BlueBull.",
+		"sprite": "img/items/energy_potion.png",
+		"target": "self",
+		"effects": {
+			"Mana": {
+				"base": 20
+			}
+		}
 	}
 };
