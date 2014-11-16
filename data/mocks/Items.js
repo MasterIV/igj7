@@ -230,7 +230,7 @@ var itemDefinitions={
 	
 	"potion":{
 		"itemname":"Heiltrank",
-		"sprite":"mock/sword.png",
+		"sprite":"mock/neck.png",
 		"target":"self",
 		"effects":{
 			"Heal":{
