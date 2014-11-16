@@ -119,7 +119,7 @@ combatScene.prototype.spell = function() {
 	var self = this;
 
 	for(var i in skills) (function(s) {
-		if( this.hero.mana < s.costs ) return;
+		if( self.hero.mana < s.costs ) return;
 		choices.push(self.getChoice(s));
 	})(skills[i]);
 
