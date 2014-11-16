@@ -790,51 +790,9 @@ var dialogDefinitions={
 		
 	},
 	"13":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Eine friedliche, unschuldige, blumige Wiese in reinem Sonnenlicht. Hier passiert dir nichts böses!",
 		"image":"boss.png",
 		"replies":[
-			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			}
 			
 		],
 		"rewards":[
@@ -843,12 +801,12 @@ var dialogDefinitions={
 		
 	},
 	"14":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Eine Gang aus Händlern belagert die Straße. Aus dem Durcheinander aus Beatboxing und 'Digga' vermeinst du zu hören, dass du 'fett krass was abkaufen musst, um auf die Westside zu kommen'. Zum Glück hast du noch etwas Taschengeld übrig. Was soll es sein?",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"text":"Auf Elfen ist verlass, ihr Stoff gibt Erinnerungen aus mindestens sieben Leben.",
+				"reply":"Voll deeper shit",
 				"condition":{
 					
 				},
@@ -861,8 +819,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
+				"text":"Tiefer gelegte Lasttiere haben seit jeher zu langen Stauß geführt, aber damn... sitzen die Puschen tight!",
+				"reply":"Krasse Maultierfelgen",
 				"condition":{
 					
 				},
@@ -875,8 +833,22 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
+				"text":"Ich bin raus...",
+				"reply":"Thug's Handbuch of life",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Mutti wäre stolz auf diesen Bizeps!",
+				"reply":"Pumpsession mit Snoop Ork",
 				"condition":{
 					
 				},
