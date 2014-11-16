@@ -69,6 +69,8 @@ combatScene.prototype.enemyTurn = function() {
 combatScene.prototype.getEffect = function(type, args, actor) {
 	if( type == 'Heal')
 		return new Heal( this, actor, args.base, args.rnd, args.attr );
+	if( type == 'Mana')
+		return new Mana( this, actor, args.value );
 	if( type == 'Attack')
 		return new Attack( this, actor, args.factor );
 	if( type == 'Stun')
