@@ -57,7 +57,7 @@ tooltip.prototype.showTooltip = function( ctx ) {
 	for( var i = 0; i < this.lines.length; i++ )
 		ctx.fillText( this.lines[i], x + 16 + 30, y+topPadding+this.headlines.length * 32+i*32, width);
 
-	var offsetY = this.headlines.length * 32 + this.lines.length * 32 + topPadding+32 +32;
+	var offsetY = this.headlines.length * 32 + this.lines.length * 32 + topPadding+32;
 	for( var i = 0; i < this.list.length; i++ ) {
 		ctx.fillText( this.list[i].label, x + 16 + 30, y+offsetY + i*32, width);
 		ctx.fillText( this.list[i].value, x + 200 + 30, y+offsetY + i*32, width);
