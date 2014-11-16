@@ -61,7 +61,8 @@ var g = {
 			'img/characters/sheep.png',
 			'img/characters/merkel.png',
 			'img/characters/witch.png',
-			'img/characters/spider.png'
+			'img/characters/spider.png',
+			'img/characters/hotelf.png'
 		],
 		
 	add: function( url ) {
