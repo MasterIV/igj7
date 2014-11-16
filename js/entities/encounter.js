@@ -41,6 +41,9 @@ encounter.prototype.draw = function(ctx, offset) {
 }
 
 encounter.prototype.update = function(delta) {
+	if(this.isVisited && this.id == 31) {
+		game.scene = new winScene();	
+	}
 }
 
 encounter.prototype.click = function(pos) {
