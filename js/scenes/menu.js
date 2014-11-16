@@ -16,14 +16,10 @@ function menuScene() {
 		this.startButton,
 		new SpriteButton('img/ui/credits_button.png', Rect.create(0, 0, 330, 87), Rect.create(330, 0, 330, 87), 751, 432, function(){
 			game.scene.entities.push(new credits());
-		}, null),
-
-
-
-
+		}, null)/*,
 
 		new textButton('Debug', 10, 50, 200, 30, function () {
-			/** debug code to have items from beginning */
+			// debug code to have items from beginning 
 			for(var key in itemDefinitions)
 				hero.loot(new item(itemDefinitions[key]));
 			for(var key in skillDefinitions)
@@ -34,7 +30,7 @@ function menuScene() {
 		}, {}),
 
 		new textButton('Debug Inventori', 10, 90, 200, 30, function () {
-			/** debug code to have items from beginning */
+			// debug code to have items from beginning 
 			for(var key in itemDefinitions)
 				hero.loot(new item(itemDefinitions[key]));
 			for(var key in skillDefinitions)
@@ -43,6 +39,7 @@ function menuScene() {
 			scenes.combat.setEnemies(['roboter','roboter','roboter']);
 			game.scene = new switchScene(scenes.character,2500,'Charakter');
 		}, {})
+		*/
 	]
 }
 menuScene.prototype = new scene();
