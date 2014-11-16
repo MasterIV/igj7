@@ -7,6 +7,14 @@ var skillDefinitions = {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
 		}
 	},
+	"oil": {
+		"name": "Einölen",
+		"costs": 2,
+		"target": "self",
+		"effects": {
+			"Heal": {"base": 10, "attr": "int", "rnd": .6 }
+		}
+	},
 	"heal_enemy": {
 		"name": "Gegner heilen (warum auch immer?!)",
 		"costs": 1,
@@ -29,7 +37,15 @@ var skillDefinitions = {
 		"costs": 2,
 		"target": "self",
 		"effects": {
-			"Buff": {"duration": 3, "value": "5" }
+			"Buff": {"duration": 3, "value": "-5" }
+		}
+	},
+	"posioncloud": {
+		"name": "Reib die Gurke",
+		"costs": 2,
+		"target": "all",
+		"effects": {
+			"Buff": {"duration": 3, "value": "20" }
 		}
 	},
 	"attack_god": {
@@ -64,6 +80,14 @@ var skillDefinitions = {
 			"Attack": {"factor": 2}
 		}
 	},
+	"roundhousekick": {
+		"name": "Roundhousekick",
+		"costs": "5",
+		"target": "single",
+		"effects": {
+			"Attack": {"factor": 3}
+		}
+	},
 	"stun_leg": {
 		"name": "Bein stellen",
 		"costs": 2,
@@ -86,6 +110,14 @@ var skillDefinitions = {
 		"target": "self",
 		"effects": {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
+		}
+	},
+	"greaterheal": {
+		"name": "Große Heilung",
+		"costs": 30,
+		"target": "self",
+		"effects": {
+			"Heal": {"base": 70, "attr": "int", "rnd": .6 }
 		}
 	}
 };

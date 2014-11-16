@@ -226,8 +226,6 @@ var itemDefinitions={
 		"int":10,
 		"blingbling":10
 	},	
-
-	
 	"hp_potion":{
 		"itemname":"Heiltrank",
 		"sprite":"img/items/neck.png",
