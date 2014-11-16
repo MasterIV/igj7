@@ -10,15 +10,12 @@ Heroinfo.prototype.draw = function(ctx) {
 	var h = 20;
 
 	this.img.draw(ctx, 0, 0);
-	ctx.strokeStyle = 'black';
 	ctx.lineWidth="1";
 
-	ctx.fillStyle = 'red';
+	ctx.fillStyle = '#bb0408';
 	ctx.fillRect( this.x, this.y, w * this.hero.life / hero.getStats().hp, h );
-	ctx.strokeRect( this.x, this.y, w, h );
 
-	ctx.fillStyle = 'blue';
+	ctx.fillStyle = '#0e5383';
 	ctx.fillRect( this.x, this.y + 30, w * this.hero.mana / hero.getStats().mana, h );
-	ctx.strokeRect( this.x, this.y + 30, w, h );
 };
 

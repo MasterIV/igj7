@@ -15,7 +15,7 @@ Enemy.prototype.draw = function( ctx ) {
 
 	ctx.lineWidth="1";
 	ctx.strokeStyle = 'black';
-	ctx.fillStyle = 'red';
+	ctx.fillStyle = 'bb0408';
 	ctx.fillRect( this.x - 50, this.y - 170, 100 * this.life / this.attrs.hp, 10 );
 	ctx.strokeRect( this.x - 50, this.y - 170, 100, 10 );
 
