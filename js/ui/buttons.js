@@ -52,6 +52,7 @@ function textButton( text, x, y, w, h, callback, colors, hover, sound ) {
 
 textButton.prototype.draw = function( ctx ) {
 	var c = this.hover &&  this.area.inside( mouse ) ? this.hover : this.colors;
+	ctx.font = '24px monospace';
 
 	ctx.fillStyle = c.background ? c.background : '#EEEEEE';
 	ctx.fillRect( this.area.p1.x, this.area.p1.y, this.area.width(), this.area.height());
@@ -60,7 +61,7 @@ textButton.prototype.draw = function( ctx ) {
 	ctx.strokeRect( this.area.p1.x, this.area.p1.y, this.area.width(), this.area.height());
 
 	ctx.fillStyle = c.text ? c.text : 'black';
-	ctx.fillText( this.text, this.area.p1.x+10, this.area.p1.y+10, this.area.width());
+	ctx.fillText( this.text, this.area.p1.x+10, this.area.p1.y+20, this.area.width());
 }
 
 /* Shared Source */

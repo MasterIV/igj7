@@ -149,9 +149,9 @@ combatScene.prototype.setEnemies = function( definitions, bg ) {
 	this.blocking = [];
 
 	var d = definitions.shift();
-	this.entities.push( new Enemy( 900, 320, npcDefinitions[d] ));
+	this.entities.push( new Enemy(1100, 480, npcDefinitions[d]));
 	if(d = definitions.shift())
-		this.entities.push( new Enemy(1100, 480, npcDefinitions[d]));
+		this.entities.push( new Enemy( 900, 320, npcDefinitions[d] ));
 	if(d = definitions.shift())
 		this.entities.push( new Enemy( 800, 560, npcDefinitions[d]));
 
@@ -163,7 +163,7 @@ combatScene.prototype.setEnemies = function( definitions, bg ) {
 
 	if( bg ) this.bg = new sprite(bg);
 
-	if( scenes.map.currentEncounter.id == 31 )
+	if( scenes.map.currentEncounter && scenes.map.currentEncounter.id == 31 )
 		backgroundsound.play('sound/boss.mp3');
 	else backgroundsound.play('sound/battle.mp3');
 };

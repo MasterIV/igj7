@@ -6,6 +6,7 @@ var g = {
 			'img/animation/destroy.png',
 			'img/animation/barrier.png',
 			'img/animation/healing.png',
+			'img/animation/newitem.png',
 			'img/characters/hero.png',
 			'img/ui/buttons.png',
 			'img/ui/target.png',
@@ -47,7 +48,11 @@ var g = {
 			'img/items/geilervikingerhelm.png',
 			'img/items/panfloetenmaske.png',
 			'img/items/mauszeigerhut.png',
-			'img/items/dereinering.png'
+			'img/items/dereinering.png',
+			'img/characters/roboter3.png',
+			'img/characters/sheep.png',
+			'img/characters/merkel.png',
+			'img/characters/spider.png'
 		],
 		
 	add: function( url ) {

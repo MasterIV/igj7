@@ -133,7 +133,9 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 					}}]
 				}	
 				if(typeof(reward.item) != "undefined") {
-					hero.loot(new item(itemDefinitions[reward.item]));
+					var loot = new item(itemDefinitions[reward.item]);
+					this.blocking.unshift(new AnimationItemFound(loot));
+					hero.loot(loot);
 				}	
 				if(typeof(reward.hp) != "undefined") {
 					hero.attrs.hp += reward.hp;

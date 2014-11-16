@@ -13,14 +13,42 @@ var npcDefinitions={
 		}
 		
 	},
-	"angelika":{
-		"name":"Angelika",
-		"image":'img/characters/villain.png',
+	"roboter2":{
+		"name":"Roboter",
+		"image":'img/characters/roboter2.png',
 		"int":10,
 		"dex":10,
 		"str":10,
 		"def":2,
 		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"roboter3":{
+		"name":"Roboter",
+		"image":'img/characters/roboter3.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"angelika":{
+		"name":"Angelika",
+		"image":'img/characters/merkel.png',
+		"int":65,
+		"dex":54,
+		"str":72,
+		"def":55,
+		"hp":320,
 		"skills":{
 			"attack":.8,
 			"heal":.2
@@ -77,7 +105,87 @@ var npcDefinitions={
 		"skills":{
 			"stun_leg":.2
 		}
-	}
-	
+	},
+	"spider":{
+		"name":"Spinne",
+		"image":'img/characters/spider.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+		}
+	},
+	"golem":{
+		"name":"Golem",
+		"image":'img/characters/roboter.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"golemlead":{
+		"name":"Golemanführer",
+		"image":'img/characters/roboter2.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"fairy":{
+		"name":"Gute Fee (mit dickem Knüppel)",
+		"image":'img/characters/fee.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"minischlacht":{
+		"name":"Soldat",
+		"image":'img/characters/roboter.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
+	"goblinprotester":{
+		"name":"Goblin Gewerkschaft",
+		"image":'img/characters/roboter.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
 }
 ;

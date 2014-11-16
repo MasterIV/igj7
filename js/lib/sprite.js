@@ -1,5 +1,6 @@
 function sprite( img ) {
 	this.img = g[img];
+	if(typeof(this.img)=="undefined") { console.error(img + " file is used but never initialized."); }
 	this.width = this.img.width;
 	this.height = this.img.height;
 }
