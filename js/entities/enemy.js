@@ -13,6 +13,7 @@ function Enemy( x, y, definition ) {
 Enemy.prototype.draw = function( ctx ) {
 	this.img.center( ctx, this.x, this.y);
 
+	ctx.lineWidth="1";
 	ctx.strokeStyle = 'black';
 	ctx.fillStyle = 'red';
 	ctx.fillRect( this.x - 50, this.y - 170, 100 * this.life / this.attrs.hp, 10 );

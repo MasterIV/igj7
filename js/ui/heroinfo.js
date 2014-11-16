@@ -11,6 +11,7 @@ Heroinfo.prototype.draw = function(ctx) {
 
 	this.img.draw(ctx, 0, 0);
 	ctx.strokeStyle = 'black';
+	ctx.lineWidth="1";
 
 	ctx.fillStyle = 'red';
 	ctx.fillRect( this.x, this.y, w * this.hero.life / hero.getStats().hp, h );
