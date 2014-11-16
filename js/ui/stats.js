@@ -13,13 +13,13 @@ stats.prototype.draw = function (ctx) {
 	var offset = 30;
 	var i = 1;
 
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Leben', stats.hp);
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Mana', stats.mana);
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Stärke', stats.str);
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Defense', stats.def);
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Agilität', stats.dex);
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Intelekt', stats.int);
-	this.printStat(ctx, this.x, this.y + (i++)*offset, 'Bling Bling', stats.blingbling);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, config.attrsLabels.hp, stats.hp);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, config.attrsLabels.mana, stats.mana);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, config.attrsLabels.str, stats.str);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, config.attrsLabels.def, stats.def);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, config.attrsLabels.dex, stats.dex);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, config.attrsLabels.int, stats.int);
+	this.printStat(ctx, this.x, this.y + (i++)*offset, config.attrsLabels.blingbling, stats.blingbling);
 
 	if (this.showDiffrence) {
 		this.drawDiffrence(ctx, this.showDiffrence);

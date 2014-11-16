@@ -1,6 +1,7 @@
 function scene() {
 	this.blocking = [];
 	this.entities = [];
+	this.tooltip = null;
 };
 
 scene.prototype.update = function (delta) {
@@ -25,6 +26,10 @@ scene.prototype.draw = function (ctx) {
 
 	if (this.blocking.length && this.blocking[0].draw)
 		this.blocking[0].draw(ctx);
+
+	if (this.tooltip) {
+		this.tooltip.showTooltip(ctx);
+	}
 }
 
 scene.prototype.click = function (pos) {

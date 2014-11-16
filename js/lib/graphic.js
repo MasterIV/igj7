@@ -29,6 +29,8 @@ var g = {
 			'img/ui/character_button.png',
 			'img/ui/character_button_hover.png',
 			'img/ui/character_sheet_background.jpg',
+			'img/ui/tooltip_content.png',
+			'img/ui/tooltip_header.png',
 			'img/maps/campaign_map.jpg',
 			'img/items/neck.png',
 			'img/items/boots.png',
