@@ -34,9 +34,6 @@ var dialogDefinitions={
 			},
 			{
 				"hp":45
-			},
-			{
-				"skill":"stun_leg"
 			}
 			
 		]
@@ -408,7 +405,7 @@ var dialogDefinitions={
 		
 	},
 	"5":{
-		"text":"Heißer Dampf schlägt dir entgegen und du merkst, dass dein Weg dich in das städtische Badehaus geführt hat. Aber die Gilde der verboten reichen Füllereiliebhaber hat alle Wasserbecken belegt. Sie sehen dich fragend an, als du hinzusteigen willst.",
+		"text":"Heißer Dampf schlägt dir entgegen und du merkst, dass dein Weg dich in das städtische Badehaus geführt hat. Aber die Gilde der verboten reichen Füllereiliebhaber hat alle Wasserbecken belegt. Sie sehen dich fragend an, als du dich mit Öl einreibst du Anstände machst dazuzusteigen.",
 		"image":"boss.png",
 		"replies":[
 			{
@@ -554,7 +551,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"stun_leg"
+			}
 		]
 		
 	},
@@ -1496,6 +1495,12 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
+						"hp":80
+					},
+					{
+						"mana":10
+					},
+					{
 						"fight":[
 							"sheep","sheep","sheep"
 						]
@@ -1511,12 +1516,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["vikinger_helm"]	
-					},
-					{
-						"hp":80
-					},
-					{
-						"mana":10
 					}					
 				],
 				"replies":[
@@ -1724,6 +1723,12 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
+						"hp":80
+					},
+					{
+						"mana":10
+					},
+					{
 						"fight":[
 							"sheep","sheep","sheep"
 						]
@@ -1739,12 +1744,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["vikinger_helm"]
-					},
-					{
-						"hp":80
-					},
-					{
-						"mana":10
 					}	
 				],
 				"replies":[
@@ -1759,6 +1758,9 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
+					{
+						"fight":["hotelf"]
+					},
 					{
 						"int":1
 					},
@@ -1776,10 +1778,7 @@ var dialogDefinitions={
 					},
 					{
 						"mana":10
-					},
-					{
-						"fight":["hotelf"]
-					}
+					}	
 				],
 				"replies":[
 					
