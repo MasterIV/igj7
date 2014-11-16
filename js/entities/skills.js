@@ -42,7 +42,7 @@ Merkel.prototype.run = function( target ) {
 	if(crit) this.factor *= 1.5;
 
 	var damage = Math.round(this.factor * ( actorStats.str + ( actorStats.str * 0.6 ) * (Math.random() - .5)));
-	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/hyperstrahl.png', 11, 50));
+	this.scene.blocking.push( new Animation(target.x+270, target.y+50, 'img/animation/hyperstrahl.png', 11, 80));
 	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/destroy.png', 18, 50));
 	dealDamage(this.scene, target, damage);
 };
