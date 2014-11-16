@@ -1,6 +1,9 @@
 function Hero() {
 	var img = new sprite('img/characters/hero.png');
+
+	var animImgOutline = new AnimationSprite('img/characters/hero_sprite_outline.png',4);
 	var animImg = new AnimationSprite('img/characters/hero_spritesheet.png',4);
+
 	this.counter = new Framecounter(200);
 
 
@@ -68,7 +71,11 @@ function Hero() {
 	};
 
 	this.center = function( ctx, x, y ) {
-		animImg.center(ctx, x, y, this.counter.frame%animImg.f);
+		if (game.scene == scenes.character) {
+			animImgOutline.center(ctx, x, y, this.counter.frame%animImg.f);
+		} else {
+			animImg.center(ctx, x, y, this.counter.frame%animImg.f);
+		}
 	}
 }
 

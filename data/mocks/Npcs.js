@@ -106,88 +106,90 @@ var npcDefinitions={
 		"def":2,
 		"hp":35,
 		"skills":{
-			"attack":.8
+			"attack":1
 		}
 	},
 	"spider":{
 		"name":"Spinne",
 		"image":'img/characters/spider.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":12,
+		"dex":15,
+		"str":16,
+		"def":8,
+		"hp":34,
 		"skills":{
 			"attack":.7,
-			"dot":.3,
+			"posioncloud":.3,
 		}
 	},
 	"golem":{
 		"name":"Golem",
 		"image":'img/characters/roboter.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":20,
+		"dex":23,
+		"str":22,
+		"def":21,
+		"hp":260,
 		"skills":{
-			"attack":.8,
-			"double_damage":.2
+			"attack":.9,
+			"double_damage":.1
 		}
 		
 	},
 	"golemlead":{
 		"name":"Golemanführer",
 		"image":'img/characters/roboter2.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":24,
+		"dex":25,
+		"str":26,
+		"def":21,
+		"hp":290,
 		"skills":{
-			"attack":.7
+			"attack":.8,
+			"roundhousekick":.1,
+			"greater_heal":.1
 		}
 		
 	},
 	"fairy":{
 		"name":"Gute Fee (mit dickem Knüppel)",
 		"image":'img/characters/fee.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":28,
+		"dex":27,
+		"str":26,
+		"def":23,
+		"hp":390,
 		"skills":{
-			"attack":.8,
-			"heal":.2
+			"attack":.7,
+			"greaterheal":.2,
+			"double_damage": .1
 		}
 		
 	},
 	"minischlacht":{
 		"name":"Soldat",
 		"image":'img/characters/roboter.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":18,
+		"dex":20,
+		"str":16,
+		"def":13,
+		"hp":91,
 		"skills":{
-			"attack":.9,
-			"heal":.1
+			"attack":.9
 		}
 		
 	},
 	"goblinprotester":{
-		"name":"Goblin Gewerkschaft",
+		"name":"Goblin Gewerkschaftler",
 		"image":'img/characters/roboter.png',
-		"int":10,
-		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"int":20,
+		"dex":19,
+		"str":21,
+		"def":18,
+		"hp":120,
 		"skills":{
 			"attack":.8,
-			"heal":.2
+			"attack_rage":.2
 		}
 		
 	},

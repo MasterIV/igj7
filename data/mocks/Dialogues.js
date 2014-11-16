@@ -34,6 +34,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":45
+			},
+			{
+				"skill":"stun_leg"
 			}
 			
 		]
@@ -719,6 +722,12 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
+				"hp":80
+			},
+			{
+				"mana":10
+			},
+			{
 				"fight":["spider","spider"]
 			},
 			{
@@ -732,12 +741,6 @@ var dialogDefinitions={
 			},
 			{
 				"item":["borats_lieblingsfetzen"]
-			},
-			{
-				"hp":80
-			},
-			{
-				"mana":10
 			},
 			{
 				"item":["hp_potion"]
@@ -1715,7 +1718,7 @@ var dialogDefinitions={
 		"replies":[
 			{
 				"text":"Nach einigen Stunden der Debatte stimmt sie dir nickend zu und kleidet sich in die schwere Rüstung eines Ritters. Sie erleidet einen Hitzestau und fällt tot um.",
-				"reply":"Sexismus ist eine schlimme Sache, das sollte man mit ihr debattieren!",
+				"reply":"Sexismus ist schlimm, das sollte man mit ihr debattieren!",
 				"condition":{
 					
 				},
@@ -1750,7 +1753,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"",
+				"text":"Sie ist überrascht, aber wild entschlossen, sich dir entgegenzustellen!",
 				"reply":"Für diesen Frevel hat sie einen abgehackten Kopf verdient!",
 				"condition":{
 					
@@ -1773,6 +1776,9 @@ var dialogDefinitions={
 					},
 					{
 						"mana":10
+					},
+					{
+						"fight":["hotelf"]
 					}
 				],
 				"replies":[
@@ -1819,12 +1825,12 @@ var dialogDefinitions={
 		
 	},
 	"22":{
-		"text":"Eine Gang aus Händlern belagert die Straße. Aus dem Durcheinander aus Beatboxing und 'Digga' vermeinst du zu hören, dass du 'fett krass was abkaufen musst, um auf die Westside zu kommen'. Zum Glück hast du noch etwas Taschengeld übrig. Was soll es sein?",
+		"text":"Der alte und zugegebenermaßen hässlige Meister Yoddar begegnet dir in einer Taverne. Er bildete schon viele Jedi aus und bietet dir seine Weisheiten an.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Auf Elfen ist verlass, ihr Stoff gibt Erinnerungen aus mindestens sieben Leben.",
-				"reply":"Voll deeper shit",
+				"text":"Yoddar denkt nach und entgegnet schließlich: 'Merkel sein schlimmer Gegner. Du nie wirst besiegen ohne fett krasse Items!'",
+				"reply":"Etwas über Politik erfahren",
 				"condition":{
 					
 				},
@@ -1845,8 +1851,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Tiefer gelegte Lasttiere haben seit jeher zu langen Stauß geführt, aber damn... sitzen die Puschen tight!",
-				"reply":"Krasse Maultierfelgen",
+				"text":"Er geht in den Tech-Babble-Modus über und klingt wie Gordi La Forge: 'Wir müssen die phasische Amplitüde über die kausal-algorithmische Phalanxmatrix hyperventilieren!' Er blickt zufrieden drein.",
+				"reply":"Quaternion-Berechnung beibringen lassen",
 				"condition":{
 					
 				},
@@ -1867,8 +1873,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Ich bin raus...",
-				"reply":"Thug's Handbuch of life",
+				"text":"Er fängt an zu sabbern. Seine Hose färbt sich dunkel... von dem erfährst du wohl nichts Interessantes, verdammter Spinner!",
+				"reply":"Nach seiner wichtigsten Weisheit fragen",
 				"condition":{
 					
 				},
@@ -1889,8 +1895,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Mutti wäre stolz auf diesen Bizeps!",
-				"reply":"Pumpsession mit Snoop Ork",
+				"text":"Er steht auf und erleuchtet mit seinem Laserschwert die Taverne. Beinahe angsterfüllt stellst du dich ihm gegenüber. Als er ausholt, erleidet er einen Hexenschuss. Du gewinnst, du alter Lucker!",
+				"reply":"Ihn zum Jedikampf fordern",
 				"condition":{
 					
 				},
@@ -1918,12 +1924,12 @@ var dialogDefinitions={
 		
 	},
 	"23":{
-		"text":"'Wuuuhuuuuuuuu...' ein schrillendes Rufen weckt dich aus deinen Reiseträumen. Du schaust dich um, kannst aber niemand finden bis dir etwas großes Rundes vor die Linsen fliegt. Aber was zum Teufel ist das? Es ist eine Miniform der guten Fee, aber scheint diese gegessen zu haben. Gut gelaunt erfüllt sie dir einen Wünsch.",
+		"text":"Der blaue Dschinn aus Alladin erscheint und beginnt die Konversation: 'Jajaja, blablablaaaar... du hast einen Wunsch, das ist wahr!' Was wünschst du dir denn?!",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Ein klasse Wunsch! Sie erzählt dir stundenlang Anekdoten außer ihrer Zeit als Wirtin Goldwalds Kneipe 'Zum stolzen Löwen'",
-				"reply":"Das Wissen der Welt",
+				"text":"Der Dschinn guckt genervt: 'Das wurde noch nicht erfunden, du Vollpfosten. Aber hier hast du ein iPhone 6 Plus mit eingebauter Herdplatte!'",
+				"reply":"Einen Tic Tac",
 				"condition":{
 					
 				},
@@ -1944,8 +1950,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Kein Problem. Madame Tickerbell hat den besten Stoff.",
-				"reply":"Ost-Mallorcanisches Vitamin B",
+				"text":"Der Dschinn versucht, deinen Wunsch ohne überraschte Mine zu erwirken. Nachdem du das Zeug tatsächlich gegessen hast, fühlst du dich bereit, Merkel in den Arsch zu treten... oder ihr den Kopf mit sandpapier-artiger Zunge kaputtzulecken.",
+				"reply":"Zwiebelsuppe mit 5kg Salz",
 				"condition":{
 					
 				},
@@ -1966,8 +1972,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Eine harte Nuss, da sich viel Erfahrung damit hat Leute übers Ohr zu hauen, aber keine Fee kann etwas gegen eine Doppelwunsch-Versicherung einwenden!",
-				"reply":"Sie soll eine Versicherung abkaufen",
+				"text":"Der Dschinn ist empört darüber, dass du mächtiger sein willst als er. Er verwandelt dich aus Rache versehentlich in einen Titanen. Du stampfst ihn daraufhin tot und verwandelst dich zurück. Diesen Dschinn konnte eh niemand leiden!",
+				"reply":"Unendliche Macht und Magie",
 				"condition":{
 					
 				},
@@ -1995,7 +2001,7 @@ var dialogDefinitions={
 		
 	},
 	"24":{
-		"text":"Schon einmal vom den angepissten Hausfrauen der Raktagron-Ebene gehört? Die auch nicht, ABER sie schlagen genauso zu! Denn sie sind verdammt wütend, dass du den Müll nicht rausgebracht hast!",
+		"text":"Schon einmal vom den angepissten Hausfrauen der Raktagron-Ebene gehört? Die auch nicht, ABER sie schlagen genauso hart zu, wie sie unwissend sind! Sie sind verdammt wütend, dass du den Müll nicht rausgebracht hast!",
 		"image":"boss.png",
 		"replies":[
 			
@@ -2019,12 +2025,12 @@ var dialogDefinitions={
 		
 	},
 	"25":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Das geilste Reittier, dass es in Rollenspielen zu finden gibt, liegt tot vor dir - ein schwarzer übergroßer Panther.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"text":"Für einige Sekunden fühlst du dich wie ein wahrer Cowboy, doch dann fällt dir auf, dass dich eine Gruppe Kindergartenkinder beobachtet. Peinlich berührt ziehst du weiter.",
+				"reply":"Ignorieren, dass er tot ist und trotzdem auf ihm reiten.",
 				"condition":{
 					
 				},
@@ -2054,8 +2060,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
+				"text":"Luke Skywalker hat es damals aus der Not heraus gemacht. Du machst es, weil du ein total kranker Typ bist. Erfahrungspunkte gibt es trotzdem!",
+				"reply":"Ihn aufschneiden und reinlegen.",
 				"condition":{
 					
 				},
@@ -2085,8 +2091,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
+				"text":"Stinkt, blutet und verursacht Angst. Es ist aber kein Item namens 'Verwester Panther-Kopf-Helm' vorgesehen, tut uns leid.",
+				"reply":"Aus seinem Kopf einen Helm schnitzen.",
 				"condition":{
 					
 				},
@@ -2116,8 +2122,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Das Gold interessiert sie nicht, aber deine Zähne sondern soviel Wasserstoff-Peroxid ab, dass diese ganz nebelt auf deine Wünsche eingehen.",
-				"reply":"Mücken stehen auf Gold. Weiß jeder!",
+				"text":"Dir fällt auf halbem Wege auf, dass du gar nicht Zorro bist. Du willst aus dem 'Z' erst ein 'F' und dann doch wieder ein 'W' machen. Am Ende ist der Leib völlig zerfetzt und dein Unterfangen scheitert.",
+				"reply":"Als Warnung aufhängen und ein 'Z' in ihn schnitzen.",
 				"condition":{
 					
 				},
@@ -2154,12 +2160,12 @@ var dialogDefinitions={
 		
 	},
 	"26":{
-		"text":"Im Untergeschoss einer verfallenen Tavernenruine findest du ein düsteres, mit grünen Kerzen beleuchtetes Kellergewölbe. Beim Betreten wendet sich eine schwarz vermummte Person auch euch: Person:'Seid gegrüßt, wir sind ehemalige Totenbeschwörer die alles für einen Schu... äh... Schluck Schwarzwein tun. ALLES!'",
+		"text":"Im Untergeschoss einer verfallenen Tavernenruine findest du ein düsteres, mit grünen Kerzen beleuchtetes Kellergewölbe. Beim Betreten wendet sich eine schwarz vermummte Person an dich. Person:'Seid gegrüßt, wir sind ehemalige Totenbeschwörer, die alles für einen Schu... äh... Schluck Schwarzwein tun. ALLES!'",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Ihr erinnert euch daran, dass ihr auf eurem letzten Auftrag noch diese Probe aus dem verseuchten Teich einsammeln solltet. Konsistenz und Farbe stimmen überein. Der merkt das nie!",
-				"reply":"Fakewein verkaufen",
+				"text":"Du erinnerst dich daran, dass du auf deinem letzten Auftrag noch diese Probe aus dem verseuchten Teich eingesammelt hast. Konsistenz und Farbe stimmen überein. Der merkt das nie!",
+				"reply":"Fake-Wein verkaufen",
 				"condition":{
 					
 				},
@@ -2189,7 +2195,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Mit Schwarzwein könnt ihr nicht dienen, aber ihr habt einen halbgelutschten Pfefferminz in der Tasche!",
+				"text":"Mit Schwarzwein kannst du nicht dienen, aber du hast einen halbgelutschten Pfefferminz in der Tasche!",
 				"reply":"Kein Schwarzwein, aber Pfefferminz!",
 				"condition":{
 					
@@ -2220,7 +2226,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Ihr dachtet schon die Schuhe könnt ihr wegschmeißen, aber was diese Totenbeschwörer mit ein wenig Spucke und einem Lappen alles hinbekommen. Sagenhaft! Sogar der Kaugummi ist raus!",
+				"text":"Du dachtest schon, die Schuhe könntest du wegschmeißen, aber was diese Totenbeschwörer mit ein wenig Spucke und einem Lappen alles hinbekommen. Sagenhaft! Sogar der Kaugummi ist raus!",
 				"reply":"Wirklich ALLES?",
 				"condition":{
 					
@@ -2291,7 +2297,7 @@ var dialogDefinitions={
 		
 	},
 	"28":{
-		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee:'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
+		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee: 'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast!' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
 		"image":"boss.png",
 		"replies":[
 			
@@ -2327,7 +2333,7 @@ var dialogDefinitions={
 		
 	},
 	"29":{
-		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee:'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
+		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee: 'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast!' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
 		"image":"boss.png",
 		"replies":[
 			
@@ -2363,7 +2369,7 @@ var dialogDefinitions={
 		
 	},
 	"30":{
-		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee:'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
+		"text":"Du steigst die letzten Stufen den Berg hinauf und hast es fast geschafft, da erscheint die gute Fee. Fee: 'Ich bin stolz auf dich! Wenn ich ehrlich bin, hätte ich nicht gedacht, dass du es soweit schaffst. Wollen wir doch mal sehen, was du drauf hast!' Mit diesen Worten holt sie einen riesigen Knüppel hevor und drischt auf dich ein.",
 		"image":"boss.png",
 		"replies":[
 			
@@ -2399,7 +2405,7 @@ var dialogDefinitions={
 		
 	},
 	"31":{
-		"text":"WIE?! Aus welchem Loch bist du denn gekrochen gekommen? Na egal, ich werde dich weg rationalisieren!",
+		"text":"WIE?! Aus welchem Loch bist du denn gekrochen gekommen? Na egal, ich werde dich wegrationalisieren und Neuland aus dir machen!",
 		"image":"boss.png",
 		"replies":[
 			
