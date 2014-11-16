@@ -1243,9 +1243,7 @@ var dialogDefinitions={
 							},
 							{
 								"dex":1
-							}
-						]
-							
+							}	
 						],
 						"replies":[
 							
@@ -1669,9 +1667,7 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
-					}
-				]
-					
+					}	
 				],
 				"replies":[
 					
