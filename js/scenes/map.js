@@ -1,33 +1,3 @@
-/*var encounters = {
-	"1": {
-		image: "mock/encounter.png",
-		x: 150,
-		y: 250,
-		width: 120,
-		height: 80,
-		paths: [ "2", "3" ]
-	},
-	"2": {
-		image: "mock/encounter.png",
-		x: 400,
-		y: 200,
-		width: 120,
-		height: 80,
-		paths: [
-		]
-	}, 
-	"3": {
-		image: "mock/encounter.png",
-		x: 600,
-		y: 500,
-		width: 120,
-		height: 80,
-		paths: [
-		]
-	}
-	
-};
-*/
 function mapScene() {
 	var self = this;
 	this.bg = new sprite("img/maps/campaign_map.jpg");
@@ -52,8 +22,6 @@ function mapScene() {
 	this.dragOffset = new V2(-912,-906);
 	
 	this.scrolls = false;
-	
-	//this.reset();
 }
 
 mapScene.prototype = new scene();
@@ -154,6 +122,9 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 				}	
 				if(typeof(reward.blingbling) != "undefined") {
 					hero.attrs.blingbling += reward.blingbling;
+				}	
+				if(typeof(reward.skill) != "undefined") {
+					hero.skills.push(skillDefinitions[reward.skill]);
 				}	
 			}
 		}
