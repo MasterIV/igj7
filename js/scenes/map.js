@@ -19,8 +19,9 @@ function mapScene() {
 	}	
 
 	this.dragStart = new V2(0,0);
-	this.dragOffset = new V2(-912,-906);
-	
+	//this.dragOffset = new V2(-912,-906);
+	this.dragOffset = new V2(-450, -150);
+
 	this.scrolls = false;
 }
 
@@ -34,7 +35,9 @@ mapScene.prototype.goToFinalScene = function() {
 }
 
 mapScene.prototype.reset = function() {
-	this.dragOffset = new V2(-912,-906);
+//	this.dragOffset = new V2(-912,-906);
+	this.dragOffset = new V2(-450, -150);
+
 	for(var index in this.encounterMap) {
 		var encounter = this.encounterMap[index];
 		encounter.isVisited = false;
@@ -93,10 +96,10 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 				var fightImage = "img/maps/mountain.jpg";
 				if(typeof(dialogueData.image) != "undefined") {
 					if(dialogueData.image == 2) {
-						fightImage = "img/maps/death.jpg";
+						fightImage = "img/maps/village.jpg";
 					}
 					if(dialogueData.image == 3) {
-						fightImage = "img/maps/death.jpg";
+						fightImage = "img/maps/waterfall.jpg";
 					}
 					if(dialogueData.image == 4) {
 						fightImage = "img/maps/death.jpg";
