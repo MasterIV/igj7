@@ -14,6 +14,10 @@ scene.prototype.update = function (delta) {
 	for (var i = 0; i < this.entities.length; i++)
 		if (this.entities[i].update)
 			this.entities[i].update(delta);
+
+	if (this._zSort) {
+		this._zSort();
+	}
 }
 
 scene.prototype.draw = function (ctx) {

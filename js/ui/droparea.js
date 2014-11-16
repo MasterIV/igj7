@@ -34,6 +34,7 @@ itemslot.prototype.draw = function(ctx) {
 	if (this.getItem() && this.area.inside(mouse)) {
 		if (!game.scene.tooltip) {
 			var list = [];
+			list.push({label:'Slot',value:config.slotLabels[this.getItem().slot]})
 			for(var key in hero.attrs) {
 				var val = this.getItem().itemdefinition[key];
 				if (val)
@@ -111,7 +112,6 @@ equipslot.prototype = new droparea();
 equipslot.prototype.isEquipmentDropArea = true;
 equipslot.prototype.draw = function( ctx ) {
 	var item = this.getItem();
-
 	if (item != null) {
 		item.sprite.draw(ctx, this.area.p1.x + this.padding.x, this.area.p1.y + this.padding.x);
 	} else {
@@ -121,12 +121,12 @@ equipslot.prototype.draw = function( ctx ) {
 	if (this.getItem() && this.area.inside(mouse)) {
 		if (!game.scene.tooltip) {
 			var list = [];
+			list.push({label:'Slot',value:config.slotLabels[this.getItem().slot]});
 			for(var key in hero.attrs) {
 				var val = this.getItem().itemdefinition[key];
 				if (val)
 					list.push({label:key,value:val})
 			}
-
 			game.scene.tooltip = new tooltip(this.getItem().itemdefinition.itemname, 'blub',list, this);
 		}
 	} else {

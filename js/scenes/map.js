@@ -47,18 +47,33 @@ function mapScene() {
 		this.encounterMap[index] = new encounter(index, enc.x, enc.y);
 		this.entities.push(this.encounterMap[index]);
 	}	
-	
-	this.encounterMap["1"].isClickable = true;
 
 	this.dragStart = new V2(0,0);
 	this.dragOffset = new V2(-912,-906);
 	
 	this.scrolls = false;
 	
-	this.currentEncounter = this.encounterMap["1"];
+	this.reset();	
 }
 
 mapScene.prototype = new scene();
+
+mapScene.prototype.goToFinalScene = function() {
+	this.dragOffset = new V2(-450, -150);
+	this.encounterMap["31"].isVisited = true;
+	this.setDialogue(dialogDefinitions["31"]);
+}
+
+mapScene.prototype.reset = function() {
+	this.dragOffset = new V2(-912,-906);
+	for(var index in this.encounterMap) {
+		var encounter = this.encounterMap[index];
+		encounter.isVisited = false;
+		encounter.isClickable = false;
+	}
+	this.encounterMap["1"].isClickable = true;
+	this.currentEncounter = this.encounterMap["1"];
+}
 
 mapScene.prototype.setEncounter = function(id) {
 	this.setClickable(false);
@@ -107,7 +122,8 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 						self.blocking.pop();
 						self.encounterMap["1"].isClickable = false;
 						self.setEncounter(nextId);
-						game.scene = scenes.combat;
+						//game.scene = scenes.combat;
+						game.scene = new switchScene(scenes.combat, 2000, config.labels.switchScene.combat);
 					}}]
 				}	
 				if(typeof(reward.item) != "undefined") {

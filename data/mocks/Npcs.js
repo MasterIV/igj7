@@ -15,7 +15,7 @@ var npcDefinitions={
 	},
 	"angelika":{
 		"name":"Angelika",
-		"image":'img/characters/villian.png',
+		"image":'img/characters/villain.png',
 		"int":10,
 		"dex":10,
 		"str":10,

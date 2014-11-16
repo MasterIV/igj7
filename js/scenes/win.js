@@ -1,4 +1,4 @@
-function looseScene() {
+function winScene() {
 	this.bg = new sprite( 'img/maps/death.jpg' );
 	var feeSprite = new sprite('img/characters/fee.png');
 	var self = this;
@@ -11,7 +11,7 @@ function looseScene() {
 		this.entities = [new HeroContainer(300,380)];
 
 	this.blocking.push(new dialogue(
-			'Verdammt noch mal! Schon wieder in die Pfanne gehauen. Wie soll ich das nur jemals schaffen... Dieses Spiel scheint einfach unmöglich. Was für Sadisten denken sich sowas aus?',
+			'Wir gratulieren dir zu deiner Ausdauer. Wir hätten nicht gedacht, dass das jemand so lange durchhält.',
 			[{text: 'Weiter', callback: function() { self.blocking.shift(); }}],
 			600
 	));
@@ -20,16 +20,15 @@ function looseScene() {
 	this.blocking.push(new FadeIn(fee, 800));
 
 	this.blocking.push(new dialogue(
-			'Aber zum Glück wurde in dieses Spiel eine gute Fee eingebaut, die dich in die Verangenheit schiecken kann. Und so schmeißt sie den Fluxkompensator an und schickt dich in eine Zeit zurück, in der du noch garnicht angefangen hattest, dieses Spiel zu spielen...',
+			'... but it is kind of fun to do the impossible!',
 			[{text: 'Weiter', callback: function() {
 				scenes.map.reset();
-				hero.reset();
 				game.scene = scenes.map; 
 			}}],
 			560
 	));
 }
 
-looseScene.prototype = new scene();
+winScene.prototype = new scene();
 
 

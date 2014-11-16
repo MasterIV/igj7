@@ -13,7 +13,6 @@ function combatScene() {
 			new Heroinfo(this.hero)
 	];
 }
-
 combatScene.prototype = new scene();
 
 combatScene.prototype.attack = function() {
@@ -58,7 +57,7 @@ combatScene.prototype.enemyTurn = function() {
 
 	if( enemyCount == 0 )
 		this.blocking.push(new dialogue('Victory!',[{'text': 'Weiter', callback: function() {
-			backgroundsound.play('sound/map_intro.mp3');
+			backgroundsound.play('sound/map.mp3');
 			game.scene = scenes.map;
 		}}]));
 };
@@ -145,7 +144,7 @@ combatScene.prototype.defend = function() {
 	this.enemyTurn();
 };
 
-combatScene.prototype.setEnemies = function( definitions ) {
+combatScene.prototype.setEnemies = function( definitions, bg ) {
 	this.entities = [];
 	this.blocking = [];
 
@@ -161,5 +160,18 @@ combatScene.prototype.setEnemies = function( definitions ) {
 
 	for( var i = 0; i < this.defaults.length; i++ )
 		this.entities.push( this.defaults[i] );
+
+	if( bg ) this.bg = new sprite(bg);
 	backgroundsound.play('sound/boss.mp3');
 };
+combatScene.prototype._zSort = function() {
+	function compare(a,b) {
+		if (a.y < b.y)
+			return -1;
+		if (a.y > b.y)
+			return 1;
+		return 0;
+	}
+
+	this.entities.sort(compare);
+}
