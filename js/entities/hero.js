@@ -12,13 +12,13 @@ function Hero() {
 	};
 
 	this.attrs = {
-		hp: 150,
+		hp: 50,
 		mana: 20,
-		str: 10,
-		def: 6,
-		dex: 10,
-		int: 10,
-		blingbling: 10
+		str: 5,
+		def: 0,
+		dex: 5,
+		int: 5,
+		blingbling: 0
 	};
 
 	this.life = this.attrs.hp;
