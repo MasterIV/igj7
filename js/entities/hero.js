@@ -93,6 +93,7 @@ function HeroContainer(x, y) {
 		if (this.life <= 0) {
 			this.life = 0;
 			game.scene = new switchScene(new looseScene(), 2000, 'Game Over');
+			backgroundsound.play('sound/map.mp3');
 		}
 	};
 
