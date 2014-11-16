@@ -58,7 +58,11 @@ combatScene.prototype.enemyTurn = function() {
 	if( enemyCount == 0 )
 		this.blocking.push(new dialogue('Victory!',[{'text': 'Weiter', callback: function() {
 			backgroundsound.play('sound/map.mp3');
-			game.scene = scenes.map;
+			if(scenes.map.currentEncounter.id != "31") {
+				game.scene = scenes.map;
+			} else {
+				game.scene = new winScene();
+			}
 		}}]));
 };
 
@@ -148,11 +152,11 @@ combatScene.prototype.setEnemies = function( definitions, bg ) {
 	this.entities = [];
 	this.blocking = [];
 
-	var d = definitions.shift();
+	var d = definitions[0];
 	this.entities.push( new Enemy(1100, 480, npcDefinitions[d]));
-	if(d = definitions.shift())
+	if(d = definitions[1])
 		this.entities.push( new Enemy( 900, 320, npcDefinitions[d] ));
-	if(d = definitions.shift())
+	if(d = definitions[2])
 		this.entities.push( new Enemy( 800, 560, npcDefinitions[d]));
 
 	this.targetSelection.init( this.entities );
