@@ -362,7 +362,7 @@ var dialogDefinitions={
 			},
 			{
 				"text":"Du entdeckst eine alte Hexe, dich direkt mit verliebten Augen ansieht. Ihr Held ist da und sie schenkt dir direkt ein Amulett als Verlobungsgeschenk!",
-				"reply":"Ein entzückendes Glucksen in einem dunklen Wald. Vielleicht braucht hier eine Person einen starken Arm und eine harte Brust zum anschmiegen!",
+				"reply":"Gewiss eine holde Maid! Sie braucht meine stahlharte Brust zum anschmiegen!",
 				"condition":{
 					"str":14
 				},
@@ -394,6 +394,73 @@ var dialogDefinitions={
 		
 	},
 	"4":{
+		"text":"Schon von weitem erkennst du eine lange Schleifspur auf dem Boden, die recht schnell in einem Einschlagskrater endet. Als du näher kommst, humpelt die ein in Lumpen gekleideter Gnome entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2b)",
+				"reply":"(Reply 2)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2v)",
+				"reply":"(Reply 3)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"5":{
 		"text":"(Questtext)",
 		"image":"boss.png",
 		"replies":[
@@ -426,6 +493,45 @@ var dialogDefinitions={
 				
 			},
 			{
+				"text":"(Questtext 2b)",
+				"reply":"(Reply 2)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2v)",
+				"reply":"(Reply 3)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"6":{
+		"text":"(Questtext)",
+		"image":"boss.png",
+		"replies":[
+			{
 				"text":"(Questtext 2a)",
 				"reply":"(Reply 1)",
 				"condition":{
@@ -442,6 +548,302 @@ var dialogDefinitions={
 			{
 				"text":"(Questtext 2a)",
 				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2b)",
+				"reply":"(Reply 2)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2v)",
+				"reply":"(Reply 3)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"7":{
+		"text":"(Questtext)",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2b)",
+				"reply":"(Reply 2)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2v)",
+				"reply":"(Reply 3)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"8":{
+		"text":"(Questtext)",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2b)",
+				"reply":"(Reply 2)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2v)",
+				"reply":"(Reply 3)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"9":{
+		"text":"(Questtext)",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2b)",
+				"reply":"(Reply 2)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2v)",
+				"reply":"(Reply 3)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"10":{
+		"text":"(Questtext)",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2a)",
+				"reply":"(Reply 1)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2b)",
+				"reply":"(Reply 2)",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"(Questtext 2v)",
+				"reply":"(Reply 3)",
 				"condition":{
 					
 				},
