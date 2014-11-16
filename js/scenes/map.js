@@ -166,24 +166,32 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 }
 
 mapScene.prototype.mousedown = function(pos) {
-	this.dragStart = new V2(pos.x, pos.y);
-	this.scrolls = true;
+	if(this.blocking.length == 0) {
+		this.dragStart = new V2(pos.x, pos.y);
+		this.scrolls = true;
+	}
 }
 mapScene.prototype.mouseup = function(pos) {
-	this.dragOffset = this.calcOffset();
-	this.scrolls = false;
+	if(this.blocking.length == 0) {
+		this.dragOffset = this.calcOffset();
+		this.scrolls = false;
+	}
 }
 mapScene.prototype.calcOffset = function() {
 	var offset;
-	if(this.scrolls) {
-		offset = this.dragOffset.dif(this.dragStart.dif(mouse));
-	} else {
-		offset = this.dragOffset;
-	}
-	return new V2(Math.max(Math.min(0, offset.x), -this.bg.width+game.buffer.width), Math.max(Math.min(0, offset.y), -this.bg.height+game.buffer.height));
+		if(this.scrolls) {
+			offset = this.dragOffset.dif(this.dragStart.dif(mouse));
+		} else {
+			offset = this.dragOffset;
+		}
+		return new V2(Math.max(Math.min(0, offset.x), -this.bg.width+game.buffer.width), Math.max(Math.min(0, offset.y), -this.bg.height+game.buffer.height));
 }
+
 mapScene.prototype.draw = function (ctx) {
-	var offset = this.calcOffset();
+	var offset = this.dragOffset;
+	if(this.blocking.length == 0) {
+		offset = this.calcOffset();
+	} 
 	
 	if (this.bg)
 		this.bg.draw(ctx, offset.x, offset.y);
