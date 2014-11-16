@@ -7,5 +7,17 @@ var config = {
 		dex: 'Agilität',
 		int: 'Intelekt',
 		blingbling: 'Bling Bling'
+	},
+	slotLabels: {
+		helmet: 'Kopf',
+		chest: 'Brust',
+		boots: 'Fuesse',
+		neck: 'Hals',
+		ring: 'Finger'
+	},
+	labels: {
+		switchScene: {
+			combat: 'Kampf'
+		}
 	}
 }
