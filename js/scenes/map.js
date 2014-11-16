@@ -137,7 +137,7 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 				}	
 				if(typeof(reward.skill) != "undefined") {
 					var skill = skillDefinitions[reward.skill];
-					//this.blocking.unshift(new AnimationSkillFound(skill));
+					this.blocking.unshift(new AnimationSkillFound(skill));
 					hero.skills.push(skill);
 				}	
 			}

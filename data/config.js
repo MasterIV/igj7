@@ -20,7 +20,8 @@ var config = {
 	labels: {
 		switchScene: {
 			combat: 'Kampf'
-		}
+		},
+		skillLearnedWord: 'erlernt'
 	},
 
 	defaultAttributes: {
