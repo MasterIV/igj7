@@ -12,8 +12,8 @@ sprite.prototype.center = function( ctx, x, y, scaleX, scaleY ) {
 	ctx.drawImage( this.img, (x-this.img.width*(scaleX||1)/2)|0, (y-this.img.height*(scaleY||1)/2)|0, this.img.width*(scaleX||1), this.img.height*(scaleY||1));
 };
 
-sprite.prototype.area = function( ctx, sx, sy, sw, sh, x, y ) {
-	ctx.drawImage( this.img, sx, sy, sw, sh, x|0, y|0, sw, sh );
+sprite.prototype.area = function( ctx, sx, sy, sw, sh, x, y, scaleW, scaleH ) {
+	ctx.drawImage( this.img, sx, sy, sw, sh, x|0, y|0, (sw*(scaleW||1)), (sh*(scaleH||1)) );
 };
 
 function AnimationSprite( img, frames ) {

@@ -28,9 +28,10 @@ var g = {
 			'img/items/boots.png',
 			'img/items/chest.png',
 			'img/items/helmet.png',
-			'img/items/ring.png'
-	],
-
+			'img/items/ring.png',
+			'img/ui/gamestates.png'
+		],
+		
 	add: function( url ) {
 		this.urls.push( url );
 	},
