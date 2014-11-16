@@ -31,7 +31,7 @@ itemslot.prototype.draw = function(ctx) {
 		}
 	}
 
-	if (this.getItem() && this.area.inside(mouse) && ((this.area.inside(mouse) && this.dragging && this.area.p1.sum(this.area.p2.dif(this.area.p2).mul(0.2)).dist(mouse) < 100  ))) {
+	if (this.getItem() && this.area.inside(mouse)) {
 		if (!game.scene.tooltip) {
 			var list = [];
 			if (this.getItem().slot)

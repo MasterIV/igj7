@@ -15,7 +15,7 @@ function menuScene() {
 	this.entities = [
 		this.startButton,
 		new SpriteButton('img/ui/credits_button.png', Rect.create(0, 0, 330, 87), Rect.create(330, 0, 330, 87), 751, 432, function(){
-			game.scene.entities.push(new credits());
+			game.scene = new switchScene(scenes.credits,2500,'Credits');
 		}, null),
 
 
