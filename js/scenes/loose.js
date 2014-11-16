@@ -8,7 +8,8 @@ function looseScene() {
 		}
 	};
 
-		this.entities = [new HeroContainer(300,380)];
+	this.blocking = [];
+	this.entities = [new HeroContainer(300,380)];
 
 	this.blocking.push(new dialogue(
 			'Verdammt noch mal! Schon wieder in die Pfanne gehauen. Wie soll ich das nur jemals schaffen... Dieses Spiel scheint einfach unmöglich. Was für Sadisten denken sich sowas aus?',
