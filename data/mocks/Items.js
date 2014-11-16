@@ -46,7 +46,7 @@ var itemDefinitions={
 	
 	
 	"mettwurststiefeletten":{
-		"itemname":"Mettwurststiefeletten",
+		"itemname":"Stiefeletten aus Mettwurst",
 		"description":"Schuhe",
 		"sprite":"img/items/mettwurststiefeletten.png",
 		"slot":"boots",
@@ -216,7 +216,7 @@ var itemDefinitions={
 		"blingbling":10
 	},	
 	"mauszeigerhut":{
-		"itemname":"mauszeigerhut",
+		"itemname":"Mauszeigerhut",
 		"description":"Helm",
 		"sprite":"img/items/mauszeigerhut.png",
 		"slot":"helmet",
