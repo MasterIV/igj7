@@ -33,7 +33,7 @@ var game = {
 		this.updateScreensize();
 		window.onresize = function() { self.updateScreensize(); };
 		
-		setInterval( function() { self.updateFramerate(); }, 1000 );
+		// setInterval( function() { self.updateFramerate(); }, 1000 );
 
 		this.lastUpdate = Date.now();
 		this.loop();
@@ -77,8 +77,8 @@ var game = {
 		this.displayCtx.drawImage( this.buffer, 0, 0 );
 
 		// fsps display
-		this.displayCtx.fillStyle = 'black';
-		this.displayCtx.font = '10px monospace';
-		this.displayCtx.fillText( this.fps, 10, 10 );
+		// this.displayCtx.fillStyle = 'black';
+		// this.displayCtx.font = '10px monospace';
+		// this.displayCtx.fillText( this.fps, 10, 10 );
 	}
 }
