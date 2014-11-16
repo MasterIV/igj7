@@ -99,7 +99,7 @@ var npcDefinitions={
 	},
 	"hotelf":{
 		"name":"Heiße Elfe",
-		"image":'img/characters/roboter2.png',
+		"image":'img/characters/hotelf.png',
 		"int":19,
 		"dex":18,
 		"str":20,
