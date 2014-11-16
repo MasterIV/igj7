@@ -163,7 +163,7 @@ combatScene.prototype.setEnemies = function( definitions, bg ) {
 
 	if( bg ) this.bg = new sprite(bg);
 
-	if( scenes.map.currentEncounter.id == 31 )
+	if( scenes.map.currentEncounter && scenes.map.currentEncounter.id == 31 )
 		backgroundsound.play('sound/boss.mp3');
 	else backgroundsound.play('sound/battle.mp3');
 };
