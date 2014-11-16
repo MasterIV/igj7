@@ -162,16 +162,9 @@ combatScene.prototype.setEnemies = function( definitions, bg ) {
 		this.entities.push( this.defaults[i] );
 
 	if( bg ) this.bg = new sprite(bg);
-	backgroundsound.play('sound/boss.mp3');
-};
-combatScene.prototype._zSort = function() {
-	function compare(a,b) {
-		if (a.y < b.y)
-			return -1;
-		if (a.y > b.y)
-			return 1;
-		return 0;
-	}
 
-	this.entities.sort(compare);
-}
+	if( scenes.map.currentEncounter.id == 31 )
+		backgroundsound.play('sound/boss.mp3');
+	else backgroundsound.play('sound/battle.mp3');
+};
+

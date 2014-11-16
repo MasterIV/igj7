@@ -27,8 +27,8 @@ switchScene.prototype = new scene();
 
 switchScene.prototype.update = function (delta) {
 
-	this.lifetime += delta/10;
-	this.progress += this.lifetime/this.delay;
+	this.lifetime += delta;
+	this.progress = this.lifetime/this.delay;
 
 	if (this.progress >1) {
 		game.scene = this.targetScene;

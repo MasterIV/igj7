@@ -1,5 +1,5 @@
 function winScene() {
-	this.bg = new sprite( 'img/maps/death.jpg' );
+	this.bg = new sprite( 'img/maps/mountain.jpg' );
 	var feeSprite = new sprite('img/characters/fee.png');
 	var self = this;
 	var fee = {
