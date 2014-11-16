@@ -7,6 +7,7 @@ var g = {
 			'img/animation/barrier.png',
 			'img/animation/healing.png',
 			'img/animation/newitem.png',
+			'img/animation/stun.png',
 			'img/characters/hero.png',
 			'img/characters/hero_spritesheet.png',
 			'img/characters/hero_sprite_outline.png',
