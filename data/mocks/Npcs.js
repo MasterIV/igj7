@@ -50,7 +50,8 @@ var npcDefinitions={
 		"def":0,
 		"hp":820,
 		"skills":{
-			"attack":.8,
+			"hyperbeam":1,
+			"attack":.6,
 			"heal":.2,
 			"attack_god":.1
 		}

@@ -77,6 +77,8 @@ combatScene.prototype.getEffect = function(type, args, actor) {
 		return new Stun( this, actor, args.duration, args.attr );
 	if( type == 'Buff')
 		return new Buff( this, actor, args.duration, args.value );
+	if( type == 'Merkel')
+		return new Merkel( this, actor, args.factor );
 };
 
 combatScene.prototype.getChoice = function(s) {
