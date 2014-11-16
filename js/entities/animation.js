@@ -164,6 +164,7 @@ AnimationItemFound.prototype.draw = function( ctx ) {
 function AnimationSkillFound( skill ) {
 	this.counter = new Framecounter(75);
 	this.item = skill;
+	this.framecount = 20;
 
 	this.topSprite = new sprite('img/ui/tooltip_header.png');
 	this.bottomSprite = new sprite('img/ui/tooltip_content.png');
@@ -171,12 +172,12 @@ function AnimationSkillFound( skill ) {
 
 AnimationSkillFound.prototype.update = function( delta ) {
 	this.counter.update(delta);
-	return this.counter.frame > 20;
+	return this.counter.frame > this.framecount;
 };
 
 AnimationSkillFound.prototype.draw = function( ctx ) {
 	var x = game.display.width/2 - this.topSprite.width/2;
-	var y = game.display.height/2 - this.bottomSprite.height/2;
+	var y = game.display.height/2 - this.bottomSprite.height/2 + 100 - Math.cos((this.counter.frame*9)/(this.framecount))*35;
 	var width = 260;
 
 	this.topSprite.draw(ctx, x, y);
