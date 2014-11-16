@@ -75,7 +75,7 @@ var npcDefinitions={
 		"image":'img/characters/witch.png',
 		"int":11,
 		"dex":10,
-		"str":12,
+		"str":11,
 		"def":8,
 		"hp":65,
 		"skills":{
