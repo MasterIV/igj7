@@ -24,7 +24,7 @@ function menuScene() {
 				hero.skills.push(skillDefinitions[key]);
 
 			scenes.combat.setEnemies(['roboter','roboter','roboter']);
-			game.scene = new switchScene(scenes.map,2500,'Charakter');
+			game.scene = new switchScene(scenes.character,2500,'Charakter');
 		}, {})
 	];
 }
