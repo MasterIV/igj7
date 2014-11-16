@@ -1,17 +1,17 @@
 var encounterMappings = {
 	"1": {
-		x: 2048,
-		y: 1346,
+		x: 2030,
+		y: 1345,
 		connected: ["2", "3", "4"]	
 	},
 	"2": {
-		x: 1808,
-		y: 1551,
+		x: 1750,
+		y: 1561,
 		connected: ["5"]	
 	},
 	"3": {
-		x: 1692,
-		y: 1164,
+		x: 1730,
+		y: 1184,
 		connected: ["5", "6"]	
 	},
 	"4": {
@@ -20,13 +20,13 @@ var encounterMappings = {
 		connected:["7"]	
 	},
 	"5": {
-		x: 1406,
-		y: 1216,
+		x: 1260,
+		y: 1236,
 		connected:["8"]	
 	},
 	"6": {
-		x: 1662,
-		y: 1032,
+		x: 1622,
+		y: 1012,
 		connected:["9"]	
 	},
 	"7": {
@@ -55,7 +55,7 @@ var encounterMappings = {
 		connected:["16"]	
 	},
 	"12": {
-		x: 935,
+		x: 860,
 		y: 1145,
 		connected:["16", "9"]
 	},
@@ -81,7 +81,7 @@ var encounterMappings = {
 	},
 	"18": {
 		x: 1926,
-		y: 654,
+		y: 684,
 		connected:["21"]	
 	},
 	"19": {
@@ -140,13 +140,13 @@ var encounterMappings = {
 		connected:["31"]	
 	},
 	"30": {
-		x: 1360,
-		y: 333,
+		x: 1330,
+		y: 353,
 		connected:["31"]	
 	},
 	"31": {
-		x: 1180,
-		y: 280,
+		x: 1170,
+		y: 290,
 		connected:[]	
 	}
 };
