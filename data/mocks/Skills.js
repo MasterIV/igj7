@@ -21,7 +21,7 @@ var skillDefinitions = {
 		"target": "self",
 		"effects": {
 			"Heal": {"base": 40, "attr": "int", "rnd": .6 },
-			"Attack": {"factor": 0.2}
+			"Attack": {"factor": 1}
 		}
 	},
 	"buff_cucumber": {
