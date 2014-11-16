@@ -161,11 +161,12 @@ AnimationItemFound.prototype.draw = function( ctx ) {
 	this.item.sprite.center(ctx, 640, 384);
 };
 
-
-function AnimationSkillFound( item ) {
+function AnimationSkillFound( skill ) {
 	this.counter = new Framecounter(75);
-	this.item = item;
-	this.bg = new AnimationSprite('img/animation/newitem.png', 4);
+	this.item = skill;
+
+	this.topSprite = new sprite('img/ui/tooltip_header.png');
+	this.bottomSprite = new sprite('img/ui/tooltip_content.png');
 }
 
 AnimationSkillFound.prototype.update = function( delta ) {
@@ -174,6 +175,20 @@ AnimationSkillFound.prototype.update = function( delta ) {
 };
 
 AnimationSkillFound.prototype.draw = function( ctx ) {
-	this.bg.center(ctx, 640, 384, this.counter.frame%4 );
-	this.item.sprite.center(ctx, 640, 384);
+	var x = game.display.width/2 - this.topSprite.width/2;
+	var y = game.display.height/2 - this.bottomSprite.height/2;
+	var width = 260;
+
+	this.topSprite.draw(ctx, x, y);
+	this.bottomSprite.drawImage(ctx, x, y + 65, 371 , 40);
+
+	ctx.font = '32px monospace';
+	ctx.textAlign = 'center';
+	ctx.fillStyle = 'black';
+	ctx.fillText( this.item.name, x+width/2 + 16 + 30, y + 55, width);
+
+	ctx.font = '24px monospace';
+	ctx.textAlign = 'center';
+	ctx.fillStyle = 'black';
+	ctx.fillText( config.labels.skillLearnedWord, x+width/2 + 16 + 30, y + 55 + 32, width);
 };
