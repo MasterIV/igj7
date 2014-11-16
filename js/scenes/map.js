@@ -115,7 +115,8 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 						self.blocking.pop();
 						self.encounterMap["1"].isClickable = false;
 						self.setEncounter(nextId);
-						game.scene = scenes.combat;
+						//game.scene = scenes.combat;
+						game.scene = new switchScene(scenes.combat, 2000, config.labels.switchScene.combat);
 					}}]
 				}	
 				if(typeof(reward.item) != "undefined") {
