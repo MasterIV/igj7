@@ -32,7 +32,21 @@ var g = {
 			'img/items/helmet.png',
 			'img/items/ring.png',
 			'img/ui/gamestates.png',
-			'img/characters/villain.png'
+			'img/characters/villain.png',
+			'img/items/tigerhoden.png',
+			'img/items/klosteinamulett.png',
+			'img/items/mettwurststiefeletten.png',
+			'img/items/sandalensocken.png',
+			'img/items/trabbelhufedestrippers.png',
+			'img/items/dampfhammeruhr3000.png',
+			'img/items/dubstepring.png',
+			'img/items/moebiusstreifen.png',
+			'img/items/dasgewissenichts.png',
+			'img/items/erotischesoutfit.png',
+			'img/items/boratslieblingsfetzen.png',
+			'img/items/geilervikingerhelm.png',
+			'img/items/panfloetenmaske.png',
+			'img/items/mauszeigerhut.png'
 		],
 		
 	add: function( url ) {
