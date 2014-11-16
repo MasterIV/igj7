@@ -227,13 +227,24 @@ var itemDefinitions = {
 	"hp_potion": {
 		"itemname": "Heiltrank",
 		"description": "Macht den Müden wieder munter.",
-		"sprite": "img/items/neck.png",
+		"sprite": "img/items/potion.png",
 		"target": "self",
 		"effects": {
 			"Heal": {
 				"base": 20,
 				"attr": "int",
 				"rnd": .6
+			}
+		}
+	},
+	"mana_potion": {
+		"itemname": "Manatrank",
+		"description": "BlueBull.",
+		"sprite": "img/items/energy_potion.png",
+		"target": "self",
+		"effects": {
+			"Mana": {
+				"base": 20
 			}
 		}
 	}
