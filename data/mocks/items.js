@@ -221,7 +221,7 @@ var itemDefinitions={
 	},
 	"hp_potion":{
 		"itemname":"Heiltrank",
-		"sprite":"img/items/neck.png",
+		"sprite":"img/items/potions.png",
 		"target":"self",
 		"effects":{
 			"Heal":{

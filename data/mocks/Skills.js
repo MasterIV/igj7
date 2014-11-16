@@ -7,12 +7,21 @@ var skillDefinitions = {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
 		}
 	},
+	"bandage": {
+		"name": "Bandagieren",
+		"costs": 1,
+		"target": "self",
+		"effects": {
+			"Heal": {"base": 7, "attr": "int", "rnd": .3 }
+		}
+	},
 	"oil": {
 		"name": "Einölen",
 		"costs": 2,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 10, "attr": "int", "rnd": .6 }
+			"Heal": {"base": 15, "attr": "int", "rnd": .6 },
+			"Stun": {"duration": 1, "attr": "str" }
 		}
 	},
 	"heal_enemy": {
@@ -117,15 +126,32 @@ var skillDefinitions = {
 		"costs": 30,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 70, "attr": "int", "rnd": .6 }
+			"Heal": {"base": 70, "attr": "int", "rnd": .3 }
 		}
 	},
 	"psychohit": {
 		"name": "Psychoschlag",
-		"costs": 30,
+		"costs": 15,
+		"target": "all",
+		"effects": {
+			"Stun": {"duration": 2, "attr": "dex" }
+		}
+	},
+	"singing": {
+		"name": "Schräger Gesang",
+		"costs": 5,
 		"target": "all",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
+		}
+	},
+	"thundershock": {
+		"name": "Donnerschock",
+		"costs": 20,
+		"target": "all",
+		"effects": {
+			"Stun": {"duration": 3, "attr": "dex" },
+			"Buff": {"duration": 2, "value": "15" }
 		}
 	}
 };

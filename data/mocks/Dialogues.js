@@ -34,6 +34,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":45
+			},
+			{
+				"skill":"bandage"
 			}
 			
 		]
@@ -318,7 +321,7 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
-				"skill":"double_damage"
+				"skill":"singing"
 			}			
 		]
 		
@@ -570,14 +573,6 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"fight":[
-							"farmerelf",
-							"sheep",
-							"sheep"
-						]
-						
-					},
-					{
 						"int":1
 					},
 					{
@@ -597,6 +592,14 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
+					},
+					{
+						"fight":[
+							"farmerelf",
+							"sheep",
+							"sheep"
+						]
+						
 					}
 					
 				],
@@ -2003,7 +2006,9 @@ var dialogDefinitions={
 			
 		],
 		"rewards":[
-			
+			{
+				"skill":"double_damage"
+			}	
 		]
 		
 	},
@@ -2027,6 +2032,9 @@ var dialogDefinitions={
 			},
 			{
 				"dex":2
+			},
+			{
+				"skill":"thundershock"
 			}
 		]
 		
