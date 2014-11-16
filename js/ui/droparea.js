@@ -42,7 +42,7 @@ itemslot.prototype.draw = function(ctx) {
 					list.push({label:config.attrsLabels[key],value:val})
 			}
 
-			game.scene.tooltip = new tooltip(this.getItem().itemdefinition.itemname, 'blub',list, this);
+			game.scene.tooltip = new tooltip(this.getItem().itemdefinition.itemname, this.getItem().itemdefinition.description,list, this);
 		}
 	} else {
 		if (game.scene.tooltip && game.scene.tooltip.owner == this) {
