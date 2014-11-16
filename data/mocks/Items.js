@@ -1,5 +1,5 @@
 var itemDefinitions={
-	"standardt_amulett_str":{
+	"standard_amulett_str":{
 		"itemname":"Amulett für Anaboliker",
 		"description":"Amulett",
 		"sprite":"img/items/neck.png",
@@ -19,9 +19,9 @@ var itemDefinitions={
 		"def":15,
 		"dex":5,
 		"int":5,
-		"blingbling":15
+		"blingbling":20
 	},
-	"standardt_amulett_dex":{
+	"standard_amulett_dex":{
 		"itemname":"Amulett der Windigkeit",
 		"description":"Amulett",
 		"sprite":"img/items/neck.png",
@@ -32,7 +32,7 @@ var itemDefinitions={
 		"int":5,
 		"blingbling":15
 	},
-	"klostein_amulett ":{
+	"klostein_amulett":{
 		"itemname":"Klostein Amulett ",
 		"description":"Amulett",
 		"sprite":"img/items/klosteinamulett.png",
@@ -156,7 +156,7 @@ var itemDefinitions={
 		"def":10,
 		"dex":5,
 		"int":5,
-		"blingbling":10
+		"blingbling":20
 	},
 	"borats_lieblingsfetzen":{
 		"itemname":"Borats lieblingsfetzen",
@@ -202,7 +202,7 @@ var itemDefinitions={
 		"def":10,
 		"dex":5,
 		"int":5,
-		"blingbling":10
+		"blingbling":15
 	},
 	"panfloetenmaske":{
 		"itemname":"Panflötenmaske",

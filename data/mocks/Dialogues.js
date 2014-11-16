@@ -1,6 +1,6 @@
 var dialogDefinitions={
 	"0":{
-		"text":"Die Partei der strahlend polierten Dampfzwerg hat dich um Hilfe gebeten. Ein seit tausend Jahren schlafendes Monstrum hat sich erhoben, um ihr Urlaubsparadies Malorca zu vernichten. Du wurdest gerufen, um sie zu verteidigen. Angelika steht dir in ihrer vollen Pracht gegenüber und ist für den Kampf bereit!",
+		"text":"(Dummy)",
 		"image":"boss.png",
 		"replies":[
 			
@@ -17,23 +17,23 @@ var dialogDefinitions={
 		
 	},
 	"1":{
-		"text":"Das letzte an das du dich noch erinnerst ist Angelika über dir und ein wildes Amazonenjodeln. Als du wieder zu dir kommst funkelt dir eine niedliche Fee entgegen, die jedoch absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAS DAS DENN? So eine jämmerliche Show habe ich lange nicht mehr gesehen. Ab auf die Trainingsbank!'",
+		"text":"Das letzte an das du dich noch erinnerst ist Angelika über dir und ein wildes Amazonenjodeln in den Ohren. Als du wieder zu dir kommst funkelt dir eine niedliche Fee entgegen, die jedoch absolut nicht zufrieden zu sein scheint. Fee: 'WAS ZUR HÖLLE WAS DAS DENN? So eine jämmerliche Show habe ich lange nicht mehr gesehen. Ab auf die Trainingsbank!' Und bevor du dich in die Welt stürzt, mach dich mit dem deinen Attributen und dem Items vertraut! GOD DAMN IT!",
 		"image":"fee.png",
 		"replies":[
 			
 		],
 		"rewards":[
 			{
-				"int":4
+				"int":13
 			},
 			{
-				"str":4
+				"str":13
 			},
 			{
-				"dex":4
+				"dex":13
 			},
 			{
-				"hp":100
+				"hp":45
 			}
 			
 		]
@@ -57,13 +57,13 @@ var dialogDefinitions={
 						
 					},
 					{
-						"int":3
+						"int":1
 					},
 					{
-						"str":3
+						"str":1
 					},
 					{
-						"dex":3
+						"dex":1
 					}
 					
 				],
@@ -96,13 +96,13 @@ var dialogDefinitions={
 								
 							},
 							{
-								"int":3
+								"int":2
 							},
 							{
-								"str":3
+								"str":2
 							},
 							{
-								"dex":3
+								"dex":2
 							}
 							
 						],
@@ -125,13 +125,13 @@ var dialogDefinitions={
 								
 							},
 							{
-								"int":3
+								"int":2
 							},
 							{
-								"str":3
+								"str":2
 							},
 							{
-								"dex":3
+								"dex":2
 							}
 							
 						],
@@ -152,42 +152,19 @@ var dialogDefinitions={
 						"replies":[
 							{
 								"text":"So soll es sein!",
-								"reply":"Schutz",
-								"condition":{
-									
-								},
-								"rewards":[
-									{
-										"int":3
-									},
-									{
-										"str":3
-									},
-									{
-										"dex":3
-									}
-									
-								],
-								"replies":[
-									
-								]
-								
-							},
-							{
-								"text":"So soll es sein!",
 								"reply":"Wissen!",
 								"condition":{
 									
 								},
 								"rewards":[
 									{
-										"int":9
+										"int":2
 									},
 									{
-										"str":3
+										"str":1
 									},
 									{
-										"dex":3
+										"dex":1
 									}
 									
 								],
@@ -204,36 +181,13 @@ var dialogDefinitions={
 								},
 								"rewards":[
 									{
-										"int":3
+										"int":1
 									},
 									{
-										"str":3
+										"str":1
 									},
 									{
-										"dex":9
-									}
-									
-								],
-								"replies":[
-									
-								]
-								
-							},
-							{
-								"text":"So soll es sein!",
-								"reply":"Stärke!",
-								"condition":{
-									
-								},
-								"rewards":[
-									{
-										"int":3
-									},
-									{
-										"str":9
-									},
-									{
-										"dex":3
+										"dex":2
 									}
 									
 								],
@@ -256,13 +210,13 @@ var dialogDefinitions={
 										
 									},
 									{
-										"int":4
+										"int":1
 									},
 									{
-										"str":4
+										"str":6
 									},
 									{
-										"dex":4
+										"dex":1
 									}
 									
 								],
@@ -301,13 +255,13 @@ var dialogDefinitions={
 						
 					},
 					{
-						"int":3
+						"int":1
 					},
 					{
-						"str":3
+						"str":1
 					},
 					{
-						"dex":3
+						"dex":1
 					}
 					
 				],
@@ -323,7 +277,13 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"int":9
+						"int":6
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
 					}
 					
 				],
@@ -339,7 +299,13 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"str":9
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
 					}
 					
 				],
@@ -373,6 +339,9 @@ var dialogDefinitions={
 						"int":2
 					},
 					{
+						"str":1
+					},
+					{
 						"dex":1
 					}
 					
@@ -390,7 +359,13 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"dex":9
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":6
 					}
 					
 				],
@@ -407,10 +382,13 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"str":3
+						"int":1
 					},
 					{
-						"dex":3
+						"str":2
+					},
+					{
+						"dex":1
 					}
 					
 				],
@@ -438,10 +416,22 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"str":3
+						"int":1
 					},
 					{
-						"dex":3
+						"str":2
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["das_gewisse_nichts"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
 					}
 					
 				],
@@ -459,6 +449,21 @@ var dialogDefinitions={
 				"rewards":[
 					{
 						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["standardt_outfit_int"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
 					}
 					
 				],
@@ -475,10 +480,54 @@ var dialogDefinitions={
 				},
 				"rewards":[
 					{
-						"str":3
+						"int":1
 					},
 					{
-						"dex":3
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["borats_lieblingsfetzen"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
+					}
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Wie es der Natur dieser reichen Säcke entspricht, respektieren sie nur Klunker und dein einfach 'Bling Bling' ist stärker!",
+				"reply":"'Sonst bade ich nur in Geld, aber...'",
+				"condition":{
+					
+				},
+				"rewards":[
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["erotisches_outfit"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
 					}
 					
 				],
@@ -514,7 +563,22 @@ var dialogDefinitions={
 						
 					},
 					{
-						
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["das_gewisse_nichts"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
 					}
 					
 				],
@@ -530,7 +594,24 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["erotisches_outfit"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
+					}
 				],
 				"replies":[
 					
@@ -539,12 +620,29 @@ var dialogDefinitions={
 			},
 			{
 				"text":"Du wusstest du hast Talent für sowas, aber wie zur Hölle konntest du selbst mit eingeflechtet?",
-				"reply":"Helf ihm mit den Zöpfen.",
+				"reply":"Hilf ihm mit den Zöpfen.",
 				"condition":{
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["standardt_outfit_int"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
+					}
 				],
 				"replies":[
 					
@@ -558,7 +656,24 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["borats_lieblingsfetzen"]
+					},
+					{
+						"hp":80
+					},
+					{
+						"item":["hp_potion"]
+					}
 				],
 				"replies":[
 					
@@ -573,7 +688,7 @@ var dialogDefinitions={
 		
 	},
 	"7":{
-		"text":"Du hast davon gehört. Spinnen sind grauselige Gegner, aber je mehr Beine, desto mehr Ringe, oder?",
+		"text":"Du hast davon gehört. Spinnen sind grauselige Gegner, aber je mehr Beine, desto mehr Klunker, oder?",
 		"image":"boss.png",
 		"replies":[
 			
@@ -581,6 +696,24 @@ var dialogDefinitions={
 		"rewards":[
 			{
 				"fight":["spider","spider"]
+			},
+			{
+				"int":1
+			},
+			{
+				"str":1
+			},
+			{
+				"dex":2
+			},
+			{
+				"item":["borats_lieblingsfetzen"]
+			},
+			{
+				"hp":80
+			},
+			{
+				"item":["hp_potion"]
 			}
 		]
 		
@@ -593,7 +726,16 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
-				"fight":["roboter2"]
+				"fight":["minischlacht","minischlacht","minischlacht"]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":2
+			},
+			{
+				"dex":2
 			}
 		]
 		
@@ -611,6 +753,15 @@ var dialogDefinitions={
 				"rewards":[
 					{
 						"fight":["roboter","sheep","sheep"]
+					},
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
 					}
 				],
 				"replies":[
@@ -625,7 +776,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					}
 				],
 				"replies":[
 					
@@ -639,7 +798,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -664,7 +831,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					}
 				],
 				"replies":[
 					
@@ -678,7 +853,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -692,21 +875,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Das Gold interessiert sie nicht, aber deine Zähne sondern soviel Wasserstoff-Peroxid ab, dass diese ganz nebelt auf deine Wünsche eingehen.",
-				"reply":"Mücken stehen auf Gold. Weiß jeder!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -731,7 +908,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":3
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["klostein_amulett"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -745,7 +936,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":3
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["standard_amulett_str"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -759,7 +964,49 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":3
+					},
+					{
+						"item":["standard_amulett_dex"]
+					},
+					{
+						"hp":80
+					}
+				],
+				"replies":[
 					
+				]
+				
+			},
+			{
+				"text":"Sie hat da noch so eine dicke Uhr von ihrer Tante TingelTangelbob. Die kannst haben!",
+				"reply":"Mehr Reichtum!",
+				"condition":{
+					
+				},
+				"rewards":[
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["getrockneter_tigerhoden"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -784,6 +1031,21 @@ var dialogDefinitions={
 				"fight":[
 					"roboter3","roboter","roboter"
 				]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":3
+			},
+			{
+				"dex":2
+			},
+			{
+				"item":["standard_amulett_str"]
+			},
+			{
+				"hp":80
 			}
 		]
 		
@@ -810,7 +1072,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":3
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["klostein_amulett"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -824,7 +1100,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["getrockneter_tigerhoden"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -838,7 +1128,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":3
+					},
+					{
+						"item":["standard_amulett_dex"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -852,7 +1156,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":3
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["standard_amulett_str"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -877,6 +1195,21 @@ var dialogDefinitions={
 				"fight":[
 					"elorko"
 				]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":3
+			},
+			{
+				"dex":2
+			},
+			{
+				"item":["standard_amulett_str"]
+			},
+			{
+				"hp":80
 			}
 		]
 		
@@ -902,6 +1235,16 @@ var dialogDefinitions={
 							
 						},
 						"rewards":[
+							{
+								"int":1
+							},
+							{
+								"str":2
+							},
+							{
+								"dex":1
+							}
+						]
 							
 						],
 						"replies":[
@@ -915,7 +1258,15 @@ var dialogDefinitions={
 							
 						},
 						"rewards":[
-							
+							{
+								"int":1
+							},
+							{
+								"str":1
+							},
+							{
+								"dex":2
+							}
 						],
 						"replies":[
 							
@@ -931,7 +1282,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -958,8 +1317,17 @@ var dialogDefinitions={
 				"rewards":[
 					{
 						"fight":[
-							"roboter","roboter","roboter"
+							"goblinprotester","goblinprotester","spider"
 						]
+					},
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
 					}
 				],
 				"replies":[
@@ -974,7 +1342,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -1003,6 +1379,15 @@ var dialogDefinitions={
 						"fight":[
 							"roboter","villian","roboter"
 						]
+					},
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
 					}
 				],
 				"replies":[
@@ -1021,6 +1406,15 @@ var dialogDefinitions={
 						"fight":[
 							"roboter3"
 						]
+					},
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
 					}
 				],
 				"replies":[
@@ -1050,9 +1444,22 @@ var dialogDefinitions={
 						"fight":[
 							"sheep","sheep","sheep"
 						]
-					}
-				]
-					
+					},
+					{
+						"int":1
+					},
+					{
+						"str":3
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["vikinger_helm"]	
+					},
+					{
+						"hp":80
+					}					
 				],
 				"replies":[
 					
@@ -1065,7 +1472,22 @@ var dialogDefinitions={
 				"condition":{
 					
 				},
-				"rewards":[
+				"rewards":[,
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["standard_helm_def"]	
+					},
+					{
+						"hp":80
+					}	
 					
 				],
 				"replies":[
@@ -1080,7 +1502,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":3
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["panfloetenmaske"]	
+					},
+					{
+						"hp":80
+					}	
 				],
 				"replies":[
 					
@@ -1114,7 +1550,22 @@ var dialogDefinitions={
 						"condition":{
 							
 						},
-						"rewards":[
+						"rewards":[						,
+							{
+								"int":1
+							},
+							{
+								"str":3
+							},
+							{
+								"dex":1
+							},
+							{
+								"item":["vikinger_helm"]	
+							},
+							{
+								"hp":80
+							}	
 							
 						],
 						"replies":[
@@ -1128,6 +1579,21 @@ var dialogDefinitions={
 							
 						},
 						"rewards":[
+							{
+								"int":1
+							},
+							{
+								"str":1
+							},
+							{
+								"dex":3
+							},
+							{
+								"item":["panfloetenmaske"]	
+							},
+							{
+								"hp":80
+							}
 							
 						],
 						"replies":[
@@ -1144,6 +1610,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["mauszeigerhut"]
+					},
+					{
+						"hp":80
+					}
 					
 				],
 				"replies":[
@@ -1173,6 +1654,21 @@ var dialogDefinitions={
 						"fight":[
 							"sheep","sheep","sheep"
 						]
+					},
+					{
+						"int":1
+					},
+					{
+						"str":3
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["vikinger_helm"]
+					},
+					{
+						"hp":80
 					}
 				]
 					
@@ -1189,7 +1685,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["standard_helm_def"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1203,7 +1713,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":3
+					},
+					{
+						"item":["panfloetenmaske"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1228,7 +1752,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -1242,7 +1774,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					}
 				],
 				"replies":[
 					
@@ -1256,7 +1796,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					}
 				],
 				"replies":[
 					
@@ -1270,7 +1818,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -1295,7 +1851,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -1309,7 +1873,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
+					}
 				],
 				"replies":[
 					
@@ -1323,7 +1895,15 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					}
 				],
 				"replies":[
 					
@@ -1338,7 +1918,7 @@ var dialogDefinitions={
 		
 	},
 	"24":{
-		"text":"Schon einmal vom den angepissten Hausfrauen der Raktagron-Ebene gehört? Nein? ABER JETZT! Denn sie sind verdammt wütend, dass du den Müll nicht rausgebracht hast!",
+		"text":"Schon einmal vom den angepissten Hausfrauen der Raktagron-Ebene gehört? Die auch nicht, ABER sie schlagen genauso zu! Denn sie sind verdammt wütend, dass du den Müll nicht rausgebracht hast!",
 		"image":"boss.png",
 		"replies":[
 			
@@ -1348,6 +1928,15 @@ var dialogDefinitions={
 				"fight":[
 					"witch","witch"
 				]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":2
+			},
+			{
+				"dex":2
 			}
 		]
 		
@@ -1363,7 +1952,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["trabbelhufe_des_trippers"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1377,7 +1980,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["mettwurststiefeletten"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1391,7 +2008,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":3
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["standard_boots_int"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1405,7 +2036,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["sandalen_mit_socken"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1430,7 +2075,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":2
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["sandalen_mit_socken"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1444,7 +2103,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":2
+					},
+					{
+						"dex":1
+					},
+					{
+						"item":["mettwurststiefeletten"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1458,7 +2131,21 @@ var dialogDefinitions={
 					
 				},
 				"rewards":[
-					
+					{
+						"int":1
+					},
+					{
+						"str":1
+					},
+					{
+						"dex":2
+					},
+					{
+						"item":["trabbelhufe_des_trippers"]
+					},
+					{
+						"hp":80
+					}
 				],
 				"replies":[
 					
@@ -1483,8 +2170,23 @@ var dialogDefinitions={
 				"fight":[
 					"golem","golemlead","golem"
 				]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":2
+			},
+			{
+				"dex":2
+			},
+			{
+				"item":["trabbelhufe_des_trippers"]
+			},
+			{
+				"hp":80
 			}
-		]
+]
 		
 	},
 	"28":{
@@ -1498,6 +2200,24 @@ var dialogDefinitions={
 				"fight":[
 					"fairy"
 				]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":2
+			},
+			{
+				"dex":2
+			},
+			{
+				"item":["moebiusstreifen"]
+			},
+			{
+				"item":["der_eine_ring"]
+			},
+			{
+				"hp":80
 			}
 		]
 		
@@ -1513,6 +2233,24 @@ var dialogDefinitions={
 				"fight":[
 					"fairy"
 				]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":2
+			},
+			{
+				"dex":2
+			},
+			{
+				"item":["dampfhammeruhr"]
+			},
+			{
+				"item":["der_eine_ring"]
+			},
+			{
+				"hp":80
 			}
 		]
 		
@@ -1528,12 +2266,30 @@ var dialogDefinitions={
 				"fight":[
 					"fairy"
 				]
+			},
+			{
+				"int":2
+			},
+			{
+				"str":2
+			},
+			{
+				"dex":2
+			},
+			{
+				"item":["dubstep-ring"]
+			},
+			{
+				"item":["der_eine_ring"]
+			},
+			{
+				"hp":80
 			}
 		]
 		
 	},
 	"31":{
-		"text":"WIE?! Aus welchem Loch bist du denn wieder gekrochen gekommen? Na egal, ich werde dich weg rationalisieren!",
+		"text":"WIE?! Aus welchem Loch bist du denn gekrochen gekommen? Na egal, ich werde dich weg rationalisieren!",
 		"image":"boss.png",
 		"replies":[
 			
