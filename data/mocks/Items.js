@@ -1,6 +1,6 @@
 var itemDefinitions={
 	"standardt_amulett_str":{
-		"itemname":"Standardt Amulett (str)",
+		"itemname":"Amulett für Anaboliker",
 		"description":"Amulett",
 		"sprite":"img/items/neck.png",
 		"slot":"neck",
@@ -22,7 +22,7 @@ var itemDefinitions={
 		"blingbling":15
 	},
 	"standardt_amulett_dex":{
-		"itemname":"Standardt Amulett (dex)",
+		"itemname":"Amulett der Windigkeit",
 		"description":"Amulett",
 		"sprite":"img/items/neck.png",
 		"slot":"neck",
@@ -79,7 +79,7 @@ var itemDefinitions={
 		"blingbling":10
 	},
 	"standardt_boots_int":{
-		"itemname":"Standardt Boots (int)",
+		"itemname":"Boots der Nerdygkeit",
 		"description":"Schuhe",
 		"sprite":"img/items/boots.png",
 		"slot":"boots",
@@ -170,7 +170,7 @@ var itemDefinitions={
 		"blingbling":10
 	},	
 	"standardt_outfit_int":{
-		"itemname":"Standardt Outfit (int)",
+		"itemname":"Rüstung der Nerdygkeit",
 		"description":"Rüstung",
 		"sprite":"img/items/chest.png",
 		"slot":"chest",
@@ -194,7 +194,7 @@ var itemDefinitions={
 		"blingbling":10
 	},
 	"standard_helm_def":{
-		"itemname":"Standard Helm (def)",
+		"itemname":"Helm der Härte",
 		"description":"Helm",
 		"sprite":"img/items/helmet.png",
 		"slot":"helmet",
@@ -228,9 +228,9 @@ var itemDefinitions={
 	},	
 
 	
-	"potion":{
+	"hp_potion":{
 		"itemname":"Heiltrank",
-		"sprite":"mock/neck.png",
+		"sprite":"img/items/neck.png",
 		"target":"self",
 		"effects":{
 			"Heal":{
