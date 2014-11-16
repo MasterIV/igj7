@@ -40,6 +40,7 @@ function Heal( scene, actor, base, rnd, attr ) {
 }
 
 Heal.prototype.run = function( target ) {
+	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/healing.png', 9, 60));
 	this.scene.blocking.push( new AnimationDamage( target, this.heal * -1 ));
 };
 
