@@ -15,7 +15,7 @@ function Hero() {
 		hp: 70,
 		mana: 20,
 		str: 1,
-		def: 10,
+		def: 5,
 		dex: 1,
 		int: 1,
 		blingbling: 0

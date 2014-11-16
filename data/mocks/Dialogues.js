@@ -24,13 +24,13 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
-				"int":13
+				"int":8
 			},
 			{
-				"str":13
+				"str":8
 			},
 			{
-				"dex":13
+				"dex":8
 			},
 			{
 				"hp":45
@@ -431,6 +431,9 @@ var dialogDefinitions={
 						"hp":80
 					},
 					{
+						"mana":10
+					},
+					{
 						"item":["hp_potion"]
 					}
 					
@@ -461,6 +464,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					},
 					{
 						"item":["hp_potion"]
@@ -495,6 +501,9 @@ var dialogDefinitions={
 						"hp":80
 					},
 					{
+						"mana":10
+					},
+					{
 						"item":["hp_potion"]
 					}
 					
@@ -525,6 +534,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					},
 					{
 						"item":["hp_potion"]
@@ -578,6 +590,9 @@ var dialogDefinitions={
 						"hp":80
 					},
 					{
+						"mana":10
+					},
+					{
 						"item":["hp_potion"]
 					}
 					
@@ -608,6 +623,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					},
 					{
 						"item":["hp_potion"]
@@ -641,6 +659,9 @@ var dialogDefinitions={
 						"hp":80
 					},
 					{
+						"mana":10
+					},
+					{
 						"item":["hp_potion"]
 					}
 				],
@@ -670,6 +691,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					},
 					{
 						"item":["hp_potion"]
@@ -711,6 +735,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":80
+			},
+			{
+				"mana":10
 			},
 			{
 				"item":["hp_potion"]
@@ -950,6 +977,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -978,6 +1008,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1006,6 +1039,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1046,6 +1082,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":80
+			},
+			{
+				"mana":10
 			}
 		]
 		
@@ -1086,6 +1125,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1114,6 +1156,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1142,6 +1187,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1170,6 +1218,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1210,6 +1261,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":80
+			},
+			{
+				"mana":10
 			}
 		]
 		
@@ -1457,6 +1511,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}					
 				],
 				"replies":[
@@ -1485,6 +1542,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}	
 					
 				],
@@ -1514,6 +1574,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}	
 				],
 				"replies":[
@@ -1563,6 +1626,9 @@ var dialogDefinitions={
 							},
 							{
 								"hp":80
+							},
+							{
+								"mana":10
 							}	
 							
 						],
@@ -1591,6 +1657,9 @@ var dialogDefinitions={
 							},
 							{
 								"hp":80
+							},
+							{
+								"mana":10
 							}
 							
 						],
@@ -1622,6 +1691,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 					
 				],
@@ -1667,6 +1739,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}	
 				],
 				"replies":[
@@ -1695,6 +1770,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1723,6 +1801,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1962,6 +2043,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -1990,6 +2074,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -2018,6 +2105,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -2046,6 +2136,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -2085,6 +2178,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -2113,6 +2209,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -2141,6 +2240,9 @@ var dialogDefinitions={
 					},
 					{
 						"hp":80
+					},
+					{
+						"mana":10
 					}
 				],
 				"replies":[
@@ -2181,6 +2283,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":80
+			},
+			{
+				"mana":10
 			}
 ]
 		
@@ -2214,6 +2319,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":80
+			},
+			{
+				"mana":10
 			}
 		]
 		
@@ -2247,6 +2355,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":80
+			},
+			{
+				"mana":10
 			}
 		]
 		
@@ -2280,6 +2391,9 @@ var dialogDefinitions={
 			},
 			{
 				"hp":80
+			},
+			{
+				"mana":10
 			}
 		]
 		

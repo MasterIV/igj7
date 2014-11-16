@@ -47,11 +47,12 @@ var npcDefinitions={
 		"int":65,
 		"dex":54,
 		"str":72,
-		"def":55,
-		"hp":320,
+		"def":0,
+		"hp":820,
 		"skills":{
 			"attack":.8,
-			"heal":.2
+			"heal":.2,
+			"attack_god":.1
 		}
 		
 	},
@@ -65,20 +66,23 @@ var npcDefinitions={
 		"hp":20,
 		"skills":{
 			"attack":.8,
-			"heal":.2
+			"stun_leg":.2
 		}
 		
 	},
 	"hexe":{
 		"name":"Verliebte Hexe",
-		"image":'img/characters/fee.png',
-		"int":10,
+		"image":'img/characters/witch.png',
+		"int":11,
 		"dex":10,
-		"str":10,
-		"def":2,
-		"hp":20,
+		"str":12,
+		"def":8,
+		"hp":65,
 		"skills":{
-			"attack":1
+			"attack":.6,
+			"heal":.2,
+			"double_damage":.1,
+			"heal_enemy":.1
 		}
 		
 	},
@@ -103,6 +107,7 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
+			"attack":.8,
 			"stun_leg":.2
 		}
 	},
@@ -115,6 +120,8 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
+			"attack":.7,
+			"dot":.3,
 		}
 	},
 	"golem":{
@@ -127,7 +134,7 @@ var npcDefinitions={
 		"hp":20,
 		"skills":{
 			"attack":.8,
-			"heal":.2
+			"double_damage":.2
 		}
 		
 	},
@@ -140,8 +147,8 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"attack":.8,
-			"heal":.2
+			"attack":.7,
+			"stun_leg":.3
 		}
 		
 	},
@@ -168,8 +175,8 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"attack":.8,
-			"heal":.2
+			"attack":.9,
+			"heal":.1
 		}
 		
 	},
