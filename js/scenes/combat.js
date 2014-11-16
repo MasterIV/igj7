@@ -148,11 +148,11 @@ combatScene.prototype.setEnemies = function( definitions, bg ) {
 	this.entities = [];
 	this.blocking = [];
 
-	var d = definitions.shift();
+	var d = definitions[0];
 	this.entities.push( new Enemy(1100, 480, npcDefinitions[d]));
-	if(d = definitions.shift())
+	if(d = definitions[1])
 		this.entities.push( new Enemy( 900, 320, npcDefinitions[d] ));
-	if(d = definitions.shift())
+	if(d = definitions[2])
 		this.entities.push( new Enemy( 800, 560, npcDefinitions[d]));
 
 	this.targetSelection.init( this.entities );
