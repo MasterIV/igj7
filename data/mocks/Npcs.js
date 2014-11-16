@@ -36,7 +36,7 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"dot":.8;
+			"dot":.8
 		}
 		
 	}
