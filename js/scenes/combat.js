@@ -59,9 +59,9 @@ combatScene.prototype.enemyTurn = function() {
 		this.blocking.push(new dialogue('Victory!',[{'text': 'Weiter', callback: function() {
 			backgroundsound.play('sound/map.mp3');
 			if(scenes.map.currentEncounter.id != "31") {
-				game.scene = scenes.map;
+				game.scene = new switchScene(scenes.map,2500,'Map');
 			} else {
-				game.scene = new winScene();
+				game.scene = new switchScene(new winScene(),2500,'Gewonnen');
 			}
 		}}]));
 };

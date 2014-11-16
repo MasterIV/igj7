@@ -2,7 +2,7 @@ function menuScene() {
 	this.entities = [
 		new textButton('Start Game', 10, 10, 200, 30, function () {
 			scenes.map.goToFinalScene();
-			game.scene = scenes.map;
+			game.scene = new switchScene(scenes.map,2500,'Map');
 		}, {}),
 
 		new textButton('Debug', 10, 50, 200, 30, function () {
@@ -13,7 +13,7 @@ function menuScene() {
 				hero.skills.push(skillDefinitions[key]);
 
 			scenes.combat.setEnemies(['roboter','roboter','roboter']);
-			game.scene = scenes.combat;
+			game.scene = new switchScene(scenes.combat, 2000, config.labels.switchScene.combat);
 		}, {}),
 
 		new textButton('Debug Inventori', 10, 90, 200, 30, function () {
@@ -24,7 +24,7 @@ function menuScene() {
 				hero.skills.push(skillDefinitions[key]);
 
 			scenes.combat.setEnemies(['roboter','roboter','roboter']);
-			game.scene = scenes.character;
+			game.scene = new switchScene(scenes.map,2500,'Charakter');
 		}, {})
 	];
 }
