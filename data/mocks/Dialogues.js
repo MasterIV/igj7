@@ -719,6 +719,12 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
+				"hp":80
+			},
+			{
+				"mana":10
+			},
+			{
 				"fight":["spider","spider"]
 			},
 			{
@@ -732,12 +738,6 @@ var dialogDefinitions={
 			},
 			{
 				"item":["borats_lieblingsfetzen"]
-			},
-			{
-				"hp":80
-			},
-			{
-				"mana":10
 			},
 			{
 				"item":["hp_potion"]
