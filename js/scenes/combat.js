@@ -12,8 +12,6 @@ function combatScene() {
 			new SpriteButton('img/ui/buttons.png', Rect.create(0,399,161,133), Rect.create(161,399,161,133), 520, 625, function() { self.defend(); }),
 			new Heroinfo(this.hero)
 	];
-
-	this.setEnemies(['roboter','roboter','roboter']);
 }
 
 combatScene.prototype = new scene();
@@ -60,6 +58,7 @@ combatScene.prototype.enemyTurn = function() {
 
 	if( enemyCount == 0 )
 		this.blocking.push(new dialogue('Victory!',[{'text': 'Weiter', callback: function() {
+			backgroundsound.play('sound/map_intro.mp3');
 			game.scene = scenes.map;
 		}}]));
 };
@@ -162,4 +161,5 @@ combatScene.prototype.setEnemies = function( definitions ) {
 
 	for( var i = 0; i < this.defaults.length; i++ )
 		this.entities.push( this.defaults[i] );
+	backgroundsound.play('sound/boss.mp3');
 };
