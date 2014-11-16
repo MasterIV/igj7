@@ -225,13 +225,33 @@ var itemDefinitions={
 		"target":"self",
 		"effects":{
 			"Heal":{
-				"base":20,
+				"base":100,
 				"attr":"int",
+				"rnd":.6
+			},
+			"Heal":{
+				"base":100,
+				"attr":"str",
+				"rnd":.6
+			},
+			"Heal":{
+				"base":100,
+				"attr":"dex",
 				"rnd":.6
 			}
 			
 		}
-		
+	},
+	"mana_potion":{
+		"itemname":"Heiltrank",
+		"sprite":"img/items/potion.png",
+		"target":"self",
+		"effects":{
+			"Mana":{
+				"base":100
+			}
+			
+		}
 	}
 }
 ;
