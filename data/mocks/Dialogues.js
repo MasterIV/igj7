@@ -242,7 +242,6 @@ var dialogDefinitions={
 								]
 								
 							},
-							,
 							{
 								"text":"",
 								"reply":"Deinen Job!",
@@ -469,7 +468,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2b)",
+				"text":"Du kannst garnicht so schnell gucken, wie die Becken leer sind, aber leider auch das Wasser...",
 				"reply":"'Draußen verteilt wer goldene Minzblätter!'",
 				"condition":{
 					
@@ -868,65 +867,27 @@ var dialogDefinitions={
 		
 	},
 	"15":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"El'Orko del diablo hat sein Lager am Wegesrand aufgeschlagen. An dieser Gelegenheit kommst du noch vorbei!",
 		"image":"boss.png",
 		"replies":[
-			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			}
 			
 		],
 		"rewards":[
-			
+			{
+				"fight":[
+					"elorko"
+				]
+			}
 		]
 		
 	},
 	"16":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Je weiter des Weges du kommst, desto größere Scharen an Menschen umgeben dich. Als du dich gerade fragst, ob du immernoch etwas Liebestrank von der Hexe am Schuh hast, siehst du die Fahnen und Schilder vom großen Dampflasterrennen. Es werden noch lebensmüde Fahrer gesucht. Was tust du?",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"text":"Zur deiner Überraschung wirst du genommen. Deine Aufgabe besteht in einer Runde 'Angsthase' gegen einen Dachs. Bremst du, oder hälst du drauf?",
+				"reply":"Fahrer? ICH ICH ICH!",
 				"condition":{
 					
 				},
@@ -934,27 +895,38 @@ var dialogDefinitions={
 					
 				],
 				"replies":[
-					
+					{
+						"text":"Du hast nicht mehr alle Tassen im Schrank! Jeder weiß, was Dachse sie Berseker der Straße sind. Es wird niemand erfahren, ob es daher rührt, dass er nicht ans Lenkrad kam, oder die Welt einfach nur brennen sehen wollte. Auf jeden Fall kracht ihr voll zusammen und du kannst dich glücklich schätzen mit dem Leben davon zu kommen!",
+						"reply":"(Draufhalten)",
+						"condition":{
+							
+						},
+						"rewards":[
+							
+						],
+						"replies":[
+							
+						]
+					},
+					{
+						"text":"Zwei Idioten, ein Gedanke. Ihr beiden weicht beide aus und kracht in die Beplankung. Zu deinem Glück warst du eine Sekunde langsamer und hast so gewonnen!",
+						"reply":"(Bist du irre?)",
+						"condition":{
+							
+						},
+						"rewards":[
+							
+						],
+						"replies":[
+							
+						]
+					}
 				]
 				
 			},
 			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
+				"text":"Das Preisgeld wäre größer, aber in fremden Taschen finden sich auch interessante Sachen.",
+				"reply":"Massen an Menschen schaffen Möglichkeiten",
 				"condition":{
 					
 				},
@@ -974,17 +946,21 @@ var dialogDefinitions={
 		
 	},
 	"17":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Die Straße wird von einer Meute wütender Goblinangesteller belagert. Ihr Vorsitzender stellt sich als Vorsitzender der Gewerkschaft 'Goblinische Diener Lebenslang' vor und fordert von allen Durchreisenden drei Prozent mehr Wegsteuer plus das Recht auch Orks vertreten zu dürfen.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"text":"Trotz ihrer Größe haben Goblins erstaunlich scharfe Zähne. Sie stürzen sich auf dich!",
+				"reply":"'Drei Prozent von Nichts sind Haue. Auf sie!'",
 				"condition":{
 					
 				},
 				"rewards":[
-					
+					{
+						"fight":[
+							"roboter","roboter","roboter"
+						]
+					}
 				],
 				"replies":[
 					
@@ -992,22 +968,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
-				"condition":{
-					
-				},
-				"rewards":[
-					
-				],
-				"replies":[
-					
-				]
-				
-			},
-			{
-				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
-				"reply":"Nach dem Weg fragen.",
+				"text":"Goblins lieben Gold. Du BIST Gold! Nimm mit...",
+				"reply":"'Bekomme ich für sechs Prozent zwei Goblins oben drauf?'",
 				"condition":{
 					
 				},
@@ -1027,17 +989,21 @@ var dialogDefinitions={
 		
 	},
 	"18":{
-		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"text":"Du kommst an eine zerstörte Burg, in welcher der ehemalige Burgherr von Söldnern belagert wird. Hilfst du den Söldnern, oder dem Burgherrn?",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
-				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"text":"Der Burgherr scheint sehr erleichert über dein Auftreten.",
+				"reply":"(Hilf dem Burgherrn)",
 				"condition":{
 					
 				},
 				"rewards":[
-					
+					{
+						"fight":[
+							"roboter","villian","roboter"
+						]
+					}
 				],
 				"replies":[
 					
@@ -1045,8 +1011,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
-				"reply":"Multirieerrrt, was? HAUEN!",
+				"text":"",
+				"reply":"(Hilf den Söldnern)",
 				"condition":{
 					
 				},
