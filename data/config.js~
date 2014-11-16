@@ -4,8 +4,32 @@ var config = {
 		mana: 'Mojo',
 		str: 'Anabolika',
 		def: 'Härte',
-		dex: 'Gewandheit',
+		dex: 'Windigkeit',
 		int: 'Nerdy',
 		blingbling: 'Bling Bling'
+	},
+
+	slotLabels: {
+		helmet: 'Kopf',
+		chest: 'Brust',
+		boots: 'Fuesse',
+		neck: 'Hals',
+		ring: 'Finger'
+	},
+
+	labels: {
+		switchScene: {
+			combat: 'Kampf'
+		}
+	},
+
+	defaultAttributes: {
+		hp: 35,
+		mana: 20,
+		str: 1,
+		def: 0,
+		dex: 1,
+		int: 1,
+		blingbling: 1
 	}
 }
