@@ -20,7 +20,7 @@ var skillDefinitions = {
 		"costs": "1",
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 40, "attr": "int", "rnd": .6 }
+			"Heal": {"base": 40, "attr": "int", "rnd": .6 },
 			"Attack": {"factor": 0.2}
 		}
 	},
@@ -31,7 +31,7 @@ var skillDefinitions = {
 		"effects": {
 			"Buff": {"duration": 3, "value": "5" }
 		}
-	}
+	},
 	"attack_god": {
 		"name": "Faust Gottes",
 		"costs": "10",
