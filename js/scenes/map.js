@@ -95,18 +95,31 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 					scenes.combat.setEnemies(reward.fight);
 					answers = [{ text: "Zum Kampf", callback: function(){
 						self.blocking.pop();
-						//self.currentEncounter.isVisited = true;
 						self.encounterMap["1"].isClickable = false;
 						self.setEncounter(nextId);
 						game.scene = scenes.combat;
 					}}]
 				}	
 				if(typeof(reward.item) != "undefined") {
-					console.log(reward.item);
 					hero.loot(new item(itemDefinitions[reward.item]));
 				}	
-				if(typeof(reward.exp) != "undefined") {
-					// Toby fragen
+				if(typeof(reward.hp) != "undefined") {
+					hero.attrs.hp += reward.hp;
+				}	
+				if(typeof(reward.mana) != "undefined") {
+					hero.attrs.mana += reward.mana;
+				}
+				if(typeof(reward.str) != "undefined") {
+					hero.attrs.str += reward.str;
+				}	
+				if(typeof(reward.dex) != "undefined") {
+					hero.attrs.dex += reward.dex;
+				}	
+				if(typeof(reward.int) != "undefined") {
+					hero.attrs.int += reward.int;
+				}	
+				if(typeof(reward.blingbling) != "undefined") {
+					hero.attrs.blingbling += reward.blingbling;
 				}	
 			}
 		}
@@ -114,7 +127,6 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 	if(answers.length == 0) {
 		answers = [{ text: "Weiter", callback: function(){
 			self.blocking.pop();
-			//self.currentEncounter.isVisited = true;
 			self.encounterMap["1"].isClickable = false;
 			self.setEncounter(nextId);
 		}}]
