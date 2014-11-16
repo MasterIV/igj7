@@ -88,7 +88,7 @@ function HeroContainer(x, y) {
 
 		if (this.life <= 0) {
 			this.life = 0;
-			game.scene = scenes.loose;
+			game.scene =  new looseScene();
 		}
 	};
 
