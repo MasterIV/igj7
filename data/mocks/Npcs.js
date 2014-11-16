@@ -5,7 +5,7 @@ var npcDefinitions={
 		"int":15,
 		"dex":15,
 		"str":15,
-		"def":12,
+		"def":11,
 		"hp":40,
 		"skills":{
 			"attack":.8,
@@ -19,8 +19,8 @@ var npcDefinitions={
 		"int":17,
 		"dex":18,
 		"str":16,
-		"def":13,
-		"hp":50,
+		"def":11,
+		"hp":40,
 		"skills":{
 			"attack":.8,
 			"heal":.2
@@ -33,8 +33,8 @@ var npcDefinitions={
 		"int":18,
 		"dex":19,
 		"str":15,
-		"def":15,
-		"hp":60,
+		"def":13,
+		"hp":50,
 		"skills":{
 			"attack":.8,
 			"heal":.2
@@ -62,8 +62,8 @@ var npcDefinitions={
 		"int":10,
 		"dex":12,
 		"str":10,
-		"def":9,
-		"hp":65,
+		"def":7,
+		"hp":55,
 		"skills":{
 			"attack":.8
 		}
@@ -75,8 +75,8 @@ var npcDefinitions={
 		"int":11,
 		"dex":10,
 		"str":11,
-		"def":8,
-		"hp":65,
+		"def":6,
+		"hp":55,
 		"skills":{
 			"attack":.6,
 			"heal":.2,
@@ -91,8 +91,8 @@ var npcDefinitions={
 		"int":10,
 		"dex":10,
 		"str":9,
-		"def":6,
-		"hp":55,
+		"def":4,
+		"hp":45,
 		"skills":{
 			"attack":1
 		}
@@ -103,8 +103,8 @@ var npcDefinitions={
 		"int":19,
 		"dex":18,
 		"str":20,
-		"def":17,
-		"hp":180,
+		"def":15,
+		"hp":160,
 		"skills":{
 			"attack":1
 		}
@@ -116,7 +116,7 @@ var npcDefinitions={
 		"dex":10,
 		"str":10,
 		"def":2,
-		"hp":35,
+		"hp":30,
 		"skills":{
 			"attack":1
 		}
@@ -127,8 +127,8 @@ var npcDefinitions={
 		"int":12,
 		"dex":15,
 		"str":16,
-		"def":8,
-		"hp":34,
+		"def":6,
+		"hp":30,
 		"skills":{
 			"attack":.9,
 			"posioncloud":.1,
@@ -140,8 +140,8 @@ var npcDefinitions={
 		"int":20,
 		"dex":23,
 		"str":22,
-		"def":21,
-		"hp":260,
+		"def":19,
+		"hp":240,
 		"skills":{
 			"attack":.9,
 			"double_damage":.1
@@ -154,8 +154,8 @@ var npcDefinitions={
 		"int":24,
 		"dex":25,
 		"str":26,
-		"def":21,
-		"hp":290,
+		"def":19,
+		"hp":240,
 		"skills":{
 			"attack":.8,
 			"roundhousekick":.1,
@@ -169,8 +169,8 @@ var npcDefinitions={
 		"int":28,
 		"dex":27,
 		"str":26,
-		"def":23,
-		"hp":390,
+		"def":21,
+		"hp":350,
 		"skills":{
 			"attack":.7,
 			"greaterheal":.2,
@@ -184,8 +184,8 @@ var npcDefinitions={
 		"int":18,
 		"dex":20,
 		"str":16,
-		"def":13,
-		"hp":91,
+		"def":12,
+		"hp":71,
 		"skills":{
 			"attack":.9
 		}
@@ -197,8 +197,8 @@ var npcDefinitions={
 		"int":20,
 		"dex":19,
 		"str":21,
-		"def":18,
-		"hp":120,
+		"def":16,
+		"hp":110,
 		"skills":{
 			"attack":.8,
 			"attack_rage":.2
