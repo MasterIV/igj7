@@ -1,7 +1,7 @@
 var skillDefinitions = {
 	"heal_self": {
 		"name": "Heilung",
-		"costs": "3",
+		"costs": 3,
 		"target": "self",
 		"effects": {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
@@ -9,7 +9,7 @@ var skillDefinitions = {
 	},
 	"heal_enemy": {
 		"name": "Gegner heilen (warum auch immer?!)",
-		"costs": "1",
+		"costs": 1,
 		"target": "single",
 		"effects": {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
@@ -17,7 +17,7 @@ var skillDefinitions = {
 	},
 	"heal_w_dmg": {
 		"name": "Blaues Auge der Heilung",
-		"costs": "1",
+		"costs": 1,
 		"target": "self",
 		"effects": {
 			"Heal": {"base": 40, "attr": "int", "rnd": .6 },
@@ -26,7 +26,7 @@ var skillDefinitions = {
 	},
 	"buff_cucumber": {
 		"name": "Reib die Gurke",
-		"costs": "2",
+		"costs": 2,
 		"target": "self",
 		"effects": {
 			"Buff": {"duration": 3, "value": "5" }
@@ -34,7 +34,7 @@ var skillDefinitions = {
 	},
 	"attack_god": {
 		"name": "Faust Gottes",
-		"costs": "10",
+		"costs": 10,
 		"target": "all",
 		"effects": {
 			"Attack": {"factor": 1.5}
@@ -42,7 +42,7 @@ var skillDefinitions = {
 	},
 	"attack_fist": {
 		"name": "Mächtige Hand",
-		"costs": "5",
+		"costs": 5,
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 2.5}
@@ -50,7 +50,7 @@ var skillDefinitions = {
 	},
 	"attack_rage": {
 		"name": "Rage!#$§!?%",
-		"costs": "4",
+		"costs": 4,
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 2.3}
@@ -66,7 +66,7 @@ var skillDefinitions = {
 	},
 	"stun_leg": {
 		"name": "Bein stellen",
-		"costs": "2",
+		"costs": 2,
 		"target": "single",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
@@ -82,7 +82,7 @@ var skillDefinitions = {
 	},
 	"heal": {
 		"name": "Heilung",
-		"costs": "1",
+		"costs": 1,
 		"target": "self",
 		"effects": {
 			"Heal": {"base": 20, "attr": "int", "rnd": .6 }

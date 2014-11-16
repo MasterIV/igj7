@@ -13,6 +13,20 @@ var npcDefinitions={
 		}
 		
 	},
+	"angelika":{
+		"name":"Angelika",
+		"image":'img/characters/villian.png',
+		"int":10,
+		"dex":10,
+		"str":10,
+		"def":2,
+		"hp":20,
+		"skills":{
+			"attack":.8,
+			"heal":.2
+		}
+		
+	},
 	"brueckenwaechter":{
 		"name":"Brückenwächter",
 		"image":'img/characters/roboter.png',
@@ -36,7 +50,7 @@ var npcDefinitions={
 		"def":2,
 		"hp":20,
 		"skills":{
-			"dot":.8
+			"dot":.3
 		}
 		
 	}

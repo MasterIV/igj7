@@ -78,36 +78,37 @@ mapScene.prototype.setClickable = function(b) {
 mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 	var self = this;
 	var answers = [];	
-	
-	if(typeof(dialogueData.replies) != "undefined" && dialogueData.replies.length > 0) {
-		for(var i = 0, j = dialogueData.replies.length; i < j; i++) {
-			var reply = dialogueData.replies[i];
-			answers.push({ data: reply, text: reply.reply, callback: function(){
-				self.blocking.pop();
-				self.setDialogue(this.data, nextId);
-			} });
-		}
-	}
-	if(typeof(dialogueData.rewards) != "undefined") {
-		for(var i = 0, j = dialogueData.rewards.length; i < j; i++) { 
-			var reward = dialogueData.rewards[i];
-			if(typeof(reward.fight) != "undefined") {
-				scenes.combat.setEnemies(reward.fight);
-				answers = [{ text: "Zum Kampf", callback: function(){
+	if(typeof(dialogueData) != "undefined"){
+		if(typeof(dialogueData.replies) != "undefined" && dialogueData.replies.length > 0) {
+			for(var i = 0, j = dialogueData.replies.length; i < j; i++) {
+				var reply = dialogueData.replies[i];
+				answers.push({ data: reply, text: reply.reply, callback: function(){
 					self.blocking.pop();
-					//self.currentEncounter.isVisited = true;
-					self.encounterMap["1"].isClickable = false;
-					self.setEncounter(nextId);
-					game.scene = scenes.combat;
-				}}]
-			}	
-			if(typeof(reward.item) != "undefined") {
-				console.log(reward.item);
-				hero.loot(new item(itemDefinitions[reward.item]));
-			}	
-			if(typeof(reward.exp) != "undefined") {
-				// Toby fragen
-			}	
+					self.setDialogue(this.data, nextId);
+				} });
+			}
+		}
+		if(typeof(dialogueData.rewards) != "undefined") {
+			for(var i = 0, j = dialogueData.rewards.length; i < j; i++) { 
+				var reward = dialogueData.rewards[i];
+				if(typeof(reward.fight) != "undefined") {
+					scenes.combat.setEnemies(reward.fight);
+					answers = [{ text: "Zum Kampf", callback: function(){
+						self.blocking.pop();
+						//self.currentEncounter.isVisited = true;
+						self.encounterMap["1"].isClickable = false;
+						self.setEncounter(nextId);
+						game.scene = scenes.combat;
+					}}]
+				}	
+				if(typeof(reward.item) != "undefined") {
+					console.log(reward.item);
+					hero.loot(new item(itemDefinitions[reward.item]));
+				}	
+				if(typeof(reward.exp) != "undefined") {
+					// Toby fragen
+				}	
+			}
 		}
 	}
 	if(answers.length == 0) {
@@ -118,7 +119,11 @@ mapScene.prototype.setDialogue = function(dialogueData, nextId) {
 			self.setEncounter(nextId);
 		}}]
 	}
-	var visibleDialogue = new dialogue(dialogueData.text, answers);
+	var text = "Hier gibt es nichts zu sehen."
+	if(typeof(dialogueData) != "undefined" && typeof(dialogueData.text) != "undefined") {
+		text = dialogueData.text;
+	}
+	var visibleDialogue = new dialogue(text, answers);
 	this.blocking.push(visibleDialogue);
 }
 
@@ -159,7 +164,7 @@ mapScene.prototype.draw = function (ctx) {
 		}
 	}
 
-	for (var i = 0; i < this.entities.length; i++)
+	for (var i = this.entities.length-1; i >= 0; i--)
 		if (this.entities[i].draw)
 			this.entities[i].draw(ctx, offset);
 
