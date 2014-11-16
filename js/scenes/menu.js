@@ -1,6 +1,7 @@
 function menuScene() {
 	this.entities = [
 		new textButton('Map', 10, 10, 200, 30, function () {
+			scenes.map.goToFinalScene();
 			game.scene = scenes.map;
 		}, {}),
 		new textButton('Kampf', 10, 50, 200, 30, function () {
