@@ -444,9 +444,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
-					},
-					{
-						"item":["mana_potion"]
 					}
 					
 				],
@@ -482,9 +479,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
-					},
-					{
-						"item":["mana_potion"]
 					}
 					
 				],
@@ -520,9 +514,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
-					},
-					{
-						"item":["mana_potion"]
 					}
 					
 				],
@@ -558,9 +549,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
-					},
-					{
-						"item":["mana_potion"]
 					}
 					
 				],
@@ -612,9 +600,6 @@ var dialogDefinitions={
 						"item":["hp_potion"]
 					},
 					{
-						"item":["mana_potion"]
-					},
-					{
 						"fight":[
 							"farmerelf",
 							"sheep",
@@ -656,9 +641,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
-					},
-					{
-						"item":["mana_potion"]
 					}
 				],
 				"replies":[
@@ -693,9 +675,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
-					},
-					{
-						"item":["mana_potion"]
 					}
 				],
 				"replies":[
@@ -730,9 +709,6 @@ var dialogDefinitions={
 					},
 					{
 						"item":["hp_potion"]
-					},
-					{
-						"item":["mana_potion"]
 					}
 				],
 				"replies":[
@@ -777,9 +753,6 @@ var dialogDefinitions={
 			},
 			{
 				"item":["hp_potion"]
-			},
-			{
-				"item":["mana_potion"]
 			}
 		]
 		

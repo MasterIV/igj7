@@ -104,6 +104,12 @@ function HeroContainer(x, y) {
 		}
 	};
 
+	this.replenish = function(mana) {
+		this.mana += mana;
+		if (this.mana > this.getStats().mana)
+			this.mana = this.getStats().mana;
+	};
+
 	this.draw = function(ctx) {
 		hero.center(ctx, this.x, this.y);
 	};
