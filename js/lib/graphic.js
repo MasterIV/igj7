@@ -46,7 +46,8 @@ var g = {
 			'img/items/boratslieblingsfetzen.png',
 			'img/items/geilervikingerhelm.png',
 			'img/items/panfloetenmaske.png',
-			'img/items/mauszeigerhut.png'
+			'img/items/mauszeigerhut.png',
+			'img/items/dereinering.png'
 		],
 		
 	add: function( url ) {
