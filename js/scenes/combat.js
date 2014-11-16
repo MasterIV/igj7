@@ -149,9 +149,9 @@ combatScene.prototype.setEnemies = function( definitions, bg ) {
 	this.blocking = [];
 
 	var d = definitions.shift();
-	this.entities.push( new Enemy( 900, 320, npcDefinitions[d] ));
+	this.entities.push( new Enemy(1100, 480, npcDefinitions[d]));
 	if(d = definitions.shift())
-		this.entities.push( new Enemy(1100, 480, npcDefinitions[d]));
+		this.entities.push( new Enemy( 900, 320, npcDefinitions[d] ));
 	if(d = definitions.shift())
 		this.entities.push( new Enemy( 800, 560, npcDefinitions[d]));
 
