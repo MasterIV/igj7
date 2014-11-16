@@ -8,6 +8,7 @@ var g = {
 			'img/animation/healing.png',
 			'img/animation/newitem.png',
 			'img/animation/stun.png',
+			'img/animation/hyperstrahl.png',
 			'img/characters/hero.png',
 			'img/characters/hero_spritesheet.png',
 			'img/characters/hero_sprite_outline.png',
@@ -44,6 +45,8 @@ var g = {
 			'img/items/boots.png',
 			'img/items/chest.png',
 			'img/items/helmet.png',
+			'img/items/potion.png',
+			'img/items/energy_potion.png',
 			'img/items/ring.png',
 			'img/ui/gamestates.png',
 			'img/characters/villain.png',
@@ -68,8 +71,6 @@ var g = {
 			'img/characters/witch.png',
 			'img/characters/spider.png',
 			'img/characters/hotelf.png'
-			'img/items/potion.png'
-			'img/items/energy_potion.png'
 		],
 		
 	add: function( url ) {

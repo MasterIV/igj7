@@ -30,6 +30,24 @@ Attack.prototype.run = function( target ) {
 	this.scene.blocking.push(new MoveTwards(this.actor, this.actor.x, this.actor.y, movex, target.y, 500 ));
 };
 
+function Merkel( scene, actor, factor ) {
+	this.scene = scene;
+	this.actor = actor;
+	this.factor = factor ? factor : 1;
+}
+
+Merkel.prototype.run = function( target ) {
+	var actorStats = this.actor.getStats();
+	var crit = ( 0.2 * actorStats.dex / target.getStats().dex ) > Math.random();
+	if(crit) this.factor *= 1.5;
+
+	var damage = Math.round(this.factor * ( actorStats.str + ( actorStats.str * 0.6 ) * (Math.random() - .5)));
+	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/hyperstrahl.png', 11, 50));
+	this.scene.blocking.push( new Animation(target.x, target.y, 'img/animation/destroy.png', 18, 50));
+	dealDamage(this.scene, target, damage);
+};
+
+
 function Mana(scene, actor, value) {
 	this.scene = scene;
 	this.actor = actor;
