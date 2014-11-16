@@ -604,13 +604,15 @@ var dialogDefinitions={
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"(Questtext 2a)",
+				"text":"Du bist nicht allein! Als du dich in einem hohen Bogen den wabernden Schwaden näherst siehst du schähmenhafte Umrisse. Aber Herje, es entpuppen sich als ein behaarter Holzfäller, sein Pferd und die zwei angepissten Schafe Jeff und Tom aus Connecticut.",
 				"reply":"...springst nackt in die Quelle.",
 				"condition":{
 					
 				},
 				"rewards":[
-					
+					{
+						"fight":["roboter","sheep","sheep"]
+					}
 				],
 				"replies":[
 					
@@ -618,7 +620,7 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2a)",
+				"text":"Die in Dampf verhüllten Gestalten bemerken dich nicht und kannst ruhig alles mitnehmen, was von Wert ist.",
 				"reply":"...durchsuchst die Sachen.",
 				"condition":{
 					
@@ -632,8 +634,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2b)",
-				"reply":"...riskierst die Sachen.",
+				"text":"Du kriechst bist auf wenige Meter heran, wirst aber von einem Hinweisschild aufgehalten, dass unmissverständlich erklärt, dass dies eine FKK-Quelle ist. Schade, aber immerhin konntest du die Gespräche belauschen und etwas orkisch lernen...",
+				"reply":"...riskierst einen Blick.",
 				"condition":{
 					
 				},
@@ -653,12 +655,12 @@ var dialogDefinitions={
 		
 	},
 	"10":{
-		"text":"(Questtext)",
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
 		"image":"boss.png",
 		"replies":[
 			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
 				"condition":{
 					
 				},
@@ -671,8 +673,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2a)",
-				"reply":"(Reply 1)",
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
 				"condition":{
 					
 				},
@@ -685,8 +687,8 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2b)",
-				"reply":"(Reply 2)",
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
 				"condition":{
 					
 				},
@@ -699,8 +701,500 @@ var dialogDefinitions={
 				
 			},
 			{
-				"text":"(Questtext 2v)",
-				"reply":"(Reply 3)",
+				"text":"Das Gold interessiert sie nicht, aber deine Zähne sondern soviel Wasserstoff-Peroxid ab, dass diese ganz nebelt auf deine Wünsche eingehen.",
+				"reply":"Mücken stehen auf Gold. Weiß jeder!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"11":{
+		"text":"'Wuuuhuuuuuuuu...' ein schrillendes Rufen weckt dich aus deinen Reiseträumen. Du schaust dich um, kannst aber niemand finden bis dir etwas großes Rundes vor die Linsen fliegt. Aber was zum Teufel ist das? Es ist eine Miniform der guten Fee, aber scheint diese gegessen zu haben. Gut gelaunt erfüllt sie dir einen Wünsch.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Ein klasse Wunsch! Sie erzählt dir stundenlang Anekdoten außer ihrer Zeit als Wirtin Goldwalds Kneipe 'Zum stolzen Löwen'",
+				"reply":"Das Wissen der Welt",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Kein Problem. Madame Tickerbell hat den besten Stoff.",
+				"reply":"Ost-Mallorcanisches Vitamin B",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Eine harte Nuss, da sich viel Erfahrung damit hat Leute übers Ohr zu hauen, aber keine Fee kann etwas gegen eine Doppelwunsch-Versicherung einwenden!",
+				"reply":"Sie soll eine Versicherung abkaufen",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"12":{
+		"text":"Niemand weiß, wie es Alibaba und seine tausend Kumpels es auf diese Insel verschlagen hat, aber es scheint hart gewesen zu sein. Sie sind nurnoch zu dritt.",
+		"image":"boss.png",
+		"replies":[
+			
+		],
+		"rewards":[
+			{
+				"fight":[
+					"roboter3","roboter","roboter"
+				]
+			}
+		]
+		
+	},
+	"13":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"14":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"15":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"16":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"17":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"18":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"19":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			}
+			
+		],
+		"rewards":[
+			
+		]
+		
+	},
+	"20":{
+		"text":"Du weißt von einem elfischen Versuchslabor, dass interessante Versuche an reitbaren Bienen durchführen soll. Als du dich jedoch frohen Mutes auf den Weg machst, kommt dir ein riesiger Schwarm mutierter Mücken in Form einer Person entgegen.",
+		"image":"boss.png",
+		"replies":[
+			{
+				"text":"Bei ihrer Schaffung haben die Elfen wohl einen Mali auf Bewegungsreichweite erwürfelt. Du hast keine Probleme abzuhauen. Gut für dich!",
+				"reply":"Das ist mir nicht geheuer... lieber weg!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Sie sind nicht nur mutiert, sondern auch verdammt angepisst!",
+				"reply":"Multirieerrrt, was? HAUEN!",
+				"condition":{
+					
+				},
+				"rewards":[
+					
+				],
+				"replies":[
+					
+				]
+				
+			},
+			{
+				"text":"Als du ohne Drohgebärden an den Schwarm herantritts, erweisen sich diese als sehr kultiviert und außerordentlich gebildet! Sie erörtern mit dir die Vorteile von Schwarmintelligenz und blutreicher Nahrung.",
+				"reply":"Nach dem Weg fragen.",
 				"condition":{
 					
 				},
