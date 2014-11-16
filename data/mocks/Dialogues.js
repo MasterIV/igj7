@@ -1636,7 +1636,7 @@ var dialogDefinitions={
 						"condition":{
 							
 						},
-						"rewards":[						,
+						"rewards":[
 							{
 								"int":1
 							},

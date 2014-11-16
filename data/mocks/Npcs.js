@@ -130,8 +130,8 @@ var npcDefinitions={
 		"def":8,
 		"hp":34,
 		"skills":{
-			"attack":.7,
-			"posioncloud":.3,
+			"attack":.9,
+			"posioncloud":.1,
 		}
 	},
 	"golem":{
