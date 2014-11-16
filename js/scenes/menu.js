@@ -1,4 +1,8 @@
 function menuScene() {
+	this.bg = new sprite( 'img/ui/menu.jpg' );
+
+
+
 	this.entities = [
 		new textButton('Start Game', 10, 10, 200, 30, function () {
 			scenes.map.goToFinalScene();
