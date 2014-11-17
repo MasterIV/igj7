@@ -4,10 +4,10 @@ function menuScene() {
 	this.firstStart = true;
 
 	this.startButton = new SpriteButton('img/ui/start_button.png', Rect.create(0, 0, 330, 87), Rect.create(330, 0, 330, 87), 191, 432, function(){
-		scenes.map.goToFinalScene();
-		game.scene = new switchScene(scenes.map,2500,'Map');
-
+		if( scenes.menu.firstStart ) { scenes.map.goToFinalScene(); }
 		scenes.menu.firstStart = false;
+		
+		game.scene = new switchScene(scenes.map,2500,'Map');
 	}, null);
 
 
