@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="data/mocks/Dialogues.js"></script>
+		<script type="text/javascript" src="data/items.js"></script>
+		<script type="text/javascript" src="data/mocks/Npcs.js"></script>
+		<script type="text/javascript" src="data/mocks/Skills.js"></script>
+
+
+		<script type="text/javascript">
+			var scenes = {};
+			var hero;
+
+			function init() {
+				for(var index in dialogDefinitions) {
+					debug(dialogDefinitions[index]);
+				}
+				document.body.innerHTML += "All tests passed.";
+			}
+			
+			function debug(part) {
+				if(part == null) return;
+				if(typeof(part.rewards) != "undefined") {
+					for(var index in part.rewards) {
+						var reward = part.rewards[index];
+						if(typeof(reward.skill) != "undefined") {
+							if(typeof(skillDefinitions[reward.skill]) == "undefined")
+								document.body.innerHTML += "Did not find skill '" + reward.skill + "'<br>";
+						}
+						if(typeof(reward.fight) != "undefined") {
+							for(var i in reward.fight) {
+								var enemy = reward.fight[i];
+								if(typeof(npcDefinitions[enemy]) == "undefined")
+									document.body.innerHTML += "Did not find enemy '" + enemy + "'<br>";
+							}
+						}
+					}
+				}
+				
+				if(typeof(part.replies) != "undefined") {
+					for(var index in part.replies) {
+						var newpart = part.replies[index];
+						console.log(newpart);
+						debug(newpart);
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="init();">
+	</body>
+</html>

@@ -179,6 +179,21 @@ var npcDefinitions={
 		}
 		
 	},
+	"villain":{
+		"name":"Dorfbewohner",
+		"image":'img/characters/villain.png',
+		"int":28,
+		"dex":27,
+		"str":26,
+		"def":21,
+		"hp":350,
+		"skills":{
+			"attack":.7,
+			"greaterheal":.2,
+			"double_damage": .1
+		}
+		
+	},
 	"minischlacht":{
 		"name":"Soldat",
 		"image":'img/characters/roboter.png',

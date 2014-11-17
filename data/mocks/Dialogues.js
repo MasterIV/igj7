@@ -1265,7 +1265,7 @@ var dialogDefinitions={
 		"rewards":[
 			{
 				"fight":[
-					"elorko"
+					"golem"
 				]
 			},
 			{
@@ -1452,7 +1452,7 @@ var dialogDefinitions={
 				"rewards":[
 					{
 						"fight":[
-							"roboter","villian","roboter"
+							"roboter","villain","roboter"
 						]
 					},
 					{
@@ -2039,7 +2039,7 @@ var dialogDefinitions={
 		"rewards":[
 			{
 				"fight":[
-					"witch","witch"
+					"hexe","hexe"
 				]
 			},
 			{
@@ -2189,7 +2189,7 @@ var dialogDefinitions={
 		],
 		"rewards":[
 			{
-				"skill":"greater_heal"
+				"skill":"greaterheal"
 			}
 		]
 		
