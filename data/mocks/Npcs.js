@@ -2,11 +2,11 @@ var npcDefinitions={
 	"roboter":{
 		"name":"Roboter",
 		"image":'img/characters/roboter.png',
-		"int":15,
-		"dex":15,
-		"str":15,
+		"int":13,
+		"dex":13,
+		"str":13,
 		"def":11,
-		"hp":40,
+		"hp":30,
 		"skills":{
 			"attack":.8,
 			"heal":.2

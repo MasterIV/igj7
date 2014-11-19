@@ -225,17 +225,17 @@ var itemDefinitions={
 		"target":"self",
 		"effects":{
 			"Heal":{
-				"base":100,
+				"base":200,
 				"attr":"int",
 				"rnd":.6
 			},
 			"Heal":{
-				"base":100,
+				"base":200,
 				"attr":"str",
 				"rnd":.6
 			},
 			"Heal":{
-				"base":100,
+				"base":200,
 				"attr":"dex",
 				"rnd":.6
 			}

@@ -1,10 +1,10 @@
 var skillDefinitions = {
 	"heal_self": {
 		"name": "Heilung",
-		"costs": 3,
+		"costs": 5,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 20, "attr": "int", "rnd": .6 }
+			"Heal": {"base": 50, "attr": "int", "rnd": .6 }
 		}
 	},
 	"bandage": {
@@ -12,7 +12,7 @@ var skillDefinitions = {
 		"costs": 5,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 7, "attr": "int", "rnd": .3 }
+			"Heal": {"base": 50, "attr": "int", "rnd": .3 }
 		}
 	},
 	"oil": {
@@ -34,10 +34,10 @@ var skillDefinitions = {
 	},
 	"heal_w_dmg": {
 		"name": "Blaues Auge der Heilung",
-		"costs": 25,
+		"costs": 5,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 40, "attr": "int", "rnd": .6 },
+			"Heal": {"base": 60, "attr": "int", "rnd": .6 },
 			"Attack": {"factor": 1}
 		}
 	},
@@ -51,7 +51,7 @@ var skillDefinitions = {
 	},
 	"posioncloud": {
 		"name": "Giftwolke",
-		"costs": 25,
+		"costs": 8,
 		"target": "all",
 		"effects": {
 			"Buff": {"duration": 3, "value": "20" }
@@ -83,7 +83,7 @@ var skillDefinitions = {
 	},
 	"double_damage": {
 		"name": "Doppelter Schaden",
-		"costs": "15",
+		"costs": 15,
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 2}
@@ -91,7 +91,7 @@ var skillDefinitions = {
 	},
 	"roundhousekick": {
 		"name": "Roundhousekick",
-		"costs": "45",
+		"costs": 25,
 		"target": "single",
 		"effects": {
 			"Attack": {"factor": 3}
@@ -99,7 +99,7 @@ var skillDefinitions = {
 	},
 	"stun_leg": {
 		"name": "Bein stellen",
-		"costs": 10,
+		"costs": 7,
 		"target": "single",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
@@ -131,10 +131,10 @@ var skillDefinitions = {
 	},
 	"greaterheal": {
 		"name": "Große Heilung",
-		"costs": 30,
+		"costs": 10,
 		"target": "self",
 		"effects": {
-			"Heal": {"base": 70, "attr": "int", "rnd": .3 }
+			"Heal": {"base": 100, "attr": "int", "rnd": .3 }
 		}
 	},
 	"psychohit": {
@@ -147,7 +147,7 @@ var skillDefinitions = {
 	},
 	"singing": {
 		"name": "Schräger Gesang",
-		"costs": 40,
+		"costs": 10,
 		"target": "all",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" }
@@ -155,7 +155,7 @@ var skillDefinitions = {
 	},
 	"thundershock": {
 		"name": "Donnerschock",
-		"costs": 20,
+		"costs": 10,
 		"target": "all",
 		"effects": {
 			"Stun": {"duration": 3, "attr": "dex" },
