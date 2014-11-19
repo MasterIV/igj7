@@ -57,7 +57,7 @@ var encounterMappings = {
 	"12": {
 		x: 860,
 		y: 1145,
-		connected:["16", "9"]
+		connected:["16"]
 	},
 	"14": {
 		x: 1643,
